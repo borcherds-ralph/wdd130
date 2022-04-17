@@ -322,6 +322,69 @@ footer a:hover {
     color: var(--color-white);
 }
 
+/**
+*
+*    FAQ Styling
+*
+**/
+
+.card {
+    background:    white;
+    padding:       38px 36px;
+    margin-top:    40px;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    grid-column:   2/12;
+}
+
+/* Accordion styles */
+
+details {
+    border-radius: 10px;
+    overflow:      hidden;
+    padding:       0 0 1em 0;
+}
+
+summary {
+    color:           white;
+    overflow:        hidden;
+    display:         flex;
+    justify-content: space-between;
+    padding:         1em;
+    background:      #2c3e50;
+    font-weight:     bold;
+    cursor:          pointer;
+}
+
+summary:hover {
+    background: #1a252f;
+}
+
+details summary::after {
+    content:    "\276F";
+    width:      1em;
+    height:     1em;
+    text-align: center;
+    transition: all 0.35s;
+}
+
+details[open] summary::after {
+    content:    "\276F";
+    transform:  rotate(90deg);
+    width:      1em;
+    height:     1em;
+    text-align: center;
+    transition: all 0.35s;
+}
+
+details p {
+    margin:           0.5em 0;
+    line-height:      1.2em;
+    background-color: #f7faf6;
+    padding:          1em;
+    margin:           0;
+}
+
 @media screen and (max-width: 900px) {
 
     #hero,
