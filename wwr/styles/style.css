@@ -119,7 +119,7 @@ header {
     height:           120px;
     display:          flex;
     justify-content:  center;
-    padding-top:      5px;
+    padding:      5px 0;
 }
 
 #logo_link>img {
