@@ -119,7 +119,7 @@ header {
     height:           120px;
     display:          flex;
     justify-content:  center;
-    padding:      5px 0;
+    padding:          5px 0;
 }
 
 #logo_link>img {
@@ -162,7 +162,7 @@ nav a:hover {
 
 .home-title {
     font-family: var(--heading-font);
-    color: var(--color-white);
+    color:       var(--color-white);
     font-size:   2em;
     margin:      10px 0 0 0;
 }
@@ -171,7 +171,7 @@ nav a:hover {
     display:               grid;
     grid-template-columns: 1fr 3fr 1fr;
     margin-top:            -90px;
-    text-align: center;
+    text-align:            center;
 }
 
 #hero-box {
@@ -385,7 +385,129 @@ details p {
     margin:           0;
 }
 
+/***********************************************
+*
+*         Contact Us Page
+*
+************************************************/
+
+main[page="contact"] {
+    padding: 3em 0;
+}
+
+.welcome {
+    grid-column:           1/11;
+    justify-self:          center;
+    display:               grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items:         center;
+}
+
+.welcome h4 {
+    padding:     0;
+    margin:      0;
+    grid-column: 4/8;
+    grid-row:    1;
+}
+
+.welcome h1 {
+    padding:     .25rem;
+    margin:      0;
+    grid-column: 4/8;
+    grid-row:    2;
+}
+
+
+.welcome p {
+    padding:     .5em;
+    margin:      0;
+    grid-column: 4/8;
+    grid-row:    3;
+}
+
+.welcome svg {
+    grid-column: 4/8;
+    grid-row:    4;
+}
+
+.welcome .w-5,
+.welcome .h-5 {
+    width:  30px;
+    height: 30px;
+}
+
+.contactform {
+    grid-column: 2/6;
+    grid-row:    2/4;
+}
+
+.contactform div {
+    display:               grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap:              0 1em;
+    margin: 5px;
+}
+
+.contactform div>label {
+    grid-column:  1;
+    justify-self: right;
+
+}
+
+.contactform div>input,
+.contactform div>textarea {
+    grid-column:  2;
+    justify-self: left;
+    width: 100%;
+}
+.contactform button {
+    background-color: var(--secondary-color);
+    color: var(--color-white);
+    width: 50%;
+    text-align: center;
+    padding: 1em;
+}
+input:active,
+textarea:focus-visible {
+    border: 2px solid #ff0000;
+}
+.contactinfo {
+    grid-column: 7/10;
+    grid-row:    2/4;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+.contactinfo svg {
+    grid-column: 1;
+}
+.contactinfo address, .contactinfo p {
+    grid-column: 2;
+}
+
+
+.contactinfo .h-5,
+.contactinfo .w-5 {
+    width:  30px;
+    height: 30px;
+}
+
 @media screen and (max-width: 900px) {
+
+    #content {
+        max-width: 100%;
+    }
+
+    header,
+    nav {
+        display:        flex;
+        flex-direction: column;
+        align-items:    start;
+    }
+
+    #logo_link {
+        background-color: unset;
+        width:            auto;
+    }
 
     #hero,
     .home-grid {
