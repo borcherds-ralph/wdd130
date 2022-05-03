@@ -491,6 +491,12 @@ textarea:focus-visible {
     height: 30px;
 }
 
+#feedback {
+    background-color: var(--accent-2);
+    padding: .5em;
+    
+    display:          none;
+}
 @media screen and (max-width: 900px) {
 
     #content {
