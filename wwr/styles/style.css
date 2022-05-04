@@ -20,7 +20,7 @@
     --heading-color: #0443b3;
     --font-2:        Lora, "Time New Roman", serif;
 
-    --heading-background: #003030;
+    --heading-background: #AD906A;
     --color-white:        #fff;
     --hover-color:        #003030;
     --trans-color:        rgba(196 207 207 / 0.7);
@@ -28,7 +28,6 @@
     --footer-background:  #3e3e3e;
     --secondary-color:    #0443b3;
     --accent-2:           #afaf60;
-}
 
 
 /*******************************************************************
@@ -113,7 +112,7 @@ header {
 }
 
 #logo_link {
-    width:            310px;
+    width:            330px;
     background-color: var(--heading-background);
     border-radius:    50px;
     height:           120px;
@@ -124,7 +123,7 @@ header {
 
 #logo_link>img {
     grid-column: 1;
-    width:       120px;
+    width:       90px;
     align-self:  center;
 }
 
@@ -186,7 +185,7 @@ nav a:hover {
 }
 
 #hero-msg h4 {
-    color: white;
+    color: var(--color-white);
 }
 
 
@@ -329,12 +328,11 @@ footer a:hover {
 **/
 
 .card {
-    background:    white;
-    padding:       38px 36px;
+    background:    var(--color-white);
     margin-top:    40px;
     margin-bottom: 40px;
     border-radius: 25px;
-    grid-column:   2/12;
+    grid-column:   2/10;
 }
 
 /* Accordion styles */
@@ -343,10 +341,11 @@ details {
     border-radius: 10px;
     overflow:      hidden;
     padding:       0 0 1em 0;
+    margin:        1rem 0;
 }
 
 summary {
-    color:           white;
+    color:           var(--color-white);
     overflow:        hidden;
     display:         flex;
     justify-content: space-between;
@@ -380,9 +379,16 @@ details[open] summary::after {
 details p {
     margin:           0.5em 0;
     line-height:      1.2em;
-    background-color: #f7faf6;
+    background-color: var(--trans-color);
     padding:          1em;
     margin:           0;
+}
+
+details img {
+    border:           solid var(--hover-color) 8px;
+    border-radius:    30px;
+    padding:          .5rem;
+    background-color: var(--trans-color);
 }
 
 /***********************************************
@@ -445,7 +451,7 @@ main[page="contact"] {
     display:               grid;
     grid-template-columns: 1fr 3fr;
     grid-gap:              0 1em;
-    margin: 5px;
+    margin:                5px;
 }
 
 .contactform div>label {
@@ -458,29 +464,35 @@ main[page="contact"] {
 .contactform div>textarea {
     grid-column:  2;
     justify-self: left;
-    width: 100%;
+    width:        100%;
 }
+
 .contactform button {
     background-color: var(--secondary-color);
-    color: var(--color-white);
-    width: 50%;
-    text-align: center;
-    padding: 1em;
+    color:            var(--color-white);
+    width:            50%;
+    text-align:       center;
+    padding:          1em;
 }
+
 input:active,
 textarea:focus-visible {
     border: 2px solid #ff0000;
 }
+
 .contactinfo {
-    grid-column: 7/10;
-    grid-row:    2/4;
-    display: grid;
+    grid-column:           7/10;
+    grid-row:              2/4;
+    display:               grid;
     grid-template-columns: 40px 1fr;
 }
+
 .contactinfo svg {
     grid-column: 1;
 }
-.contactinfo address, .contactinfo p {
+
+.contactinfo address,
+.contactinfo p {
     grid-column: 2;
 }
 
@@ -493,11 +505,21 @@ textarea:focus-visible {
 
 #feedback {
     background-color: var(--accent-2);
-    padding: .5em;
-    
-    display:          none;
+    padding:          .5em;
+
+    display: none;
 }
+
 @media screen and (max-width: 900px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        letter-spacing: unset;
+    }
 
     #content {
         max-width: 100%;
@@ -545,7 +567,7 @@ textarea:focus-visible {
 
     .home-title {
         font-size: 25px;
-        color:     #6f7364;
+        color:     var(--trans-text-color);
     }
 
     .rivers-card,

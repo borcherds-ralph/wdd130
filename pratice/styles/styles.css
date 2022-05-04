@@ -1,0 +1,23 @@
+* {
+    border: 2px solid blue;
+}
+
+body {
+    text-align: center;
+}
+
+img {
+    display: block;
+    width:   80%;
+    margin:  0 auto;
+}
+h1 {
+    text-align: center;
+}
+nav {
+    text-align: center;
+}
+.main-para {
+    width:  80%;
+    margin: 0 auto;
+}
