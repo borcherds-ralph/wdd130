@@ -28,6 +28,8 @@
     --footer-background:  #3e3e3e;
     --secondary-color:    #0443b3;
     --accent-2:           #afaf60;
+    --accent-3:           #003030;
+}
 
 
 /*******************************************************************
@@ -238,7 +240,7 @@ main {
 
 .msg {
     color:            var(--color-white);
-    background-color: var(--heading-background);
+    background-color: var(--accent-3);
     line-height:      1.5em;
     padding:          35px;
     grid-column:      6/10;
