@@ -1,0 +1,96 @@
+/* These are the rule names that we in Week 4 assignment.
+If the property is given in the example it is in this file */
+
+/* Step 9 */
+#content {}
+
+/* Step 10 */
+nav a {}
+
+#hero-msg h1,
+#hero-msg h4 {}
+
+.button-box {}
+
+main section {}
+
+/* Sep 11 */
+#background {
+    height: 725px;
+}
+
+/* Step 12 */
+body {
+    background-color: #fcfbfb;
+}
+
+header {
+    background-color: rgba(20, 30, 13, .7);
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+.book,
+.join {}
+
+.book:hover,
+.join:hover {}
+
+#background {}
+
+.msg {}
+
+footer {}
+
+/* Step 13 */
+nav a:hover {
+    background-color: black;
+    color:            #d9c2a3;
+}
+
+nav a {}
+
+.home-title {}
+
+h4 {}
+
+.book,
+.join {}
+
+.book:hover,
+.join:hover {}
+
+.msg h2 {}
+
+.msg p {}
+
+footer h3 {}
+
+footer a {}
+
+footer a:hover {}
+
+/* Step 14 */
+.icon {
+    width: 80px;
+}
+
+.logo {}
+
+#hero-img {}
+
+/* Step 15 */
+nav a {
+    text-align:      center;
+    color:           #fcfbfb;
+    text-decoration: none;
+}
+
+.book,
+.join {}
+
+footer a {}
+
+footer h3 a:hover {}
