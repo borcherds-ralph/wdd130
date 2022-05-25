@@ -9,6 +9,7 @@
     --accent1-color:   #CC6C39;
     --accent2-color:   #7E7F3C;
     --accent3-color:   #553B1F;
+    --accent4-color:   #933503;
 }
 
 * {
@@ -110,6 +111,7 @@ main {
     display:               grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap:              1.5rem;
+    background-color:      #7E7F3C;
 }
 
 .banner {
@@ -136,52 +138,62 @@ main {
     margin:  0;
 }
 
-.card1 {
-    grid-row:              2;
-    grid-column:           1/-1;
+section {
     display:               grid;
-    grid-template-columns: repeat(4, 1fr);
-    background-color:      var(--accent3-color);
+    grid-template-columns: repeat(6, 1fr);
     color:                 #fff;
+    padding:               2em;
+}
+
+
+.card1 {
+    grid-row:         2;
+    grid-column:      1/-1;
+    background-color: var(--accent3-color);
+
 }
 
 .card1 h2 {
     grid-column: 1/3;
     grid-row:    1;
-
 }
 
 .card1 p {
-    grid-column: 1/3;
-    grid-row:    2/3;
-    padding:     1.5em;
+    grid-column:      1/3;
+    grid-row:         2/4;
+    padding:          1.5em;
+    z-index:          2;
+    background-color: var(--accent4-color);
+    align-self:       center;
 
 }
 
 .card1 img {
-    grid-column: 3/5;
-    grid-row:    1/3;
+
+    grid-column:  2/-1;
+    grid-row:     1/5;
+    justify-self: end;
 }
 
 .card2 {
-    grid-row:              3;
-    grid-column:           1/-1;
-    display:               grid;
-    grid-template-columns: repeat(4, 1fr);
-    background-color:      var(--accent2-color);
-    color:                 #fff;
+    grid-row:         3;
+    grid-column:      1/-1;
+    background-color: var(--accent2-color);
+    color:            #fff;
+
 }
 
 .card2 h2 {
-    grid-column: 3/5;
+    grid-column: 4/-1;
     grid-row:    1;
-
 }
 
 .card2-text {
-    grid-column: 3/5;
-    grid-row:    2/3;
-    padding:     1em;
+    grid-column:      4/-1;
+    grid-row:         2/3;
+    padding:          1em;
+    z-index:          2;
+    background-color: var(--accent4-color);
 }
 
 .card2 ul,
@@ -191,39 +203,46 @@ main {
 }
 
 .card2 img {
-    grid-column: 1/3;
-    grid-row:    1/3;
+    grid-column: 1/5;
+    grid-row:    1/5;
 }
 
 .card3 {
-    grid-row:              4;
-    grid-column:           1/-1;
-    display:               grid;
-    grid-template-columns: repeat(4, 1fr);
-    background-color:      var(--primary-color);
-    color:                 #fff;
+    grid-row:         4;
+    grid-column:      1/-1;
+    background-color: var(--primary-color);
+    color:            #fff;
+
 }
 
 .card3 h2 {
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row:    1;
-
+    z-index:     2;
+    align-self:  center;
 }
 
-.card3 p {
-    grid-column: 1/3;
-    grid-row:    2/3;
-    padding:     2em;
+.card3-text {
+    grid-column:      1/4;
+    grid-row:         2/4;
+    align-self:       center;
+    z-index:          2;
+    background-color: var(--accent4-color);
+    padding:          1em;
 }
 
 .card3>a {
-    grid-column: 3/5;
-    grid-row:    1/3;
+    grid-column:  4/-1;
+    grid-row:     1/4;
+    justify-self: end;
+    padding:      0;
+    margin:       0;
 }
 
 .card1 h2,
 .card2 h2,
-.card3 h2 {
+.card3 h2,
+.video h2 {
     background-color: var(--accent1-color);
     color:            #fff;
     border-top:       3px solid var(--secondary-color);
@@ -231,8 +250,142 @@ main {
     align-self:       baseline;
     padding:          1em .25em;
     margin:           0;
+    z-index:          2;
 }
 
+.video {
+    background-color: var(--accent2-color);
+    grid-row:         5;
+    grid-column:      1/-1;
+    gap:              0 1em;
+}
+
+.video h2 {
+    grid-column: 4/-1;
+    grid-row:    1;
+
+}
+
+.video-text {
+    grid-column:      4/-1;
+    grid-row:         2/4;
+    background-color: var(--accent4-color);
+    color:            #fff;
+    padding:          1em;
+}
+
+.video-player {
+    width:       100%;
+    grid-column: 1/4;
+    grid-row:    1/4;
+    align-self:  center;
+}
+
+/************************************* 
+* 
+*      Activities Page  
+*
+*************************************/
+.activities-title {
+    grid-column: 1/-1;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.hatchet,
+.musket,
+.roping,
+.wood-cutting,
+.dance,
+.fire-starting,
+.sling-shot {
+    grid-column: 1/-1;
+}
+
+.hatchet h4,
+.roping h4,
+.dance h4,
+.sling-shot h4 {
+    grid-column:      1/4;
+    grid-row:         1;
+    background-color: var(--accent3-color);
+    border:           2px solid var(--secondary-color);
+    font-size:        36px;
+    align-self:       center;
+    padding:          .5em;
+    z-index:          2;
+    margin:           0;
+
+}
+
+.hatchet .activity-text,
+.roping .activity-text,
+.dance .activity-text,
+.sling-shot .activity-text {
+    grid-column:      1/4;
+    grid-row:         2/4;
+    background-color: var(--primary-color);
+    border:           2px solid var(--accent4-color);
+    padding:          2em;
+    z-index:          2;
+    align-self:       center;
+}
+
+.hatchet img,
+.roping img,
+.dance img,
+.sling-shot img {
+    grid-column: 3/-1;
+    grid-row:    1/4;
+    border:      2px solid var(--accent1-color);
+    box-shadow:  5px 5px 5px #3e3e3e;
+    font-size:   22px;
+    align-self:  center;
+    padding:     .5em;
+
+}
+
+.musket h4,
+.wood-cutting h4,
+.fire-starting h4
+ {
+    grid-column:      4/-1;
+    grid-row:         1;
+    background-color: var(--primary-color);
+    border:           2px solid var(--accent3-color);
+    font-size:        36px;
+    align-self:       center;
+    padding:          .5em;
+    z-index:          2;
+    margin:           0;
+    ;
+}
+
+.musket .activity-text,
+.wood-cutting .activity-text,
+.fire-starting .activity-text {
+    grid-column:      4/-1;
+    grid-row:         2/4;
+    background-color: var(--accent3-color);
+    border:           2px solid var(--secondary-color);
+    padding:          2em;
+    z-index:          2;
+    align-self:       center;
+}
+
+.musket img,
+.wood-cutting img,
+.fire-starting img {
+    grid-column:         1/5;
+    grid-row:            1/4;
+    border:              2px solid var(--accent1-color);
+    box-shadow:          5px 5px 5px #3e3e3e;
+    font-size:           22px;
+    align-self:          center;
+    padding:             .5em;
+
+}
 
 /************************************* 
 *

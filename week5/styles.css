@@ -7,11 +7,17 @@ Colors and font-family are examples and must be updated to your choices. */
  font-family:  */
 @import url();
 
-body {font-family: ;}
+body {
+    font-family: 
+}
 
-.home-title {font-family:}
+.home-title {
+    font-family:
+}
 
-.msg h2 {font-family:}
+.msg h2 {
+    font-family:
+}
 
 /* Step 2 
 font-size & line-height */
@@ -22,11 +28,11 @@ font-size & line-height */
 
 .book,
 .join {
-    font-size:18px
+    font-size: 18px
 }
 
 .msg p {
-    font-size:.8em
+    font-size: .8em
 }
 
 .msg {
@@ -99,13 +105,25 @@ footer .social img {
     padding:          15px 30px;
     margin-top:       50px;
 }
-.home-title {margin-top: 10px;}
+
+.home-title {
+    margin-top: 10px;
+}
+
 .book,
-.join {margin-top: 50px;}
+.join {
+    margin-top: 50px;
+}
+
 .rivers-card,
 .camping-card,
-.rapids-card {margin: 200px 0;}
-footer {margin-top:   200px;}
+.rapids-card {
+    margin: 200px 0;
+}
+
+footer {
+    margin-top: 200px;
+}
 
 /* Step 6
    Adding borders,
