@@ -482,3 +482,85 @@ footer p {
 .modal-close:hover {
     color: black;
 }
+
+
+
+@media screen and (max-width: 900px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        letter-spacing: unset;
+    }
+
+    #content {
+        max-width: 100%;
+    }
+
+    header,
+    nav, section {
+        display:        flex;
+        flex-direction: column;
+        align-items:    start;
+    }
+
+    #logo_link {
+        background-color: unset;
+        width:            auto;
+    }
+
+    #hero,
+    .home-grid {
+        display: block;
+        height:  auto;
+    }
+
+    nav,
+    footer {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+
+    #hero {
+        margin-top: 0;
+    }
+
+    #hero-msg {
+        margin-top: 0;
+    }
+
+    #hero-msg h4 {
+        display: none;
+    }
+
+    .home-title {
+        font-size: 25px;
+        color:     var(--trans-text-color);
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        margin: 50px auto;
+        width:  60%;
+    }
+
+    
+    .mountains,
+    .msg {
+        width:   80%;
+        display: block;
+        margin:  0 auto;
+    }
+
+    footer {
+        margin-top: 25px;
+    }
+}
