@@ -551,6 +551,10 @@ footer p {
         margin: 50px auto;
         width:  60%;
     }
+    .video-player {
+        width: 600px;
+        height: 400px;
+    }
 
     
     .mountains,
