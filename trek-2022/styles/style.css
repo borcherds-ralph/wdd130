@@ -501,7 +501,7 @@ footer p {
     }
 
     header,
-    nav, section {
+    nav, section, footer {
         display:        flex;
         flex-direction: column;
         align-items:    start;
@@ -512,16 +512,12 @@ footer p {
         width:            auto;
     }
 
-    #hero,
+    .banner,
     .home-grid {
         display: block;
         height:  auto;
     }
 
-    nav,
-    footer {
-        flex-direction: column;
-    }
 
     nav a {
         display: block;
@@ -566,5 +562,9 @@ footer p {
 
     footer {
         margin-top: 25px;
+        padding: 1em;
+    }
+    .site-plan {
+        padding: 1em 0;
     }
 }
