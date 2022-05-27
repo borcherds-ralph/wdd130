@@ -545,11 +545,11 @@ footer p {
     .card2,
     .card3 {
         margin: 50px auto;
-        width:  60%;
+        width:  90%;
     }
     .video-player {
-        width: 600px;
-        height: 400px;
+        width: 400px;
+        height: 200px;
     }
 
     
