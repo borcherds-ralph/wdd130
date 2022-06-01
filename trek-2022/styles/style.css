@@ -112,6 +112,7 @@ main {
     grid-template-columns: repeat(12, 1fr);
     grid-gap:              1.5rem;
     background-color:      #7E7F3C;
+    padding: 1em 0;
 }
 
 .banner {
@@ -387,6 +388,53 @@ section {
 
 }
 
+/*************************************
+*
+*       Stories Page
+*
+*************************************/
+.more-info {
+    grid-column: 1/-1;
+    grid-row: 1;
+    padding: 1em;
+
+}
+
+.story {
+    grid-column: 2/-2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--accent3-color);
+    color: #fff;
+}
+.story summary {
+    grid-column: 1/5;
+    grid-row: 1;
+    padding: 1em;
+    background-color: #496BAc;
+    color: #fff;
+    font-size: 1.25em;
+}
+.story h3 {
+    grid-column: 2/5;
+}
+.story p {
+    grid-column: 1/5;
+    padding: .5em 2em;
+    
+}
+.story cite {
+    grid-column: 2/6;
+    font-size: .74em;
+}
+.story a {
+    text-decoration: none;
+    color: inherit;
+}
+.story a:hover {
+     background-color: #fff;
+     color: var(--accent3-color);
+}
 /************************************* 
 *
 *       Footer

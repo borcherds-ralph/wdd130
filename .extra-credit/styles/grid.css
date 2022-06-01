@@ -1,47 +1,125 @@
 /******************************************************************************
-START Glitch grid layout extra credit
+START grid layout extra credit
 ******************************************************************************/
-
 * {
-    box-sizing: border-box;
+    background-color: #d3d3d3;
+    box-sizing:       border-box;
 }
 
-.grid1 {}
+.grid1 {
+    display:               grid;
+    grid-template-columns: repeat(12, 120px);
+    padding:               2em 0 2em 0;
+}
 
-.grid1 h1 {}
+.grid1 h1 {
+    grid-column: 1 / 12;
+    grid-row:    1 / 2;
+    align-items: center;
+}
 
-.grid2 {}
+.grid2 {
+    grid-row:              2 / 3;
+    grid-column:           2 / 7;
+    display:               grid;
+    grid-template-columns: repeat(12, 100px);
+    align-items:           center;
+    padding:               1rem;
+    background-color:      white;
+}
 
-.grid2 h2 {}
+.grid2 h2 {
+    grid-column:      1 / 5;
+    grid-row:         1 / 2;
+    background-color: white;
+    text-align:       center;
+    align-items:      center;
+}
 
-.grid3 {}
+.grid3 {
+    grid-column: 7 / 13;
 
-.grid3 h3 {}
+    display:               grid;
+    grid-template-columns: repeat(12, 50px);
+    padding:               1rem;
+    background-color:      #98ff98;
+}
 
-.grid4 {}
+.grid3 h3 {
+    grid-column:      2 / 4;
+    align-items:      center;
+    background-color: #98ff98;
+}
 
-.grid4 h2 {}
+.grid4 {
+    grid-row:              3 / 4;
+    grid-column:           4 / 12;
+    display:               grid;
+    grid-template-columns: repeat(12, 70px);
+    padding:               1rem;
+    background-color:      #429e9d;
+}
 
-section {}
+.grid4 h2 {
+    grid-column:      1 / 6;
+    background-color: #429e9d;
+    align-items:      center;
+}
 
-section h2 {}
+section {
+    grid-row:              4 / 5;
+    grid-column:           2 / 7;
+    display:               grid;
+    grid-template-columns: repeat(12, 70px);
+    background-color:      white;
+}
 
-form {}
 
+section h2 {
+    grid-column:      1 / 5;
+    background-color: white;
+}
+
+form {
+    background-color: white;
+    grid-column:      2 / 5;
+
+}
 
 legend {
-    font-size:   20px;
-    font-weight: 700;
+    background-color: orange;
+    font-size:        20px;
+    font-weight:      700;
+    grid-column:      2 / 5;
+    grid-row:         3 / 6;
 }
 
-fieldset>div {}
+fieldset>div {
+    grid-template-column: 1fr 1fr 2fr;
+    background-color:     white;
+}
 
-label {}
+label {
+    justify-content:  right;
+    background-color: white;
+}
 
-input {}
+input {
+    width:            100%;
+    align-items:      : left;
+    background-color: white;
+}
 
-button {}
+button {
+    background-color: Blue;
+    color:            white;
+    padding-right:    160px;
+    margin-bottom:    60px;
+}
+
 
 section>div {
-    /* This is the hr tag rules */
+    background-color: pink;
+    grid-column:      2 / 5;
+    margin:           -40px 0 20px 0;
 }
