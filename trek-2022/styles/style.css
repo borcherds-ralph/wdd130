@@ -82,7 +82,7 @@ header {
 }
 
 .logo img {
-    max-width:     150px;
+    max-width:     200px;
     border-radius: 75px 75px 0 0;
 }
 
@@ -549,12 +549,15 @@ footer p {
     }
 
     header,
-    nav,
     section,
     footer {
         display:        flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items:    start;
+        justify-content: space-between;
+    }
+    nav {
+        display: block;
     }
 
     #logo_link {
