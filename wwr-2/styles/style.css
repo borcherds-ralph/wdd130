@@ -407,6 +407,7 @@ footer {
     }
 
     .nav-item {
+        /* This rule name was updated to match new class name */
         display: block;
         padding: 15px;
     }
@@ -457,18 +458,18 @@ footer {
 Here are some specification and best practices from the Mozilla Developer Network.
 
 
-https: //developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 
 Note: As we learned in the lesson on specificity, an ID has high specificity. It will overrule most other selectors. In most cases, it is preferable to add a class to an element instead of an ID. However, if using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — this will work.
 
 
-https: //developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
 
 Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 CSS pixels is recommended.
 
 
 
-https: //developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 
 Usage notes Heading information can be used by user agents to construct a table of contents for a document automatically. 
 Avoid using heading elements to resize text. Instead, use the CSS font-size property. 
