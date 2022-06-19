@@ -118,14 +118,14 @@ footer {
 *
 */
 
-#content {
+.content {
     /*  w04 step 8 & 9 */
     max-width: 1600px;
     margin: 0 auto;
 }
 
 
-#logo_link {
+.logo-link {
     /* w05 step 4 */
     padding-top: 5px;
     /* w07 step 1 */
@@ -139,7 +139,7 @@ footer {
 }
 
 
-nav a {
+.nav-item {
     /* w04 step 10 This was nav a rule*/
     text-align: center;
     /* w04 step 13 */
@@ -150,7 +150,7 @@ nav a {
     font-size: 1.2em;
 }
 
-nav a:hover {
+.nav-item:hover {
     /* w04 step 12 */
     background-color: #003030;
     /* w04 step 13 */
@@ -465,13 +465,13 @@ Note: As we learned in the lesson on specificity, an ID has high specificity. It
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
 
-Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 CSS pixels is recommended. This is a default of 1rem padding or 16px padding on all sides.
+Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 CSS pixels is recommended.
 
 
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 
-Usage notes: Heading information can be used by user agents to construct a table of contents for a document automatically. 
+Usage notes Heading information can be used by user agents to construct a table of contents for a document automatically. 
 Avoid using heading elements to resize text. Instead, use the CSS font-size property. 
 Avoid skipping heading levels: always start from <h1>, followed by <h2>and so on. 
 Use only one <h1>per page or view. It should concisely describe the overall purpose of the content.
@@ -481,7 +481,7 @@ Use only one <h1>per page or view. It should concisely describe the overall purp
 W08 Personal Site Plan Content
 Can we get step 4 to be worded better. A lot of the students are questioning how to do this.
 1.  Update the navigation area with the page names
-
+2.  
 
 
 W08 Wireframes
