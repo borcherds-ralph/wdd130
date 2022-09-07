@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-size:  18px;
+    font-size: 18px;
 }
 
 body {
@@ -14,13 +14,15 @@ h4,
 h5,
 h6 {
     font-weight: 700;
-    color:       #3e3e3e;
-    margin:      0;
-    padding:     0;
+    color: #3e3e3e;
+    margin: 0;
+    padding: 0;
 }
+
 h1 {
     font-size: 2em;
 }
+
 h2 {
     font-size: 1.5em;
 }
@@ -30,54 +32,54 @@ img {
 }
 
 figure {
-    margin:  0;
+    margin: 0;
     padding: .25em;
-    border:  1px solid #4e4e4e;
+    border: 1px solid #4e4e4e;
 }
 
 .content {
-    display:               grid;
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    max-width:             1600px;
-    margin:                0 auto;
-    grid-gap:              1.5rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    grid-gap: 1.5rem;
     padding: .25em;
     background-color: #fff;
 }
 
 .content h1 {
-    padding:          1em;
-    grid-column:      1/13;
+    padding: 1em;
+    grid-column: 1/13;
     color: #fff;
     background-color: #1d0da7;
-    border:           5px double #000;
+    border: 5px double #000;
 }
 
 .content h2 {
-    padding:          .25em;
-    grid-column:      1/7;
+    padding: .25em;
+    grid-column: 1/7;
     background-color: #dedede;
-    border:           5px double #000;
+    border: 5px double #000;
 }
 
 .profile {
     grid-column: 7/13;
-    grid-row:    3/6;
-    width:       100%;
-    border:      1px solid #3e3e3e;
-    box-shadow:  5px 5px 5px #2c2c2c;
+    grid-row: 3/6;
+    width: 100%;
+    border: 1px solid #3e3e3e;
+    box-shadow: 5px 5px 5px #2c2c2c;
 }
 
 .text-content {
-    grid-row:    3/7;
+    grid-row: 3/7;
     grid-column: 1/7;
 }
 
 .img-grid {
-    grid-column:           1/13;
-    display:               grid;
+    grid-column: 1/13;
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap:              1em;
+    grid-gap: 1em;
 }
 
 .img-grid figure:nth-of-type(1) {
@@ -94,9 +96,10 @@ figure {
 
 @media screen and (max-width: 480px) {
     .content {
-            display: block;
+        display: block;
         width: 100%;
     }
+
     .img-grid {
         display: block;
         width: 100%;
