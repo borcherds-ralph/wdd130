@@ -1,0 +1,51 @@
+body {
+    background-color: #d8d2d2;
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #f3ffff;
+    color:#020c0c;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+     font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.preformatted {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: #050642;
+    color: #fff;
+    padding: .5em;
+}
+
+li {
+    line-height: 1.5em;
+}
+li p:first-of-type {
+    font-size: 1.rem;
+    font-weight: 700;
+}
