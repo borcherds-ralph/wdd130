@@ -144,8 +144,10 @@ footer {
     box-shadow: 5px 5px 10px #6f7364;
 }
 
+
+ /* W07 step 7 */
 @media screen and (max-width: 900px) {
-    /* W07 step 7 */
+   
     #hero,
     .home-grid {
         display: block;

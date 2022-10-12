@@ -8,7 +8,7 @@ Colors and font-family are examples and must be updated to your choices. */
 @import url();
 
 body {
-    font-family: 
+    font-family:
 }
 
 .home-title {
@@ -23,7 +23,7 @@ body {
 font-size & line-height */
 .home-title {
     font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
-    font-size:   2em;
+    font-size: 2em;
 }
 
 .book,
@@ -37,17 +37,17 @@ font-size & line-height */
 
 .msg {
     background-color: #6f7364;
-    line-height:      1.5em;
+    line-height: 1.5em;
 }
 
 /* Step 3
    Simple Reset */
 body {
     background-color: #fcfbfb;
-    font-family:      Raleway, Arial, sans-serif;
-    font-size:        22px;
-    margin:           0;
-    padding:          0;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
@@ -59,9 +59,9 @@ h2 {
 
 nav a {
     text-decoration: none;
-    color:           #fcfbfb;
-    text-align:      center;
-    padding:         35px;
+    color: #fcfbfb;
+    text-align: center;
+    padding: 35px;
 }
 
 #logo_link {
@@ -99,11 +99,11 @@ footer .social img {
 .book,
 .join {
     background-color: #d9c2a3;
-    color:            black;
-    text-decoration:  none;
-    font-size:        18px;
-    padding:          15px 30px;
-    margin-top:       50px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
 }
 
 .home-title {
@@ -132,12 +132,12 @@ border radius and box-sizing*/
 .book,
 .join {
     background-color: #d9c2a3;
-    color:            #000;
-    text-decoration:  none;
-    font-size:        18px;
-    padding:          15px 30px;
-    margin-top:       50px;
-    border-radius:    5px;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .card-img {

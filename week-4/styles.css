@@ -1,5 +1,6 @@
 /* These are the rule names that we in Week 4 assignment.
-If the property is given in the example it is in this file */
+If the property is given in the example it is in this file 
+Make sure not to duplicate the rule names in your CSS file. */
 
 /* Step 9 */
 #content {}
@@ -47,7 +48,7 @@ footer {}
 /* Step 13 */
 nav a:hover {
     background-color: black;
-    color:            #d9c2a3;
+    color: #d9c2a3;
 }
 
 nav a {}
@@ -66,11 +67,16 @@ h4 {}
 
 .msg p {}
 
-footer h3 {}
+footer p {}
 
 footer a {}
 
+/* these next 2 are identical for the purposes of this class 
+You can use either one of these rules. Personally I like the first one 
+to keep in format with the rule right above this */
 footer a:hover {}
+
+footer p a:hover {}
 
 /* Step 14 */
 .icon {
@@ -83,8 +89,8 @@ footer a:hover {}
 
 /* Step 15 */
 nav a {
-    text-align:      center;
-    color:           #fcfbfb;
+    text-align: center;
+    color: #fcfbfb;
     text-decoration: none;
 }
 
