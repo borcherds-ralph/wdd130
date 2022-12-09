@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt|Source+Code+Pro:300,400,600">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://bgrins.github.io/spectrum/spectrum.css">
+    <link rel="stylesheet" href="shttps://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timedropper/1.0/timedropper.min.css">
+    <link rel="stylesheet" href="https://www.pigno.se/barn/PIGNOSE-Calendar/dist/css/pignose.calendar.css">
+    <link rel="stylesheet" href="styles/input-fields.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://bgrins.github.io/spectrum/spectrum.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timedropper/1.0/timedropper.min.js"></script>
+    <script src="https://www.pigno.se/barn/PIGNOSE-Calendar/dist/js/pignose.calendar.js"></script>
+    <script src="js/input-fields.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="container font-bold mx-4 p-5">
+            <h1>HTML5 FlexBox Form Layout</h1>
+            <p>The example demonstrates a simple responsive form layout.</p>
+        </header>
+
+        <!-- Using: http://bennettfeely.com/flexplorer/ -->
+        <!-- Using: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+        <!-- Using: https://caniuse.com/#feat=flexbox -->
+        <!-- Using: https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp -->
+        <form action="#" method="POST" name="login form 1" autocomplete="on" class="rounded form-border">
+            <!-- It's sometimes convenient for technical reasons to have pieces of data that are sent with a form but not displayed to the user. To do this, you can add an invisible element in your form. Use an &lt;input&gt; with its type attribute set to the value hidden. If you create such an element, it's required to set its name and value attributes: -->
+            <input name="subject" type="hidden" value="Login form 1">
+            <fieldset>
+                <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                    Login form
+                </legend>
+                <!-- Form-Field Validation used: The Errors-Only Approach -->
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="user-name-login1" class="flex-label">User:</label>
+                    <div class="form-group flex-column flex-md-row flex-wrap">
+                        <!-- Not more than one element in the document may have the autofocus attribute, and autofocus cannot be used on inputs of type "hidden", because hidden inputs can't be focused. -->
+                        <!-- Pattern checker for Regex: http://html5pattern.com/Names -->
+                        <input type="text" name="user-name-login1" id="user-name-login1"
+                            class="flex-input form-control form-border" placeholder="User name"
+                            pattern="^[a-zA-Z][a-zA-Z0-9- _\.]{1,20}$" autocomplete="off" autofocus
+                            title="Please, provide your User name" required
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="user-email-login1" class="flex-label">Email:</label>
+                    <div class="form-group flex-column flex-md-row flex-wrap">
+                        <!-- Using: https://www.w3schools.com/tags/att_input_pattern.asp -->
+                        <input type="email" name="user-email-login1" id="user-email-login1"
+                            class="flex-input form-control form-border" placeholder="myemail@domain.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="off"
+                            title="Please, provide your Email address" required
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="user-psw-login1" class="flex-label">Password:</label>
+                    <div class="form-group with-icon-btns d-flex container">
+                        <!-- inspired by https://bootsnipp.com/snippets/kldkg -->
+                        <input type="password" name="user-psw-login1" id="user-psw-login1"
+                            class="flex-input form-control form-border" placeholder="mypa$$woRD123"
+                            pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$"
+                            title="Please, provide your Password. Your password may consist of 8-16 characters, containing 3 out of 4 of the following: Lowercase characters, uppercase characters, digits (0-9), and one or more of the following symbols: @ # $ % ^ &amp; * - _ + = [ ] { } | \ : ' , ? / ` ~ &quot; ( ) ; ."
+                            required data-value-missing="No chance! Fill it already.">
+                        <button class="toggler-txt text-center d-flex flex-row flex-wrap rounded font-bold legend-bg"
+                            type="button" id="toggleBtn1">
+                            Show
+                        </button>
+                    </div>
+                </div>
+                <!-- custom checkbox style inspired by https://www.w3schools.com/howto/howto_css_custom_checkbox.asp -->
+                <div class="flex-container d-flex remember-me justify-content-end">
+                    <label for="remember-me-1" class="checkbox-label d-flex align-self-center">Remember me
+                        <input type="checkbox" name="remember" id="remember-me-1" class="align-self-center mr-2">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <!-- hoover on them buttons, they shine -->
+                <!-- inspired by https://codepen.io/iheartkode/pen/jqKpQV -->
+                <div class="flex-container with-btns">
+                    <div class="button resetBtn">
+                        <button type="reset" name="resetBtn-1" class="reset rounded font-bold legend-bg" value="Reset">
+                            Reset
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                    <div class="button submitBtn">
+                        <button type="submit" name="submitBtn-1" class="btn-success rounded font-bold" value="Submit">
+                            Submit
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form action="#" method="POST" name="login form with icons" class="login-with-icons rounded form-border mt-3">
+            <input name="subject" type="hidden" value="Login form with icons">
+            <fieldset>
+                <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                    Login form with icons
+                </legend>
+                <!-- Form-Field Validation used: The live inline validation Approach -->
+                <!-- https://www.the-art-of-web.com/html/html5-form-validation/ -->
+                <div class="flex-container d-flex flex-row flex-wrap">
+                    <div class="form-group d-flex flex-row flex-nowrap">
+                        <!-- icon usage inspired by https://www.w3schools.com/howto/howto_css_form_icon.asp -->
+                        <i class="fa fa-search icon legend-bg text-center"></i>
+                        <input type="search" name="search" id="search" class="flex-input form-control form-border"
+                            value="My personal search bar..." title="My personal search bar...">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-row flex-wrap">
+                    <!-- icon usage inspired by https://www.w3schools.com/howto/howto_css_form_icon.asp -->
+                    <div class="form-group d-flex flex-row flex-nowrap">
+                        <i class="fa fa-user icon legend-bg text-center"></i>
+                        <!-- Pattern checker for Regex: http://html5pattern.com/Names -->
+                        <input type="text" name="user-name-icons" id="user-name-icons"
+                            class="flex-input form-control form-border" value="User name"
+                            pattern="^[a-zA-Z][a-zA-Z0-9- _\.]{1,20}$" autocomplete="on" required
+                            title="Please, provide your User name" data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-row flex-wrap">
+                    <!-- Don't use the placeholder attribute if you can avoid it. If you need to label an <input> element, use the <label> element. -->
+                    <div class="form-group d-flex flex-row flex-nowrap">
+                        <i class="fa fa-envelope icon legend-bg text-center"></i>
+                        <!-- Using: https://www.w3schools.com/tags/att_input_pattern.asp -->
+                        <input type="email" name="user-email-icons" id="user-email-icons"
+                            class="flex-input form-control form-border" value="myemail@domain.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="on" required
+                            title="Please, provide your Email address" data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-row flex-wrap">
+                    <div class="form-group d-flex flex-row flex-nowrap">
+                        <!-- inspired by https://bootsnipp.com/snippets/kldkg -->
+                        <i class="fa fa-key icon legend-bg text-center"></i>
+                        <input type="password" name="user-psw-icon" id="user-psw-icon"
+                            class="flex-input form-control form-border" value="mypa$$woRD123" autocomplete="on"
+                            pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$"
+                            title="Please, provide your Password. Your password may consist of 8-16 characters, containing 3 out of 4 of the following: Lowercase characters, uppercase characters, digits (0-9), and one or more of the following symbols: @ # $ % ^ &amp; * - _ + = [ ] { } | \ : ' , ? / ` ~ &quot; ( ) ; ."
+                            data-value-missing="No chance! Fill it already." required
+                            aria-describedby="password_visibility">
+                        <i class="input-group-addon fa fa-eye-slash btn btn-primary text-white"
+                            id="password_visibility"></i>
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-row flex-wrap">
+                    <div class="form-group d-flex flex-row flex-nowrap">
+                        <!-- taken from: https://bootsnipp.com/snippets/featured/contact-form -->
+                        <div class="input-group-text legend-bg p-0">
+                            <i class="fa fa-comment icon legend-bg text-center"></i>
+                        </div>
+                        <textarea name="user-message" class="flex-input form-control form-border"
+                            placeholder="Oh, hey, it's me, I am a blank multi-line text field and I resize: vertical; You can try to drag my right corner up and down"
+                            cols="30" rows="3" title="This is an optional textarea field for you comments"></textarea>
+                    </div>
+                </div>
+                <div class="flex-container d-flex remember-me justify-content-end">
+                    <label for="remember-me-2" class="checkbox-label d-flex align-self-center">Remember me
+                        <input type="checkbox" name="remember" id="remember-me-2" class="align-self-center mr-2">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="flex-container with-btns">
+                    <div class="button resetBtn">
+                        <button type="reset" name="resetBtn-2" class="reset rounded font-bold legend-bg" value="Reset">
+                            Reset
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                    <div class="button submitBtn">
+                        <button type="submit" name="submitBtn-2" class="btn-success rounded font-bold" value="Submit">
+                            Submit
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- The GET method is the method used by the browser to ask the server to send back a given resource. In this case, the browser sends an empty body. Because the body is empty, if a form is sent using this method the data sent to the server is appended to the URL. -->
+        <form action="#" method="GET" name="web page" id="web-page" class="rounded form-border mt-3">
+            <input name="subject" type="hidden" value="Web page">
+            <fieldset>
+                <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                    Web Page
+                </legend>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="display-name" class="flex-label">Name:</label>
+                    <div class="form-group with-icon-btns d-flex flex-row flex-nowrap">
+                        <input type="text" name="ip-display" id="display-name"
+                            class="flex-input form-control form-border" value="Aabcdefg" minlength="5" maxlength="15"
+                            pattern="[A-Za-z\s]+" required title="Please, provide your Name"
+                            data-value-missing="No chance! Fill it already.">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="readonly-ip" class="flex-label">ReadOnly:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <input type="text" name="readonly-ip" id="readonly-ip"
+                            class="flex-input form-control form-border" value="I'm read only." readonly
+                            title="I'm read only.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <!-- Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
+          Specifically, disabled inputs do not receive the click event, and disabled inputs are not submitted with the form.
+                    
+          Note: Although not required by the specification, Firefox will by default persist the dynamic disabled state of an <input> across page loads. Use the autocomplete attribute to control this feature. -->
+                    <label for="disabled-ip" class="flex-label">Disabled:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <input type="text" name="disabled-ip" id="disabled-ip"
+                            class="flex-input form-control form-border" value="I'm disabled." disabled
+                            title="I'm disabled.">
+                    </div>
+                </div>
+                <div class="flex-container with-btns">
+                    <div class="button resetBtn">
+                        <button type="reset" name="resetBtn-3" class="reset rounded font-bold legend-bg" value="Reset">
+                            Reset
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                    <div class="button submitBtn">
+                        <button type="submit" name="submitBtn-3" class="btn-success rounded font-bold" value="Submit">
+                            Submit
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- If you need to send a large amount of data, the POST method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept. -->
+        <form action="#" method="POST" name="personal form 1" enctype="multipart/form-data"
+            class="rounded form-border mt-3">
+            <!-- The enctype attribute lets you specify the value of the Content-Type HTTP header included in the request generated when the form is submitted. This header is very important because it tells the server what kind of data is being sent. By default, its value is application/x-www-form-urlencoded. 
+      If you want to send files, you need to take three extra steps:
+      
+      - Set the method attribute to POST because file content can't be put inside URL parameters.
+      
+      - Set the value of enctype to multipart/form-data because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if text is also entered into the form).
+      
+      - Include one or more File picker widgets to allow your users to select the file(s) that will be uploaded. -->
+            <input name="subject" type="hidden" value="Personal form 1">
+            <fieldset>
+                <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                    Personal information Form 1
+                </legend>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="user-first-name" class="flex-label">First Name:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <!-- \w+ matches 1 or more word characters (same as [a-zA-Z0-9_]+) -->
+                        <input type="text" name="user-first-name" id="user-first-name"
+                            class="flex-input form-control form-border" placeholder="First name" pattern="\w+" required
+                            title="Please, provide your First name" data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="user-last-name" class="flex-label">Last Name:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <!-- \w+ matches 1 or more word characters (same as [a-zA-Z0-9_]+) -->
+                        <input type="text" name="user-last-name" id="user-last-name"
+                            class="flex-input form-control form-border" placeholder="Last name" pattern="\w+" required
+                            title="Please, provide your Last name" data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="age-and-gender flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <div class="form-group-half-width d-flex flex-row flex-nowrap">
+                        <label for="user-age" class="flex-label">Age:</label>
+                        <input type="number" name="user-age" id="user-age" class="flex-input form-control form-border"
+                            value="33" min="1" max="100" step="1" required title="Please, provide your Age"
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                    <div class="form-group-half-width d-flex flex-column flex-md-row flex-nowrap">
+                        <label class="flex-label">Gender:</label>
+                        <!-- custom radio style inspired by https://www.w3schools.com/howto/howto_css_custom_checkbox.asp -->
+                        <!-- You'll need to provide values for these kinds of inputs inside the value attribute if you want them to be meaningful — if no value is provided, check boxes and radio buttons are given a value of on. -->
+                        <label for="male" class="radio-label flex-label">Male
+                            <input type="radio" name="user-gender" id="male" value="Male"
+                                class="flex-input form-control" checked>
+                            <span class="checkmark-radio rounded-circle"></span>
+                        </label>
+                        <label for="female" class="radio-label flex-label">Female
+                            <input type="radio" name="user-gender" id="female" value="Female"
+                                class="flex-input form-control">
+                            <span class="checkmark-radio rounded-circle"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <!-- It's also possible to let the user type several e-mail addresses into the same input (separated by commas) by including the "multiple" attribute. -->
+                    <label for="user-email-personal" class="flex-label">E-mail(s):</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <!-- Using: https://www.w3schools.com/tags/att_input_pattern.asp -->
+                        <input type="email" name="user-email-personal" id="user-email-personal"
+                            class="flex-input form-control form-border" placeholder="myemail@domain.com"
+                            pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}" autocomplete="off" required
+                            title="Please, provide your Email address(es)"
+                            data-value-missing="No chance! Fill it already." multiple>
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="user-tel" class="flex-label">Mobile:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel -->
+                        <input type="tel" name="user-tel" id="user-tel" class="flex-input form-control form-border"
+                            placeholder="+359-888-88-88-88" pattern="\+[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                            required title="Please, provide your Mobile number"
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="user-url" class="flex-label">Web Site:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <!-- Using: https://www.w3schools.com/tags/att_input_pattern.asp -->
+                        <input type="url" name="user-url" id="user-url" class="flex-input form-control form-border"
+                            placeholder="http://sample.com" pattern="https?://.+" required
+                            title="Please, provide your Web site address"
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <!-- custom checkbox style inspired by https://www.w3schools.com/howto/howto_css_custom_checkbox.asp -->
+                    <label class="flex-label">Hobbies:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-nowrap">
+                        <div class="form-check-inline">
+                            <label for="hobbie-1" class="checkbox-label form-check-label">
+                                <input type="checkbox" name="hobbie-1" id="hobbie-1"
+                                    class="form-check-input flex-input form-control" value="Reading" checked>Reading
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label for="hobbie-2" class="checkbox-label form-check-label">
+                                <input type="checkbox" name="hobbie-2" id="hobbie-2"
+                                    class="form-check-input flex-input form-control" value="Coding">Coding
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label for="hobbie-3" class="checkbox-label form-check-label">
+                                <input type="checkbox" name="hobbie-3" id="hobbie-3"
+                                    class="form-check-input flex-input form-control" value="Cooking">Cooking
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label for="hobbie-4" class="checkbox-label form-check-label">
+                                <input type="checkbox" name="hobbie-4" id="hobbie-4"
+                                    class="form-check-input flex-input form-control" value="Drawing" checked>Drawing
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label for="hobbie-5" class="checkbox-label form-check-label">
+                                <input type="checkbox" name="hobbie-5" id="hobbie-5"
+                                    class="form-check-input flex-input form-control" value="Singing" checked>Singing
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="favourites container-fluid p-0">
+                <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                    Please, tell us your favorite:
+                </legend>
+                <div class="fruit flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <!-- According to the HTML specification, the list attribute and the <datalist> element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields. -->
+                    <div class="form-group d-flex flex-column flex-md-row flex-nowrap">
+                        <label for="myFruit">Fruit (input):</label>
+                        <input type="text" name="myFruit" id="myFruit" class="flex-input form-control form-border"
+                            list="fruitList" placeholder="Cherry"
+                            pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range"
+                            title="Please, provide your Favourite fruit">
+                        <!-- The id of a <datalist> element located in the same document which provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the type are not included in the suggested options. The list attribute is not supported by the hidden, password, checkbox, radio, file, or any of the button types. -->
+                        <label for="suggestion" class="ml-md-2">Fruit (datalist):</label>
+                        <datalist id="fruitList" class="d-flex flex-input">
+                            <select name="altFruit" id="suggestion" class="form-control form-border"
+                                title="Please, provide your Favourite fruit">
+                                <option value="" selected disabled hidden>--Select Favourite Fruit--</option>
+                                <option value="Banana">Banana</option>
+                                <option value="Cherry">Cherry</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Strawberry">Strawberry</option>
+                                <option value="Lemon">Lemon</option>
+                                <option value="Orange">Orange</option>
+                            </select>
+                        </datalist>
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <!-- Range inputs aren't supported in versions of IE below 10 -->
+                    <!-- Generator: http://danielstern.ca/range.css/?ref=css-tricks#/ -->
+                    <label for="fruitAmount" class="flex-label">How many can you eat?</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <input type="range" name="fruitAmount" id="fruitAmount" class="flex-input rounded form-border"
+                            value="250" min="0" max="500" step="1">
+                        <label class="flex-label text-center mt-3">Count: <span
+                                class="fruitcount rounded font-bold"></span></label>
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <!-- Number inputs aren't supported in versions of IE below 10. -->
+                    <label for="user-decimal" class="flex-label">Decimal:</label>
+                    <div class="form-group d-flex flex-row flex-wrap">
+                        <input type="number" name="user-decimal" id="user-decimal"
+                            class="flex-input form-control form-border" min="1" max="100" step="0.001" value="1.111"
+                            title="Please, provide your Favourite Decimal">
+                    </div>
+                </div>
+                <div class="flex-container with-btns">
+                    <div class="button resetBtn">
+                        <button type="reset" name="resetBtn-4" class="reset rounded font-bold legend-bg" value="Reset">
+                            Reset
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                    <div class="button submitBtn">
+                        <button type="submit" name="submitBtn-4" class="btn-success rounded font-bold" value="Submit">
+                            Submit
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- If you need to send a large amount of data, the POST method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept. -->
+        <form action="#" method="POST" name="personal form 2" enctype="multipart/form-data"
+            class="rounded form-border mt-3">
+            <fieldset class="container p-0">
+                <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                    Personal Information Form 2
+                </legend>
+                <fieldset class="container p-0">
+                    <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                        Color pickers:
+                    </legend>
+                    <div class="alert alert-warning mt-2">
+                        <i class="fa fa-exclamation-triangle fa-2x flex-label"></i>
+                        <strong>Warning!</strong>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <p>
+                                Color input widget support is currently not very good. There
+                                is no support in IE, and Safari currently doesn't support it
+                                either. The other major browsers do support it.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">
+                        <i class="fa fa-check fa-2x flex-label"></i>
+                        <strong>Success!</strong>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <p>
+                                Open the codepen in IE 10 & 11 to see the implemented
+                                solution.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex-container d-flex flex-column flex-md-row flex-wrap mt-4">
+                        <label for="color" class="flex-label">Color:</label>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <input type="color" name="color" id="color" class="flex-input form-control form-border"
+                                title="Please, provide your Favourite Color">
+                        </div>
+                    </div>
+                    <fieldset class="fieldset-slider container p-0 mt-3">
+                        <!-- Range inputs are not supported in versions of Internet Explorer below 10. -->
+                        <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                            Sliders:
+                        </legend>
+                        <!-- Another way to pick a number is to use a slider. Visually speaking, sliders are less accurate than text fields, therefore they are used to pick a number whose exact value is not necessarily important. One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. You need to add this yourself with JavaScript, but this is relatively easy to do. -->
+                        <div class="slider-container flex-container d-flex flex-column flex-md-row flex-wrap">
+                            <div class="slider-inner form-group d-flex flex-row flex-wrap mt-4">
+                                <input id="sliderRed" type="range" min="0" max="255" value="0"
+                                    onchange="changeColor('slider')" class="form-border">
+                                <input id="sliderGreen" type="range" min="0" max="255" value="0"
+                                    onchange="changeColor('slider')" class="form-border">
+                                <input id="sliderBlue" type="range" min="0" max="255" value="0"
+                                    onchange="changeColor('slider')" class="form-border">
+                                <div id="sliderColorValueDiv" class="text-center d-flex font-bold">
+                                    #000000
+                                </div>
+                                <div id="sliderColorDiv"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset-spinbox p-0">
+                        <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                            Spinboxes:
+                        </legend>
+                        <!-- Number inputs are not supported in versions of Internet Explorer below 10. -->
+                        <div class="spinbox-container flex-container d-flex flex-row flex-wrap">
+                            <div class="spinbox-inner form-group d-flex flex-row flex-wrap mt-4">
+                                <input id="spinboxRed" type="number" min="0" max="255" value="0"
+                                    onchange="changeColor('spinbox')" class="form-border">
+                                <input id="spinboxGreen" type="number" min="0" max="255" value="0"
+                                    onchange="changeColor('spinbox')" class="form-border">
+                                <input id="spinboxBlue" type="number" min="0" max="255" value="0"
+                                    onchange="changeColor('spinbox')" class="form-border">
+                                <div id="spinboxColorValueDiv" class="text-center d-flex font-bold">
+                                    #000000
+                                </div>
+                                <div id="spinboxColorDiv"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap mt-3">
+                    <label class="flex-label">Send us a Message:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-nowrap">
+                        <textarea name="user-message" class="form-control form-border"
+                            placeholder="Oh, hey, it's me, I am a blank multi-line text field and I resize: vertical; You can try to drag my right corner up and down"
+                            cols="30" rows="10"
+                            title="This is an optional textarea field for you messages to us"></textarea>
+                    </div>
+                </div>
+                <!--         <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+        <label for="user-availability" class="flex-label">or provide us with your Availability:</label>
+        <div class="form-group d-flex flex-column flex-md-row flex-nowrap">
+          <input type="date" name="user-availability" id="user-availability" class="flex-input form-control" min="2018-11-09" max="2018-12-31">
+        </div>
+        </div> -->
+                <fieldset class="container-fluid p-0">
+                    <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                        Date and time pickers:
+                    </legend>
+                    <div class="alert alert-warning">
+                        <i class="fa fa-exclamation-triangle fa-2x flex-label"></i>
+                        <strong>Warning!</strong>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <p>
+                                The date, datetime-local, time, month and week input widgets
+                                don't have the deepest support. At the moment, Chrome, Edge,
+                                Firefox, and Opera support them well, but there is no support
+                                in IE and Safari has patchy support. To check out how they
+                                behave - uncomment the 5 flex-container-s below.
+                            </p>
+                        </div>
+                    </div>
+                    <!--           <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+          <label for="user-date" class="flex-label">Date:</label>
+          <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+            <input type="date" name="user-date" id="user-date" class="flex-input form-control">
+          </div>
+          </div>
+          <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+          <label for="user-datetime-local" class="flex-label">DateTime-local:</label>
+          <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+            <input type="datetime-local" name="user-datetime-local" id="user-datetime-local" class="flex-input form-control">
+          </div>
+          </div>
+          <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+          <label for="user-time" class="flex-label">Time:</label>
+          <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+            <input type="time" name="user-time" id="user-time" class="flex-input form-control">
+          </div>
+          </div>
+          <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+          <label for="user-month" class="flex-label">Month:</label>
+          <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+            <input type="month" name="user-month" id="user-month" class="flex-input form-control">
+          </div>
+          </div>
+          <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+          <label for="user-week" class="flex-label">Week:</label>
+          <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+            <input type="week" name="user-week" id="user-week" class="flex-input form-control">
+          </div>
+          </div> -->
+                    <div class="alert alert-success">
+                        <i class="fa fa-check fa-2x flex-label"></i>
+                        <strong>Success!</strong>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <p>
+                                You can find below date and time input widgets examples and as
+                                well as full calendar widget suitable for mobile and desktop
+                                uses.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Datedropper -->
+                    <!-- Official site: https://felicegattuso.com/projects/datedropper/-->
+                    <!-- cdn: https://cdnjs.com/libraries/datedropper -->
+                    <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                        <label for="datedropper" class="flex-label">Datedropper:</label>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <input type="text" name="datedropper" id="datedropper"
+                                class="flex-input form-control form-border"
+                                title="This is an example of an Datedropper">
+                        </div>
+                    </div>
+                    <!-- Timedropper -->
+                    <!-- Official site: https://felicegattuso.com/projects/timedropper/ -->
+                    <!-- cdn: https://cdnjs.com/libraries/timedropper -->
+                    <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                        <label for="timedropper" class="flex-label">Timedropper:</label>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <input type="text" name="timedropper" id="timedropper"
+                                class="flex-input form-control form-border"
+                                title="This is an example of an Timedropper">
+                        </div>
+                    </div>
+                    <!-- Pignose Calendar -->
+                    <!-- documentation: https://www.pigno.se/barn/PIGNOSE-Calendar/ -->
+                    <!-- Codepen basic demo: https://codepen.io/PIGNOSE/pen/VzOpLo -->
+                    <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                        <label for="calendar" class="flex-label">Calendar:</label>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <input type="text" name="calendar" id="calendar" class="flex-input form-control form-border"
+                                title="This is an example of an Calendar">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="container-fluid p-0 input-files mt-5">
+                    <!-- The enctype attribute lets you specify the value of the Content-Type HTTP header included in the request generated when the form is submitted. This header is very important because it tells the server what kind of data is being sent. By default, its value is application/x-www-form-urlencoded. 
+          If you want to send files, you need to take three extra steps:
+          - Set the method attribute to POST because file content can't be put inside URL parameters.
+          - Set the value of enctype to multipart/form-data because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if text is also entered into the form).
+          - Include one or more File picker widgets to allow your users to select the file(s) that will be uploaded. -->
+                    <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                        Send us file(s):
+                    </legend>
+                    <!-- https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications -->
+                    <!-- Read more for File API: https://www.w3.org/TR/FileAPI/ -->
+                    <!-- Read more for Progress Events: https://www.w3.org/TR/progress-events -->
+                    <!-- The types of files that are accepted can be constrained using the accept attribute. In addition, if you want to let the user pick more than one file, you can do so by adding the multiple attribute. -->
+                    <!-- Warning: Many servers are configured with a size limit for files and HTTP requests in order to prevent abuse. It's important to check this limit with the server administrator before sending a file. -->
+                    <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                        <!-- implemented from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
+                        <label for="image-file" class="flex-label">Image(s):</label>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <input type="file" name="image-file" id="image-file" accept="image/*" multiple
+                                class="flex-input form-border" title="Please, provide an Image file">
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <p class="d-flex">No files currently selected for upload</p>
+                    </div>
+                    <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                        <label for="audio-file" class="flex-label">Audio(s):</label>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <input type="file" name="audio-file" id="audio-file" accept="audio/*" multiple
+                                class="flex-input form-border" title="Please, provide an Audio file">
+                        </div>
+                    </div>
+                    <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                        <label for="video-file" class="flex-label">Video(s):</label>
+                        <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                            <input type="file" name="video-file" id="video-file" accept="video/*" multiple
+                                class="flex-input form-border" title="Please, provide a Video file"><br>
+                            <input type="button" value="Upload File" onclick="uploadFile()"
+                                class="text-center video-btn legend-bg rounded font-bold mt-2">
+                        </div>
+                    </div>
+                    <!-- A progress bar represents a value that changes over time up to a maximum value specified by the max attribute. Such a bar is created using a <progress> element. This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.
+          The content inside the <progress> element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it. -->
+                    <progress id="progressBar" value="0" max="100"></progress>
+                    <h3 id="status">Progress:</h3>
+                    <p id="loaded_n_total"></p>
+                </fieldset>
+                <div class="flex-container d-flex flex-row flex-wrap">
+                    <!-- <button> elements let you use HTML content in their labels, which are inserted inside the opening and closing <button> tags. -->
+                    <div class="form-group d-flex flex-row flex-nowrap text-center">
+                        <button type="button" name="anonymous-btn"
+                            class="anonymous-btn form-control text-center rounded font-bold legend-bg">
+                            <strong>Anonymous btn</strong>
+                        </button>
+                        <!-- <input> elements on the other hand are empty elements; their labels are inserted inside value attributes, and therefore only accept plain text content. -->
+                        <input type="button" name="anonymous-btn" value="Anonymous"
+                            class="anonymous-btn form-control text-center rounded font-bold legend-bg">
+                    </div>
+                    <!-- Technically speaking, there is almost no difference between a button defined with the <button> element or the <input> element. The only noticeable difference is the label of the button itself. Within an <input> element, the label can only be character data, whereas in a <button> element, the label can be HTML, so it can be styled accordingly. -->
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <!-- The image button control is one which is displayed exactly like an <img> element, except that when the user clicks on it, it behaves like a submit button -->
+                    <!-- An image button is created using an <input> element with its type attribute set to the value image. This element supports exactly the same set of attributes as the <img> element, plus all the attributes supported by other form buttons. -->
+                    <label for="input-image" class="flex-label">Image button:</label>
+                    <!-- If the image button is used to submit the form, this widget doesn't submit its value; instead the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate 0, 0). 
+          The coordinates are sent as two key/value pairs:
+          The X value key is the value of the name attribute followed by the string ".x".
+          The Y value key is the value of the name attribute followed by the string ".y".
+          
+          So for example when you click on the image of this widget, you are sent to a URL like the following: http://foo.com?pos.x=123&pos.y=456
+          This is a very convenient way to build a "hot map". -->
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <input type="image" name="input-image" id="input-image" class="flex-input form-border"
+                            src="https://placeimg.com/80/45/arch/sepia" alt="input-image" width="80" height="45">
+                    </div>
+                </div>
+                <div class="flex-container with-btns">
+                    <div class="button resetBtn">
+                        <button type="reset" name="resetBtn-5" class="reset rounded font-bold legend-bg" value="Reset">
+                            Reset
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                    <div class="button submitBtn">
+                        <button type="submit" name="submitBtn-5" class="btn-success rounded font-bold" value="Submit">
+                            Submit
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- inspired by https://github.com/TelerikAcademy/HTML/blob/master/Topics/04.%20HTML-Forms-and-Frames/demos/1.%20Form-input-fields.html -->
+        <form action="#" method="GET" name="academic form 1" class="rounded form-border mt-3">
+            <input name="subject" type="hidden" value="Academic form 1">
+            <fieldset>
+                <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                    Academic information Form
+                </legend>
+                <div class="student-degree flex-container d-flex flex-column flex-md-row flex-wrap container-fluid m-0">
+                    <label for="student-degree" class="flex-label">Degree:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <select name="student-degree" id="student-degree"
+                            class="flex-input form-control form-border m-0 p-0" required
+                            title="Please, provide your Student degree"
+                            data-value-missing="No chance! Fill it already.">
+                            <option value="" selected disabled hidden>--Select a Student Degree--</option>
+                            <option value="BA">Bachelor of Art</option>
+                            <option value="BP">Bachelor of Psychology</option>
+                            <option value="BS">Bachelor of Science</option>
+                            <option value="MBA">Master of Business Administration</option>
+                            <option value="MAP">Master of Applied Psychology</option>
+                            <option value="MCS">Master of Computer Science</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="student-id" class="flex-label">Student ID:</label>
+                    <div class="form-group d-flex flex-row flex-wrap">
+                        <input type="text" name="student-id" id="student-id" class="flex-input form-control form-border"
+                            placeholder="987654321" minlength="9" maxlength="9" pattern="^([0-9]{9})$" required
+                            title="Please, provide your Student ID" data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div
+                    class="classes-attended flex-container d-flex flex-column flex-md-row flex-wrap container-fluid m-0">
+                    <label for="student-classes" class="flex-label">Class(es) attended:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <select name="student-classes" id="student-classes"
+                            class="flex-input form-control form-border m-0 p-0" multiple size="6"
+                            title="Please, provide your Attended Classes"
+                            data-value-missing="No chance! Fill it already.">
+                            <option value="" selected disabled>--Select Attended Classes--</option>
+                            <optgroup label="languages">
+                                <option value="eng">English</option>
+                                <option value="ger">German</option>
+                                <option value="nl">Netherlands</option>
+                                <option value="fr">French</option>
+                                <option value="fl">Flemish</option>
+                                <option value="dn">Danish</option>
+                            </optgroup>
+                            <optgroup label="arts">
+                                <option value="solfeggio">Solfeggio</option>
+                                <option value="music">History of Music</option>
+                                <option value="art">History of Art</option>
+                                <option value="ethics">Ethics and Law</option>
+                                <option value="psychology">Psychology and Logic</option>
+                                <option value="drawing">Drawing and Color Sensing</option>
+                            </optgroup>
+                            <optgroup label="others">
+                                <option value="history">History and Civilization</option>
+                                <option value="physics">Physics and Astronomy</option>
+                                <option value="geo">Geography and Economics</option>
+                                <option value="math">Mathematics</option>
+                                <option value="informatics">Informatics</option>
+                                <option value="technology">Information Technology</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-container with-btns">
+                    <div class="button resetBtn">
+                        <button type="reset" name="resetBtn-6" class="reset rounded font-bold legend-bg" value="Reset">
+                            Reset
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                    <div class="button submitBtn">
+                        <button type="submit" name="submitBtn-6" class="btn-success rounded font-bold" value="Submit">
+                            Submit
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form -->
+        <form action="#" method="POST" id="payment-form-1" name="payment form 1" class="rounded form-border mt-3">
+            <input name="subject" type="hidden" value="Payment Form 1">
+            <fieldset class="container-fluid m-0 p-0">
+                <legend class="text-center font-bold rounded legend-border legend-bg legend-padding">
+                    Payment Form 1
+                </legend>
+                <img class="img-fluid mt-3 p-0"
+                    src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/355ab406-b6ff-40c1-a4e6-31a50a77fbef/preview.gif"
+                    alt="credit card icons">
+                <p class="mt-5 p-0">
+                    Thank you for choosing us!<br>Please, fill in the form to complete
+                    the purchase.<br>Required fields are followed by
+                    <strong><abbr title="required">*</abbr></strong>.
+                </p>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap mt-5">
+                    <label for="payment1-name" class="flex-label"><span>Name:</span><strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-column flex-nowrap">
+                        <input type="text" name="payment1-name" id="payment1-name"
+                            class="flex-input form-control form-border" placeholder="Name 
+Familyname" minlength="5" maxlength="25" pattern="[A-Za-z\s]+" autocomplete="off" required
+                            title="Please, provide your Name" data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-email" class="flex-label"><span>E-mail:</span><strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-column flex-nowrap">
+                        <input type="email" name="payment1-email" id="payment1-email"
+                            class="flex-input form-control form-border" placeholder="myemail@domain.com"
+                            pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}" autocomplete="off" required
+                            title="Please, provide your Email address" data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-tel" class="flex-label">Mobile:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel -->
+                        <input type="tel" name="payment1-tel" id="payment1-tel"
+                            class="flex-input form-control form-border" placeholder="+359-888-88-88-88"
+                            pattern="\+[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" autocomplete="off" required
+                            title="Please, provide your Mobile number" data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-promo-code" class="flex-label">Promo code:</label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel -->
+                        <input type="text" name="payment1-promo-code" id="payment1-promo-code"
+                            class="flex-input form-control form-border" placeholder="11111" minlength="5" maxlength="5"
+                            pattern="[0-9]{5}" title="Please, provide the five digit promo code" autocomplete="off"
+                            required data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-card-address-1" class="flex-label">Address 1:<strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <input type="text" name="payment1-card-address-1" id="payment1-card-address-1"
+                            class="flex-input form-control form-border" placeholder="My Billing Address 1"
+                            pattern="^[a-zA-Z0-9\s,.'-]{3,}$" autocomplete="off" required
+                            title="Please, provide your billing Address"
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-card-address-2" class="flex-label">Address 2:<br><span
+                            class="label-optional d-inline rounded text-center font-bold">Optional</span></label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <input type="text" name="payment1-card-address-2" id="payment1-card-address-2"
+                            class="flex-input form-control form-border" placeholder="My Billing Address 2"
+                            pattern="^[a-zA-Z0-9\s,.'-]{3,}$" autocomplete="off"
+                            title="Please, provide an optional billing Address">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-card_zip" class="flex-label"><span>Zip code:</span><strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-row flex-wrap">
+                        <!-- http://html5pattern.com/Postal_Codes -->
+                        <input type="text" name="payment1-card_zip" id="payment1-card_zip"
+                            class="flex-input form-control form-border" placeholder="111/11111" minlength="3"
+                            maxlength="5" pattern="[0-9]{3,5}" autocomplete="off" required
+                            title="Please, provide your three or five digit zip code"
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-country" class="flex-label">Country:<strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <input type="text" name="payment1-country" id="payment1-country"
+                            class="flex-input form-control form-border" placeholder="Country" pattern="[A-Za-z\s]+"
+                            autocomplete="off" required title="Please, provide the name of your Country"
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-city" class="flex-label">City:<br><span
+                            class="label-optional d-inline rounded text-center font-bold">Optional</span></label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <input type="text" name="payment1-city" id="payment1-city"
+                            class="flex-input form-control form-border" placeholder="City" pattern="[A-Za-z\s]+"
+                            autocomplete="off" title="Please, provide the name of your City">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-card-type" class="flex-label"><span>Card type:</span><strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <select name="payment1-card-type" id="payment1-card-type"
+                            class="flex-input form-control form-border m-0 p-0"
+                            title="Please, provide your Credit card type" required
+                            data-value-missing="No chance! Fill it already.">
+                            <option value="" selected disabled hidden>--Select type of Credit card--</option>
+                            <option value="visa">Visa</option>
+                            <option value="mc">Mastercard</option>
+                            <option value="amex">American Express</option>
+                            <option value="disc">Discover</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-cardnumber" class="flex-label"><span>Card number:</span><strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-column flex-md-row flex-wrap">
+                        <!-- https://www.regular-expressions.info/creditcard.html -->
+                        <!-- http://regexlib.com/REDetails.aspx?regexp_id=1288 -->
+                        <!-- Matches major credit cards including: MC (length 16, prefix 51-55), Visa (length 16, prefix 4), Amex (length 15, prefix 34 or 37), Diners/CarteBlanche (length 14, prefix must be 36, 38, or 300-305), Discover/Novus (length 16, prefix 6011), Enroute (length 15, prefix must be  2014 or 2149), and JCB (length 15, prefix must be 2131 or 1800). Does as much as I feel is possible using regex (doesn't do MOD 10). Javascript safe. All 16 digit formats accept optional hyphens (-) between each group of four digits.  -->
+                        <input type="text" name="payment1-cardnumber" id="payment1-cardnumber"
+                            class="flex-input form-control form-border"
+                            pattern="^3(?:[47]\d([ -]?)\d{4}(?:\1\d{4}){2}|0[0-5]\d{11}|[68]\d{12})$|^4(?:\d\d\d)?([ -]?)\d{4}(?:\2\d{4}){2}$|^6011([ -]?)\d{4}(?:\3\d{4}){2}$|^5[1-5]\d\d([ -]?)\d{4}(?:\4\d{4}){2}$|^2014\d{11}$|^2149\d{11}$|^2131\d{11}$|^1800\d{11}$|^3\d{15}$"
+                            placeholder="1234-5678-1234-5678" required
+                            title="Please, provide your Credit card number. All 16 digit formats accept optional hyphens (-) between each group of four digits, but all other formats - don't"
+                            data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
+                    <label for="payment1-card-code" class="flex-label"><span>Security Code:</span><strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-row flex-wrap">
+                        <!-- http://regexlib.com/REDetails.aspx?regexp_id=908 -->
+                        <input type="text" name="payment1-card-code" id="payment1-card-code"
+                            class="flex-input form-control form-border" placeholder="11111" minlength="3" maxlength="5"
+                            pattern="^([0-9]{3,5})$" title="Please, provide your three or five digit security code"
+                            required data-value-missing="No chance! Fill it already.">
+                    </div>
+                </div>
+                <div class="card-expiration flex-container d-flex flex-row flex-wrap">
+                    <label class="flex-label"><span>Expiration:</span><strong><abbr
+                                title="required">*</abbr></strong></label>
+                    <div class="form-group d-flex flex-row flex-nowrap">
+                        <select class="half-width flex-input form-control form-border m-0 p-0"
+                            title="Please, provide the Month for your Credit card expiration date" required
+                            data-value-missing="No chance! Fill it already.">
+                            <option value="" selected disabled hidden>--Month--</option>
+                            <option value="1">1 - January</option>
+                            <option value="2">2 - February</option>
+                            <option value="3">3 - March</option>
+                            <option value="4">4 - April</option>
+                            <option value="5">5 - May</option>
+                            <option value="6">6 - June</option>
+                            <option value="7">7 - July</option>
+                            <option value="8">8 - August</option>
+                            <option value="9">9 - September</option>
+                            <option value="10">10 - October</option>
+                            <option value="11">11 - November</option>
+                            <option value="12">12 - December</option>
+                        </select>
+                        <select class="half-width flex-input form-control form-border m-0 p-0"
+                            title="Please, provide the Year for your Credit card expiration date" required
+                            data-value-missing="No chance! Fill it already.">
+                            <option value="" selected disabled hidden>--Year--</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-container with-btns">
+                    <div class="button resetBtn">
+                        <button type="reset" name="resetBtn-7" class="reset rounded font-bold legend-bg" value="Reset">
+                            Reset
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                    <div class="button submitBtn">
+                        <button type="submit" name="submitBtn-7" class="btn-success rounded font-bold" value="Submit">
+                            Pay now
+                        </button>
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <footer class="text-center font-bold mt-5">
+            <div>
+                <p class="d-inline-flex">
+                    <a href="https://www.w3.org/Icons/valid-html401-blue">
+                        <img src="https://www.w3.org/Icons/valid-html401-blue" alt="Valid HTML!">
+                    </a>
+                </p>
+                <p class="d-inline-flex">
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+                    </a>
+                </p>
+            </div>
+            <p>Original Version created by Ralitsa Voronevska located on <a
+                    href="https://codepen.io/ralitsavoronevska/pen/yRGjvQ">codepen.io</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
