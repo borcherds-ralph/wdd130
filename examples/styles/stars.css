@@ -1,0 +1,43 @@
+/*  FOr use with the stars.html file. */
+
+.star {
+  width: 16px;
+  height: 16px;
+  color: #000;
+}
+
+.checked {
+  width: 16px;
+  height: 16px;
+  filter: invert(8%) sepia(100%) saturate(7482%) hue-rotate(248deg)
+    brightness(103%) contrast(143%);
+}
+
+hr {
+  margin: 3em 0;
+  border: solid #000 5px;
+}
+.h-6 {
+  height: 2em;
+}
+
+.w-6 {
+  width: 2em;
+}
+
+.chevron:after {
+  content: url(https://cdn.glitch.global/efa88b55-5cfa-4f42-bedc-a98ff3aed733/chevron-right.svg?v=1647150591142);
+}
+.down:after {
+  content: url(https://cdn.glitch.global/efa88b55-5cfa-4f42-bedc-a98ff3aed733/chevron-down.svg?v=1647150814178);
+}
+
+
+
+.black-bg {
+  background-color: #000000;
+}
+
+.logo {
+  width: 600px;
+}

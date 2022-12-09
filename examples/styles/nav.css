@@ -1,0 +1,90 @@
+body {
+  background-color: #dedfdf;
+}
+
+img {
+  width: 75px;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  margin: 3em 0;
+}
+
+#content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  min-height: 80vh;
+}
+.nav1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  align-items: center;
+  justify-items: center;
+  background-color: #0a5e66;
+}
+.nav1 a {
+  padding: 1em;
+  font-size: 20px;
+  color: #f7f6f6;
+}
+nav1 a:hover {
+  background-color: #f7f6f6;
+  color: #0a5e66;
+}
+
+.nav2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  align-items: end;
+  justify-items: center;
+  background-color: #0a5e66;
+  min-height: 6em;
+}
+
+.nav2 a {
+  padding: 1em;
+  color: #fff;
+}
+.nav2 a:hover {
+  background-color: #f7f6f6;
+  color: #0a5e66;
+}
+
+.nav3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  align-items: start;
+  justify-items: center;
+  background-color: #0a5e66;
+  min-height: 6em;
+}
+
+.nav3 a {
+  padding: 1em;
+  color: #fff;
+}
+.nav3 a:hover {
+  background-color: #f7f6f6;
+  color: #0a5e66;
+}
+
+.nav4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  justify-items: center;
+  background-color: #0a5e66;
+  align-items: center;
+}
+
+.nav4 a {
+  padding: 1em;
+  color: #fff;
+  transition: all 1s ease-out;
+}
+.nav4 a:hover {
+  background-color: #f7f6f6;
+  color: #0a5e66;
+}

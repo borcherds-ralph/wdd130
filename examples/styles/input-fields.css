@@ -1,0 +1,849 @@
+/* global */
+/* css formula: responsive fonts using rems */
+html {
+    font-family: Raleway, sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 15px;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box !important;
+}
+
+header {
+    margin: 0 auto !important;
+    padding: 1.5em !important;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.rounded {
+    border-radius: 0.4em !important;
+}
+
+.form-border {
+    border: 1px solid #007bff;
+}
+
+.legend-border {
+    border: 1px solid #000080;
+}
+
+.legend-bg {
+    background-color: #007bff;
+}
+
+.legend-padding {
+    padding: 0.4em;
+}
+
+/* Recommended: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms */
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+input,
+textarea,
+select {
+    font: 1.5rem;
+    caret-color: #007bff;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    border-color: #000080 !important;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5rem;
+    resize: vertical;
+}
+
+/* Flex Styles */
+.flex-container {
+    width: 100% !important;
+    margin-top: 0.5em;
+}
+
+.form-group {
+    width: 100% !important;
+}
+
+/* Buttons styles */
+.flex-container.with-btns {
+    position: relative;
+    height: 2.5rem;
+}
+
+.button {
+    position: relative;
+    transition: background .3s linear;
+    overflow: hidden;
+}
+
+.resetBtn {
+    position: absolute;
+    left: 0%;
+}
+
+.submitBtn {
+    position: absolute;
+    right: 0%;
+}
+
+#remember-me-1,
+#remember-me-2 {
+    order: -1;
+    width: auto !important;
+}
+
+.btn-success {
+    font-size: 1em;
+}
+
+.toggler-txt {
+    height: 1.7em !important;
+    line-height: 1 !important;
+}
+
+.reset,
+.submit,
+.toggler-txt,
+.anonymous-btn {
+    border-color: #5999D4;
+    color: white;
+    opacity: 0.7;
+}
+
+.reset:hover,
+.submit:hover,
+.toggler-txt:hover,
+.anonymous-btn:hover {
+    opacity: 1;
+}
+
+.anonymous-btn {
+    font-size: 1em;
+    height: 2.5em;
+}
+
+/* Button shine effect */
+.shine {
+    position: absolute;
+    top: 0;
+    left: -70px;
+    height: 98px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    transition: all .3s linear;
+    transform: skewX(20deg) translateX(0);
+}
+
+.button:hover .shine {
+    transform: skewX(20deg) translateX(300px);
+}
+
+/* Forms */
+form {
+    margin: 0 auto !important;
+    padding: 1em !important;
+    padding-bottom: 0;
+}
+
+form:last-child {
+    margin-bottom: 1.5em;
+}
+
+fieldset:last-child {
+    margin-bottom: 0;
+}
+
+legend,
+.video-btn {
+    color: #fff !important;
+}
+
+/* Custom checkboxes and radio buttons */
+label.checkbox-label,
+label.radio-label {
+    display: block;
+    position: relative;
+    padding-left: 1.8em;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+    width: auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-label input[type="checkbox"],
+.radio-label input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    background-color: #eee;
+    border-radius: 0.2em;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-label:hover input~.checkmark,
+.radio-label:hover input~.checkmark-radio {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-label input:checked~.checkmark,
+.radio-label input:checked~.checkmark-radio {
+    background-color: #007bff !important;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after,
+.checkmark-radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-label input:checked~.checkmark:after,
+.radio-label input:checked~.checkmark-radio:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator for checkboxes */
+.checkbox-label .checkmark:after {
+    left: 0.9rem;
+    top: 0.5rem;
+    width: 0.5rem;
+    height: 1rem;
+    border: 1px solid #fff;
+    border-width: 0 0.3rem 0.3rem 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Create a custom radio button */
+.checkmark-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* Style the indicator (dot/circle) for radio buttons */
+.radio-label .checkmark-radio:after {
+    top: 0.6rem;
+    left: 0.6rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Login Form */
+/* containers styles for the input password */
+.form-group.container {
+    padding: 0 !important;
+}
+
+.form-group.container .flex-input {
+    flex: 1 1 90% !important;
+    max-width: 90% !important;
+}
+
+/* Login form with icons */
+/* Style of icons */
+.login-with-icons .flex-label {
+    flex: 1 1 20% !important;
+}
+
+.login-with-icons .flex-input {
+    flex: 1 1 80% !important;
+}
+
+.icon {
+    padding: 0.3em;
+    border-radius: .25rem;
+    color: white;
+    min-width: 3em;
+    line-height: 1;
+}
+
+.input-group-text {
+    border-radius: .3em;
+    font-size: 1em;
+}
+
+/* https://www.the-art-of-web.com/html/html5-form-validation/ */
+form.login-with-icons input:required:invalid,
+form.login-with-icons input:focus:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    box-shadow: none;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+form.login-with-icons input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+/* Web form 1 */
+/* Styles for Name input field - first input field */
+#display-name {
+    width: 95% !important;
+}
+
+#display-name:invalid+span:after {
+    content: '✖';
+    color: #f00;
+    padding-left: 0.5rem !important;
+}
+
+#display-name:valid+span:after {
+    content: '✓';
+    color: #26b72b;
+    padding-left: 0.5rem !important;
+}
+
+/* Personal Information Form 1 */
+/* age and gender containers styles */
+.age-and-gender.flex-container {
+    height: 5.5rem;
+    position: relative;
+}
+
+.form-group-half-width {
+    width: 50% !important;
+}
+
+.form-group-half-width:nth-child(1) label {
+    max-width: 20% !important;
+}
+
+.form-group-half-width:nth-child(1) input {
+    max-width: 35% !important;
+    margin-left: 1.5em;
+}
+
+.form-group-half-width:nth-child(2) {
+    position: absolute;
+    top: 0%;
+    left: 55%;
+}
+
+.form-group-half-width:nth-child(2) label {
+    max-width: 30% !important;
+}
+
+/* Please, tell us your favourite: Fruit => */
+span.fruitcount {
+    border: 2px solid #007bff;
+    padding: 0.4rem;
+}
+
+/* Custom Range CSS */
+/* inspired by https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+/* Generator: http://danielstern.ca/range.css/?ref=css-tricks#/ */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 0.13em;
+    padding: 0.8em;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #3071a9;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    cursor: pointer;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+}
+
+/* Personal Information Form 2 */
+.alert.alert-success p,
+.alert.alert-warning p {
+    width: 100% !important;
+}
+
+/* color input pollyfill styles */
+.sp-replacer.sp-light {
+    width: 100% !important;
+    display: flex !important;
+}
+
+.sp-preview {
+    width: calc(100% - 1em) !important;
+    position: relative;
+    margin-right: 0 !important;
+}
+
+.sp-dd {
+    padding: 3px 5px 3px 5px !important;
+}
+
+.ws-color.ws-inputreplace,
+.ws-popover-opener {
+    display: none !important;
+}
+
+/* number input pollyfill styles */
+.ws-number.ws-inputreplace {
+    padding-right: 0 !important;
+}
+
+.spinbox-container .input-buttons,
+.spinbox-container .step-controls,
+.spinbox-container .ws-popover-opener {
+    margin-top: 5px !important;
+}
+
+.input-buttons,
+.step-controls,
+.ws-popover-opener {
+    margin-top: 1.5px;
+}
+
+/* Sliders and Spinboxes styles */
+fieldset.fieldset-slider,
+fieldset.fieldset-spinbox {
+    width: 100%;
+    position: relative;
+}
+
+.fieldset-slider input[type=range] {
+    width: 70%;
+}
+
+.fieldset-spinbox input[type=number] {
+    margin: 0 0 0.1em 0.1em;
+    width: 100%;
+    width: 70%;
+}
+
+.slider-container,
+.spinbox-container {
+    height: 10em !important;
+}
+
+.slider-inner.form-group,
+.spinbox-inner.form-group {
+    height: 8em !important;
+    position: relative;
+}
+
+#sliderColorDiv,
+#spinboxColorDiv {
+    width: 27% !important;
+    position: absolute !important;
+    top: 2%;
+    left: 73%;
+    background-color: #000;
+}
+
+#sliderColorDiv,
+#spinboxColorDiv {
+    height: 7.75em !important;
+}
+
+#sliderColorValueDiv,
+#spinboxColorValueDiv {
+    position: absolute !important;
+    top: -15%;
+    left: 73%;
+}
+
+#spinboxRed,
+#spinboxGreen,
+#spinboxBlue {
+    width: 70%;
+    margin-bottom: 0.2em !important;
+    height: 2.5em !important;
+}
+
+/* Anonymous buttons */
+button.anonymous-btn,
+input[type="button"] {
+    width: 50% !important;
+    opacity: 0.7;
+}
+
+/* Input type file for uploading images */
+#image-file {
+    opacity: 1 !important;
+}
+
+form ol {
+    padding-left: 0;
+}
+
+form li,
+fieldset.input-files div>p {
+    background: #eee;
+    margin-bottom: 10px;
+    list-style-type: none;
+    border: 1px solid black;
+}
+
+form img {
+    height: 65px;
+}
+
+form p {
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+#input-image,
+#progressBar {
+    width: 100%;
+}
+
+/* Academic information Form */
+.student-degree,
+.classes-attended {
+    padding-top: 1px !important;
+    padding-left: 0 !important;
+    padding-right: 1px !important;
+}
+
+/* Payment Form 1 */
+.img-fluid {
+    padding-right: 3px !important;
+}
+
+abbr[title] {
+    text-decoration: none !important;
+    color: red;
+}
+
+span.label-optional {
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    line-height: 1;
+    color: #fff;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #007bff;
+}
+
+.card-expiration {
+    position: relative;
+}
+
+.card-expiration .half-width {
+    width: 50% !important;
+}
+
+#payment1-country-autocomplete-list {
+    font-family: 'Rock Salt', cursive !important;
+    font-size: 1.1em;
+    color: blue;
+}
+
+footer,
+header {
+    font-family: 'Rock Salt', cursive !important;
+    color: blue;
+}
+
+footer {
+    clear: both;
+}
+
+@media screen and (min-width: 400px) {
+
+    #sliderColorValueDiv,
+    #spinboxColorValueDiv {
+        left: 80%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .form-group-half-width {
+        flex-direction: row !important;
+    }
+
+    .form-group-half-width:nth-child(1) input {
+        max-width: 30% !important;
+        margin-left: 0.5em !important;
+    }
+
+    .form-group-half-width:nth-child(2) label {
+        margin-left: 0.5em !important;
+    }
+
+    .form-group-half-width:nth-child(2) {
+        left: 46%;
+    }
+
+    .age-and-gender.flex-container {
+        height: 2.2em;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    form {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .flex-label {
+        flex: 1 1 20% !important;
+        line-height: 1.5em !important;
+    }
+
+    .form-group,
+    .flex-input,
+    #color {
+        display: flex;
+        flex: 1 1 80% !important;
+    }
+
+    form {
+        width: 600px !important;
+    }
+
+    .form-group-half-width:nth-child(1) {
+        margin-left: 20% !important;
+    }
+
+    .form-group-half-width:nth-child(1) label {
+        max-width: 15% !important;
+    }
+
+    .form-group-half-width:nth-child(2) {
+        left: 62% !important;
+    }
+
+    .form-group-half-width:nth-child(2) label {
+        max-width: 20% !important;
+    }
+
+    .img-fluid {
+        width: 100% !important;
+        height: 350px !important;
+    }
+}
+
+/* Datedropper styles */
+@font-face {
+    font-family: "datedropper";
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/dd-icon/dd-icon.eot");
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/dd-icon/dd-icon.eot?#iefix") format("embedded-opentype"), url("https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/dd-icon/dd-icon.woff") format("woff"), url("https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/dd-icon/dd-icon.ttf") format("truetype"), url("https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/dd-icon/dd-icon.svg#datedropper") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Custom datedroppper styles */
+div.datedropper.my-style {
+    border-radius: 10px;
+    width: 200px;
+}
+
+div.datedropper.my-style .picker {
+    border-radius: 10px;
+    box-shadow: 0 0 35px 0px rgba(0, 0, 0, 0.55);
+}
+
+div.datedropper.my-style .pick-l {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#dd-w-0 .dd-n,
+#dd-w-0 .dd-sun {
+    color: #000080 !important;
+}
+
+#dd-w-0 .dd-w-c {
+    border: 1px solid #007bff !important;
+}
+
+#dd-w-0 .dd-c .dd-s,
+#dd-w-0 .dd-s-b-s,
+#dd-w-0 .dd-s-b-s:hover,
+#dd-w-0 .dd-s-b-sub-y,
+#dd-w-0 .dd-sub-y {
+    background-color: #007bff !important;
+    color: #FFFFFF;
+}
+
+#dd-w-0 .dd-sun,
+#dd-w-0 .dd-s-b-ul li.dd-on {
+    color: #007bff !important;
+}
+
+div.datedropper.my-style:before,
+div.datedropper.my-style .pick-submit,
+div.datedropper.my-style .pick-lg-b .pick-sl:before,
+div.datedropper.my-style .pick-m,
+div.datedropper.my-style .pick-lg-h,
+.dd-b.dd-m,
+#dd-w-0.dd-bottom .dd-c:after,
+.dd-s,
+.dd-s:hover {
+    background-color: #007bff !important;
+}
+
+div.datedropper.my-style .pick-y.pick-jump,
+div.datedropper.my-style .pick li span,
+div.datedropper.my-style .pick-lg-b .pick-wke,
+div.datedropper.my-style .pick-btn {
+    color: #007bff !important;
+}
+
+div.datedropper.my-style .picker,
+div.datedropper.my-style .pick-l {
+    background-color: #FFF;
+}
+
+div.datedropper.my-style .picker,
+div.datedropper.my-style .pick-arw,
+div.datedropper.my-style .pick-l {
+    color: #4D4D4D;
+}
+
+div.datedropper.my-style .pick-m,
+div.datedropper.my-style .pick-m .pick-arw,
+div.datedropper.my-style .pick-lg-h,
+div.datedropper.my-style .pick-lg-b .pick-sl,
+div.datedropper.my-style .pick-submit {
+    color: #FFF;
+}
+
+div.datedropper.my-style.picker-tiny:before,
+div.datedropper.my-style.picker-tiny .pick-m {
+    background-color: #FFF;
+}
+
+div.datedropper.my-style.picker-tiny .pick-m,
+div.datedropper.my-style.picker-tiny .pick-m .pick-arw {
+    color: #4D4D4D;
+}
+
+div.datedropper.my-style.picker-lkd .pick-submit {
+    background-color: #FFF;
+    color: #4D4D4D;
+}

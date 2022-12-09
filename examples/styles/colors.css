@@ -1,0 +1,13 @@
+:root {
+  --color: 353, 68%;
+  --l:42%; 
+  --color-primary: hsl(var(--color),var(--l));
+  --color-primary-lighter: hsl(var(--color),calc(var(--l) + 15%));
+  --color-primary-darker: hsl(var(--color),calc(var(--l) - 15%));
+}
+
+.darken {
+  color: var(--color-primary-darker);
+  background-color: var(--color-primary-lighter);
+  padding: 1em 2.5em;
+}
