@@ -551,6 +551,59 @@ p {
     border-color: #d8dade;
 }
 
+/* ========================
+   MAILCHIMP STYLE BUTTON
+   ======================= */
+.p-ctaPrimary {
+    --animation-depth: 2;
+    --cta-background-color: #ffe01b;
+    --cta-stroke-color: #241c15;
+    --cta-stroke-width: 0.0625rem;
+    --cta-depth-color: #241c15;
+    --cta-text-color: #241c15;
+    --cta-text-size: var(--copy-info-size);
+    --cta-line-height: 1.5;
+    --cta-text-weight: 500;
+    /* --cta-border-radius: 2em; */
+    /* --link-color: #241c15; */
+    /* --link-color-hovered: #241c15; */
+    /* --link-background-hovered: rgba(255, 224, 27, 0.65); */
+    /* --selection-background-color: rgba(255, 224, 27, 0.15); */
+    /* --spacing-1: 0.25rem; */
+    --spacing-2: 0.5rem;
+    /* --spacing-3: 1rem; */
+    /* --spacing-4: 1.5rem; */
+    /* --spacing-5: 2.5rem; */
+    /* --spacing-6: 4rem; */
+    /* --spacing-7: 5rem; */
+    /* --spacing-8: 6rem; */
+    cursor: pointer;
+    /* --horizontal-padding: 1.5rem; */
+    /* --vertical-padding: 0.75rem; */
+    text-align: center;
+    font-family: Graphik Web, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
+    color: var(--cta-text-color);
+    background-color: var(--cta-background-color);
+    font-size: var(--cta-text-size);
+    font-weight: var(--cta-text-weight);
+    line-height: var(--cta-line-height);
+    border-radius: 50%;
+    margin: 0 var(--spacing-2);
+    padding: .5em 1em;
+}
+
+.p-cta-background {
+    border: 1px #000 solid;
+}
+
+.p-ctaPrimary:hover {
+    --animation-depth: 5px;
+    bottom: calc(1*var(--animation-depth, .375em)*1.1);
+    box-shadow: 0 0 0 var(--cta-stroke-width, 0) var(--cta-stroke-color),
+        0 var(--animation-depth, .375em) 0 0 var(--cta-depth-color);
+}
+
+
 
 /* =====================
    3D BUTTON 1
