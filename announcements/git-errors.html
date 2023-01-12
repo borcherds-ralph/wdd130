@@ -526,6 +526,217 @@
                     <p>It is that simple.</p>
 
                 </details>
+                <details>
+                    <summary>Adding a description to your repository</summary>
+                    <p>One of the things you will see in a lot of repositories is a description of what the repository
+                        is all about, how to install and use the code, etc.</p>
+                    <p>This is all done using Markdown text. This will show you the details of how to use that so you
+                        can describe wheat you repository is all about.</p>
+                    <p>First you need to create a file in the top level folder called README.md. It must be capitalized
+                        for GuitHub to recognize it as the description file for the repository</p>
+                    <h4>Teh following information comes from the <a href="https://www.markdownguide.org/"
+                            target="_blank">Markdown
+                            Guide<a> website basic syntax page.</h4>
+                    <p>The basic syntax is as follows:</p>
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Markdown</th>
+                                <th>HTML</th>
+                                <th>Rendered Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code class="highlighter-rouge"># Heading level 1</code></td>
+                                <td><code class="highlighter-rouge">&lt;h1&gt;Heading level 1&lt;/h1&gt;</code></td>
+                                <td>
+                                    <h1 class="no-anchor" data-toc-skip="">Heading level 1</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="highlighter-rouge">## Heading level 2</code></td>
+                                <td><code class="highlighter-rouge">&lt;h2&gt;Heading level 2&lt;/h2&gt;</code></td>
+                                <td>
+                                    <h2 class="no-anchor" data-toc-skip="">Heading level 2</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="highlighter-rouge">### Heading level 3</code></td>
+                                <td><code class="highlighter-rouge">&lt;h3&gt;Heading level 3&lt;/h3&gt;</code></td>
+                                <td>
+                                    <h3 class="no-anchor" data-toc-skip="">Heading level 3</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="highlighter-rouge">#### Heading level 4</code></td>
+                                <td><code class="highlighter-rouge">&lt;h4&gt;Heading level  4&lt;/h4&gt;</code></td>
+                                <td>
+                                    <h4 class="no-anchor">Heading level 4</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="highlighter-rouge">##### Heading level 5</code></td>
+                                <td><code class="highlighter-rouge">&lt;h5&gt;Heading level 5&lt;/h5&gt;</code></td>
+                                <td>
+                                    <h5 class="no-anchor">Heading level 5</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="highlighter-rouge">###### Heading level 6</code></td>
+                                <td><code class="highlighter-rouge">&lt;h6&gt;Heading level 6&lt;/h6&gt;</code></td>
+                                <td>
+                                    <h6 class="no-anchor">Heading level 6</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="highlighter-rouge">This is regular paragraph text</code></td>
+                                <td><code
+                                        class="highlighter-rouge">&lt;p&gt;This is regular paragraph text&lt;/p&gt;</code>
+                                </td>
+                                <td>
+                                    <p class="no-anchor">This is regular paragraph text</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 id="heading-best-practices">Heading Best Practices</h3>
+
+                    <p>Markdown applications don’t agree on how to handle a missing space between the number signs
+                        (<code class="language-plaintext highlighter-rouge">#</code>) and the heading name. For
+                        compatibility, always put a
+                        space between the number signs and the heading name.</p>
+
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>✅&nbsp; Do this</th>
+                                <th>❌&nbsp; Don't do this</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code class="highlighter-rouge">
+                              # Here's a Heading<br /><br />
+                            </code>
+                                </td>
+                                <td>
+                                    <code class="highlighter-rouge">
+                              #Here's a Heading
+                            </code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>You should also put blank lines before and after a heading for compatibility.</p>
+
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>✅&nbsp; Do this</th>
+                                <th>❌&nbsp; Don't do this</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code class="highlighter-rouge">
+                            Try to put a blank line before...<br /><br />
+                    
+                            # Heading<br /><br />
+                    
+                            ...and after a heading.
+                            </code>
+                                </td>
+                                <td>
+                                    <code class="highlighter-rouge">
+                            Without blank lines, this might not look right.<br />
+                            # Heading<br />
+                            Don't do this!
+                            </code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Paragraphs</h2>
+
+                    <p>To create paragraphs, use a blank line to separate one or more lines of text.</p>
+
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Markdown</th>
+                                <th>HTML</th>
+                                <th>Rendered Output</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code class="highlighter-rouge">
+                              I really like using Markdown.<br /><br />
+                    
+                              I think I'll use it to format all of my documents from now on.
+                            </code>
+                                </td>
+                                <td>
+                                    <code class="highlighter-rouge">&lt;p&gt;I really like using Markdown.&lt;/p&gt;<br /><br />
+                    
+                            &lt;p&gt;I think I'll use it to format all of my documents from now on.&lt;/p&gt;</code>
+                                </td>
+                                <td>
+                                    <p>I really like using Markdown.</p>
+
+                                    <p>I think I'll use it to format all of my documents from now on.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="paragraph-best-practices">Paragraph Best Practices</h3>
+
+                    <p>Unless the <a href="https://www.markdownguide.org/basic-syntax/#paragraphs"
+                            target="_blank">paragraph is in a list</a>, don’t indent
+                        paragraphs with spaces or
+                        tabs.</p>
+
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i> <strong>Note:</strong> If you need to indent paragraphs in
+                        the output, see thesection on how to <a href="https://www.markdownguide.org/hacks/#indent-tab"
+                            target="_blank">indent (tab)</a>.
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>✅&nbsp; Do this</th>
+                                <th>❌&nbsp; Don't do this</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code class="highlighter-rouge">
+                              Don't put tabs or spaces in front of your paragraphs.<br /><br />
+                    
+                              Keep lines left-aligned like this.<br /><br />
+                            </code>
+                                </td>
+                                <td>
+                                    <code class="highlighter-rouge">
+                            &nbsp;&nbsp;&nbsp;&nbsp;This can result in unexpected
+                            formatting problems.<br /><br />
+                    
+                            &nbsp;&nbsp;Don't add tabs or spaces in front of paragraphs.
+                            </code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
             </section>
         </main>
         <footer>
