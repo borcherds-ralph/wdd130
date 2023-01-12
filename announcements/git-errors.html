@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Git - Github error messages</title>
+    <link rel="stylesheet" href="styles/git-errors.css">
+</head>
+
+<body>
+    <div class="content">
+
+
+        <main>
+            <h1> Git / GitHub / VSCode errors and Useful Suggestions</h1>
+            <section class="errors">
+                <details>
+                    <summary>Git: gpg: skipped &lt;email&gt;: No Secret Key</summary>
+                    <img src="images/git-gpg-no-key.png" alt="Git No GPG Error">
+                    <p>This has to do with how Git is configured with GPG signing process. This is an issue on Windows
+                        computers, as the GPG implementation is weird.</p>
+                    <p>There are a few potential ways to fix this issue. I would recommend turning off the signing with
+                        GPG.
+                    </p>
+                    <p>Here are the steps to disable this option</p>
+                    <p>Go to VSCode preferences - Settings</p>
+                    <img src="images/gpg-1.png" alt="GPG error steps 1">
+                    <p>Type this into the search bar at the top to find the setting: gpg commit</p>
+                    <img src="images/gpg-2.png" alt="GPG error step 2">
+                    <p>Make sure this option is not checked. This is the option that tells VSCode to use PGP while
+                        pushing to GitHub: Enables commit signing with GPG or X.509</p>
+                    <img src="images/gpg-3.png" alt="GPG error step 3">
+                    <p>Close out of the Settings tab.</p>
+
+                </details>
+                <details>
+                    <summary>Permission Error trying to Push to GitHub</summary>
+                    <p>This error occurs when you have GitHub setup on one account and you try to use another account
+                        and GitHub auto logs you into the old account with VSCode.</p>
+                    <p>You don&apos;t have permission to push to &lt;GitHub Account&gt; on GitHub. Would you like to
+                        create a fork and push it instead?</p>
+                    <img src="images/git-error-push-github.png" alt="Git Error no authorization">
+                    <p>This error is because VSCode was previously configured for another user account on GitHub. There
+                        are two solutions.</p>
+
+                    <p>Go to GitHub and log into the old account and click on the user profile picture in the top right
+                        of the web page. Select Settings
+                    </p>
+
+                    <p>On the left navigation menu, select Password and Authentication</p>
+                    <img src="images/github-password-auth-reset.png" alt="GitHub Password Authorization link">
+                    <p>Then click on the Authorized Oauth Apps tab</p>
+                    <img src="images/github-oath-apps.png" alt="GitHub AOuth Tab">
+                    <p>Find teh GitHub for VSCode line</p>
+                    <p>Click on the 3 dots to the left of GitHub for VSCode</p>
+                    <img src="images/github-oauth-link.png" alt="GitHub Oauth entry">
+                    <p>Click the Revoke option</p>
+                    <img src="images/github-revoke-oauth.png" alt="GitHub Revoke OAuth">
+                    <p>This will force VSCode to re-authenticate with GitHub.</p>
+
+
+                    <p>
+                        If this is not a possibility and you must have two GitHub accounts with VSCode You have to go
+                        through an elaborate setup with a few extensions and you use the Profile icon in the bar in
+                        VSCode to switch to the various profiles. This is problematic at times.
+                    </p>
+
+                    <p>
+                        This from StackOverflow has all the steps needed to setup multiple accounts. There are 3
+                        possibilities.
+                        <a href="https://stackoverflow.com/questions/62625513/i-have-2-github-accounts-how-can-i-use-both-when-i-am-working-in-vs-code"
+                            target="_blank">Click here to see the other options</a>
+                    </p>
+
+                    <p>
+                        There are other authentication methods, but they are much more complex to setup and require
+                        installation
+                        of additional
+                        software.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>GitHub Pages does not initialize</summary>
+                    <p>There is an issue where the GitHub pages do not initialize the first time. This means you must
+                        re-initialize a push to
+                        GitHub and then recreate the pages setup.</p>
+                    <ol>
+                        <li>
+                            <p>Go to the pages setup page and change the branch to NONE</p>
+                            <img src="images/github-pages-branch-name.png" alt="GitHub pages branch name">
+                            <p>Click Save</p>
+                        </li>
+                        <li>
+                            <p>Go to VSCode and push to GitHub</p>
+
+                            <p>Yu can do an empty push by typing the following commands in the command prompt</p>
+
+                            <pre class="code-style">
+                            git commit --allow-empty -m "Trigger rebuild"<br>
+                            git push
+                        </pre>
+                        </li>
+                        <li>
+                            <p>Go back to GitHub Pages and recreate the pages setup.</p>
+
+                            <p>Click on the Actions menu option</p>
+                            <img src="images/github-action-tab.png" alt="GitHub Actions Tab">
+
+                            <p>
+                                Watch the top entry until the icon to the left turns blue with a check mark. That means
+                                it is complete. The red circle with an X means that it failed.
+                            </p>
+                            <img src="images/github-actions-list.png" alt="Github Actions List">
+                            <p>You will notice that the process will take longer than 1 minute. This is due to some
+                                change GitHub has made on the server due to new features that are being added. Even
+                                publishing the push/sync from VSCode takes as long as 90 seconds (1 min 30 sec).</p>
+                            <p>If the user gets a failed again, check the spelling of the folders and file names. This
+                                process seems to fail if the user has spaces in the folder and filenames and sometime if
+                                there are underscores in
+                                these names.</p>
+                        </li>
+                    </ol>
+
+                </details>
+                <details>
+                    <summary>Make sure to configure your &apos;user.name&apos; and &apos;user.email&apos; in git
+                    </summary>
+                    <p>
+                        If the user gets this error, they missed that step in the configuration of Git. It is found in
+                        the installation steps of Git for Windows.
+                    </p>
+
+                    <img src="images/git-username-useremail.png" alt="Git Username Email error">
+
+                    <p> Open the terminal or command prompt. This can be the one inside VSCode</p>
+
+                    <p>Type each of these commands</p>
+
+                    <pre>
+                        git config &minus;global user.name &apos;github user name&apos;<br>
+                        git config &minus;global user.email &apos;email address used on github&apos;
+                    </pre>
+
+                    <p>Try to push to GitHub</p>
+
+                    <p>If you still have issues, then contact someone for help</p>
+                </details>
+                <details>
+                    <summary>VSCode push/sync to GitHub seems to hang and not do anything</summary>
+                    <p> There are a few reasons as to why this will occur. There are a couple of things to try.</p>
+
+                    <ol>
+                        <li>
+                            <p>Open a terminal/command window and try to push to GitHub using the command line</p>
+
+                            <pre>git push</pre>
+
+                            <p>You may get an error that says something like this (It will look different on the various
+                                OS&apos;s):</p>
+
+                            <pre>
+                                There is no tracking information for the current branch.<br>
+                                Please specify which branch you want to merge with.<br>
+                                See git-pull(1) for details<br><br>
+                                
+                                git push &lt;remote&gt;  &lt;branch&gt;<br><br>
+                            
+                            
+                                If you wish to set tracking information for this branch you can do so with:<br><br>
+                            
+                                git push --set-upstream origin master
+                            </pre>
+
+                            <p>If you get that error at the command line type in the command</p>
+
+                            <pre>git push &minus;set-upstream origin master</pre>
+
+
+                            <p>Then do a git push command</p>
+
+                            <p>You may be prompted to authenticate with GitHub again.</p>
+
+                            <p>
+                                Once the push/sync is complete, you will need to restart VSCode and the GitHub controls
+                                within VSCode should work again.
+                            </p>
+                            1.
+                        </li>
+
+                        <li>
+                            The other reasons why this process will hang are too numerous and hard to give instructions
+                            on how to overcome in this document. This will require more research with debug logs to see
+                            if there is a reason for the hang.
+                        </li>
+                    </ol>
+                </details>
+
+                <details>
+                    <summary>Windows Error message: App or process blocked: git.exe</summary>
+                    <p> User is trying to run git commands at the command prompt and Windows is displaying the following
+                        Windows System error</p>
+                    <img src="images/windows-unathorixed-change.jpg" alt="Windows Security Issue">
+
+                    <p>
+                        The instructions to fix this are specific to the version of Windows that is being run. Here are
+                        the basic steps:
+                        <a
+                            href="https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034">https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034</a>
+                    </p>
+                    <h3>Use controlled folder access</h3>
+                    <p>
+                        Controlled folder access in Windows Security reviews the apps that can make changes to files in
+                        protected folders and
+                        block unauthorized or unsafe apps from accessing or changing files in those folders.
+                    </p>
+                    <ol>
+                        <li>Select <span class="bolded">Start > Settings > Update & Security > Windows Security > Virus
+                                & threat protection.</span>
+                        </li>
+                        <li>Under <span class="bolded">Virus & threat protection</span> settings, select <span
+                                class="bolded">Manage settings</span>.</li>
+                        <li>Under <span class="bolded">Controlled folder access</span>, select <span
+                                class="bolded">Manage Controlled folder access</span>.</li>
+                        <li>Switch the <span class="bolded">Controlled folder access</span> setting to <span
+                                class="bolded">On</span> or <span class="bolded">Off</span>.</li>
+                    </ol>
+
+                    <p>
+                        There is an option to allow just one program to run in this Controlled Folder Access and you can
+                        select git.exe from the
+                        recently blocked programs.
+                    </p>
+
+
+                    <p> If you look at the Windows Notifications, you may see an error like this.</p>
+
+                    <img src="images/windows-unathorixed-change-2.jpg" alt="Windows Notification Controlled Access">
+
+                    <p>
+                        This is the same step as above for the same error. Microsoft has a few diverse ways to present
+                        this message. It will also be logged in to the System Logs.
+                    </p>
+
+                </details>
+
+                <details>
+                    <summary>git RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)</summary>
+                    <img src="images/git-rpc-failue-error.png" alt="Git RPC Failure Error">
+                    <P>This error has to do with the amount of data being sent to GitHub. On bad internet connections,
+                        you can only send enough
+                        data that GitHub will keep the connection open. Bad internet connections will drop with this
+                        error. There are other
+                        reasons this error can occur, but this is the only reason for this error with the data we use.
+                    </P>
+                </details>
+                <details>
+                    <summary>Git does not allow you to add a folder to the repo</summary>
+                    <p>If you type the git add &lt;foldername&gt; and get an error that looks like this</p>
+
+                    <pre>Git Error - 'main/' does not have a commit checked out</pre>
+
+                    <p>
+                        The issue is mot likely that the folder has been initialized as a git repository. Go into that
+                        folder and look for
+                        the hidden folder/directory called .git
+                    </p>
+
+                    <p>Remove the .git folder in the sub-directory</p>
+                </details>
+                <details>
+                    <summary>Error: Failed to push some refs to…</summary>
+                    <p>Updates were rejected because the tip of your current branch is behind its remote counterpart.
+                        Integrate the remote
+                        change (e.g. ‘git pull …’) before pushing again.</p>
+                    <img src="images/git-ref-tips-error.png" alt="Git Refs Tip Error">
+                    <p>
+                        The reason for this error is that the code on GitHub was edited and the user did not issue a git
+                        pull command before
+                        making any changes to their local machine before they started to edit on the local machine.
+                    </p>
+
+                    <p> To fix this error there are a few options.</p>
+
+                    <ol>
+                        <li>
+                            The first and usually the easiest for those new to Git/GitHub is to recreate the repository.
+                            You have to unpublish
+                            the site, delete the repository, delete the .git folder on the local and then push back to a
+                            Public Repository on
+                            GitHub.
+                        </li>
+
+                        <li>
+                            <p>
+                                The preferred way is to stash the changes, pull from the server, merge your stashed
+                                changes into the update from the
+                                server and then push back to the server.
+                            </p>
+                            <p>Run these commands:</p>
+                            <pre>
+                                git stash<br>
+                                git pull<br>
+                                git stash pop &lt;&minus; This will apply your saved changes<br>
+                                git commit -m “message”<br>
+                                git push<br>
+                                git stash clear &lt;&minus; This will remove the stashed files from memory. Stashed files stay until removed.<br>
+                            </pre>
+                        </li>
+
+                        <li>
+                            You can try and issue a &apos;git push -f&apos; command at the command line and see it will
+                            go through. This is still not a guarantee that it will push.
+                        </li>
+
+                        <li>
+                            <p>
+                                You can create a new branch and push to the new brach. You can then go to the fork and
+                                use the built in process on
+                                GitHub to validate the change in the fork and merge back to the master/main branch.
+                                (This is the way most companies do
+                                development)
+                            </p>
+
+                            <p>Create a new branch in VSCode</p>
+                            <img src="images/vscode-create-branch.png" alt="VSCode Create Branch">
+                            <p>Give the branch a new name</p>
+                            <img src="images/brach-new-name.png" alt="Branch New Name">
+                            <p>Commit and push the new branch</p>
+                            <img src="images/vscode-commit-sync.png" alt="VSCode Commit & Sync">
+                            <p> Open GitHub repository</p>
+                            <p>You should see a message like this</p>
+                            <img src="images/github-branch-push-merge.png" alt="Github message about pending merges">
+                            <p>Click the Compare & Pull Request button</p>
+                            <p>You will see a screen like this</p>
+                            <img src="images/brach-pull-request.png" alt="GutHub Branch Pull Request">
+                            <p>You can type a comment in box where it says Leave a Comment.</p>
+                            <p>Click the Create pull request button</p>
+                            <p>Hopefully you will see this message</p>
+                            <img src="images/branch-no-conflict.png" alt="GitHub merge no conflict">
+                            <p>
+                                If you see a message that state there is a conflict, you will have to fix the conflict
+                                using one of the options suggested.
+                            </p>
+
+                            <p>Once the conflict is resolved and you get this message, click the Merge pull Request
+                                button</p>
+
+                            <p> You will then be asked to confirm the merge</p>
+                            <img src="images/branch-confirm-merge.png" alt="GitHub confirm Merge message">
+                            <p>Click the Confirm Merge button</p>
+
+                            <p>
+                                Once the merge is successful you will see this message. Go ahead and delete the branch
+                                by clicking the Delete Branch
+                                button
+                            </p>
+                            <img src="images/branch-merge-successful.png" alt="Github Branch Merge successful">
+                            <p>If you do not delete the branch you will always push to this branch from VSCode by
+                                default now.</p>
+
+                            <p>Go back to VSCode</p>
+
+                            <p>change back to the master branch by using the Checkout To option</p>
+                            <img src="images/branch-check-out.png" alt="VSCode Branch Checkout">
+                            <p>Select the Main/Master branch. Go by the name and not the number.</p>
+                            <img src="images/branch-select-master.png" alt="VSCode Select Master Branch">
+                            <p>To remove the local branch open the command prompted</p>
+
+                            <p> Run this git command at the command prompt</p>
+                            <pre>git pull &minus;prune</pre>
+                            <p>You will see something like this if it works</p>
+                            <img src="images/branch-prune.png" alt="Git Prune Command">
+                            <pre>git branch &minus;d &lt;branch name&gt;</pre>
+                            <img src="images/branch-delete.png" alt="Git Branch Delete Command">
+                            <p>
+                                This screenshot shows what happens if you have not switched to the main/master branch
+                                first and the branch has not been
+                                fully merged. These entries are denoted with the red dot to the left of the command that
+                                was run.
+                            </p>
+                            <p>You must CHECKOUT the main/master branch first</p>
+                            <p>You can force the delete by using the -D option. Lowercase -d for the check and uppercase
+                                -D to force the delete.</p>
+
+                            <p>You should now only have the one branch on your local computer. This is the preferred
+                                option for most classes at school. YOu will have multiple branches if you are working as
+                                a group on a single project.</p>
+                        </li>
+
+                    </ol>
+                </details>
+            </section>
+            <section class="hints">
+                <h2>These are suggestions and hints</h2>
+                <details>
+                    <summary>User is prompted to configure formatter</summary>
+                    <p>User is prompted to configure formatter</p>
+                    <p>If the user installs the Prettier extension, which is not needed, the first time they go to
+                        format the code, they will
+                        be prompted to select a formatter for that type of file type (HTML or CSS). VSCode as a code
+                        formatter built into the
+                        editor that works well with HTML, CSS, JavaScript, and PHP.</p>
+                    <img src="images/formatters-configure.png" alt="Choose Formatter">
+                </details>
+                <details>
+                    <summary>Users with multiple coding projects/classes</summary>
+                    <p>
+                        It is recommended that if you are doing multiple coding projects at a time and each has its own
+                        folder/directory
+                        structure, you install an extension called Project Manager
+                    </p>
+                    <p>Go to extensions</p>
+                    <p>Search for Project Manager</p>
+                    <img src="images/project-manager-search.png" alt="Search Project Manager">
+                    <p>Click Install.</p>
+                    <p>Once installed open one project folder in VSCode</p>
+                    <p>Click on the Project Manager icon in the icons on the left or right of the editor</p>
+                    <img src="images/project-manager-icon.png" alt="Project Manager Icon">
+                    <p>You should see a blue button that states: Project Manager: Save Project - Click that button and
+                        you will be prompted for
+                        a name at the top center of the screen. The default name is the folder name.</p>
+                    <img src="images/project-manager-1st-save.png" alt="Project Manager 1st Save">
+                    <p>You will be prompted to give the project a name</p>
+                    <img src="images/project-mananger-naming.png" alt="Naming Project">
+                    <p>That will then add that project name to the Project Manager list of projects.</p>
+                    <p>Open the second project folder in its own workspace.</p>
+                    <p>Click the Save icon in the Project Manager folder icon area.</p>
+                    <img src="images/project-manager-save.png" alt="Project Manager Save">
+                    <p>Give your project a name and hit enter. This will add it to the list.</p>
+                    <img src="images/project-mananger-naming.png" alt="Naming Project">
+
+                    <p>
+                        If you click the edit icon, it will open the JSON file that lists your projects. The format is
+                        quite easy to follow. The
+                        rule is that each project must be enclosed with { } and must have a comma between the project
+                        section.
+                    </p>
+                    <ul>
+                        <li>Name is the name of the project</li>
+                        <li>Rootpath is the path to the project.</li>
+                        <li>Paths is not used at this time</li>
+                        <li>Tags is a way to categorize the type of project for sorting. This list is up to the person
+                        </li>
+                        <li>
+                            Enabled is if the project will display or not in the list of projects. This is a way to only
+                            show projects you are
+                            currently working on.
+                        </li>
+                    </ul>
+
+                    <p>This is the format of the JSON File</p>
+                    <pre>
+                        {<br>
+                        "name": "WDD-130",<br>
+                        "rootPath": "/var/www/html/school/wdd130",<br>
+                        "paths": [],<br>
+                        "tags": ["School", "WDD-130"],<br>
+                        "enabled": true<br>
+                        },
+                    </pre>
+
+
+
+                </details>
+                <details>
+                    <summary>Pushing to GitHub using fewer steps</summary>
+                    <p>When you are on the Git tab in VSCode, the button to Commit and Sync may state Commit only.
+                        If you click on the down arrow to the right of the button and select Commit & Sync</p>
+                    <img src="images/vscode-commit-sync.png" alt="commit & sync">
+                    <p>If this is the first time you are doing that you should see the following messages. On the first
+                        dialog, click the
+                        Always button</p>
+                    <img src="images/vscode-stage-commit-message.png" alt="Stage & commit">
+                    <p>On this next dialog if you get prompted, click the OK, Don&apos;t Show Again button</p>
+                    <img src="images/vscode-pull-push-always.png" alt="Always Pull Push to branch">
+                    <p>Sometimes these will prompt the second time you click on the Commit & Sync option.</p>
+                    <p>You can change your Commit button to Say Commit & Sync by doing the following</p>
+                    <ul>
+                        <li>Go to the VSCode Settings
+                            <img src="images/gpg-1.png" alt="VSCode settings">
+                        </li>
+                        <li>In the search bar search for Git: Post Commit Command
+                            <img src="images/vscode-settings-sync-search.png" alt="Search VSCode settings">
+                        </li>
+                        <li>Change the option on that command to be sync
+                            <img src="images/vscode-post-command-commit-sync.png" alt="sync & commit">
+                        </li>
+                    </ul>
+                    <p>This will make it possible for you to click the button once and commit and sync at the same time.
+                    </p>
+                </details>
+
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+</html>
