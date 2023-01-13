@@ -187,7 +187,7 @@
                                 Once the push/sync is complete, you will need to restart VSCode and the GitHub controls
                                 within VSCode should work again.
                             </p>
-                            1.
+
                         </li>
 
                         <li>
@@ -213,14 +213,14 @@
                     <h3>Use controlled folder access</h3>
                     <p>
                         Controlled folder access in Windows Security reviews the apps that can make changes to files in
-                        protected folders and
-                        block unauthorized or unsafe apps from accessing or changing files in those folders.
+                        protected folders and block unauthorized or unsafe apps from accessing or changing files in
+                        those folders.
                     </p>
                     <ol>
-                        <li>Select <span class="bolded">Start > Settings > Update & Security > Windows Security > Virus
-                                & threat protection.</span>
+                        <li>Select <span class="bolded">Start > Settings > Update &amp; Security > Windows Security >
+                                Virus &amp; threat protection.</span>
                         </li>
-                        <li>Under <span class="bolded">Virus & threat protection</span> settings, select <span
+                        <li>Under <span class="bolded">Virus &amp; threat protection</span> settings, select <span
                                 class="bolded">Manage settings</span>.</li>
                         <li>Under <span class="bolded">Controlled folder access</span>, select <span
                                 class="bolded">Manage Controlled folder access</span>.</li>
@@ -250,10 +250,9 @@
                     <summary>git RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)</summary>
                     <img src="images/git-rpc-failue-error.png" alt="Git RPC Failure Error">
                     <P>This error has to do with the amount of data being sent to GitHub. On bad internet connections,
-                        you can only send enough
-                        data that GitHub will keep the connection open. Bad internet connections will drop with this
-                        error. There are other
-                        reasons this error can occur, but this is the only reason for this error with the data we use.
+                        you can only send enough data that GitHub will keep the connection open. Bad internet
+                        connections will drop with this error. There are other reasons this error can occur, but this is
+                        the only reason for this error with the data we use.
                     </P>
                 </details>
 
@@ -265,8 +264,7 @@
 
                     <p>
                         The issue is mot likely that the folder has been initialized as a git repository. Go into that
-                        folder and look for
-                        the hidden folder/directory called .git
+                        folder and look for the hidden folder/directory called .git
                     </p>
 
                     <p>Remove the .git folder in the sub-directory</p>
@@ -275,8 +273,7 @@
                 <details>
                     <summary>Error: Failed to push some refs to…</summary>
                     <p>Updates were rejected because the tip of your current branch is behind its remote counterpart.
-                        Integrate the remote
-                        change (e.g. &apos;git pull …&apos;) before pushing again.</p>
+                        Integrate the remote change (e.g. &apos;git pull …&apos;) before pushing again.</p>
                     <img src="images/git-ref-tips-error.png" alt="Git Refs Tip Error">
                     <p>
                         The reason for this error is that the code on GitHub was edited and the user did not issue a git
@@ -289,17 +286,14 @@
                     <ol>
                         <li>
                             The first and usually the easiest for those new to Git/GitHub is to recreate the repository.
-                            You have to unpublish
-                            the site, delete the repository, delete the .git folder on the local and then push back to a
-                            Public Repository on
-                            GitHub.
+                            You have to unpublish the site, delete the repository, delete the .git folder on the local
+                            and then push back to a Public Repository on GitHub.
                         </li>
 
                         <li>
                             <p>
                                 The preferred way is to stash the changes, pull from the server, merge your stashed
-                                changes into the update from the
-                                server and then push back to the server.
+                                changes into the update from the server and then push back to the server.
                             </p>
                             <p>Run these commands:</p>
                             <pre>
@@ -331,11 +325,11 @@
                             <p>Give the branch a new name</p>
                             <img src="images/brach-new-name.png" alt="Branch New Name">
                             <p>Commit and push the new branch</p>
-                            <img src="images/vscode-commit-sync.png" alt="VSCode Commit & Sync">
+                            <img src="images/vscode-commit-sync.png" alt="VSCode Commit &amp; Sync">
                             <p> Open GitHub repository</p>
                             <p>You should see a message like this</p>
                             <img src="images/github-branch-push-merge.png" alt="Github message about pending merges">
-                            <p>Click the Compare & Pull Request button</p>
+                            <p>Click the Compare &amp; Pull Request button</p>
                             <p>You will see a screen like this</p>
                             <img src="images/brach-pull-request.png" alt="GutHub Branch Pull Request">
                             <p>You can type a comment in box where it says Leave a Comment.</p>
@@ -379,13 +373,13 @@
                             <img src="images/branch-delete.png" alt="Git Branch Delete Command">
                             <p>
                                 This screenshot shows what happens if you have not switched to the main/master branch
-                                first and the branch has not been
-                                fully merged. These entries are denoted with the red dot to the left of the command that
-                                was run.
+                                first and the branch has not been fully merged. These entries are denoted with the red
+                                dot to the left of the command that was run.
                             </p>
                             <p>You must CHECKOUT the main/master branch first</p>
-                            <p>You can force the delete by using the -D option. Lowercase -d for the check and uppercase
-                                -D to force the delete.</p>
+                            <p>You can force the delete by using the -D option. Lowercase &minus;d for the check and
+                                uppercase
+                                &minus;D to force the delete.</p>
 
                             <p>You should now only have the one branch on your local computer. This is the preferred
                                 option for most classes at school. YOu will have multiple branches if you are working as
@@ -422,10 +416,9 @@
                     <summary>User is prompted to configure formatter</summary>
                     <p>User is prompted to configure formatter</p>
                     <p>If the user installs the Prettier extension, which is not needed, the first time they go to
-                        format the code, they will
-                        be prompted to select a formatter for that type of file type (HTML or CSS). VSCode as a code
-                        formatter built into the
-                        editor that works well with HTML, CSS, JavaScript, and PHP.</p>
+                        format the code, they will be prompted to select a formatter for that type of file type (HTML or
+                        CSS). VSCode as a code formatter built into the editor that works well with HTML, CSS,
+                        JavaScript, and PHP.</p>
                     <img src="images/formatters-configure.png" alt="Choose Formatter">
                 </details>
 
@@ -433,8 +426,7 @@
                     <summary>Users with multiple coding projects/classes</summary>
                     <p>
                         It is recommended that if you are doing multiple coding projects at a time and each has its own
-                        folder/directory
-                        structure, you install an extension called Project Manager
+                        folder/directory structure, you install an extension called Project Manager
                     </p>
                     <p>Go to extensions</p>
                     <p>Search for Project Manager</p>
@@ -463,15 +455,16 @@
                         section.
                     </p>
                     <ul>
-                        <li>Name is the name of the project</li>
-                        <li>Rootpath is the path to the project.</li>
-                        <li>Paths is not used at this time</li>
-                        <li>Tags is a way to categorize the type of project for sorting. This list is up to the person
+                        <li><span class="bolded">Name</span> is the name of the project</li>
+                        <li><span class="bolded">Rootpath</span> is the path to the project.</li>
+                        <li><span class="bolded">Paths</span> is not used at this time</li>
+                        <li><span class="bolded">Tags</span> is a way to categorize the type of project for sorting.
+                            This list is up to the person
                         </li>
                         <li>
-                            Enabled is if the project will display or not in the list of projects. This is a way to only
-                            show projects you are
-                            currently working on.
+                            <span class="bolded">Enabled</span> is if the project will display or not in the list of
+                            projects. This is a way to only
+                            show projects you are currently working on.
                         </li>
                     </ul>
 
@@ -493,16 +486,15 @@
                 <details>
                     <summary>Pushing to GitHub using fewer steps</summary>
                     <p>When you are on the Git tab in VSCode, the button to Commit and Sync may state Commit only.
-                        If you click on the down arrow to the right of the button and select Commit & Sync</p>
-                    <img src="images/vscode-commit-sync.png" alt="commit & sync">
+                        If you click on the down arrow to the right of the button and select Commit &amp; Sync</p>
+                    <img src="images/vscode-commit-sync.png" alt="commit &amp; sync">
                     <p>If this is the first time you are doing that you should see the following messages. On the first
-                        dialog, click the
-                        Always button</p>
-                    <img src="images/vscode-stage-commit-message.png" alt="Stage & commit">
+                        dialog, click the Always button</p>
+                    <img src="images/vscode-stage-commit-message.png" alt="Stage &amp; commit">
                     <p>On this next dialog if you get prompted, click the OK, Don&apos;t Show Again button</p>
                     <img src="images/vscode-pull-push-always.png" alt="Always Pull Push to branch">
-                    <p>Sometimes these will prompt the second time you click on the Commit & Sync option.</p>
-                    <p>You can change your Commit button to Say Commit & Sync by doing the following</p>
+                    <p>Sometimes these will prompt the second time you click on the Commit &amp; Sync option.</p>
+                    <p>You can change your Commit button to Say Commit &amp; Sync by doing the following</p>
                     <ul>
                         <li>Go to the VSCode Settings
                             <img src="images/gpg-1.png" alt="VSCode settings">
@@ -511,7 +503,7 @@
                             <img src="images/vscode-settings-sync-search.png" alt="Search VSCode settings">
                         </li>
                         <li>Change the option on that command to be sync
-                            <img src="images/vscode-post-command-commit-sync.png" alt="sync & commit">
+                            <img src="images/vscode-post-command-commit-sync.png" alt="sync &amp; commit">
                         </li>
                     </ul>
                     <p>This will make it possible for you to click the button once and commit and sync at the same time.
@@ -525,7 +517,7 @@
                     <p>The default maximum length for a git commit message is 50 characters</p>
                     <p>There is a way to add more details to the commit so that you can see what you did in a lot more
                         detail without having to look at the code changes directly.</p>
-                    <p>In VSCode, do not type a message before you hit the commit/commit & sync button</p>
+                    <p>In VSCode, do not type a message before you hit the commit/commit &amp; sync button</p>
                     <p>By doing this you will get prompted with a screen in the code editor for the commit message like
                         this</p>
                     <img src="images/vscode-editor-commit.png" alt="VSCode commit text editor screen">
