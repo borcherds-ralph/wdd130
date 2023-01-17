@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important information about the way Instructions are written</title>
+</head>
+
+<body>
+    <p>It has come to my attention as I am looking at your CSS files to see if you are making all the correct changes, I
+        am
+        seeing a few things that need to be clarified.</p>
+    <p>&nbsp;</p>
+    <p><span style="font-size: 14pt; color: #34495e;"><strong>Fonts:&nbsp; If you are using Google Fonts, the @import
+                line must be the first line in your CSS file or the fonts do not work.</strong></span></p>
+    <p>&nbsp;</p>
+    <p>When the instructions have rules written like this:</p>
+    <p><span style="color: #b58900;"><kbd>.book, .join</kbd>&nbsp;</span></p>
+    <p>That means you write that as 1 rule like this in your CSS file.</p>
+    <pre>.book, .join {<br />  &nbsp; color: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#fff;<br />  &nbsp; background-color: #0443b3;<br />&nbsp; &nbsp; padding: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15px 30px;<br />&nbsp; &nbsp; margin: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 50px 0 0 0;<br />&nbsp; &nbsp; border-radius: &nbsp; &nbsp;5px;<br />}</pre>
+    <p>&nbsp;</p>
+    <p><span style="color: #b58900;"><kbd>.rivers-card, .camping-card, .rapids-card</kbd></span><span> &nbsp; margin:
+            200px
+            0;</span></p>
+    <p><span>The rule will look like this</span></p>
+    <pre><span>.rivers-card, .camping-card, .rapids-card {<br />&nbsp; &nbsp; margin: &nbsp; &nbsp; 200px 0;<br />&nbsp; &nbsp; text-align: center;<br />}</span></pre>
+    <p>&nbsp;</p>
+    <p><span style="font-size: 14pt;"><strong><span style="color: #0810a1;">Do not add any rules that are not specified
+                    in the instructions until after week 7</span></strong>. <span style="font-size: 12pt;">Week 7 you
+                will be doing the page layout using display: flex and display: grid. If you have any display: block,
+                display: inline, etc you must remove them as they will mess up the layout in week 7</span></span></p>
+    <p>&nbsp;</p>
+    <h3><span style="color: #0810a1;">Some of you are putting styling in the HTML file.</span></h3>
+    <p>in the HTML tag you do something like this.</p>
+    <pre>&lt;img src="images/image.jpg" <span style="color: #ff0000;">style="width: 300px;"</span>&gt;</pre>
+    <p>That is not allowed in this class and not allowed in almost all web development classes at BYU-Idaho. The school
+        is teaching HTML5 which means that all styling must be separated from the HTML. The HTML file loads the styling
+        from CSS files. There is no exception in this class to this rule. You will not get full points on the
+        assignments when I see that and I do let you remove the and resubmit.</p>
+    <p>&nbsp;</p>
+    <p><span style="color: #0810a1;"><strong><span style="font-size: 14pt;">You must read all the instructions to make
+                    sure you do not miss something</span>.</strong></span> A few of you that I have had zoom calls with
+        have realized how important it is to read all the instructions. They have realized that they did miss a lot of
+        little details that make a big difference in the web page. Common things that students miss in week 4 are
+        missing rules, spelling issues, difference between id/class names in the HTML vs the CSS files. Using the
+        incorrect selector (tag name, class name selector, id name selector).</p>
+    <p>&nbsp;</p>
+    <p><span style="font-size: 14pt; color: #0810a1;">The image below shows where some of the various HTML sections will
+            be in the final layout. </span>Your layout will match this, your colors and font will be your own. The
+        header area is my own and not what you will have.&nbsp; I have this image set to 1200px wide. The original image
+        is 2645px wide. If you cannot see this image please try a different browser. I use the webp image format which
+        is half the size of jpg images and it is still over 1mb in size.</p>
+    <p>This image is to help you decide where the colors you have chosen in your <strong>SITE PLAN</strong> and the the
+        fonts you are using will be displayed on your page. Some of you will need to change the background or the text
+        color so that you can see them on the page.</p>
+    <p>&nbsp;</p>
+    <p><img src="../images/homepage-layout.jpg" alt="Homepage layout with HTML tags" width="1200"></p>
+</body>
+
+</html>
