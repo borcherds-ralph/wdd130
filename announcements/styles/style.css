@@ -49,3 +49,11 @@ li p:first-of-type {
     font-size: 1.rem;
     font-weight: 700;
 }
+
+section {
+    border-top: 10px double #050642;
+}
+a {
+    padding: 1em 0;
+    display: block;
+}

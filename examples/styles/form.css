@@ -1,0 +1,80 @@
+/*  This rule is used on all 3 form examples */
+
+
+form {
+    max-width: 600px;
+    display: grid;
+}
+
+label {
+    grid-column: 1;
+    justify-self: right;
+}
+
+input {
+    grid-column: 2;
+}
+
+textarea {
+    grid-column: 2;
+}
+
+button {
+    width: 205px;
+    background-color: #3e3e3e;
+    color: #ffffff;
+    padding: 1em;
+    border-radius: 20px;
+    justify-self: center;
+}
+
+/* for use with the form.html file  */
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: none;
+    grid-gap: 1em;
+}
+
+.field1-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    grid-gap: 1em;
+}
+
+
+/*  These rules are for the second form example */
+.form2 fieldset {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
+    border: 3px #dedede solid;
+    border-radius: 25px;
+}
+
+.form2 legend {
+    margin: 0 2em;
+}
+
+
+
+
+/*  These rules are used on the third form example */
+.field3-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    grid-gap: 1em;
+}
+
+.field3area-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    grid-gap: 1em;
+}
+
+.field3-grid label {
+    justify-self: end;
+}

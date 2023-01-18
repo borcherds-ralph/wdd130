@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Form using List</title>
+     <link rel="stylesheet" href="style/form.css">
+</head>
+
+<body>
+     <form action="/contact-form" method="post">
+          <fieldset class="fielset-grid">
+               <div class="field1-grid">
+                    <label for="name">Fullname:</label>
+                    <input type="text" id="name" name="user_name" />
+               </div>
+
+               <div class="field1-grid">
+                    <label for="mail">E-mail adress:</label>
+                    <input type="email" id="mail" name="user_email" />
+               </div>
+
+               <div class="field1-grid">
+                    <label for="question">What is your question?</label>
+                    <textarea id="question" name="user_question" rows="5"></textarea>
+               </div>
+          </fieldset>
+          <button type="submit">Send your message</button>
+     </form>
+</body>
+
+</html>
