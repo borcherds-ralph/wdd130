@@ -15,83 +15,83 @@
     <p>The bolded items have to be unique names.</p>
     <p>The items in RED and Blue are used by the JavaScript code and that is below the HTML for both forms.</p>
     <p>&nbsp;</p>
-    <pre>&lt;div class="customer_form"&gt;<br /> 
-        &nbsp; &nbsp; &lt;div <strong>id="<span style="color: #fc0202;">feedback</span>"</strong>&gt;&lt;/div&gt;<br /> 
-        &nbsp; &nbsp; &lt;form action="#" method="post"&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="name"&gt;Name:&lt;/label&gt;<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="text" <strong>id="name" name="<span style="color: #fc0202;">user_name</span>"</strong>&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="mail"&gt;E-mail:&lt;/label&gt;<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="email" <strong>id="mail" name="user_email"</strong>&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="msg"&gt;Message:&lt;/label&gt;<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;textarea <strong>id="msg" name="user_message"</strong>&gt;&lt;/textarea&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type="submit"&gt;Send your message&lt;/button&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &lt;/form&gt;<br /> 
-        &lt;/div&gt;<br /> 
-        <br /> 
-        &lt;hr&gt;<br /> 
-        <br /> 
-        &lt;div class="delivery_form"&gt;<br /> 
-          &nbsp; &lt;div <strong>id="<span style="color: #0000ff;">feedback2</span>"</strong>&gt;&lt;/div&gt;<br /> 
-        &nbsp; &nbsp; &lt;form action="#" method="post"&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="name2"&gt;Name:&lt;/label&gt;<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="text" <strong>id="name2" name="<span style="color: #0000ff;">user_name2</span>"</strong>&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="mail2"&gt;E-mail:&lt;/label&gt;<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="email" <strong>id="mail2" name="user_email2"</strong>&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="msg2"&gt;Message:&lt;/label&gt;<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;textarea <strong>id="msg2" name="user_message2"</strong>&gt;&lt;/textarea&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type="submit"&gt;Send your message&lt;/button&gt;<br /> 
-        <br /> 
-        &nbsp; &nbsp; &lt;/form&gt;<br /> 
-        <br /> 
-        <br /> 
-        <br /> 
-        <br /> 
-        &nbsp; &nbsp; &lt;script&gt;<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; // This is for the Customer_Form<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; // get the feedback div element so we can do something with it.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; const feedbackElement = document.getElementById('<span style="color: #fc0202;">feedback</span>');<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; // get the form so we can read what was entered in it.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; <strong><span style="color: #050b77;">const formElement = document.forms[0];</span></strong><br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; // add a 'listener' to wait for a submission of our form. When that happens run the code below.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; formElement.addEventListener('submit', function (e) {<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // stop the form from doing the default action.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e.preventDefault();<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; feedbackElement.innerHTML = 'Hello ' + formElement.<span style="color: #fc0202;">user_name</span>.value + '! Thank you for your message. We will get back with you as soon as possible!';<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // make the feedback element visible.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; feedbackElement.style.display = "block";<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // add a class to move everything down so our message doesn't cover it.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.body.classList.toggle('moveDown');<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; });<br /> 
-        <br /> 
-        <br /> 
-        <br /> 
-        <br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; // This is for the Delivery Form<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; // get the feedback div element so we can do something with it.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const feedbackElement = document.getElementById('<span style="color: #0000ff;">feedback2</span>');<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // get the form so we can read what was entered in it.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong><span style="color: #050b77;">const formElement = document.forms[1];</span></strong><br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // add a 'listener' to wait for a submission of our form. When that happens run the code below.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; formElement.addEventListener('submit', function (e) {<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // stop the form from doing the default action.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e.preventDefault();<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; feedbackElement.innerHTML = 'Hello ' + formElement.<span style="color: #0000ff;">user_name2</span>.value + '! Thank you for your message. We will get back with you as soon as possible!';<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // make the feedback element visible.<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; feedbackElement.style.display = "block";<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // add a class to move everything down so our message doesn't cover it.<br /> 
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.body.classList.toggle('moveDown');<br /> 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br /> 
+    <pre>&lt;div class="customer_form"&gt;<br> 
+        &nbsp; &nbsp; &lt;div <strong>id="<span style="color: #fc0202;">feedback</span>"</strong>&gt;&lt;/div&gt;<br> 
+        &nbsp; &nbsp; &lt;form action="#" method="post"&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="name"&gt;Name:&lt;/label&gt;<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="text" <strong>id="name" name="<span style="color: #fc0202;">user_name</span>"</strong>&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="mail"&gt;E-mail:&lt;/label&gt;<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="email" <strong>id="mail" name="user_email"</strong>&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="msg"&gt;Message:&lt;/label&gt;<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;textarea <strong>id="msg" name="user_message"</strong>&gt;&lt;/textarea&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type="submit"&gt;Send your message&lt;/button&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &lt;/form&gt;<br> 
+        &lt;/div&gt;<br> 
+        <br> 
+        &lt;hr&gt;<br> 
+        <br> 
+        &lt;div class="delivery_form"&gt;<br> 
+          &nbsp; &lt;div <strong>id="<span style="color: #0000ff;">feedback2</span>"</strong>&gt;&lt;/div&gt;<br> 
+        &nbsp; &nbsp; &lt;form action="#" method="post"&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="name2"&gt;Name:&lt;/label&gt;<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="text" <strong>id="name2" name="<span style="color: #0000ff;">user_name2</span>"</strong>&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="mail2"&gt;E-mail:&lt;/label&gt;<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="email" <strong>id="mail2" name="user_email2"</strong>&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="msg2"&gt;Message:&lt;/label&gt;<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;textarea <strong>id="msg2" name="user_message2"</strong>&gt;&lt;/textarea&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type="submit"&gt;Send your message&lt;/button&gt;<br> 
+        <br> 
+        &nbsp; &nbsp; &lt;/form&gt;<br> 
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+        &nbsp; &nbsp; &lt;script&gt;<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; // This is for the Customer_Form<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; // get the feedback div element so we can do something with it.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; const feedbackElement = document.getElementById('<span style="color: #fc0202;">feedback</span>');<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; // get the form so we can read what was entered in it.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; <strong><span style="color: #050b77;">const formElement = document.forms[0];</span></strong><br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; // add a 'listener' to wait for a submission of our form. When that happens run the code below.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; formElement.addEventListener('submit', function (e) {<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // stop the form from doing the default action.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e.preventDefault();<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; feedbackElement.innerHTML = 'Hello ' + formElement.<span style="color: #fc0202;">user_name</span>.value + '! Thank you for your message. We will get back with you as soon as possible!';<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // make the feedback element visible.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; feedbackElement.style.display = "block";<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // add a class to move everything down so our message doesn't cover it.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.body.classList.toggle('moveDown');<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; });<br> 
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; // This is for the Delivery Form<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; // get the feedback div element so we can do something with it.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const feedbackElement = document.getElementById('<span style="color: #0000ff;">feedback2</span>');<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // get the form so we can read what was entered in it.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong><span style="color: #050b77;">const formElement = document.forms[1];</span></strong><br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // add a 'listener' to wait for a submission of our form. When that happens run the code below.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; formElement.addEventListener('submit', function (e) {<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // stop the form from doing the default action.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e.preventDefault();<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; feedbackElement.innerHTML = 'Hello ' + formElement.<span style="color: #0000ff;">user_name2</span>.value + '! Thank you for your message. We will get back with you as soon as possible!';<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // make the feedback element visible.<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; feedbackElement.style.display = "block";<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // add a class to move everything down so our message doesn't cover it.<br> 
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.body.classList.toggle('moveDown');<br> 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br> 
         &nbsp; &nbsp; &lt;/script&gt;</pre>
     <p>&nbsp;</p>
     <p>You could put each piece of JavaScript code within their own &lt;script&gt; tags or just leave them as in the example

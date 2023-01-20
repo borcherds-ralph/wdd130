@@ -1,107 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tends that must be address</title>
+   </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tends that must be address</title>
-</head>
-
-<body>
-    <h2>The things that I see that need to be fixed.</h2>
-    <p>&nbsp;</p>
-    <p>1.&nbsp; <strong>Everything must be in 1 GitHub Repository</strong> (repo). A few of you have create a few repo's
-        for the various parts of the site. Everything must be in one repository. The homepage for the repo was created
-        in the Week 2 GitHub setup instructions step 4 &amp; 6.</p>
-    <p>&nbsp;</p>
-    <p>2.&nbsp; <strong>Some of you are missing some of the details.</strong> I have mentioned the importance of details
-        in a previous announcement. The details some of you are missing is 2 fold. The first is you are not reading all
-        the instructions carefully. For example close to half of the students missed the last sentence of step 7 about
-        the year in the copyright notice. The other big detail that has been missed is the spelling of the folders and
-        file names to the images.</p>
-    <p>&nbsp;</p>
-    <p>3.&nbsp; <strong>Absolute vs relative URLs for the images</strong>. When you start a src= with a /, you are
-        telling the browser to look for the file starting at the homepage level of the site. If you do not start with
-        the /, then you are telling the browser to find the file based upon the current folder the of the file location.
-    </p>
-    <p>This is an absolute location:&nbsp;&nbsp;&nbsp; &lt;img class="logo" src="<strong>/wwr/images/logo.png</strong>"
-        alt="Dry Oar Logo"&gt;. This cannot find the file on GitHub but can on the local Live Server. To find this file
-        on GitHub the correct code is something like this: &lt;img class="logo" src="/wdd130/wwr/images/logo.png"
-        alt="Dry Oar Logo"&gt;. This will not work on your local live server for testing. This is why a relative URL is
-        best like this one: &lt;img class="logo" src="images/logo.png" alt="Dry Oar Logo"&gt;. As long as the images
-        folder is in the same folder as the index.html, the server can fint the file, no matter if it is on the local
-        machine or on the server.
-    </p>
-    <p>&nbsp;</p>
-    <p>4.&nbsp;<strong> Images</strong>. Quite a few of you have used images on the internet. If you are using one of
-        the free image sites, you must download the image and put it into your images folder. The reason for this is
-        that the image you are linking to has a watermark in it to show that it is copyrighted and thus illegal to use
-        this way. You have to create an account on that site, download a copy of the file and put it onto your own
-        server.</p>
-    <p>Do not use your own images if they are not about river running. The images must make sense for what the content
-        is about. You will get more instruction on this in Week 8 when you have to gather the images and write the
-        content for your personal site. Images will most likely have to be in your repo for your personal site, so I
-        recommend practicing now with them.</p>
-    <p>&nbsp;</p>
-    <p>5.&nbsp; <strong>Background colors:</strong>&nbsp; Quite a few of you are using white for the body background and
-        the a few other places. Take a loo at the discussion forum as I have an image that has been marked with the main
-        HTML tags as to where they will end up in week 7 when you do the layout. This week you will add a couple more
-        HTML tags and this image shows those tags and where they go.</p>
-    <p>Putting a background color on paragraphs and headers is OK as long as there is a reason for it. In this design,
-        there is no reason. Most of the time all the text in a section or div will have the same background color. The
-        issue with doing the background color on just a paragraph or heading tag is that unless you add padding, the
-        background color is just as tall as the text. Background colors tend to be much larger and you have multiple
-        tags withing the background color. The exception is buttons. Make sure you do not use white for button
-        background colors unless you have a reason. Buttons must stand out and call attention to them. I will have
-        examples of buttons in week 10.
-    </p>
-    <p>&nbsp;</p>
-    <p>6.&nbsp; <strong>Footer background color</strong>:&nbsp; The standard on the internet is to make the
-        &lt;footer&gt; background denote the end of the page. Make it a color that is not defined in your Site Plan.
-        #3e3e3e is a very popular shade for footer. I will give examples of footer in week 9/10 in the discussion forum
-        as that becomes a topic you have to address in your personal site.</p>
-    <p>&nbsp;</p>
-    <p>7.&nbsp; <strong>Inline Styling</strong>. This is the CSS code put into the HTML tags directly. <span
-            style="color: #0000ff;"><strong>DO NOT DO IT</strong></span>. This goes against the HTML5 standards of
-        separating the markup with the styling. All styling must go into the CSS file. No image width or height allowed
-        in the HTML.</p>
-    <p>Here is a common example with the bolded items that is not allowed:</p>
-    <p>&lt;img src="https://borcherds-ralph.github.io/wdd130.." alt="image description" <strong>width="600px"&nbsp; style="widht: 600px;"</strong>&gt;</p>
-    <p>&nbsp;</p>
-    <p>8.&nbsp; Personal Logos.&nbsp; When using a different logo than the ones presented in the class, make sure you
-        get rid of all the extra space around the logo.Here is an example. This is a logo one of the students in the
-        semester is using. This is the original logo.</p>
-    <p><img src="https://borcherds-ralph.github.io/wdd130/images/logo-example-0.png" alt="logo example"></p>
-    <p>&nbsp;</p>
-    <p>This is that same logo set to the width we will use in the class.</p>
-    <p>&nbsp;</p>
-    <p><img src="https://borcherds-ralph.github.io/wdd130/images/logo-example-0.png" alt="logo example" width="80"></p>
-    <p>&nbsp;</p>
-    <p>Now here is the same image with a background with all the white-space that I have colored for this example set to
-        80px wide which is what you will be using in this course.</p>
-    <p><img src="https://borcherds-ralph.github.io/wdd130/images/logo-example-1.png" alt="logo -2" width="80"></p>
-    <p>&nbsp;</p>
-    <p>Here is the logo again with the extra space removed</p>
-    <p><img src="https://borcherds-ralph.github.io/wdd130/images/logo-example-2.png" alt="logo-3" width="80"></p>
-    <p>&nbsp;</p>
-    <p>As you can see with the colored backgrounds, the one with all the extra space removed is a larger logo overall
-        and easier to read,&nbsp; Personally I would make this logo into an SVG file for use. If you know how to do that
-        go ahead and do it.&nbsp; Here is one of the Dry Oar logos I did as an SVG image.&nbsp;I put a dark background
-        and padding so you could see the image. Without the padding there is not extra space around the logo.</p>
-    <p>&nbsp;</p>
-    <p>This is full size.</p>
-    <p><img style="background-color: #3f3f3f; padding: 1em;" src="https://borcherds-ralph.github.io/wdd130/images/dry-oar-2.svg" alt="SVG Logo"></p>
-    <p>&nbsp;</p>
-    <p>This is at 80px. You will notice the readability is still there.</p>
-    <p><img style="background-color: #3f3f3f; padding: 1em;" src="https://borcherds-ralph.github.io/wdd130/images/dry-oar-2.svg" alt="SVG Logo" width="80">
-    </p>
-    <p>I used a free program called Inkscape (inkscape.org) to create the image. It is very similar to Adobe
-        Illustrator.
-    </p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>Let me know if you do not understand something or need more clarification</p>
-</body>
-
+   <body>
+      <h2>The things that I see that need to be fixed.</h2>
+      <p>&nbsp;</p>
+      <p>
+         1.&nbsp; <strong>Everything must be in 1 GitHub Repository</strong> (repo). A few of you have create a few
+         repo's for the various parts of the site. Everything must be in one repository. The homepage for the repo was
+         created in the Week 2 GitHub setup instructions step 4 &amp; 6.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+         2.&nbsp; <strong>Some of you are missing some of the details.</strong> I have mentioned the importance of
+         details in a previous announcement. The details some of you are missing is 2 fold. The first is you are not
+         reading all the instructions carefully. For example close to half of the students missed the last sentence of
+         step 7 about the year in the copyright notice. The other big detail that has been missed is the spelling of the
+         folders and file names to the images.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+         3.&nbsp; <strong>Absolute vs relative URLs for the images</strong>. When you start a src= with a /, you are
+         telling the browser to look for the file starting at the homepage level of the site. If you do not start with
+         the /, then you are telling the browser to find the file based upon the current folder the of the file
+         location.
+      </p>
+      <p>
+         This is an absolute location:&nbsp;&nbsp;&nbsp; &lt;img class="logo"
+         src="<strong>/wwr/images/logo.png</strong>" alt="Dry Oar Logo"&gt;. This cannot find the file on GitHub but can
+         on the local Live Server. To find this file on GitHub the correct code is something like this: &lt;img
+         class="logo" src="/wdd130/wwr/images/logo.png" alt="Dry Oar Logo"&gt;. This will not work on your local live
+         server for testing. This is why a relative URL is best like this one: &lt;img class="logo"
+         src="images/logo.png" alt="Dry Oar Logo"&gt;. As long as the images folder is in the same folder as the
+         index.html, the server can fint the file, no matter if it is on the local machine or on the server.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+         4.&nbsp;<strong> Images</strong>. Quite a few of you have used images on the internet. If you are using one of
+         the free image sites, you must download the image and put it into your images folder. The reason for this is
+         that the image you are linking to has a watermark in it to show that it is copyrighted and thus illegal to use
+         this way. You have to create an account on that site, download a copy of the file and put it onto your own
+         server.
+      </p>
+      <p>
+         Do not use your own images if they are not about river running. The images must make sense for what the content
+         is about. You will get more instruction on this in Week 8 when you have to gather the images and write the
+         content for your personal site. Images will most likely have to be in your repo for your personal site, so I
+         recommend practicing now with them.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+         5.&nbsp; <strong>Background colors:</strong>&nbsp; Quite a few of you are using white for the body background
+         and the a few other places. Take a loo at the discussion forum as I have an image that has been marked with the
+         main HTML tags as to where they will end up in week 7 when you do the layout. This week you will add a couple
+         more HTML tags and this image shows those tags and where they go.
+      </p>
+      <p>
+         Putting a background color on paragraphs and headers is OK as long as there is a reason for it. In this design,
+         there is no reason. Most of the time all the text in a section or div will have the same background color. The
+         issue with doing the background color on just a paragraph or heading tag is that unless you add padding, the
+         background color is just as tall as the text. Background colors tend to be much larger and you have multiple
+         tags withing the background color. The exception is buttons. Make sure you do not use white for button
+         background colors unless you have a reason. Buttons must stand out and call attention to them. I will have
+         examples of buttons in week 10.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+         6.&nbsp; <strong>Footer background color</strong>:&nbsp; The standard on the internet is to make the
+         &lt;footer&gt; background denote the end of the page. Make it a color that is not defined in your Site Plan.
+         #3e3e3e is a very popular shade for footer. I will give examples of footer in week 9/10 in the discussion forum
+         as that becomes a topic you have to address in your personal site.
+      </p>
+      <p>&nbsp;</p>
+      <p>
+         7.&nbsp; <strong>Inline Styling</strong>. This is the CSS code put into the HTML tags directly.
+         <span style="color: #0000ff;"><strong>DO NOT DO IT</strong></span
+         >. This goes against the HTML5 standards of separating the markup with the styling. All styling must go into
+         the CSS file. No image width or height allowed in the HTML.
+      </p>
+      <p>Here is a common example with the bolded items that is not allowed:</p>
+      <p>
+         &lt;img src="https://borcherds-ralph.github.io/wdd130.." alt="image description"
+         <strong>width="600px"&nbsp; style="widht: 600px;"</strong>&gt;
+      </p>
+      <p>&nbsp;</p>
+      <p>
+         8.&nbsp; Personal Logos.&nbsp; When using a different logo than the ones presented in the class, make sure you
+         get rid of all the extra space around the logo.Here is an example. This is a logo one of the students in the
+         semester is using. This is the original logo.
+      </p>
+      <p><img src="https://borcherds-ralph.github.io/wdd130/images/logo-example-0.png" alt="logo example"></p>
+      <p>&nbsp;</p>
+      <p>This is that same logo set to the width we will use in the class.</p>
+      <p>&nbsp;</p>
+      <p>
+         <img src="https://borcherds-ralph.github.io/wdd130/images/logo-example-0.png" alt="logo example" width="80">
+      </p>
+      <p>&nbsp;</p>
+      <p>
+         Now here is the same image with a background with all the white-space that I have colored for this example set
+         to 80px wide which is what you will be using in this course.
+      </p>
+      <p><img src="https://borcherds-ralph.github.io/wdd130/images/logo-example-1.png" alt="logo -2" width="80"></p>
+      <p>&nbsp;</p>
+      <p>Here is the logo again with the extra space removed</p>
+      <p><img src="https://borcherds-ralph.github.io/wdd130/images/logo-example-2.png" alt="logo-3" width="80"></p>
+      <p>&nbsp;</p>
+      <p>
+         As you can see with the colored backgrounds, the one with all the extra space removed is a larger logo overall
+         and easier to read,&nbsp; Personally I would make this logo into an SVG file for use. If you know how to do
+         that go ahead and do it.&nbsp; Here is one of the Dry Oar logos I did as an SVG image.&nbsp;I put a dark
+         background and padding so you could see the image. Without the padding there is not extra space around the
+         logo.
+      </p>
+      <p>&nbsp;</p>
+      <p>This is full size.</p>
+      <p>
+         <img
+            style="background-color: #3f3f3f; padding: 1em;"
+            src="https://borcherds-ralph.github.io/wdd130/images/dry-oar-2.svg"
+            alt="SVG Logo"
+        >
+      </p>
+      <p>&nbsp;</p>
+      <p>This is at 80px. You will notice the readability is still there.</p>
+      <p>
+         <img
+            style="background-color: #3f3f3f; padding: 1em;"
+            src="https://borcherds-ralph.github.io/wdd130/images/dry-oar-2.svg"
+            alt="SVG Logo"
+            width="80"
+        >
+      </p>
+      <p>
+         I used a free program called Inkscape (inkscape.org) to create the image. It is very similar to Adobe
+         Illustrator.
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>Let me know if you do not understand something or need more clarification</p>
+   </body>
 </html>
