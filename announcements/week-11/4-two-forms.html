@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two forms in one HTML page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two forms in one HTML page</title>
 </head>
+
 <body>
-    <p>This questions comes up every semester, I wait for the question before I post this announcement.</p>
-    <p>You want to have 2 form elements in the the same HTML document. This is possible with the JavaScript code given in
-        week 10. Once you understand what is required, you can do this with any JavaScript.</p>
-    <p>&nbsp;</p>
-    <p>Here is the code for the 2 forms</p>
-    <p>The bolded items have to be unique names.</p>
-    <p>The items in RED and Blue are used by the JavaScript code and that is below the HTML for both forms.</p>
-    <p>&nbsp;</p>
-    <pre>&lt;div class="customer_form"&gt;<br> 
+  <p> This questions comes up every semester, I wait for the question before I
+    post this announcement. </p>
+  <p> You want to have 2 form elements in the the same HTML document. This is
+    possible with the JavaScript code given in week 10. Once you understand what
+    is required, you can do this with any JavaScript. </p>
+  <p>&nbsp;</p>
+  <p>Here is the code for the 2 forms</p>
+  <p>The bolded items have to be unique names.</p>
+  <p> The items in RED and Blue are used by the JavaScript code and that is
+    below the HTML for both forms. </p>
+  <p>&nbsp;</p>
+  <pre>&lt;div class="customer_form"&gt;<br> 
         &nbsp; &nbsp; &lt;div <strong>id="<span style="color: #fc0202;">feedback</span>"</strong>&gt;&lt;/div&gt;<br> 
         &nbsp; &nbsp; &lt;form action="#" method="post"&gt;<br> 
         <br> 
@@ -93,14 +98,26 @@
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.body.classList.toggle('moveDown');<br> 
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });<br> 
         &nbsp; &nbsp; &lt;/script&gt;</pre>
-    <p>&nbsp;</p>
-    <p>You could put each piece of JavaScript code within their own &lt;script&gt; tags or just leave them as in the example
-        above.</p>
-    <p>&nbsp;</p>
-    <p>This line in the JavaScript tells the code which of the 2 forms to connect with.&nbsp; The [0] is the first
-        &lt;form&gt; tag. This is an array of forms. You could name the forms by using a name= in the &lt;form&gt; tag area.
-        That requires a little different JavaScript code.</p>
-    <p><strong><span style="color: #050b77;">const formElement = document.forms[0];</span></strong></p>
-    <p><strong><span style="color: #050b77;">const formElement = document.forms[1];</span></strong></p>
+  <p>&nbsp;</p>
+  <p> You could put each piece of JavaScript code within their own
+    &lt;script&gt; tags or just leave them as in the example above. </p>
+  <p>&nbsp;</p>
+  <p> This line in the JavaScript tells the code which of the 2 forms to connect
+    with.&nbsp; The [0] is the first &lt;form&gt; tag. This is an array of
+    forms. You could name the forms by using a name= in the &lt;form&gt; tag
+    area. That requires a little different JavaScript code. </p>
+  <p>
+    <strong>
+      <span style="color: #050b77;"> const formElement = document.forms[0];
+      </span>
+    </strong>
+  </p>
+  <p>
+    <strong>
+      <span style="color: #050b77;"> const formElement = document.forms[1];
+      </span>
+    </strong>
+  </p>
 </body>
+
 </html>
