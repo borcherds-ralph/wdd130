@@ -217,6 +217,22 @@
             to the System Logs. </p>
         </details>
         <details>
+          <summary>git RPC fail: curl 18 transfer closed with outstanding read data remaining</summary>
+          <img src="images/git-rpc-curl-18.jpg" alt="Git Error curl 18">
+          <p>A few reasons I have seen this curl 18 error: 
+            <ul>
+              <li>Too many files - This is usually related to #3</li>
+              <li>Anti-virus software</li>
+              <li>Number of files and sizes exceeds the buffer size for git. See this article: <a
+                href="https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining"
+                target="_blank">https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining<a></li>
+              <li>Speed of internet can also cause this issue.
+              <a href="https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/" target="_blank">https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/<a ></li>
+              <li>Running Homebrew on a MAC or Linux machine. There are known issues at times with this
+              error in Homebrew. Homebrew is not supported for students and they will have to find the answers on their own as Homebrew has its own command strcuture to work with Git & GitHub.</li>
+            </ul>
+        </details>
+        <details>
           <summary> git RPC failed; curl 92 HTTP/2 stream 0 was not closed
             cleanly: CANCEL (err 8) </summary>
           <img src="images/git-rpc-failue-error.png"
