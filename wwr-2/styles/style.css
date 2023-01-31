@@ -125,7 +125,7 @@ footer {
 }
 
 
-#logo_link {
+.logo_link {
     /* w05 step 4 */
     padding-top: 5px;
     /* w07 step 1 */
@@ -189,7 +189,7 @@ nav a:hover {
 */
 
 
-#hero {
+.hero {
     /* w07 step 2 */
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -197,7 +197,7 @@ nav a:hover {
     margin-top: -100px;
 }
 
-#hero-msg {
+.hero-msg {
     /* w07 step 3 */
     grid-column: 2/3;
     grid-row: 1/2;
@@ -331,7 +331,7 @@ nav a:hover {
 
 
 
-#background {
+.background {
     /* w04 step 11 */
     height: 725px;
     /* w04 step 12 */
@@ -395,7 +395,7 @@ nav a:hover {
 @media screen and (max-width: 900px) {
 
     /* w07 step 7 for all these rules */
-    #hero,
+    .hero,
     .home-grid {
         display: block;
         height: auto;
@@ -412,15 +412,15 @@ nav a:hover {
         padding: 15px;
     }
 
-    #hero {
+    .hero {
         margin-top: 0;
     }
 
-    #hero-msg {
+    .hero-msg {
         margin-top: 0;
     }
 
-    #hero-msg h4 {
+    .hero-msg h4 {
         display: none;
     }
 
@@ -436,7 +436,7 @@ nav a:hover {
         width: 60%;
     }
 
-    #background {
+    .background {
         display: none;
     }
 
@@ -475,26 +475,6 @@ Usage notes: Heading information can be used by user agents to construct a table
 Avoid using heading elements to resize text. Instead, use the CSS font-size property. 
 Avoid skipping heading levels: always start from <h1>, followed by <h2>and so on. 
 Use only one <h1>per page or view. It should concisely describe the overall purpose of the content.
-
-
-
-W08 Personal Site Plan Content
-Can we get step 4 to be worded better. A lot of the students are questioning how to do this.
-1.  Update the navigation area with the page names
-
-
-
-W08 Wireframes
-
-Here are the URL's to the export instructions for the 3 sites in the instructions
-
-https://wireframe.cc/docs/#-exporting
-
-
-https://gomockingbird.com/help/articles/24/how-do-i-export-my-project-pdf-or-images
-
-
-https://moqups.com/blog/revamped-pdf-and-png-exports/
 
 
 */
