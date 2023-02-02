@@ -47,10 +47,6 @@ li {
   line-height: 1.5em;
 }
 
-li p:first-of-type {
-  font-size: 1rem;
-  font-weight: 700;
-}
 
 main {
   background-color: #f3ffff;
@@ -68,4 +64,5 @@ pre {
   background-color: #050642;
   color: #fff;
   padding: 0.5em;
+  line-height: 1.5rem;
 }
