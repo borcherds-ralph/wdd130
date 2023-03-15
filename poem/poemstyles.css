@@ -1,5 +1,5 @@
 section {
-    width:  50%;
+    width: 50%;
     border: 1px solid;
 }
 
@@ -16,7 +16,7 @@ section {
 }
 
 .block1 p:nth-of-type(3) {
-    text-align: center;
+    text-align: right;
 }
 
 .block2 {
@@ -31,8 +31,12 @@ section {
     text-align: center;
 }
 
+.block2 p:nth-of-type(3) {
+    text-align: right;
+}
+
 .block3 p:nth-of-type(3) {
-    text-align: center;
+    text-align: right;
 }
 
 .block3 {
@@ -48,7 +52,7 @@ section {
 }
 
 .block3 p:nth-of-type(3) {
-    text-align: center;
+    text-align: right;
 }
 
 .block4 {
