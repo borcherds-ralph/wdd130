@@ -217,20 +217,28 @@
             to the System Logs. </p>
         </details>
         <details>
-          <summary>git RPC fail: curl 18 transfer closed with outstanding read data remaining</summary>
+          <summary>git RPC fail: curl 18 transfer closed with outstanding read
+            data remaining</summary>
           <img src="images/git-rpc-curl-18.jpg" alt="Git Error curl 18">
-          <p>A few reasons I have seen this curl 18 error: 
-            <ul>
-              <li>Too many files - This is usually related to #3</li>
-              <li>Anti-virus software</li>
-              <li>Number of files and sizes exceeds the buffer size for git. See this article: <a
+          <p>A few reasons I have seen this curl 18 error:
+          <ul>
+            <li>Too many files - This is usually related to #3</li>
+            <li>Anti-virus software</li>
+            <li>Number of files and sizes exceeds the buffer size for git. See
+              this article: <a
                 href="https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining"
-                target="_blank">https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining<a></li>
-              <li>Speed of internet can also cause this issue.
-              <a href="https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/" target="_blank">https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/<a ></li>
-              <li>Running Homebrew on a MAC or Linux machine. There are known issues at times with this
-              error in Homebrew. Homebrew is not supported for students and they will have to find the answers on their own as Homebrew has its own command strcuture to work with Git & GitHub.</li>
-            </ul>
+                target="_blank">https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining</a>
+            </li>
+            <li>Speed of internet can also cause this issue. <a
+                href="https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/"
+                target="_blank">https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/</a>
+            </li>
+            <li>Running Homebrew on a MAC or Linux machine. There are known
+              issues at times with this error in Homebrew. Homebrew is not
+              supported for students and they will have to find the answers on
+              their own as Homebrew has its own command strcuture to work with
+              Git & GitHub.</li>
+          </ul>
         </details>
         <details>
           <summary> git RPC failed; curl 92 HTTP/2 stream 0 was not closed
@@ -249,8 +257,7 @@
           </summary>
           <p> If you type the git add &lt;foldername&gt; and get an error that
             looks like this </p>
-          <pre>
-Git Error - &apos;main/&apos; does not have a commit checked out</pre>
+          <pre>Git Error - &apos;main/&apos; does not have a commit checked out</pre>
           <p> The issue is mot likely that the folder has been initialized as a
             git repository. Go into that folder and look for the hidden
             folder/directory called .git </p>
@@ -366,8 +373,8 @@ Git Error - &apos;main/&apos; does not have a commit checked out</pre>
           </ol>
         </details>
         <details>
-          <summary> USer is prompted git-credential-manager-core.exe could not
-            be started </summary>
+          <summary>User is prompted git-credential-manager-core.exe could not be
+            started</summary>
           <p>User gets this prompt every time they go to sync with GitHub</p>
           <img src="images/git-credential-manaager-net.png"
             alt="Grit Credential Manager .Net prompt">
@@ -386,10 +393,29 @@ Git Error - &apos;main/&apos; does not have a commit checked out</pre>
             can tell which version you have boy going to the About option in the
             Windows Settings. </p>
           <p> This post on Microsoft Support site shows you how to find which
-            version of Windows you are running. <a
-              href="https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808"
+            version of Windows you are running. 
+            <a href="https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808"
               target="_blank"> Find operating system info in Windows 10 </a>
           </p>
+        </details>
+        <details>
+          <summary>MacOS error: xcrun: error: invalid active developer path
+          </summary>
+          <h2>Error when running git --version on MAC</h2>
+          <p>When running the git --version on a Mac, you may encounter this
+            error:</p>
+          <p>xcrun: error: invalid active developer path
+            (/Library/Developer/CommandLineTools), missing xcrun at:
+            /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
+          <img src="images/macos-xcode-error.png" alt="MacOS error message">
+          <p>To fix this error you must run the following command in a terminal
+            window on the Mac.</p>
+          <pre>xcode-select --install</pre>
+          <p>The other way to install these tools is to goto the Apple Developer software page and install from there: 
+            <a href="https://developer.apple.com/download/more/" target="_blank">https://developer.apple.com/download/more/</a></p>
+          <p>Look for the: "Command Line Tools for Xcode" with the version number that matches your OS version number and does not contain the word 'BETA' as part of the filename. It will look something like this screenshot.</p>
+          <img src="images/macos-xcode-download.png" alt="MacOS Developer Download">
+          <p>Once the software has been installed make sure to restart the VSCode application by clicking on the menu and select QUIT, (<img src="images/mac-command.png" alt="command icon">-q)</p>
         </details>
       </section>
       <section class="hints">

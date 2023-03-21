@@ -7,6 +7,10 @@
   --trans-text-color: #04040c;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #006eb6;
   font-family: 'Open Sans', sans-serif;
@@ -24,6 +28,10 @@ h6 {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 .content {
