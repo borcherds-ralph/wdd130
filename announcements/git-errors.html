@@ -423,12 +423,14 @@
         <details>
           <summary>User is prompted to configure formatter</summary>
           <p>User is prompted to configure formatter</p>
-          <p> If the user installs the Prettier extension, which is not needed,
+          <p>If the user installs the Prettier extension, which is not needed,
             the first time they go to format the code, they will be prompted to
             select a formatter for that type of file type (HTML or CSS). VSCode
             as a code formatter built into the editor that works well with HTML,
             CSS, JavaScript, and PHP. </p>
           <img src="images/formatters-configure.png" alt="Choose Formatter">
+          <p>One of the issues with the Prettier formatter is that is closes null tags. What this means is that tags such as the img tag will be closed with /> at the end. This is XHTML syntax and not part of HTML5 standards.</p>
+          <p>Prettier is what is knows as an Opinionated Formatter. It is opinionated in that the creators of it are stating what they believe is the best way to format something even if it goes against the standards or not explicitily stated that this is the way it must be done. They do not give you the option to turn that off. VSCode setting does give you that option. </p>
         </details>
         <details>
           <summary>Users with multiple coding projects/classes</summary>
