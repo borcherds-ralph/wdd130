@@ -52,3 +52,16 @@ nav {
     display: flex;
     flex-direction: column;
 }
+.dropdown:hover svg {
+    transform: rotate(-90deg);
+}
+.w-6  {
+    width: 1em;
+    stroke-width: 3px;
+    padding: 0 3px;
+    margin: 4px 0;
+}
+
+.h-6 {
+    height: 1em;
+}
