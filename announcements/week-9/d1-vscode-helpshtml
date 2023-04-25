@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSCode Tips</title>
-    <link rel="stylesheet" href="../styles/canvas.css">
-</head>
-
-<body>
-    <h2>How to get the most out of VSCode</h2>
-    <!DOCTYPE html>
-    <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Use VSCode Like a Senior Developer</title>
+        <title>VSCode helps</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
 
     <body>
@@ -46,7 +34,7 @@
             <li>Move line up and down</li>
             <li>User Snippets</li>
         </ul>
-        <h2><mark>Multiple Cursors</mark></h2>
+        <h1>Multiple Cursors</h1>
         <p>We might want to type the same thing in different places at the same
             time. </p>
         <p>For example, in the following code, we want to add a
@@ -80,7 +68,7 @@
             <li>Windows: Alt+Click</li>
             <li>macOS: Option+Click</li>
         </ul>
-        <h2><mark>Rename Symbol</mark></h2>
+        <h1><mark>Rename Symbol</mark></h1>
         <p i>Let’s do an easy trick now.</p>
         <p i>When we write code or document, we may find a spelling error, or we
             may want to change the naming conventions, so we often need to
@@ -105,7 +93,7 @@
         <p i>This option appears when we select a text and right-click it. Or
             you can press the <code>F2</code> shortcut after you select the
             text.</p>
-        <h2><mark>Move lines up and down</mark></h2>
+        <h1>Move lines up and down</h1>
         <p i>Sometimes we want to move some code or text as a whole up or down.
             At this point, we can select the text and then:</p>
         <ul>
@@ -124,7 +112,7 @@
         </figure>
         <p i>These tips can help us quickly adjust the order of the contents.
         </p>
-        <h2>User Snippets</h2>
+        <h1>User Snippets</h1>
         <p i>When we write code, we always use a few pieces of code repeatedly.
         </p>
         <p i>For example, our HTML5 files always have the following basic
@@ -152,7 +140,7 @@
         </figure>
         <p i>Let’s begin by showing how to configure VSCode to achieve the above
             effect. </p>
-        <h3>Generate Configuration File</h3>
+        <h2>Generate Configuration File</h2>
         <p i>VSCode achieves the above effect by reading the configuration file,
             so we first need to generate a configuration file. We can generate a
             configuration file using the following path.</p>
@@ -224,7 +212,7 @@
                 </div>
             </div>
         </figure>
-        <h3>Set-Up</h3>
+        <h2>Set-Up</h2>
         <p i>The configuration file is written in JSON format, and here is a
             simple example.</p>
         <figure>
@@ -270,7 +258,7 @@
                 </div>
             </div>
         </figure>
-        <h3>Scope</h3>
+        <h2>Scope</h2>
         <p i>Well, our configuration did work. But we can still find an
             imperfect place. That is, html5 autocomplete is usually only used in
             HTML files, and when we write JavaScript files, we don’t need this
@@ -302,7 +290,7 @@
         </figure>
         <p i>Good. Now in a JavaScript file, this shortcut will automatically
             expire. </p>
-        <h3>Cursor</h3>
+        <h2>Cursor</h2>
         <p i>Now let’s re-test our auto-complete. Have you found any
             imperfections? </p>
         <figure>
@@ -341,7 +329,7 @@
                 </picture>
             </div>
         </figure>
-        <h3>Example</h3>
+        <h2>Example</h2>
         <p i>Ok, now let’s look at a new example to review what we’ve learned.
         </p>
         <p i>We hope that when we enter the string <code>fori</code> in
@@ -373,7 +361,7 @@
             when I had to type duplicate code, I copied and pasted it from
             another file, which was very troublesome. Now that we have it, we
             can write code quickly.</p>
-        <h2><mark>Quickly open files</mark></h2>
+        <h1>Quickly open files</h1>
         <p i>When we are in contact with a large unfamiliar project, how to
             quickly find the file we want in a large number of files?</p>
         <p i>For example, when I’m reading an unfamiliar open source project, I
@@ -409,7 +397,7 @@
                 </div>
             </div>
         </figure>
-        <h2><mark>Emmet</mark></h2>
+        <h1>Emmet</h1>
         <p i>Using Emmet can greatly increase the speed at which we coding. If
             you are interested in this topic, you can refer to another article
             of mine. </p>
@@ -434,8 +422,5 @@
         </div>
         </section>
     </body>
-
-    </html>
-</body>
 
 </html>
