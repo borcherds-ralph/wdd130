@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VSCode helps</title>
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="../styles/canvas.css">
     </head>
 
     <body>
@@ -27,7 +27,7 @@
             can greatly improve our programming efficiency. Here I will
             introduce some advanced tips for using VSCode, which I hope will
             help you.</p>
-        <p i>Here are the features I’m going to talk about:</p>
+        <p i>Here are the features I&lsquo;m going to talk about:</p>
         <ul>
             <li>Multiple Cursors</li>
             <li>Rename Symbol</li>
@@ -46,7 +46,7 @@
         <figure>
             <picture>
                 <img alt="vscode-add-example"
-                    src="https://miro.medium.com/v2/resize:fit:700/1*4pvlI2LtUzsQf3aWXt0Rcg.png">
+                    src="//borcherds-ralph.github.io/wdd130/announcements/images/multi-cursor.png">
             </picture>
         </figure>
         <p i>I used to type <code>class="old”</code> on one label and then
@@ -60,7 +60,7 @@
         <figure>
             <picture>
                 <img alt="vscode rename multiple"
-                    src="https://miro.medium.com/v2/resize:fit:577/1*mRmuHM9dkEyuzlYQXH4Ycw.gif">
+                    src="//borcherds-ralph.github.io/wdd130/announcements/images/multi-cursor.gif">
             </picture>
         </figure>
         <p i>Note:</p>
@@ -69,7 +69,7 @@
             <li>macOS: Option+Click</li>
         </ul>
         <h1><mark>Rename Symbol</mark></h1>
-        <p i>Let’s do an easy trick now.</p>
+        <p i>Let&lsquo;s do an easy trick now.</p>
         <p i>When we write code or document, we may find a spelling error, or we
             may want to change the naming conventions, so we often need to
             modify a word in batch.</p>
@@ -83,7 +83,7 @@
                         </li>
                     </ul>
                     <p i>At this point, we can access
-                        VSCode’s <code >Rename Symbol</code> function.</p>
+                        VSCode&lsquo;s <code >Rename Symbol</code> function.</p>
         <figure>
             <picture>
                 <img alt="vscode rename symbol gif"
@@ -127,7 +127,7 @@
             had to enter these snippets manually every time we needed to use
             them.</p>
         <p i>Fortunately, VSCode provides us with a custom auto-complete
-            feature. Here’s a demo:</p>
+            feature. Here&lsquo;s a demo:</p>
         <figure>
             <div>
                 <div>
@@ -138,7 +138,7 @@
                 </div>
             </div>
         </figure>
-        <p i>Let’s begin by showing how to configure VSCode to achieve the above
+        <p i>Let&lsquo;s begin by showing how to configure VSCode to achieve the above
             effect. </p>
         <h2>Generate Configuration File</h2>
         <p i>VSCode achieves the above effect by reading the configuration file,
@@ -172,12 +172,12 @@
         </figure>
         <p i>In this window, we can select the existing configuration file and
             modify it. Or we can also create a new configuration file. </p>
-        <p i>Here, we’ll just create a new configuration file.</p>
+        <p i>Here, we&lsquo;ll just create a new configuration file.</p>
         <p i>If you choose <code>New Global Snippets file</code> , a globally
             active configuration file is created. If you choose
             <code>New Snippets file for 'test'</code> , a local active
             configuration file is created.</p>
-        <p i>Here, we’ll just create a local active configuration file.</p>
+        <p i>Here, we&lsquo;ll just create a local active configuration file.</p>
         <p i>It then asks you to enter the name of the newly created file. </p>
         <figure>
             <div>
@@ -230,11 +230,11 @@
         &lt;title&gt;&lt;/title&gt;",<br> "&lt;/head&gt;",<br>
         "&lt;body&gt;",<br> "&lt;/body&gt;",<br> "&lt;/html&gt;"<br> ]<br>
         }<br>}</span></pre>
-        <p i>First, let’s look at the field <code>“html5 autocomplete”</code>.
+        <p i>First, let&lsquo;s look at the field <code>“html5 autocomplete”</code>.
             This field does nothing but tells the programmer what the
             configuration option is for, and you can write the field as you
             like.</p>
-        <p i>Then let’s look at the <code>“prefix”: “html5”</code> . This field
+        <p i>Then let&lsquo;s look at the <code>“prefix”: “html5”</code> . This field
             is the shortcut command we define. When we type the word
             <code>html5</code> in a file, VSCode will automatically complete the
             code for us.</p>
@@ -242,11 +242,11 @@
             this field is the code we need to complete. Because our code might
             have many lines, this field is represented as an array. Each element
             in the array represents one line of code. Translate the above array
-            into normal code, and that’s it. </p> >&lt;!DOCTYPE
+            into normal code, and that&lsquo;s it. </p> >&lt;!DOCTYPE
         html&gt;<br>&lt;html lang="en"&gt;<br>&lt;head&gt;<br>
         &lt;title&gt;&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</span>
         </pre>
-        <p i>Ok, now that we have the basic configuration, let’s test it out.
+        <p i>Ok, now that we have the basic configuration, let&lsquo;s test it out.
         </p>
         <figure>
             <div>
@@ -261,7 +261,7 @@
         <h2>Scope</h2>
         <p i>Well, our configuration did work. But we can still find an
             imperfect place. That is, html5 autocomplete is usually only used in
-            HTML files, and when we write JavaScript files, we don’t need this
+            HTML files, and when we write JavaScript files, we don&lsquo;t need this
             shortcut command. </p>
         <p i>Fortunately, we can specify the scope of this configuration in the
             configuration file.</p>
@@ -277,7 +277,7 @@
                 </div>
             </div>
         </figure>
-        <p i>So let’s test that out again.</p>
+        <p i>So let&lsquo;s test that out again.</p>
         <figure>
             <div>
                 <div>
@@ -291,7 +291,7 @@
         <p i>Good. Now in a JavaScript file, this shortcut will automatically
             expire. </p>
         <h2>Cursor</h2>
-        <p i>Now let’s re-test our auto-complete. Have you found any
+        <p i>Now let&lsquo;s re-test our auto-complete. Have you found any
             imperfections? </p>
         <figure>
             <div class="lh li asq">
@@ -330,7 +330,7 @@
             </div>
         </figure>
         <h2>Example</h2>
-        <p i>Ok, now let’s look at a new example to review what we’ve learned.
+        <p i>Ok, now let&lsquo;s look at a new example to review what we&lsquo;ve learned.
         </p>
         <p i>We hope that when we enter the string <code>fori</code> in
             JavaScript or TypeScript files, VSCode will automatically complete
@@ -338,7 +338,7 @@
         </pre>
         <p i>Also, the cursor should stay after <code>i &lt; </code>.</p>
         <p i>You can pause for a moment and think for yourself.</p>
-        <p i>Okay, I’m going to give you the answer.</p>
+        <p i>Okay, I&lsquo;m going to give you the answer.</p>
         <p i>We can write a configuration file like this:</p>>{<br> "for-i
         loop": {<br> "prefix": "fori",<br> "scope": "javascript,
         typescript",<br> "body": [<br> "for(let i = 0; i &lt; $0; i++){",<br>
@@ -355,8 +355,8 @@
                 </div>
             </div>
         </figure>
-        <p i>Okay, so that’s how User Snippets are used. I spend a lot of time
-            talking about this feature, because it’s one of my favorite
+        <p i>Okay, so that&lsquo;s how User Snippets are used. I spend a lot of time
+            talking about this feature, because it&lsquo;s one of my favorite
             features, and I think it will be useful for you too. In the past,
             when I had to type duplicate code, I copied and pasted it from
             another file, which was very troublesome. Now that we have it, we
@@ -364,7 +364,7 @@
         <h1>Quickly open files</h1>
         <p i>When we are in contact with a large unfamiliar project, how to
             quickly find the file we want in a large number of files?</p>
-        <p i>For example, when I’m reading an unfamiliar open source project, I
+        <p i>For example, when I&lsquo;m reading an unfamiliar open source project, I
             like to prioritize all files that contain the word <code>util</code>
             in the filename of the project.</p>
         <p i>In this case, we can use the file search tool of VSCode.</p>
