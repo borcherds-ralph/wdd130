@@ -5,3 +5,17 @@ challenge/
 announcements/week-14/1-css-extra-credit.html
 announcements/week-11/5-positioning-solutions.html
 challenge.zip
+
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsi
