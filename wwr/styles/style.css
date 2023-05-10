@@ -1,12 +1,12 @@
 @import url(normalize.css);
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&family=Roboto+Slab:wght@200;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lora&family=Roboto+Slab&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 :root {
-  background-color: #95e5e5;
+  background-color: #c1f7f7;
   margin: 0px;
   font-family: 'Roboto Slab', sans-serif, serif;
   box-sizing: border-box;
@@ -115,8 +115,8 @@ header {
 #logo_link {
   width: 330px;
   background-color: var(--heading-background);
-  border-radius: 50px;
-  height: 120px;
+  border-radius: 30%;
+  height: 150px;
   display: flex;
   justify-content: center;
   padding: 5px 0;
@@ -295,7 +295,7 @@ main {
 *
 *              Footer Area
 *
-********************************************************/
+*******************************************************/
 footer {
   color: var(--color-white);
   background-color: var(--footer-background);
@@ -304,20 +304,20 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
-footer h3,
+.copyright,
 footer a,
 footer a:hover {
   color: var(--color-white);
 }
 
-/**
+/*******************************************************
 *
 *    FAQ Styling
 *
-**/
+*******************************************************/
 
 .card {
   background: var(--color-white);
