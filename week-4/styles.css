@@ -1,5 +1,5 @@
 /* These are the rule names that we in Week 4 assignment.
-If the property is given in the example it is in this file 
+If the property is given in the example it is in this file
 Make sure not to duplicate the rule names in your CSS file. */
 
 /* Step 8 & 9 */
@@ -47,34 +47,30 @@ footer {}
 
 /* Step 13 */
 nav a:hover {
+    /* Merge with rule with same name from step 12  */
     background-color: black;
     color: #d9c2a3;
 }
 
-nav a {}
+nav a {}/* Merge with rule with same name from step 10  */
 
 .home-title {}
 
 h4 {}
 
 .book,
-.join {}
+.join {} /* Merge with rule with same name from step 12  */
 
 .book:hover,
-.join:hover {}
+.join:hover {} /* Merge with rule with same name from step 12  */
 
-.msg h2 {}
+.msg h2 {} /* Merge with rule with same name from step 12  */
 
 .msg p {}
 
 footer p {}
 
 footer a {}
-
-/* these next 2 are identical for the purposes of this class 
-You can use either one of these rules. Personally I like the first one 
-to keep in format with the rule right above this */
-footer a:hover {}
 
 footer p a:hover {}
 
@@ -88,15 +84,15 @@ footer p a:hover {}
 #hero-img {}
 
 /* Step 15 */
-nav a {
+nav a { /* Merge with rule with same name from step 10  */
     text-align: center;
     color: #fcfbfb;
     text-decoration: none;
 }
 
 .book,
-.join {}
+.join {}/* Merge with rule with same name from step 12  */
 
-footer a {}
+footer a {}/* Merge with rule with same name from step 13  */
 
-footer h3 a:hover {}
+footer p a:hover {}  /* Merge with rule with same name from step 13  */
