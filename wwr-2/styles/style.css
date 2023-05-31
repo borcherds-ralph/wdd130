@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato&display=swap');
 
 
-/* 
+/*
 *
 *           defaults -  These items are the same on all pages
 *
 */
 
-* {
+*,
+*::after,
+*::before {
     /* w05 step 6 - This adds this property to all elements in the CSS file. */
     box-sizing: border-box;
 }
@@ -16,10 +18,12 @@ body {
     /* w04 step 12 */
     background-color: #95e5e5;
     /* w05 step 1 */
-    font-family: Lato, Helvetica, sans-serif;
+    font-family: Lato, sans-serif;
     /* w05 step 3 */
     margin: 0;
     padding: 0;
+    /* This will force the default font-size to be used on page */
+    font-size: 22px;
 }
 
 h1,
@@ -30,7 +34,7 @@ h5,
 h6 {
     /* w05 step 1 Set this for all headings*/
     font-family: "IM Fell French Canon SC";
-    /* This is a new property */
+    /* This is a new property. This set the margins around all headings to be 16px by default unless the user has updated the default font size in the browser then it is that size and we have not control over that. */
     margin: 1rem;
 
 }
@@ -79,7 +83,7 @@ a {
 
 p {
     /* w05 step 2 */
-    font-size: .8em;
+    font-size: 1em;
 }
 
 header {
@@ -112,20 +116,20 @@ footer {
 
 
 
-/* 
+/*
 *
 *           Classes/ID's that are used on all pages - Default class/id rules
 *
 */
 
-#content {
+.content {
     /*  w04 step 8 & 9 */
     max-width: 1600px;
     margin: 0 auto;
 }
 
 
-.logo_link {
+.logo-link {
     /* w05 step 4 */
     padding-top: 5px;
     /* w07 step 1 */
@@ -139,8 +143,8 @@ footer {
 }
 
 
-nav a {
-    /* w04 step 10 This was nav a rule*/
+.nav-item {
+    /* w04 step 10 This was .nav-item rule*/
     text-align: center;
     /* w04 step 13 */
     color: #fff;
@@ -150,13 +154,14 @@ nav a {
     font-size: 1.2em;
 }
 
-nav a:hover {
+.nav-item:hover {
     /* w04 step 12 */
     background-color: #003030;
     /* w04 step 13 */
     color: #fff;
 }
 
+/* The footer-link rules are for he links in the footer  */
 .footer-link,
 .footer-link:hover {
     /* w04 step 13 */
@@ -168,21 +173,22 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* This rule sets the color of all the text including the links to the same color in the footer. */
 .footer-text {
     /* w04 step 15 */
-    font-size: 1.2em;
+    font-size: .8em;
     padding: 0;
     margin: 0;
 }
 
-.social img {
+.social-icon {
     /* w05 step 4 */
     padding-top: 15px;
 }
 
 
 
-/* 
+/*
 *
 *           Page classes and id's unique to the various pages.
 *
@@ -193,19 +199,22 @@ nav a:hover {
     /* w07 step 2 */
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
+
     /* w05 step 3 */
     margin-top: -100px;
+
+    /* These next 3 are new */
+    grid-template-rows: 110px auto;
+    justify-self: center;
+    text-align: center;
 }
 
 .hero-msg {
     /* w07 step 3 */
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: 100px;
-    /* These are new for the format */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 50px 0;
+
 }
 
 /* This was the #hero-box rule */
@@ -218,7 +227,6 @@ nav a:hover {
     /* w04 step 14  This was moved from the #hero-img rule */
     width: 100%;
 }
-
 
 
 .home-title {
@@ -237,7 +245,7 @@ nav a:hover {
 /* This rule can be removed with these changes */
 .button-box {
     /* w04 step 10 */
-    /* text-align: center; */
+    text-align: center;
 }
 
 
@@ -297,9 +305,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.rivers-card,
-.camping-card,
-.rapids-card {
+.card {
     /* w05 step 5 */
     margin: 200px 0;
 }
@@ -352,6 +358,8 @@ nav a:hover {
 .msg {
     /* w04 step 12 */
     background-color: #003030;
+    /* w04 step 13 */
+    color: #fff;
     /* w05 step 4 */
     padding: 30px;
     /* w07 step 4 */
@@ -361,34 +369,24 @@ nav a:hover {
     box-shadow: 5px 5px 10px #6f7364;
 }
 
-.msg-color {
-    /* w04 step 13 */
-    color: #fff;
+.msg-heading {
+    font-size: 1.75em;
+    font-weight: 900;
 }
 
-/* The two rules above can be written as one rule
-.msg and .msg-color rules as one rule.
-.msg {
-    background-color: #003030;
-    padding: 30px;
-    color: #fff;
-}
-
-*/
 .msg-text {
     /* w05 step 4 This was the msg p rule */
     padding-bottom: 15px;
+    /* w05 step 2 */
+    font-size: 1em;
+
 }
 
 
 
-
-
-
-
-/* 
+/*
 *
-*           900px max width media 
+*           900px max width media
 *
 */
 
@@ -437,6 +435,7 @@ nav a:hover {
     }
 
     .background {
+        /* This rule name was updated to match new class name */
         display: none;
     }
 
@@ -451,30 +450,3 @@ nav a:hover {
         margin-top: 25px;
     }
 }
-
-
-/*
-
-Here are some specification and best practices from the Mozilla Developer Network.
-
-
-https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-
-Note: As we learned in the lesson on specificity, an ID has high specificity. It will overrule most other selectors. In most cases, it is preferable to add a class to an element instead of an ID. However, if using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — this will work.
-
-
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
-
-Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 CSS pixels is recommended. This is a default of 1rem padding or 16px padding on all sides.
-
-
-
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
-
-Usage notes: Heading information can be used by user agents to construct a table of contents for a document automatically. 
-Avoid using heading elements to resize text. Instead, use the CSS font-size property. 
-Avoid skipping heading levels: always start from <h1>, followed by <h2>and so on. 
-Use only one <h1>per page or view. It should concisely describe the overall purpose of the content.
-
-
-*/
