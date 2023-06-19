@@ -106,7 +106,7 @@ h2 {
     justify-self: center;
     z-index: 3;
     display: flex;
-    flex-direction: revert;
+    flex-direction: row;
 }
 .dot {
     width: 25px;
