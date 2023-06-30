@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Moon+Dance&family=Playfair+Display:wght@400;700;800;900&family=Zeyada&display=swap');
+
+body {
+    background-color: #cecdcd;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4em 6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1e1e1e;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: #2e05a0;
+    letter-spacing: 1px;
+}
+
+.list-title,
+ol>li::marker {
+    margin: 10px;
+    font-family: "Dancing Script", cursive;
+    color: #e15a97;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.list-title:hover,
+ol>li::marker:hover {
+    font-weight: 900;
+    transform: scale(1.1);
+}
+
+
+.list-img::marker {
+    content: '\276F';
+}
+
+.list-img2::marker {
+    margin: 0;
+    background-image: url('../img/audio-304331.svg');
+    background-size: 2em;
+    background-repeat: no-repeat;
+    content: ' ';
+    background-position: left center
+}
