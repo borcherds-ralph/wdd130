@@ -1,0 +1,54 @@
+body {
+    font-family: Arial;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Style the tab */
+.tab-grid {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0em, 10em));
+}
+
+/* Style the buttons inside the tab */
+.tab-grid button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab-grid button:hover {
+    background-color: #eec262;
+    color: #2b2b2b;
+}
+
+
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    grid-column: 1/-1;
+}
+
+button.tablinks {
+    background-color: #8bcdf8;
+    border: solid #03385c 1px;
+}
+
+/* Create an active/current tablink class */
+.tablinks.active {
+    background-color: #03385c;
+    color: #cecece;
+}
