@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How to make your site Cell Phone Responsive</title>
+        <link rel="stylesheet" href="../styles/canvas.css">
+    </head>
+
+    <body>
+        <p>Making your site responsive is quite easy. You start it his way</p>
+            <p>&nbsp;</p>
+            <p>Step 1:&nbsp;create a rule that starts like this</p>
+            <pre>@media screen and (max-width: 900px) {<br /><br /><br />}</pre>
+            <p>&nbsp;</p>
+            <p>Step 2: Create the rule names that have display: grid or display:
+                flex in them and set the display to block like this example.</p>
+            <pre>@media screen and (max-width: 900px) {<br /><br /><br />    header, nav, main, footer {<br />        display: block;<br />    } <br /><br />}</pre>
+            <p>&nbsp;</p>
+            <p>Step 3.&nbsp; Start the developer tools in the browser and set
+                the page size to less than 900px as in this example</p>
+            <p>In Google Chrome this will be on the left side of the screen and
+                in FireFox it is on the right side.</p>
+            <p><img src="https://borcherds-ralph.github.io/wdd130/announcements/images/responsive-view-icon.png"
+                    alt="responsive icon" /></p>
+            <p>Make sure that the screen width is set to a number below what is
+                in the @media line</p>
+            <p><img src="https://borcherds-ralph.github.io/wdd130/announcements/images/responsive-screen-size.png"
+                    alt="responsive size" /></p>
+            <p>&nbsp;</p>
+            <p>Step 4: Use the developer tools to see what needs to be adjusted
+                and make the adjustments in the CSS file in VSCode. Add the
+                rules and properties to the @media section of the CSS file.</p>
+            <p>Step 5: Once the site looks good, save and push to GitHub and
+                retest. Make sure to validate the CSS.</p>
+    </body>
+
+</html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="HTML5 FlexBox Form Layout">
@@ -231,7 +231,7 @@
                 <div class="flex-container d-flex flex-column flex-md-row flex-wrap">
                     <!-- Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
           Specifically, disabled inputs do not receive the click event, and disabled inputs are not submitted with the form.
-                    
+
           Note: Although not required by the specification, Firefox will by default persist the dynamic disabled state of an <input> across page loads. Use the autocomplete attribute to control this feature. -->
                     <label for="disabled-ip" class="flex-label">Disabled:</label>
                     <div class="form-group d-flex flex-column flex-md-row flex-wrap">
@@ -259,13 +259,13 @@
         <!-- If you need to send a large amount of data, the POST method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept. -->
         <form action="#" method="POST" name="personal form 1" enctype="multipart/form-data"
             class="rounded form-border mt-3">
-            <!-- The enctype attribute lets you specify the value of the Content-Type HTTP header included in the request generated when the form is submitted. This header is very important because it tells the server what kind of data is being sent. By default, its value is application/x-www-form-urlencoded. 
+            <!-- The enctype attribute lets you specify the value of the Content-Type HTTP header included in the request generated when the form is submitted. This header is very important because it tells the server what kind of data is being sent. By default, its value is application/x-www-form-urlencoded.
       If you want to send files, you need to take three extra steps:
-      
+
       - Set the method attribute to POST because file content can't be put inside URL parameters.
-      
+
       - Set the value of enctype to multipart/form-data because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if text is also entered into the form).
-      
+
       - Include one or more File picker widgets to allow your users to select the file(s) that will be uploaded. -->
             <input name="subject" type="hidden" value="Personal form 1">
             <fieldset>
@@ -639,7 +639,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="container-fluid p-0 input-files mt-5">
-                    <!-- The enctype attribute lets you specify the value of the Content-Type HTTP header included in the request generated when the form is submitted. This header is very important because it tells the server what kind of data is being sent. By default, its value is application/x-www-form-urlencoded. 
+                    <!-- The enctype attribute lets you specify the value of the Content-Type HTTP header included in the request generated when the form is submitted. This header is very important because it tells the server what kind of data is being sent. By default, its value is application/x-www-form-urlencoded.
           If you want to send files, you need to take three extra steps:
           - Set the method attribute to POST because file content can't be put inside URL parameters.
           - Set the value of enctype to multipart/form-data because the data will be split into multiple parts, one for each file plus one for the text data included in the form body (if text is also entered into the form).
@@ -702,11 +702,11 @@
                     <!-- The image button control is one which is displayed exactly like an <img> element, except that when the user clicks on it, it behaves like a submit button -->
                     <!-- An image button is created using an <input> element with its type attribute set to the value image. This element supports exactly the same set of attributes as the <img> element, plus all the attributes supported by other form buttons. -->
                     <label for="input-image" class="flex-label">Image button:</label>
-                    <!-- If the image button is used to submit the form, this widget doesn't submit its value; instead the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate 0, 0). 
+                    <!-- If the image button is used to submit the form, this widget doesn't submit its value; instead the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate 0, 0).
           The coordinates are sent as two key/value pairs:
           The X value key is the value of the name attribute followed by the string ".x".
           The Y value key is the value of the name attribute followed by the string ".y".
-          
+
           So for example when you click on the image of this widget, you are sent to a URL like the following: http://foo.com?pos.x=123&pos.y=456
           This is a very convenient way to build a "hot map". -->
                     <div class="form-group d-flex flex-column flex-md-row flex-wrap">
@@ -834,7 +834,7 @@
                                 title="required">*</abbr></strong></label>
                     <div class="form-group d-flex flex-column flex-nowrap">
                         <input type="text" name="payment1-name" id="payment1-name"
-                            class="flex-input form-control form-border" placeholder="Name 
+                            class="flex-input form-control form-border" placeholder="Name
 Familyname" minlength="5" maxlength="25" pattern="[A-Za-z\s]+" autocomplete="off" required
                             title="Please, provide your Name" data-value-missing="No chance! Fill it already.">
                     </div>
