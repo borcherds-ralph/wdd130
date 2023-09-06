@@ -3,7 +3,6 @@
 
     <head>
         <meta charset="UTF-8">
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VSCode helps</title>
         <link rel="stylesheet" href="../styles/canvas.css">
@@ -83,7 +82,8 @@
                         </li>
                     </ul>
                     <p i>At this point, we can access
-                        VSCode&lsquo;s <code >Rename Symbol</code> function.</p>
+                        VSCode&lsquo;s <code >Rename Symbol</code> function.
+        </p>
         <figure>
             <picture>
                 <img alt="vscode rename symbol gif"
@@ -129,17 +129,13 @@
         <p i>Fortunately, VSCode provides us with a custom auto-complete
             feature. Here&lsquo;s a demo:</p>
         <figure>
-            <div>
-                <div>
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*e4Srh3mFm7lSICGC-Tcv3A.gif">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*e4Srh3mFm7lSICGC-Tcv3A.gif">
+            </picture>
         </figure>
-        <p i>Let&lsquo;s begin by showing how to configure VSCode to achieve the above
-            effect. </p>
+        <p i>Let&lsquo;s begin by showing how to configure VSCode to achieve the
+            above effect. </p>
         <h2>Generate Configuration File</h2>
         <p i>VSCode achieves the above effect by reading the configuration file,
             so we first need to generate a configuration file. We can generate a
@@ -150,25 +146,17 @@
             <p i>Preferences -&gt; User Snippets </p>
         </blockquote>
         <figure>
-            <div>
-                <div>
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*1czxqh7qHo5cUz_GllnBJw.png">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*1czxqh7qHo5cUz_GllnBJw.png">
+            </picture>
         </figure>
         <p i>And then VSCode will pop up this window:</p>
         <figure>
-            <div>
-                <div>
-                    <picture>
-                        <img alt="" height="251"
-                            src="https://miro.medium.com/v2/resize:fit:700/1*bwK_NIev4tw0spBdb5AdgA.png">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt="" height="251"
+                    src="https://miro.medium.com/v2/resize:fit:700/1*bwK_NIev4tw0spBdb5AdgA.png">
+            </picture>
         </figure>
         <p i>In this window, we can select the existing configuration file and
             modify it. Or we can also create a new configuration file. </p>
@@ -177,65 +165,50 @@
             active configuration file is created. If you choose
             <code>New Snippets file for 'test'</code> , a local active
             configuration file is created.</p>
-        <p i>Here, we&lsquo;ll just create a local active configuration file.</p>
+        <p i>Here, we&lsquo;ll just create a local active configuration file.
+        </p>
         <p i>It then asks you to enter the name of the newly created file. </p>
         <figure>
-            <div>
-                <div class="lh li ask">
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*PC7hjWNbHaWwap6n223Nwg.png">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*PC7hjWNbHaWwap6n223Nwg.png">
+            </picture>
         </figure>
         <p i>Ok, now we have created a configuration file.</p>
         <figure>
-            <div>
-                <div class="lh li asl">
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*Ajz2Weg4l_3fZNpk3KvA7g.png">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*Ajz2Weg4l_3fZNpk3KvA7g.png">
+            </picture>
         </figure>
         <p i>For the convenience of readers, I recorded a GIF to complete the
             above process, I hope it will help you.</p>
         <figure>
-            <div>
-                <div class="lh li asm">
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*RTAgh2bcEICfxwNx4v1fHw.gif">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*RTAgh2bcEICfxwNx4v1fHw.gif">
+            </picture>
         </figure>
         <h2>Set-Up</h2>
         <p i>The configuration file is written in JSON format, and here is a
             simple example.</p>
         <figure>
-            <div>
-                <div class="lh li asn">
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*4Oy-HjRfvA8SzTiOiIZJ3w.png">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*4Oy-HjRfvA8SzTiOiIZJ3w.png">
+            </picture>
         </figure>>{<br> "html5 autocomplete": {<br> "prefix": "html5",<br>
         "body": [<br> "&lt;!DOCTYPE html&gt;",<br> "&lt;html
         lang=\"en\"&gt;",<br> "&lt;head&gt;",<br> "
         &lt;title&gt;&lt;/title&gt;",<br> "&lt;/head&gt;",<br>
         "&lt;body&gt;",<br> "&lt;/body&gt;",<br> "&lt;/html&gt;"<br> ]<br>
         }<br>}</span></pre>
-        <p i>First, let&lsquo;s look at the field <code>“html5 autocomplete”</code>.
-            This field does nothing but tells the programmer what the
-            configuration option is for, and you can write the field as you
-            like.</p>
-        <p i>Then let&lsquo;s look at the <code>“prefix”: “html5”</code> . This field
-            is the shortcut command we define. When we type the word
+        <p i>First, let&lsquo;s look at the field
+            <code>“html5 autocomplete”</code>. This field does nothing but tells
+            the programmer what the configuration option is for, and you can
+            write the field as you like.</p>
+        <p i>Then let&lsquo;s look at the <code>“prefix”: “html5”</code> . This
+            field is the shortcut command we define. When we type the word
             <code>html5</code> in a file, VSCode will automatically complete the
             code for us.</p>
         <p i>And then look at the <code>"body": [...]</code> . The content of
@@ -246,47 +219,35 @@
         html&gt;<br>&lt;html lang="en"&gt;<br>&lt;head&gt;<br>
         &lt;title&gt;&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</span>
         </pre>
-        <p i>Ok, now that we have the basic configuration, let&lsquo;s test it out.
-        </p>
+        <p i>Ok, now that we have the basic configuration, let&lsquo;s test it
+            out. </p>
         <figure>
-            <div>
-                <div>
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*phqBii-urwqR8UZr-7AIPA.gif">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*phqBii-urwqR8UZr-7AIPA.gif">
+            </picture>
         </figure>
         <h2>Scope</h2>
         <p i>Well, our configuration did work. But we can still find an
             imperfect place. That is, html5 autocomplete is usually only used in
-            HTML files, and when we write JavaScript files, we don&lsquo;t need this
-            shortcut command. </p>
+            HTML files, and when we write JavaScript files, we don&lsquo;t need
+            this shortcut command. </p>
         <p i>Fortunately, we can specify the scope of this configuration in the
             configuration file.</p>
         <p i>All we need to do is add the field <code>"scope": "html"</code> to
             the configuration file.</p>
         <figure>
-            <div>
-                <div class="lh li asp">
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*OG6H-6-MQ_dw84qQcU10ZQ.png">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*OG6H-6-MQ_dw84qQcU10ZQ.png">
+            </picture>
         </figure>
         <p i>So let&lsquo;s test that out again.</p>
         <figure>
-            <div>
-                <div>
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*kVR4X1ukEXMBylDoGTdMJA.gif">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*kVR4X1ukEXMBylDoGTdMJA.gif">
+            </picture>
         </figure>
         <p i>Good. Now in a JavaScript file, this shortcut will automatically
             expire. </p>
@@ -294,12 +255,10 @@
         <p i>Now let&lsquo;s re-test our auto-complete. Have you found any
             imperfections? </p>
         <figure>
-            <div class="lh li asq">
-                <picture>
-                    <img alt=""
-                        src="https://miro.medium.com/v2/resize:fit:665/1*kvShU86p2ZIZT5pWrfClkg.gif">
-                </picture>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:665/1*kvShU86p2ZIZT5pWrfClkg.gif">
+            </picture>
         </figure>
         <p i>We can see that when we finish autocompleting, the cursor stops at
             the end of the code automatically. However, the code we autocomplete
@@ -310,28 +269,22 @@
         <p i>To do this, we simply add a special variable <code>$0</code> to the
             configuration.</p>
         <figure>
-            <div>
-                <div class="lh li asr">
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*SmJFljmvS4XTcJ46QF-rNQ.png">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*SmJFljmvS4XTcJ46QF-rNQ.png">
+            </picture>
         </figure>
         <p i>After completion, the cursor will automatically stay at
             <code>$0</code>. </p>
         <figure>
-            <div>
-                <picture>
-                    <img alt=""
-                        src="https://miro.medium.com/v2/resize:fit:672/1*GeBMp9i2Qp3j4s0qnkuitw.gif">
-                </picture>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:672/1*GeBMp9i2Qp3j4s0qnkuitw.gif">
+            </picture>
         </figure>
         <h2>Example</h2>
-        <p i>Ok, now let&lsquo;s look at a new example to review what we&lsquo;ve learned.
-        </p>
+        <p i>Ok, now let&lsquo;s look at a new example to review what
+            we&lsquo;ve learned. </p>
         <p i>We hope that when we enter the string <code>fori</code> in
             JavaScript or TypeScript files, VSCode will automatically complete
             the following code:</p> >for(let i = 0; i &lt; ; i++){<br>}</span>
@@ -346,27 +299,23 @@
         </pre>
         <p i>Here is a gif:</p>
         <figure>
-            <div>
-                <div>
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*fI5PysT2CWV8pHcSB7s-aQ.gif">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*fI5PysT2CWV8pHcSB7s-aQ.gif">
+            </picture>
         </figure>
-        <p i>Okay, so that&lsquo;s how User Snippets are used. I spend a lot of time
-            talking about this feature, because it&lsquo;s one of my favorite
-            features, and I think it will be useful for you too. In the past,
-            when I had to type duplicate code, I copied and pasted it from
+        <p i>Okay, so that&lsquo;s how User Snippets are used. I spend a lot of
+            time talking about this feature, because it&lsquo;s one of my
+            favorite features, and I think it will be useful for you too. In the
+            past, when I had to type duplicate code, I copied and pasted it from
             another file, which was very troublesome. Now that we have it, we
             can write code quickly.</p>
         <h1>Quickly open files</h1>
         <p i>When we are in contact with a large unfamiliar project, how to
             quickly find the file we want in a large number of files?</p>
-        <p i>For example, when I&lsquo;m reading an unfamiliar open source project, I
-            like to prioritize all files that contain the word <code>util</code>
-            in the filename of the project.</p>
+        <p i>For example, when I&lsquo;m reading an unfamiliar open source
+            project, I like to prioritize all files that contain the word
+            <code>util</code> in the filename of the project.</p>
         <p i>In this case, we can use the file search tool of VSCode.</p>
         <ul>
             <li>Open the tool by press <code>⌘</code> and <code>P</code>
@@ -374,53 +323,21 @@
             <li>Enter file name</li>
         </ul>
         <figure>
-            <div>
-                <div>
-                    <picture>
-                        <img alt=""
-                            src="https://miro.medium.com/v2/resize:fit:700/1*iIRC5eDRmypp9yY8I8CJ2Q.gif">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt=""
+                    src="https://miro.medium.com/v2/resize:fit:700/1*iIRC5eDRmypp9yY8I8CJ2Q.gif">
+            </picture>
         </figure>
         <p i>So we can find all the util files in this project.</p>
         <p i>Similarly, many configuration files contain the word
             <code>config</code> or <code>configuration</code>. We can also find
             configuration files in a project in this way.</p>
         <figure>
-            <div>
-                <div>
-                    <picture>
-                        <img alt="" height="250"
-                            src="https://miro.medium.com/v2/resize:fit:700/1*PgDml46dAEBRa7aaoHkxZA.gif">
-                    </picture>
-                </div>
-            </div>
+            <picture>
+                <img alt="" height="250"
+                    src="https://miro.medium.com/v2/resize:fit:700/1*PgDml46dAEBRa7aaoHkxZA.gif">
+            </picture>
         </figure>
-        <h1>Emmet</h1>
-        <p i>Using Emmet can greatly increase the speed at which we coding. If
-            you are interested in this topic, you can refer to another article
-            of mine. </p>
-        <div><a rel="noopener follow" target="_blank"
-                href="/frontend-handbooks/speed-up-your-coding-with-emmet-in-vscode-433162d95880">
-                <div>
-                    <div>
-                        <h2> Speed up Your Coding with Emmet in VSCode</h2>
-                        <div class="tq s">
-                            <h3> Explained with 20 GIFs.</h3>
-                        </div>
-                        <div>
-                            <p> medium.com</p>
-                        </div>
-                    </div>
-                    <div class="tr s">
-                        <div class="asv s tt tu tv tr tw ti tn"></div>
-                    </div>
-                </div>
-            </a></div>
-        </div>
-        </div>
-        </section>
     </body>
 
 </html>
