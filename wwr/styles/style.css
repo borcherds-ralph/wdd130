@@ -20,15 +20,15 @@
   --heading-color: #0443b3;
   --font-2: Lora, 'Time New Roman', serif;
 
-  --heading-background: #ad906a;
+  --heading-background: #5f503c;
   --color-white: #fff;
-  --hover-color: #003030;
+  --hover-color: #5f503c;
   --trans-color: rgba(196 207 207 / 0.7);
   --trans-text-color: #04040c;
   --footer-background: #3e3e3e;
   --secondary-color: #0443b3;
   --accent-2: #afaf60;
-  --accent-3: #003030;
+  --accent-3: #5f503c;
 }
 
 /*******************************************************************
@@ -115,6 +115,7 @@ header {
 #logo_link {
   width: 330px;
   background-color: var(--heading-background);
+  color:var(--color-white);
   border-radius: 30%;
   height: 150px;
   display: flex;
