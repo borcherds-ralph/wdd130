@@ -1,12 +1,26 @@
 trek-2022/video/water-crossing.mp4
-.vscode/
 poem/
 challenge/
 announcements/week-14/1-css-extra-credit.html
 announcements/week-11/5-positioning-solutions.html
 challenge.zip
 
+*~
 
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+
+#  These are to keep the VSCode settings you use from becoming public
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -18,5 +32,4 @@ challenge.zip
 .history/
 
 # Built Visual Studio Code Extensions
-*.vsi
-announcements/week-4/d2-file-folder.html
+*.vsix
