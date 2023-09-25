@@ -1,150 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Git - Github error messages</title>
-  <link rel="stylesheet" href="styles/git-errors.css">
-</head>
+    <title>Git - Github error messages</title>
+    <link rel="stylesheet" href="styles/git-errors.css">
+  </head>
 
-<body>
-  <div class="content">
-    <main>
-      <h1>Git GitHub VSCode errors and Useful Suggestions</h1>
-      <section class="errors">
-        <details>
-          <summary>Git: gpg: skipped &lt;email&gt;: No Secret Key</summary>
-          <img src="images/git-gpg-no-key.png" alt="Git No GPG Error">
-          <p> This has to do with how Git is configured with GPG signing
-            process. This is an issue on Windows computers, as the GPG
-            implementation is weird. </p>
-          <p> There are a few potential ways to fix this issue. I would
-            recommend turning off the signing with GPG. </p>
-          <p>Here are the steps to disable this option</p>
-          <p>Go to VSCode preferences - Settings</p>
-          <img src="images/gpg-1.png" alt="GPG error steps 1">
-          <p> Type this into the search bar at the top to find the setting: gpg
-            commit </p>
-          <img src="images/gpg-2.png" alt="GPG error step 2">
-          <p> Make sure this option is not checked. This is the option that
-            tells VSCode to use PGP while pushing to GitHub: Enables commit
-            signing with GPG or X.509 </p>
-          <img src="images/gpg-3.png" alt="GPG error step 3">
-          <p>Close out of the Settings tab.</p>
-        </details>
-        <details>
-          <summary>Permission Error trying to Push to GitHub</summary>
-          <p> This error occurs when you have GitHub setup on one account and
-            you try to use another account and GitHub auto logs you into the old
-            account with VSCode. </p>
-          <p> You don&apos;t have permission to push to &lt;GitHub Account&gt;
-            on GitHub. Would you like to create a fork and push it instead? </p>
-          <img src="images/git-error-push-github.png"
-            alt="Git Error no authorization">
-          <p> This error is because VSCode was previously configured for another
-            user account on GitHub. There are two solutions. </p>
-          <p> Go to GitHub and log into the old account and click on the user
-            profile picture in the top right of the web page. Select Settings
-          </p>
-          <p> On the left navigation menu, select Password and Authentication
-          </p>
-          <img src="images/github-password-auth-reset.png"
-            alt="GitHub Password Authorization link">
-          <p>Then click on the Authorized Oauth Apps tab</p>
-          <img src="images/github-oath-apps.png" alt="GitHub AOuth Tab">
-          <p>Find teh GitHub for VSCode line</p>
-          <p>Click on the 3 dots to the left of GitHub for VSCode</p>
-          <img src="images/github-oauth-link.png" alt="GitHub Oauth entry">
-          <p>Click the Revoke option</p>
-          <img src="images/github-revoke-oauth.png" alt="GitHub Revoke OAuth">
-          <p>This will force VSCode to re-authenticate with GitHub.</p>
-          <p> If this is not a possibility and you must have two GitHub accounts
-            with VSCode You have to go through an elaborate setup with a few
-            extensions and you use the Profile icon in the bar in VSCode to
-            switch to the various profiles. This is problematic at times. </p>
-          <p> This from StackOverflow has all the steps needed to setup multiple
-            accounts. There are 3 possibilities. <a
-              href="https://stackoverflow.com/questions/62625513/i-have-2-github-accounts-how-can-i-use-both-when-i-am-working-in-vs-code"
-              target="_blank"> Click here to see the other options </a>
-          </p>
-          <p> There are other authentication methods, but they are much more
-            complex to setup and require installation of additional software.
-          </p>
-        </details>
-        <details>
-          <summary>GitHub Pages does not initialize</summary>
-          <p> There is an issue where the GitHub pages do not initialize the
-            first time. This means you must re-initialize a push to GitHub and
-            then recreate the pages setup. </p>
-          <ol>
-            <li>
-              <p>Go to the pages setup page and change the branch to NONE</p>
-              <img src="images/github-pages-branch-name.png"
-                alt="GitHub pages branch name">
-              <p>Click Save</p>
-            </li>
-            <li>
-              <p>Go to VSCode and push to GitHub</p>
-              <p> Yu can do an empty push by typing the following commands in
-                the command prompt </p>
-              <pre class="code-style">
+  <body>
+    <div class="content">
+      <main>
+        <h1>Git GitHub VSCode errors and Useful Suggestions</h1>
+        <section class="errors">
+          <details>
+            <summary>Git: gpg: skipped &lt;email&gt;: No Secret Key</summary>
+            <img src="images/git-gpg-no-key.png" alt="Git No GPG Error">
+            <p> This has to do with how Git is configured with GPG signing
+              process. This is an issue on Windows computers, as the GPG
+              implementation is weird. </p>
+            <p> There are a few potential ways to fix this issue. I would
+              recommend turning off the signing with GPG. </p>
+            <p>Here are the steps to disable this option</p>
+            <p>Go to VSCode preferences - Settings</p>
+            <img src="images/gpg-1.png" alt="GPG error steps 1">
+            <p> Type this into the search bar at the top to find the setting:
+              gpg commit </p>
+            <img src="images/gpg-2.png" alt="GPG error step 2">
+            <p> Make sure this option is not checked. This is the option that
+              tells VSCode to use PGP while pushing to GitHub: Enables commit
+              signing with GPG or X.509 </p>
+            <img src="images/gpg-3.png" alt="GPG error step 3">
+            <p>Close out of the Settings tab.</p>
+          </details>
+          <details>
+            <summary>You don&apos;t have permission to push to &lt;GitHub
+              Account&gt; on GitHub</summary>
+            <p>This error occurs when you have GitHub setup on one account and
+              you try to use another account and GitHub auto logs you into the
+              old account with VSCode. </p>
+            <img src="images/git-error-push-github.png"
+              alt="Git Error no authorization">
+            <p>This error is because Git was previously configured for another
+              user account on the computer using the global settings. There are
+              a a few solutions.</p>
+            <details>
+              <summary>Potentially Destructive and Permanent method</summary>
+              <p>Only use this method if the computer was used by someone else
+                and now a new person is using the computer and both people are
+                available to do this. This is also a method to reset or
+                reconfigure the user on the same computer due to corruption.</p>
+              <p>Go to GitHub and log into the old account and click on the user
+                profile picture in the top right of the web page. <span
+                  class="menu-select"> Select Settings</span> </p>
+              <p> On the left navigation menu, select <span
+                  class="menu-select">Password and Authentication</span> </p>
+              <img src="images/github-password-auth-reset.png"
+                alt="GitHub Password Authorization link">
+              <p>Then click on the <span class="menu-select">Authorized Oauth
+                  Apps</span> tab</p>
+              <img src="images/github-oath-apps.png" alt="GitHub AOuth Tab">
+              <p>Find teh GitHub for VSCode line</p>
+              <p>Click on the <span class="menu-select">3 dots</span> to the
+                left of GitHub for VSCode</p>
+              <img src="images/github-oauth-link.png" alt="GitHub Oauth entry">
+              <p>Click the <span class="menu-select">Revoke</span> option</p>
+              <img src="images/github-revoke-oauth.png"
+                alt="GitHub Revoke OAuth">
+              <p>This will force VSCode to re-authenticate with GitHub.</p>
+              <p> If this is not a possibility and you must have two GitHub
+                accounts with VSCode You have to go through an elaborate setup
+                with an extensions and that is listed below. </p>
+              <p> There are other authentication methods, but they are much more
+                complex to setup and require installation of additional software
+                to create SSH keys for unique encryption process and
+                authentication. </p>
+            </details>
+            <details>
+              <summary>Preferred Method</summary>
+              <p> Make sure each student is using a different system Account to
+                log into the computer. This is not always possible, but the
+                preferred method and easiest. Some families do not allow this,
+                one reason is so people do not have the temptation of going to
+                inappropriate sites because everyone else in the family will see
+                where they went. </p>
+              <p> This web page explains the various locations that the config
+                files may be found in Windows: <a
+                  href="https://www.onwebsecurity.com/configuration/git-on-windows-location-of-global-configuration-file.html"
+                  target="_blank">On Web Security</a>. The first command on this
+                page</p>
+              <pre class="code-style">git config --list –show-origin</pre>
+              <p>will show you where the config files are located. If you run
+                this in a folder that is part of a repository you will see the
+                global and repository locations. If run outside of a repository,
+                it will show only the global config.</p>
+              <p> <span class="bold-text">Windows</span>: The reason for the
+                different Profiles/Accounts on the computer is that git should
+                store the config for that profile in a hidden file in the <span
+                  class="bold-text">%USERPROFILE%\.gitconfig</span> file. The
+                <span class="bold-text">%userprofile%</span> is usually in the
+                <span class="bold-text">c:\users\username</span> folder
+                depending on who is logged in. This does not always work as the
+                location of the .config file may be found in a shared area of
+                the system. That is why you should run the command above to see
+                where the global config is located.</p>
+              <p> <span class="bold-text">Mac / Linux</span>system stores the
+                file in the HOME folder for the user by default in a hidden file
+                called <span class="bolded-text">.gitconfig</span> and is much
+                more reliable than Windows for the location. </p>
+            </details>
+            <details>
+              <summary>Manual method</summary>
+              <p>Do not use the <span class="bold-text">git config
+                  --global</span> command. The student must set the username and
+                email for each repository. To do this they will have to edit the
+                <span class="bold-text">.git/config</span> file for each
+                repository and add the correct entries or run the git config
+                commands in the repository directory after the git init command
+                and do not use the global option.</p>
+              <pre
+                class="colde-style">git config user.email "email"<br>git config user.name "github username"</pre>
+              <p>That will set the username and email address per repository in
+                each <span class="bold-text">.git/config</span> file. </p>
+            </details>
+            <details>
+              <summary>Use VSCode Extension</summary>
+              <p>Install a VSCode extension that will do this for you: “Git
+                Config User Profiles” Here is a link to the description of the
+                extension <a
+                  href="https://marketplace.visualstudio.com/items?itemName=onlyutkarsh.git-config-user-profiles"
+                  target="_blank">Git Config User Profiles</a>
+              </p>
+              <p>This extension does the configuring of the username and email
+                address in each repository for you or will change the global
+                config setting for each person that you switch too.</p>
+            </details>
+          </details>
+          <details>
+            <summary>GitHub Pages does not initialize</summary>
+            <p> There is an issue where the GitHub pages do not initialize the
+              first time. This means you must re-initialize a push to GitHub and
+              then recreate the pages setup. </p>
+            <ol>
+              <li>
+                <p>Go to the pages setup page and change the branch to NONE</p>
+                <img src="images/github-pages-branch-name.png"
+                  alt="GitHub pages branch name">
+                <p>Click Save</p>
+              </li>
+
+              <li>
+                <p>Go to VSCode and push to GitHub</p>
+                <p>You can do an empty push by typing the following commands in
+                  the command prompt </p>
+                <pre class="code-style">
                             git commit --allow-empty -m "Trigger rebuild"<br>
                             git push
                         </pre>
-            </li>
-            <li>
-              <p>Go back to GitHub Pages and recreate the pages setup.</p>
-              <p>Click on the Actions menu option</p>
-              <img src="images/github-action-tab.png" alt="GitHub Actions Tab">
-              <p> Watch the top entry until the icon to the left turns blue with
-                a check mark. That means it is complete. The red circle with an
-                X means that it failed. </p>
-              <img src="images/github-actions-list.png"
-                alt="Github Actions List">
-              <p> You will notice that the process will take longer than 1
-                minute. This is due to some change GitHub has made on the server
-                due to new features that are being added. Even publishing the
-                push/sync from VSCode takes as long as 90 seconds (1 min 30
-                sec). </p>
-              <p> If the user gets a failed again, check the spelling of the
-                folders and file names. This process seems to fail if the user
-                has spaces in the folder and filenames and sometime if there are
-                underscores in these names. </p>
-            </li>
-          </ol>
-        </details>
-        <details>
-          <summary> Make sure to configure your &apos;user.name&apos; and
-            &apos;user.email&apos; in git </summary>
-          <p> If the user gets this error, they missed that step in the
-            configuration of Git. It is found in the installation steps of Git
-            for Windows. </p>
-          <img src="images/git-username-useremail.png"
-            alt="Git Username Email error">
-          <p> Open the terminal or command prompt. This can be the one inside
-            VSCode </p>
-          <p>Type each of these commands</p>
-          <pre>
+              </li>
+              <li>
+                <p>Go back to GitHub Pages and recreate the pages setup.</p>
+                <p>Once you have clicked save on the pages setup, click on the <span class="menu-select">Actions</span> tab</p>
+                <img src="images/github-action-tab.png"
+                  alt="GitHub Actions Tab">
+                <p> Watch the top entry until the icon to the left turns blue or green
+                  with a check mark. That means it is complete. The red circle
+                  with an X means that it failed. </p>
+                <img src="images/github-actions-list.png"
+                  alt="Github Actions List">
+                <p> You will notice that the process will take longer than 1
+                  minute. This is due to some change GitHub has made on the
+                  server due to new features that are being added. Even
+                  publishing the push/sync from VSCode takes as long as 5 min on very busy days. </p>
+                <p> If the user gets a failed again, check the spelling of the
+                  folders and file names. This process seems to fail if the user
+                  has spaces in the folder and filenames and sometimes if there
+                  are underscores in these names. </p>
+              </li>
+            </ol>
+          </details>
+          <details>
+            <summary> Make sure to configure your &apos;user.name&apos; and
+              &apos;user.email&apos; in git </summary>
+            <p> If the user gets this error, they missed that step in the
+              configuration of Git. It is found in the installation steps of Git
+              for Windows. </p>
+            <img src="images/git-username-useremail.png"
+              alt="Git Username Email error">
+            <p> Open the terminal or command prompt. This can be the one inside
+              VSCode </p>
+            <p>Type each of these commands</p>
+            <pre>
                         git config &minus;global user.name &apos;github user name&apos;<br>
                         git config &minus;global user.email &apos;email address used on github&apos;
                     </pre>
-          <p>Try to push to GitHub</p>
-          <p>If you still have issues, then contact someone for help</p>
-        </details>
-        <details>
-          <summary> VSCode push/sync to GitHub seems to hang and not do anything
-          </summary>
-          <p> There are a few reasons as to why this will occur. There are a
-            couple of things to try. </p>
-          <ol>
-            <li>
-              <p> Open a terminal/command window and try to push to GitHub using
-                the command line </p>
-              <pre>git push</pre>
-              <p> You may get an error that says something like this (It will
-                look different on the various OS&apos;s): </p>
-              <pre>
+            <p>Try to push to GitHub</p>
+            <p>If you still have issues, then contact someone for help</p>
+          </details>
+          <details>
+            <summary> VSCode push/sync to GitHub seems to hang and not do
+              anything </summary>
+            <p> There are a few reasons as to why this will occur. There are a
+              couple of things to try. </p>
+            <ol>
+              <li>
+                <p> Open a terminal/command window and try to push to GitHub
+                  using the command line </p>
+                <pre>git push</pre>
+                <p> You may get an error that says something like this (It will
+                  look different on the various OS&apos;s): </p>
+                <pre>
                                 There is no tracking information for the current branch.<br>
                                 Please specify which branch you want to merge with.<br>
                                 See git-pull(1) for details<br><br>
@@ -156,134 +221,134 @@
 
                                 git push --set-upstream origin master
                             </pre>
-              <p> If you get that error at the command line type in the command
-              </p>
-              <pre>git push &minus;set-upstream origin master</pre>
-              <p>Then do a git push command</p>
-              <p>You may be prompted to authenticate with GitHub again.</p>
-              <p> Once the push/sync is complete, you will need to restart
-                VSCode and the GitHub controls within VSCode should work again.
-              </p>
-            </li>
-            <li> The other reasons why this process will hang are too numerous
-              and hard to give instructions on how to overcome in this document.
-              This will require more research with debug logs to see if there is
-              a reason for the hang. </li>
-          </ol>
-        </details>
-        <details>
-          <summary> Windows Error message: App or process blocked: git.exe
-          </summary>
-          <p> User is trying to run git commands at the command prompt and
-            Windows is displaying the following Windows System error </p>
-          <img src="images/windows-unathorixed-change.jpg"
-            alt="Windows Security Issue">
-          <p> The instructions to fix this are specific to the version of
-            Windows that is being run. Here are the basic steps: <a
-              href="https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034">
-              https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034
-            </a>
-          </p>
-          <h3>Use controlled folder access</h3>
-          <p> Controlled folder access in Windows Security reviews the apps that
-            can make changes to files in protected folders and block
-            unauthorized or unsafe apps from accessing or changing files in
-            those folders. </p>
-          <ol>
-            <li> Select <span class="bolded"> Start> Settings> Update &amp;
-                Security> Windows Security> Virus &amp; threat protection.
-              </span>
-            </li>
-            <li> Under <span class="bolded">Virus &amp; threat protection</span>
-              settings, select <span class="bolded">Manage settings</span> .
-            </li>
-            <li> Under <span class="bolded">Controlled folder access</span> ,
-              select <span class="bolded">Manage Controlled folder access</span>
-              . </li>
-            <li> Switch the <span class="bolded">Controlled folder access</span>
-              setting to <span class="bolded">On</span> or <span
-                class="bolded">Off</span> . </li>
-          </ol>
-          <p> There is an option to allow just one program to run in this
-            Controlled Folder Access and you can select git.exe from the
-            recently blocked programs. </p>
-          <p> If you look at the Windows Notifications, you may see an error
-            like this. </p>
-          <img src="images/windows-unathorixed-change-2.jpg"
-            alt="Windows Notification Controlled Access">
-          <p> This is the same step as above for the same error. Microsoft has a
-            few diverse ways to present this message. It will also be logged in
-            to the System Logs. </p>
-        </details>
-        <details>
-          <summary>git RPC fail: curl 18 transfer closed with outstanding read
-            data remaining</summary>
-          <img src="images/git-rpc-curl-18.jpg" alt="Git Error curl 18">
-          <p>A few reasons I have seen this curl 18 error:
-          <ul>
-            <li>Too many files - This is usually related to #3</li>
-            <li>Anti-virus software</li>
-            <li>Number of files and sizes exceeds the buffer size for git. See
-              this article: <a
-                href="https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining"
-                target="_blank">https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining</a>
-            </li>
-            <li>Speed of internet can also cause this issue. <a
-                href="https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/"
-                target="_blank">https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/</a>
-            </li>
-            <li>Running Homebrew on a MAC or Linux machine. There are known
-              issues at times with this error in Homebrew. Homebrew is not
-              supported for students and they will have to find the answers on
-              their own as Homebrew has its own command strcuture to work with
-              Git & GitHub.</li>
-          </ul>
-        </details>
-        <details>
-          <summary> git RPC failed; curl 92 HTTP/2 stream 0 was not closed
-            cleanly: CANCEL (err 8) </summary>
-          <img src="images/git-rpc-failue-error.png"
-            alt="Git RPC Failure Error">
-          <p> This error has to do with the amount of data being sent to GitHub.
-            On bad internet connections, you can only send enough data that
-            GitHub will keep the connection open. Bad internet connections will
-            drop with this error. There are other reasons this error can occur,
-            but this is the only reason for this error with the data we use.
-          </p>
-        </details>
-        <details>
-          <summary> Git does not allow you to add a folder to the repo
-          </summary>
-          <p> If you type the git add &lt;foldername&gt; and get an error that
-            looks like this </p>
-          <pre>Git Error - &apos;main/&apos; does not have a commit checked out</pre>
-          <p> The issue is mot likely that the folder has been initialized as a
-            git repository. Go into that folder and look for the hidden
-            folder/directory called .git </p>
-          <p>Remove the .git folder in the sub-directory</p>
-        </details>
-        <details>
-          <summary>Error: Failed to push some refs to…</summary>
-          <p> Updates were rejected because the tip of your current branch is
-            behind its remote counterpart. Integrate the remote change (e.g.
-            &apos;git pull …&apos;) before pushing again. </p>
-          <img src="images/git-ref-tips-error.png" alt="Git Refs Tip Error">
-          <p> The reason for this error is that the code on GitHub was edited
-            and the user did not issue a git pull command before making any
-            changes to their local machine before they started to edit on the
-            local machine. </p>
-          <p>To fix this error there are a few options.</p>
-          <ol>
-            <li> The first and usually the easiest for those new to Git/GitHub
-              is to recreate the repository. You have to unpublish the site,
-              delete the repository, delete the .git folder on the local and
-              then push back to a Public Repository on GitHub. </li>
-            <li>
-              <p> The preferred way is to stash the changes, pull from the
-                server, merge your stashed changes into the update from the
-                server and then push back to the server. </p>
-              <p>Run these commands:</p>
-              <pre>
+                <p> If you get that error at the command line type in the
+                  command </p>
+                <pre>git push &minus;set-upstream origin master</pre>
+                <p>Then do a git push command</p>
+                <p>You may be prompted to authenticate with GitHub again.</p>
+                <p> Once the push/sync is complete, you will need to restart
+                  VSCode and the GitHub controls within VSCode should work
+                  again. </p>
+              </li>
+              <li> The other reasons why this process will hang are too numerous
+                and hard to give instructions on how to overcome in this
+                document. This will require more research with debug logs to see
+                if there is a reason for the hang. </li>
+            </ol>
+          </details>
+          <details>
+            <summary> Windows Error message: App or process blocked: git.exe
+            </summary>
+            <p> User is trying to run git commands at the command prompt and
+              Windows is displaying the following Windows System error </p>
+            <img src="images/windows-unathorixed-change.jpg"
+              alt="Windows Security Issue">
+            <p> The instructions to fix this are specific to the version of
+              Windows that is being run. Here are the basic steps: <a
+                href="https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034">
+                https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034
+              </a>
+            </p>
+            <h3>Use controlled folder access</h3>
+            <p> Controlled folder access in Windows Security reviews the apps
+              that can make changes to files in protected folders and block
+              unauthorized or unsafe apps from accessing or changing files in
+              those folders. </p>
+            <ol>
+              <li> Select <span class="bolded"> Start> Settings> Update &amp;
+                  Security> Windows Security> Virus &amp; threat protection.
+                </span>
+              </li>
+              <li> Under <span class="bolded">Virus &amp; threat
+                  protection</span> settings, select <span class="bolded">Manage
+                  settings</span> . </li>
+              <li> Under <span class="bolded">Controlled folder access</span> ,
+                select <span class="bolded">Manage Controlled folder
+                  access</span> . </li>
+              <li> Switch the <span class="bolded">Controlled folder
+                  access</span> setting to <span class="bolded">On</span> or
+                <span class="bolded">Off</span> . </li>
+            </ol>
+            <p> There is an option to allow just one program to run in this
+              Controlled Folder Access and you can select git.exe from the
+              recently blocked programs. </p>
+            <p> If you look at the Windows Notifications, you may see an error
+              like this. </p>
+            <img src="images/windows-unathorixed-change-2.jpg"
+              alt="Windows Notification Controlled Access">
+            <p> This is the same step as above for the same error. Microsoft has
+              a few diverse ways to present this message. It will also be logged
+              in to the System Logs. </p>
+          </details>
+          <details>
+            <summary>git RPC fail: curl 18 transfer closed with outstanding read
+              data remaining</summary>
+            <img src="images/git-rpc-curl-18.jpg" alt="Git Error curl 18">
+            <p>A few reasons I have seen this curl 18 error:
+            <ul>
+              <li>Too many files - This is usually related to #3</li>
+              <li>Anti-virus software</li>
+              <li>Number of files and sizes exceeds the buffer size for git. See
+                this article: <a
+                  href="https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining"
+                  target="_blank">https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining</a>
+              </li>
+              <li>Speed of internet can also cause this issue. <a
+                  href="https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/"
+                  target="_blank">https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/</a>
+              </li>
+              <li>Running Homebrew on a MAC or Linux machine. There are known
+                issues at times with this error in Homebrew. Homebrew is not
+                supported for students and they will have to find the answers on
+                their own as Homebrew has its own command strcuture to work with
+                Git & GitHub.</li>
+            </ul>
+          </details>
+          <details>
+            <summary> git RPC failed; curl 92 HTTP/2 stream 0 was not closed
+              cleanly: CANCEL (err 8) </summary>
+            <img src="images/git-rpc-failue-error.png"
+              alt="Git RPC Failure Error">
+            <p> This error has to do with the amount of data being sent to
+              GitHub. On bad internet connections, you can only send enough data
+              that GitHub will keep the connection open. Bad internet
+              connections will drop with this error. There are other reasons
+              this error can occur, but this is the only reason for this error
+              with the data we use. </p>
+          </details>
+          <details>
+            <summary> Git does not allow you to add a folder to the repo
+            </summary>
+            <p> If you type the git add &lt;foldername&gt; and get an error that
+              looks like this </p>
+            <pre>Git Error - &apos;main/&apos; does not have a commit checked out</pre>
+            <p> The issue is mot likely that the folder has been initialized as
+              a git repository. Go into that folder and look for the hidden
+              folder/directory called .git </p>
+            <p>Remove the .git folder in the sub-directory</p>
+          </details>
+          <details>
+            <summary>Error: Failed to push some refs to…</summary>
+            <p> Updates were rejected because the tip of your current branch is
+              behind its remote counterpart. Integrate the remote change (e.g.
+              &apos;git pull …&apos;) before pushing again. </p>
+            <img src="images/git-ref-tips-error.png" alt="Git Refs Tip Error">
+            <p> The reason for this error is that the code on GitHub was edited
+              and the user did not issue a git pull command before making any
+              changes to their local machine before they started to edit on the
+              local machine. </p>
+            <p>To fix this error there are a few options.</p>
+            <ol>
+              <li> The first and usually the easiest for those new to Git/GitHub
+                is to recreate the repository. You have to unpublish the site,
+                delete the repository, delete the .git folder on the local and
+                then push back to a Public Repository on GitHub. </li>
+              <li>
+                <p> The preferred way is to stash the changes, pull from the
+                  server, merge your stashed changes into the update from the
+                  server and then push back to the server. </p>
+                <p>Run these commands:</p>
+                <pre>
                                 git stash<br>
                                 git pull<br>
                                 git stash pop &lt;&minus; This will apply your saved changes<br>
@@ -291,202 +356,240 @@
                                 git push<br>
                                 git stash clear &lt;&minus; This will remove the stashed files from memory. Stashed files stay until removed.<br>
                             </pre>
-            </li>
-            <li> You can try and issue a &apos;git push -f&apos; command at the
-              command line and see it will go through. This is still not a
-              guarantee that it will push. </li>
-            <li>
-              <p> You can create a new branch and push to the new brach. You can
-                then go to the fork and use the built in process on GitHub to
-                validate the change in the fork and merge back to the
-                master/main branch. (This is the way most companies do
-                development) </p>
-              <p>Create a new branch in VSCode</p>
-              <img src="images/vscode-create-branch.png"
-                alt="VSCode Create Branch">
-              <p>Give the branch a new name</p>
-              <img src="images/brach-new-name.png" alt="Branch New Name">
-              <p>Commit and push the new branch</p>
-              <img src="images/vscode-commit-sync.png"
-                alt="VSCode Commit &amp; Sync">
-              <p>Open GitHub repository</p>
-              <p>You should see a message like this</p>
-              <img src="images/github-branch-push-merge.png"
-                alt="Github message about pending merges">
-              <p>Click the Compare &amp; Pull Request button</p>
-              <p>You will see a screen like this</p>
-              <img src="images/brach-pull-request.png"
-                alt="GutHub Branch Pull Request">
-              <p> You can type a comment in box where it says Leave a Comment.
-              </p>
-              <p>Click the Create pull request button</p>
-              <p>Hopefully you will see this message</p>
-              <img src="images/branch-no-conflict.png"
-                alt="GitHub merge no conflict">
-              <p> If you see a message that state there is a conflict, you will
-                have to fix the conflict using one of the options suggested.
-              </p>
-              <p> Once the conflict is resolved and you get this message, click
-                the Merge pull Request button </p>
-              <p>You will then be asked to confirm the merge</p>
-              <img src="images/branch-confirm-merge.png"
-                alt="GitHub confirm Merge message">
-              <p>Click the Confirm Merge button</p>
-              <p> Once the merge is successful you will see this message. Go
-                ahead and delete the branch by clicking the Delete Branch button
-              </p>
-              <img src="images/branch-merge-successful.png"
-                alt="Github Branch Merge successful">
-              <p> If you do not delete the branch you will always push to this
-                branch from VSCode by default now. </p>
-              <p>Go back to VSCode</p>
-              <p> change back to the master branch by using the Checkout To
-                option </p>
-              <img src="images/branch-check-out.png"
-                alt="VSCode Branch Checkout">
-              <p> Select the Main/Master branch. Go by the name and not the
-                number. </p>
-              <img src="images/branch-select-master.png"
-                alt="VSCode Select Master Branch">
-              <p>To remove the local branch open the command prompted</p>
-              <p>Run this git command at the command prompt</p>
-              <pre>git pull &minus;prune</pre>
-              <p>You will see something like this if it works</p>
-              <img src="images/branch-prune.png" alt="Git Prune Command">
-              <pre>git branch &minus;d &lt;branch name&gt;</pre>
-              <img src="images/branch-delete.png"
-                alt="Git Branch Delete Command">
-              <p> This screenshot shows what happens if you have not switched to
-                the main/master branch first and the branch has not been fully
-                merged. These entries are denoted with the red dot to the left
-                of the command that was run. </p>
-              <p>You must CHECKOUT the main/master branch first</p>
-              <p> You can force the delete by using the -D option. Lowercase
-                &minus;d for the check and uppercase &minus;D to force the
-                delete. </p>
-              <p> You should now only have the one branch on your local
-                computer. This is the preferred option for most classes at
-                school. YOu will have multiple branches if you are working as a
-                group on a single project. </p>
-            </li>
-          </ol>
-        </details>
-        <details>
-          <summary>User is prompted git-credential-manager-core.exe could not be
-            started</summary>
-          <p>User gets this prompt every time they go to sync with GitHub</p>
-          <img src="images/git-credential-manaager-net.png"
-            alt="Grit Credential Manager .Net prompt">
-          <p> You have to install Microsoft .Net 4.7.2 to get rid of this prompt
-            and to have Git remember your GitHub credentials. </p>
-          <p> If internet connectivity is an issue, then use this URL to go
-            directly to the download page and download the off-line installer.
-            Install the software, reboot the computer and try to sync with
-            Github. </p>
-          <p> You should not be prompted for this again. If you do then the
-            install did not work correctly. </p>
-          <p>If you get the following message</p>
-          <img src="images/windows-net-not-supported.png"
-            alt="Windows .Net not supported">
-          <p> You must update Windows to at least Windows 10 version 1607. You
-            can tell which version you have boy going to the About option in the
-            Windows Settings. </p>
-          <p> This post on Microsoft Support site shows you how to find which
-            version of Windows you are running.
-            <a href="https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808"
-              target="_blank"> Find operating system info in Windows 10 </a>
-          </p>
-        </details>
-        <details>
-          <summary>MacOS error: xcrun: error: invalid active developer path
-          </summary>
-          <h2>Error when running git --version on MAC</h2>
-          <p>When running the "git --version"  or "git version" on a Mac, you may encounter this
-            error:</p>
-          <p>xcrun: error: invalid active developer path
-            (/Library/Developer/CommandLineTools), missing xcrun at:
-            /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
-          <img src="images/macos-xcode-error.png" alt="MacOS error message">
-          <p>To fix this error you must run the following command in a terminal
-            window on the Mac.</p>
-          <pre>xcode-select --install</pre>
-          <p>The other way to install these tools is to goto the Apple Developer software page and install from there:
-            <a href="https://developer.apple.com/download/more/" target="_blank">https://developer.apple.com/download/more/</a></p>
-          <p>Look for the: "Command Line Tools for Xcode" with the version number that matches your OS version number and does not contain the word 'BETA' as part of the filename. It will look something like this screenshot.</p>
-          <img src="images/macos-xcode-download.png" alt="MacOS Developer Download">
-          <p>Once the software has been installed make sure to restart the VSCode application by clicking on the menu and select QUIT, (<img src="images/mac-command.png" alt="command icon">-q)</p>
-        </details>
-      </section>
-      <section class="hints">
-        <h2>These are suggestions and hints</h2>
-        <details>
-          <summary>User is prompted to configure formatter</summary>
-          <p>User is prompted to configure formatter</p>
-          <p>If the user installs the Prettier extension, which is not needed,
-            the first time they go to format the code, they will be prompted to
-            select a formatter for that type of file type (HTML or CSS). VSCode
-            as a code formatter built into the editor that works well with HTML,
-            CSS, JavaScript, and PHP. </p>
-          <img src="images/formatters-configure.png" alt="Choose Formatter">
-          <p>One of the issues with the Prettier formatter is that is closes null tags. What this means is that tags such as the img tag will be closed with /> at the end. This is XHTML syntax and not part of HTML5 standards.</p>
-          <p>Prettier is what is knows as an Opinionated Formatter. It is opinionated in that the creators of it are stating what they believe is the best way to format something even if it goes against the standards or not explicitily stated that this is the way it must be done. They do not give you the option to turn that off. VSCode setting does give you that option. </p>
-        </details>
-        <details>
-          <summary>Users with multiple coding projects/classes</summary>
-          <p> It is recommended that if you are doing multiple coding projects
-            at a time and each has its own folder/directory structure, you
-            install an extension called Project Manager </p>
-          <p>Go to extensions</p>
-          <p>Search for Project Manager</p>
-          <img src="images/project-manager-search.png"
-            alt="Search Project Manager">
-          <p>Click Install.</p>
-          <p>Once installed open one project folder in VSCode</p>
-          <p> Click on the Project Manager icon in the icons on the left or
-            right of the editor </p>
-          <img src="images/project-manager-icon.png" alt="Project Manager Icon">
-          <p> You should see a blue button that states: Project Manager: Save
-            Project - Click that button and you will be prompted for a name at
-            the top center of the screen. The default name is the folder name.
-          </p>
-          <img src="images/project-manager-1st-save.png"
-            alt="Project Manager 1st Save">
-          <p>You will be prompted to give the project a name</p>
-          <img src="images/project-mananger-naming.png" alt="Naming Project">
-          <p> That will then add that project name to the Project Manager list
-            of projects. </p>
-          <p>Open the second project folder in its own workspace.</p>
-          <p>Click the Save icon in the Project Manager folder icon area.</p>
-          <img src="images/project-manager-save.png" alt="Project Manager Save">
-          <p> Give your project a name and hit enter. This will add it to the
-            list. </p>
-          <img src="images/project-mananger-naming.png" alt="Naming Project">
-          <p> If you click the edit icon, it will open the JSON file that lists
-            your projects. The format is quite easy to follow. The rule is that
-            each project must be enclosed with { } and must have a comma between
-            the project section. </p>
-          <ul>
-            <li>
-              <span class="bolded">Name</span> is the name of the project
-            </li>
-            <li>
-              <span class="bolded">Rootpath</span> is the path to the project.
-            </li>
-            <li>
-              <span class="bolded">Paths</span> is not used at this time
-            </li>
-            <li>
-              <span class="bolded">Tags</span> is a way to categorize the type
-              of project for sorting. This list is up to the person
-            </li>
-            <li>
-              <span class="bolded">Enabled</span> is if the project will display
-              or not in the list of projects. This is a way to only show
-              projects you are currently working on.
-            </li>
-          </ul>
-          <p>This is the format of the JSON File</p>
-          <pre>
+              </li>
+              <li> You can try and issue a &apos;git push -f&apos; command at
+                the command line and see it will go through. This is still not a
+                guarantee that it will push. </li>
+              <li>
+                <p> You can create a new branch and push to the new brach. You
+                  can then go to the fork and use the built in process on GitHub
+                  to validate the change in the fork and merge back to the
+                  master/main branch. (This is the way most companies do
+                  development) </p>
+                <p>Create a new branch in VSCode</p>
+                <img src="images/vscode-create-branch.png"
+                  alt="VSCode Create Branch">
+                <p>Give the branch a new name</p>
+                <img src="images/brach-new-name.png" alt="Branch New Name">
+                <p>Commit and push the new branch</p>
+                <img src="images/vscode-commit-sync.png"
+                  alt="VSCode Commit &amp; Sync">
+                <p>Open GitHub repository</p>
+                <p>You should see a message like this</p>
+                <img src="images/github-branch-push-merge.png"
+                  alt="Github message about pending merges">
+                <p>Click the Compare &amp; Pull Request button</p>
+                <p>You will see a screen like this</p>
+                <img src="images/brach-pull-request.png"
+                  alt="GutHub Branch Pull Request">
+                <p> You can type a comment in box where it says Leave a Comment.
+                </p>
+                <p>Click the Create pull request button</p>
+                <p>Hopefully you will see this message</p>
+                <img src="images/branch-no-conflict.png"
+                  alt="GitHub merge no conflict">
+                <p> If you see a message that state there is a conflict, you
+                  will have to fix the conflict using one of the options
+                  suggested. </p>
+                <p> Once the conflict is resolved and you get this message,
+                  click the Merge pull Request button </p>
+                <p>You will then be asked to confirm the merge</p>
+                <img src="images/branch-confirm-merge.png"
+                  alt="GitHub confirm Merge message">
+                <p>Click the Confirm Merge button</p>
+                <p> Once the merge is successful you will see this message. Go
+                  ahead and delete the branch by clicking the Delete Branch
+                  button </p>
+                <img src="images/branch-merge-successful.png"
+                  alt="Github Branch Merge successful">
+                <p> If you do not delete the branch you will always push to this
+                  branch from VSCode by default now. </p>
+                <p>Go back to VSCode</p>
+                <p> change back to the master branch by using the Checkout To
+                  option </p>
+                <img src="images/branch-check-out.png"
+                  alt="VSCode Branch Checkout">
+                <p> Select the Main/Master branch. Go by the name and not the
+                  number. </p>
+                <img src="images/branch-select-master.png"
+                  alt="VSCode Select Master Branch">
+                <p>To remove the local branch open the command prompted</p>
+                <p>Run this git command at the command prompt</p>
+                <pre>git pull &minus;prune</pre>
+                <p>You will see something like this if it works</p>
+                <img src="images/branch-prune.png" alt="Git Prune Command">
+                <pre>git branch &minus;d &lt;branch name&gt;</pre>
+                <img src="images/branch-delete.png"
+                  alt="Git Branch Delete Command">
+                <p> This screenshot shows what happens if you have not switched
+                  to the main/master branch first and the branch has not been
+                  fully merged. These entries are denoted with the red dot to
+                  the left of the command that was run. </p>
+                <p>You must CHECKOUT the main/master branch first</p>
+                <p> You can force the delete by using the -D option. Lowercase
+                  &minus;d for the check and uppercase &minus;D to force the
+                  delete. </p>
+                <p> You should now only have the one branch on your local
+                  computer. This is the preferred option for most classes at
+                  school. YOu will have multiple branches if you are working as
+                  a group on a single project. </p>
+              </li>
+            </ol>
+          </details>
+          <details>
+            <summary>User is prompted git-credential-manager-core.exe could not
+              be started</summary>
+            <p>User gets this prompt every time they go to sync with GitHub</p>
+            <img src="images/git-credential-manaager-net.png"
+              alt="Grit Credential Manager .Net prompt">
+            <p> You have to install Microsoft .Net 4.7.2 to get rid of this
+              prompt and to have Git remember your GitHub credentials. </p>
+            <p> If internet connectivity is an issue, then use this URL to go
+              directly to the download page and download the off-line installer.
+              Install the software, reboot the computer and try to sync with
+              Github. </p>
+            <p> You should not be prompted for this again. If you do then the
+              install did not work correctly. </p>
+            <p>If you get the following message</p>
+            <img src="images/windows-net-not-supported.png"
+              alt="Windows .Net not supported">
+            <p> You must update Windows to at least Windows 10 version 1607. You
+              can tell which version you have boy going to the About option in
+              the Windows Settings. </p>
+            <p> This post on Microsoft Support site shows you how to find which
+              version of Windows you are running. <a
+                href="https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808"
+                target="_blank"> Find operating system info in Windows 10 </a>
+            </p>
+          </details>
+          <details>
+            <summary>MacOS error: xcrun: error: invalid active developer path
+            </summary>
+            <h2>Error when running git --version on MAC</h2>
+            <p>When running the "git --version" or "git version" on a Mac, you
+              may encounter this error:</p>
+            <p>xcrun: error: invalid active developer path
+              (/Library/Developer/CommandLineTools), missing xcrun at:
+              /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
+            <img src="images/macos-xcode-error.png" alt="MacOS error message">
+            <p>To fix this error you must run the following command in a
+              terminal window on the Mac.</p>
+            <pre>xcode-select --install</pre>
+            <p>The other way to install these tools is to goto the Apple
+              Developer software page and install from there: <a
+                href="https://developer.apple.com/download/more/"
+                target="_blank">https://developer.apple.com/download/more/</a>
+            </p>
+            <p>Look for the: "Command Line Tools for Xcode" with the version
+              number that matches your OS version number and does not contain
+              the word 'BETA' as part of the filename. It will look something
+              like this screenshot.</p>
+            <img src="images/macos-xcode-download.png"
+              alt="MacOS Developer Download">
+            <p>Once the software has been installed make sure to restart the
+              VSCode application by clicking on the menu and select QUIT, (<img
+                src="images/mac-command.png" alt="command icon">-q)</p>
+          </details>
+          <details>
+            <summary>Git LoadLibraryExW() failed with" The specified procedure
+              could not be found.?</summary>
+            <img src="images/libcurl4-not-found.png" alt="Libcurl not found">
+            <p>If you open the Show <span class="bold-text">Command
+                Output</span> you will see the following error: <span
+                class="bold-text">git failed to load library
+                libcurl-4.dll</span></p>
+            <p>To resolve this error, you must find the libcurl-4.dll file on
+              the system and make a copy of it to the <span
+                class="bolded-text">C:\Program Files\Git\bin\</span> folder</p>
+            <p>for some reason even though Windows generally has the folder that
+              this file can be found in the Path Environmental settings, Git
+              does not always see it and cannot load it.</p>
+            <p>Most Windows systems has this file located in <span
+                class="bold-text">C:\Windows</span> and this folder is part of
+              the Path setting on Windows computers.
+            <p>
+          </details>
+        </section>
+        <section class="hints">
+          <h2>These are suggestions and hints</h2>
+          <details>
+            <summary>User is prompted to configure formatter</summary>
+            <p>User is prompted to configure formatter</p>
+            <p>If the user installs the Prettier extension, which is not needed,
+              the first time they go to format the code, they will be prompted
+              to select a formatter for that type of file type (HTML or CSS).
+              VSCode as a code formatter built into the editor that works well
+              with HTML, CSS, JavaScript, and PHP. </p>
+            <img src="images/formatters-configure.png" alt="Choose Formatter">
+            <p>One of the issues with the Prettier formatter is that is closes
+              null tags. What this means is that tags such as the img tag will
+              be closed with /> at the end. This is XHTML syntax and not part of
+              HTML5 standards.</p>
+            <p>Prettier is what is knows as an Opinionated Formatter. It is
+              opinionated in that the creators of it are stating what they
+              believe is the best way to format something even if it goes
+              against the standards or not explicitly stated that this is the
+              way it must be done. They do not give you the option to turn that
+              off. VSCode setting does give you that option. </p>
+          </details>
+          <details>
+            <summary>Users with multiple coding projects/classes</summary>
+            <p> It is recommended that if you are doing multiple coding projects
+              at a time and each has its own folder/directory structure, you
+              install an extension called Project Manager </p>
+            <p>Go to extensions</p>
+            <p>Search for Project Manager</p>
+            <img src="images/project-manager-search.png"
+              alt="Search Project Manager">
+            <p>Click Install.</p>
+            <p>Once installed open one project folder in VSCode</p>
+            <p> Click on the Project Manager icon in the icons on the left or
+              right of the editor </p>
+            <img src="images/project-manager-icon.png"
+              alt="Project Manager Icon">
+            <p> You should see a blue button that states: Project Manager: Save
+              Project - Click that button and you will be prompted for a name at
+              the top center of the screen. The default name is the folder name.
+            </p>
+            <img src="images/project-manager-1st-save.png"
+              alt="Project Manager 1st Save">
+            <p>You will be prompted to give the project a name</p>
+            <img src="images/project-mananger-naming.png" alt="Naming Project">
+            <p> That will then add that project name to the Project Manager list
+              of projects. </p>
+            <p>Open the second project folder in its own workspace.</p>
+            <p>Click the Save icon in the Project Manager folder icon area.</p>
+            <img src="images/project-manager-save.png"
+              alt="Project Manager Save">
+            <p> Give your project a name and hit enter. This will add it to the
+              list. </p>
+            <img src="images/project-mananger-naming.png" alt="Naming Project">
+            <p> If you click the edit icon, it will open the JSON file that
+              lists your projects. The format is quite easy to follow. The rule
+              is that each project must be enclosed with { } and must have a
+              comma between the project section. </p>
+            <ul>
+              <li>
+                <span class="bolded">Name</span> is the name of the project
+              </li>
+              <li>
+                <span class="bolded">Rootpath</span> is the path to the project.
+              </li>
+              <li>
+                <span class="bolded">Paths</span> is not used at this time
+              </li>
+              <li>
+                <span class="bolded">Tags</span> is a way to categorize the type
+                of project for sorting. This list is up to the person
+              </li>
+              <li>
+                <span class="bolded">Enabled</span> is if the project will
+                display or not in the list of projects. This is a way to only
+                show projects you are currently working on.
+              </li>
+            </ul>
+            <p>This is the format of the JSON File</p>
+            <pre>
                         {<br>
                         "name": "WDD-130",<br>
                         "rootPath": "/var/www/html/school/wdd130",<br>
@@ -495,250 +598,250 @@
                         "enabled": true<br>
                         },
                     </pre>
-        </details>
-        <details>
-          <summary>Pushing to GitHub using fewer steps</summary>
-          <p> When you are on the Git tab in VSCode, the button to Commit and
-            Sync may state Commit only. If you click on the down arrow to the
-            right of the button and select Commit &amp; Sync </p>
-          <img src="images/vscode-commit-sync.png" alt="commit &amp; sync">
-          <p> If this is the first time you are doing that you should see the
-            following messages. On the first dialog, click the Always button
-          </p>
-          <img src="images/vscode-stage-commit-message.png"
-            alt="Stage &amp; commit">
-          <p> On this next dialog if you get prompted, click the OK, Don&apos;t
-            Show Again button </p>
-          <img src="images/vscode-pull-push-always.png"
-            alt="Always Pull Push to branch">
-          <p> Sometimes these will prompt the second time you click on the
-            Commit &amp; Sync option. </p>
-          <p> You can change your Commit button to Say Commit &amp; Sync by
-            doing the following </p>
-          <ul>
-            <li> Go to the VSCode Settings <img src="images/gpg-1.png"
-                alt="VSCode settings">
-            </li>
-            <li> In the search bar search for Git: Post Commit Command <img
-                src="images/vscode-settings-sync-search.png"
-                alt="Search VSCode settings">
-            </li>
-            <li> Change the option on that command to be sync <img
-                src="images/vscode-post-command-commit-sync.png"
-                alt="sync &amp; commit">
-            </li>
-          </ul>
-          <p> This will make it possible for you to click the button once and
-            commit and sync at the same time. Just click this button and both
-            steps are executed in order. </p>
-          <img src="images/vscode-comit-sync-button.png"
-            alt="commit sync button">
-        </details>
-        <details>
-          <summary> How to add more than 50 characters to a Git commit
-          </summary>
-          <p> The default maximum length for a git commit message is 50
-            characters </p>
-          <p> There is a way to add more details to the commit so that you can
-            see what you did in a lot more detail without having to look at the
-            code changes directly. </p>
-          <p> In VSCode, do not type a message before you hit the commit/commit
-            &amp; sync button </p>
-          <p> By doing this you will get prompted with a screen in the code
-            editor for the commit message like this </p>
-          <img src="images/vscode-editor-commit.png"
-            alt="VSCode commit text editor screen">
-          <p> The way you use this to type in your 50 character or less comment
-            in the first line </p>
-          <p> Go to the line below the last # (hashtag/pound symbol) and then
-            type in the longer message you want to give. There is not limit to
-            how long this message can be. </p>
-          <img src="images/vscode-message-details.png" alt="Message Details">
-          <p>To see this message on GitHub do the following.</p>
-          <ul>
-            <li>
-              <p>Open Github and click on the commits link</p>
-              <img src="images/github-read-commits.png" alt="GitHub Commits">
-            </li>
-            <li>
-              <p> If there is an extra detail comment on the commit you will see
-                this little icon of 3 dots </p>
-              <img src="images/vscode-message-details-2.png"
-                alt="extra message details">
-            </li>
-            <li>
-              <p> Click on those 3 dots and the extra message you typed will be
-                displayed </p>
-              <img src="images/vscode-message-details-3.png"
-                alt="display message details">
-            </li>
-          </ul>
-          <p>It is that simple.</p>
-        </details>
-        <details>
-          <summary>Adding a description to your repository</summary>
-          <p> One of the things you will see in a lot of repositories is a
-            description of what the repository is all about, how to install and
-            use the code, etc. </p>
-          <p> This is all done using Markdown text. This will show you the
-            details of how to use that so you can describe wheat you repository
-            is all about. </p>
-          <p> First you need to create a file in the top level folder called
-            README.md. It must be capitalized for GuitHub to recognize it as the
-            description file for the repository </p>
-          <h4> Teh following information comes from the <a
-              href="https://www.markdownguide.org/" target="_blank"> Markdown
-              Guide </a> website basic syntax page. </h4>
-          <p>The basic syntax is as follows:</p>
-          <table class="table table-bordered">
-            <thead class="thead-light">
-              <tr>
-                <th>Markdown</th>
-                <th>HTML</th>
-                <th>Rendered Output</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge"># Heading level 1</code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+          </details>
+          <details>
+            <summary>Pushing to GitHub using fewer steps</summary>
+            <p> When you are on the Git tab in VSCode, the button to Commit and
+              Sync may state Commit only. If you click on the down arrow to the
+              right of the button and select Commit &amp; Sync </p>
+            <img src="images/vscode-commit-sync.png" alt="commit &amp; sync">
+            <p> If this is the first time you are doing that you should see the
+              following messages. On the first dialog, click the Always button
+            </p>
+            <img src="images/vscode-stage-commit-message.png"
+              alt="Stage &amp; commit">
+            <p> On this next dialog if you get prompted, click the OK,
+              Don&apos;t Show Again button </p>
+            <img src="images/vscode-pull-push-always.png"
+              alt="Always Pull Push to branch">
+            <p> Sometimes these will prompt the second time you click on the
+              Commit &amp; Sync option. </p>
+            <p> You can change your Commit button to Say Commit &amp; Sync by
+              doing the following </p>
+            <ul>
+              <li> Go to the VSCode Settings <img src="images/gpg-1.png"
+                  alt="VSCode settings">
+              </li>
+              <li> In the search bar search for Git: Post Commit Command <img
+                  src="images/vscode-settings-sync-search.png"
+                  alt="Search VSCode settings">
+              </li>
+              <li> Change the option on that command to be sync <img
+                  src="images/vscode-post-command-commit-sync.png"
+                  alt="sync &amp; commit">
+              </li>
+            </ul>
+            <p> This will make it possible for you to click the button once and
+              commit and sync at the same time. Just click this button and both
+              steps are executed in order. </p>
+            <img src="images/vscode-comit-sync-button.png"
+              alt="commit sync button">
+          </details>
+          <details>
+            <summary> How to add more than 50 characters to a Git commit
+            </summary>
+            <p> The default maximum length for a git commit message is 50
+              characters </p>
+            <p> There is a way to add more details to the commit so that you can
+              see what you did in a lot more detail without having to look at
+              the code changes directly. </p>
+            <p> In VSCode, do not type a message before you hit the
+              commit/commit &amp; sync button </p>
+            <p> By doing this you will get prompted with a screen in the code
+              editor for the commit message like this </p>
+            <img src="images/vscode-editor-commit.png"
+              alt="VSCode commit text editor screen">
+            <p> The way you use this to type in your 50 character or less
+              comment in the first line </p>
+            <p> Go to the line below the last # (hashtag/pound symbol) and then
+              type in the longer message you want to give. There is not limit to
+              how long this message can be. </p>
+            <img src="images/vscode-message-details.png" alt="Message Details">
+            <p>To see this message on GitHub do the following.</p>
+            <ul>
+              <li>
+                <p>Open Github and click on the commits link</p>
+                <img src="images/github-read-commits.png" alt="GitHub Commits">
+              </li>
+              <li>
+                <p> If there is an extra detail comment on the commit you will
+                  see this little icon of 3 dots </p>
+                <img src="images/vscode-message-details-2.png"
+                  alt="extra message details">
+              </li>
+              <li>
+                <p> Click on those 3 dots and the extra message you typed will
+                  be displayed </p>
+                <img src="images/vscode-message-details-3.png"
+                  alt="display message details">
+              </li>
+            </ul>
+            <p>It is that simple.</p>
+          </details>
+          <details>
+            <summary>Adding a description to your repository</summary>
+            <p> One of the things you will see in a lot of repositories is a
+              description of what the repository is all about, how to install
+              and use the code, etc. </p>
+            <p> This is all done using Markdown text. This will show you the
+              details of how to use that so you can describe wheat you
+              repository is all about. </p>
+            <p> First you need to create a file in the top level folder called
+              README.md. It must be capitalized for GuitHub to recognize it as
+              the description file for the repository </p>
+            <h4> Teh following information comes from the <a
+                href="https://www.markdownguide.org/" target="_blank"> Markdown
+                Guide </a> website basic syntax page. </h4>
+            <p>The basic syntax is as follows:</p>
+            <table class="table table-bordered">
+              <thead class="thead-light">
+                <tr>
+                  <th>Markdown</th>
+                  <th>HTML</th>
+                  <th>Rendered Output</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge"># Heading level 1</code>
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &lt;h1&gt;Heading level 1&lt;/h1&gt;
                     </code>
-                </td>
-                <td>
-                  <h1 class="no-anchor" data-toc-skip="">Heading level 1</h1>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">## Heading level 2</code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <h1 class="no-anchor" data-toc-skip="">Heading level 1</h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">## Heading level 2</code>
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &lt;h2&gt;Heading level 2&lt;/h2&gt;
                     </code>
-                </td>
-                <td>
-                  <h2 class="no-anchor" data-toc-skip="">Heading level 2</h2>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">### Heading level 3</code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <h2 class="no-anchor" data-toc-skip="">Heading level 2</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">### Heading level 3</code>
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &lt;h3&gt;Heading level 3&lt;/h3&gt;
                     </code>
-                </td>
-                <td>
-                  <h3 class="no-anchor" data-toc-skip="">Heading level 3</h3>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">#### Heading level 4</code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <h3 class="no-anchor" data-toc-skip="">Heading level 3</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">#### Heading level 4</code>
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &lt;h4&gt;Heading level 4&lt;/h4&gt;
                     </code>
-                </td>
-                <td>
-                  <h4 class="no-anchor">Heading level 4</h4>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">##### Heading level 5</code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <h4 class="no-anchor">Heading level 4</h4>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">##### Heading level 5</code>
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &lt;h5&gt;Heading level 5&lt;/h5&gt;
                     </code>
-                </td>
-                <td>
-                  <h5 class="no-anchor">Heading level 5</h5>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <h5 class="no-anchor">Heading level 5</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">
                       ###### Heading level 6
                     </code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &lt;h6&gt;Heading level 6&lt;/h6&gt;
                     </code>
-                </td>
-                <td>
-                  <h6 class="no-anchor">Heading level 6</h6>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <h6 class="no-anchor">Heading level 6</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">
                       This is regular paragraph text
                     </code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &lt;p&gt;This is regular paragraph text&lt;/p&gt;
                     </code>
-                </td>
-                <td>
-                  <p class="no-anchor">This is regular paragraph text</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <h3 id="heading-best-practices">Heading Best Practices</h3>
-          <p> Markdown applications don&apos;t agree on how to handle a missing
-            space between the number signs ( <code
-              class="language-plaintext highlighter-rouge">#</code> ) and the
-            heading name. For compatibility, always put a space between the
-            number signs and the heading name. </p>
-          <table class="table table-bordered">
-            <thead class="thead-light">
-              <tr>
-                <th>✅&nbsp; Do this</th>
-                <th>❌&nbsp; Don&apos;t do this</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <p class="no-anchor">This is regular paragraph text</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 id="heading-best-practices">Heading Best Practices</h3>
+            <p> Markdown applications don&apos;t agree on how to handle a
+              missing space between the number signs ( <code
+                class="language-plaintext highlighter-rouge">#</code> ) and the
+              heading name. For compatibility, always put a space between the
+              number signs and the heading name. </p>
+            <table class="table table-bordered">
+              <thead class="thead-light">
+                <tr>
+                  <th>✅&nbsp; Do this</th>
+                  <th>❌&nbsp; Don&apos;t do this</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">
                       # Here&apos;s a Heading
                       <br>
                       <br>
                     </code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       #Here&apos;s a Heading
                     </code>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p> You should also put blank lines before and after a heading for
-            compatibility. </p>
-          <table class="table table-bordered">
-            <thead class="thead-light">
-              <tr>
-                <th>✅&nbsp; Do this</th>
-                <th>❌&nbsp; Don&apos;t do this</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p> You should also put blank lines before and after a heading for
+              compatibility. </p>
+            <table class="table table-bordered">
+              <thead class="thead-light">
+                <tr>
+                  <th>✅&nbsp; Do this</th>
+                  <th>❌&nbsp; Don&apos;t do this</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">
                       Try to put a blank line before...
                       <br>
                       <br>
@@ -749,34 +852,34 @@
 
                       ...and after a heading.
                     </code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       Without blank lines, this might not look right.
                       <br>
                       # Heading
                       <br>
                       Don&apos;t do this!
                     </code>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <h2>Paragraphs</h2>
-          <p> To create paragraphs, use a blank line to separate one or more
-            lines of text. </p>
-          <table class="table table-bordered">
-            <thead class="thead-light">
-              <tr>
-                <th>Markdown</th>
-                <th>HTML</th>
-                <th>Rendered Output</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Paragraphs</h2>
+            <p> To create paragraphs, use a blank line to separate one or more
+              lines of text. </p>
+            <table class="table table-bordered">
+              <thead class="thead-light">
+                <tr>
+                  <th>Markdown</th>
+                  <th>HTML</th>
+                  <th>Rendered Output</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">
                       I really like using Markdown.
                       <br>
                       <br>
@@ -784,9 +887,9 @@
                       I think I&apos;ll use it to format all of my documents
                       from now on.
                     </code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &lt;p&gt;I really like using Markdown.&lt;/p&gt;
                       <br>
                       <br>
@@ -794,38 +897,38 @@
                       &lt;p&gt;I think I&apos;ll use it to format all of my
                       documents from now on.&lt;/p&gt;
                     </code>
-                </td>
-                <td>
-                  <p>I really like using Markdown.</p>
-                  <p> I think I&apos;ll use it to format all of my documents
-                    from now on. </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <h3 id="paragraph-best-practices">Paragraph Best Practices</h3>
-          <p> Unless the <a
-              href="https://www.markdownguide.org/basic-syntax/#paragraphs"
-              target="_blank"> paragraph is in a list </a> , don&apos;t indent
-            paragraphs with spaces or tabs. </p>
-          <div class="alert alert-info">
-            <i class="fas fa-info-circle"></i>
-            <strong>Note:</strong> If you need to indent paragraphs in the
-            output, see thesection on how to <a
-              href="https://www.markdownguide.org/hacks/#indent-tab"
-              target="_blank"> indent (tab) </a> .
-          </div>
-          <table class="table table-bordered">
-            <thead class="thead-light">
-              <tr>
-                <th>✅&nbsp; Do this</th>
-                <th>❌&nbsp; Don&apos;t do this</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <p>I really like using Markdown.</p>
+                    <p> I think I&apos;ll use it to format all of my documents
+                      from now on. </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 id="paragraph-best-practices">Paragraph Best Practices</h3>
+            <p> Unless the <a
+                href="https://www.markdownguide.org/basic-syntax/#paragraphs"
+                target="_blank"> paragraph is in a list </a> , don&apos;t indent
+              paragraphs with spaces or tabs. </p>
+            <div class="alert alert-info">
+              <i class="fas fa-info-circle"></i>
+              <strong>Note:</strong> If you need to indent paragraphs in the
+              output, see thesection on how to <a
+                href="https://www.markdownguide.org/hacks/#indent-tab"
+                target="_blank"> indent (tab) </a> .
+            </div>
+            <table class="table table-bordered">
+              <thead class="thead-light">
+                <tr>
+                  <th>✅&nbsp; Do this</th>
+                  <th>❌&nbsp; Don&apos;t do this</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code class="highlighter-rouge">
                       Don&apos;t put tabs or spaces in front of your paragraphs.
                       <br>
                       <br>
@@ -834,9 +937,9 @@
                       <br>
                       <br>
                     </code>
-                </td>
-                <td>
-                  <code class="highlighter-rouge">
+                  </td>
+                  <td>
+                    <code class="highlighter-rouge">
                       &nbsp;&nbsp;&nbsp;&nbsp;This can result in unexpected
                       formatting problems.
                       <br>
@@ -845,15 +948,15 @@
                       &nbsp;&nbsp;Don&apos;t add tabs or spaces in front of
                       paragraphs.
                     </code>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </details>
-      </section>
-    </main>
-    <footer></footer>
-  </div>
-</body>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
 
 </html>
