@@ -36,18 +36,6 @@
 *               Default HTML TAG settings
 *
 ********************************************************************/
-h1,
-h2 {
-  font-family: var(--font-2);
-  padding: 0.5em;
-  margin: 0;
-}
-
-h3,
-h4 {
-  font-family: var(--heading-font);
-  padding: 10px;
-}
 
 h1,
 h2,
