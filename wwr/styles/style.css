@@ -1,15 +1,16 @@
 @import url(normalize.css);
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lora&family=Roboto+Slab&display=swap');
 
-* {
+*, *::after, *::before {
   box-sizing: border-box;
 }
 
 :root {
   background-color: #c1f7f7;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto Slab', sans-serif, serif;
-  box-sizing: border-box;
+
 
   /************************************************************
   *
@@ -49,6 +50,17 @@ h6 {
   font-weight: 700;
 }
 
+h1,
+h2 {
+  font-family: var(--font-2);
+  padding: 0.5em;
+  margin: 0;
+}
+
+h3,
+h4 {
+  padding: 10px;
+}
 h1 {
   font-size: 2.5rem;
 }
