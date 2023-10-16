@@ -53,31 +53,26 @@
 /* Activity 3 styles */ 
 .content3 {
   /* This is the parent of the activity 3 boxes. */
-  
 }
 .red3 {
-  width: 100%; 
+  width: 100px; 
   height: 100px; 
   background-color: red; 
- 
 } 
 .green3 {
-  width: 300px; 
+  width: 100px; 
   height: 100px; 
   background-color: green;
-
 } 
 .yellow3 {
-  width: 300px; 
+  width: 100px; 
   height: 100px; 
   background-color: gold; 
- 
 } 
 .blue3 {
-  width: 100%;
+  width: 100px;
   height: 100px; 
   background-color: blue; 
- 
 } 
 /* Activity 4 styles */ 
 .content4 {
