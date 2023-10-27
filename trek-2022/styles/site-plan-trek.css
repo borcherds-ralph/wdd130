@@ -1,5 +1,5 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
+/* if you are using any Google fonts change the font names below to your fonts.
+Any spaces in your font name should be replaced with a +.
 Fonts are separated by a | */
 @import url('https://fonts.googleapis.com/css2?family=Macondo&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -10,6 +10,7 @@ Fonts are separated by a | */
   --accent1-color: #cc6c39;
   --accent2-color: #7e7f3c;
   --accent3-color: #553b1f;
+  --accent4-color: #933503;
 
   /* change the values below to your chosen font(s) */
   --heading-font: 'Macondo', cursive;
@@ -29,6 +30,10 @@ Fonts are separated by a | */
   --nav-background-color: #496bac;
   --nav-hover-link-color: white;
   --nav-hover-background-color: #553b1f;
+}
+
+.white {
+  color: #fff;
 }
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
@@ -110,7 +115,7 @@ p {
 }
 
 .colors td {
-  width: 20%;
+  width: 16%;
   height: 3em;
 }
 
