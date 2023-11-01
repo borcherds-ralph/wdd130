@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid Playground</title>
+        <link rel="stylesheet" href="styles/grid-playground.css">
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="main-grid">
+                <div class="placement1" id="placement1"></div>
+                <div class="placement2" id="placement2"></div>
+                <div class="placement3" id="placement3"></div>
+                <div class="placement4" id="placement4"></div>
+                <div class="placement5" id="placement5"></div>
+                <div class="placement6" id="placement6"></div>
+                <div class="placement7" id="placement7"></div>
+            </div>
+        </div>
+        <script>
+            let place1 = document.getElementById('placement1');
+            let place1comp = getComputedStyle(place1);
+            document.getElementById('placement1').innerHTML = 'Placement1<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+
+            let place2 = document.getElementById('placement2');
+            let place2comp = getComputedStyle(place2);
+            document.getElementById('placement2').innerHTML = 'Placement2<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+
+            let place3 = document.getElementById('placement3');
+            let place3comp = getComputedStyle(place3);
+            document.getElementById('placement3').innerHTML = 'Placement3<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+
+            let place4 = document.getElementById('placement4');
+            let place4comp = getComputedStyle(place4);
+            document.getElementById('placement4').innerHTML = 'Placement14b<r>grid-column: ' + place4comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+
+            let place5 = document.getElementById('placement5');
+            let place5comp = getComputedStyle(place5);
+            document.getElementById('placement5').innerHTML = 'Placement5<br>grid-column: ' + place5comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+
+            let place6 = document.getElementById('placement6');
+            let place6comp = getComputedStyle(place6);
+            document.getElementById('placement6').innerHTML = 'Placement6<br>grid-column: ' + place6comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+
+            let place7 = document.getElementById('placement7');
+            let place7comp = getComputedStyle(place7);
+            document.getElementById('placement7').innerHTML = 'Placement7<br>grid-column: ' + place7comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+
+
+        </script>
+    </body>
+
+</html>
