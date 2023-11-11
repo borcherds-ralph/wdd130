@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Correct HTML5 Syntax that must be used</title>
+        <link rel="stylesheet" href="../styles/canvas.css">
+    </head>
+
+    <body>
+        <p>This flowchart shows you the basic decision process to determine
+            which HTML tag to use when. The &lt;div&gt; tag is that of last
+            resort and if you use it incorrectly I will kick it back to you with
+            the correct tag to use.</p>
+        <p><img role="presentation"
+                src="http://html5doctor.com/downloads/h5d-sectioning-flowchart.png"
+                alt="" /></p>
+        <h2>Starting HTML syntax</h2>
+        <p>This is the basic HTML format that you should be using for correct
+            HTML5 standards.</p>
+        <p>The main tag below has the various section type tags that are allowed
+            to be used in the main and footer sections. Make sure to read the
+            Welcome to Week 10 Announcement for a chart that shows when each
+            should be used.</p>
+        <p>The heading tags can be used in any area. Just remember that h1
+            should only be used once per page. There is one exception and that
+            is when it is inside the article tag.</p>
+        <p>Correct HTML format that must be used.&nbsp; <strong><span
+                    style="color: #166d05;">Comments are bold and in
+                    green.</span></strong></p>
+        <p>&nbsp;</p>
+        <pre>&lt;!DOCTYPE html&gt;<br />        &lt;html lang="en"&gt;<br />        &lt;head&gt;<br />        &nbsp; &nbsp; &lt;meta charset="UTF-8"&gt;<br />        &nbsp; &nbsp; &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br />        &nbsp; &nbsp; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br />        &nbsp; &nbsp; &lt;title&gt;Page Title&lt;/title&gt;<br />        &nbsp; &nbsp; &lt;link rel="stylesheet" href="styles/style.css"&gt; &nbsp; <strong><span style="color: #166d05;">&lt;!-- This must go here after the other tags --&gt;</span></strong><br /><strong><span style="color: #166d05;">&nbsp; &nbsp; &lt;!-- Do not link to Font-Awesome for school work. That does not validate.&nbsp;</span></strong><br /><strong><span style="color: #166d05;">  &nbsp; &nbsp; &nbsp; Copy SVG code from <a href="https://heroicons.com" target="_blank" rel="noopener">https://heroicons.com</a> or  for icons in your page if you want to use them --&gt;</span></strong><br />&lt;/head&gt;<br /><br />&lt;body&gt;<br />    &lt;div class="content"&gt;   <strong><span style="color: #076a57;">&lt;!-- This is what sets the max-width. You must have something to set the max-width of the page --&gt;</span></strong><br />        &lt;header&gt;<br />        &nbsp; &nbsp;&lt;img src="images/logo.svg" alt="Company Logo" class="logo"&gt; &nbsp; <strong><span style="color: #166d05;">&lt;!-- This is for the logo only --&gt;</span></strong><br />  &nbsp; &nbsp; &nbsp;    &lt;nav&gt;<br />        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #166d05;"><strong>&lt;!-- Links to the 3 website pages go in this area --&gt;</strong></span><br />  &nbsp; &nbsp; &nbsp;    &lt;/nav&gt;<br />        &lt;/header&gt;<br />
+            &lt;main&gt;<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #166d05;"><strong>&lt;!-- The ALL content between the header and footer goes in here These are valid sub-sections</strong></span><br /><span style="color: #166d05;"><strong>  &nbsp; &nbsp; &nbsp; inside the main area  Hero images should go here as well --&gt;</strong></span><br />  &nbsp; &nbsp; &nbsp;     &lt;section&gt;&lt;/section&gt;<br />
+            &nbsp; &nbsp; &lt;div&gt;&lt;/div&gt;<br />
+            &nbsp; &nbsp; &lt;article&gt;&lt;/article&gt;<br />
+            &nbsp; &nbsp;&lt;aside&gt;&lt;/aside&gt;<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #166d05;"><strong>&lt;!-- You can use all other formatting tags inside the main or the other sections listed</strong></span><br /><span style="color: #166d05;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; h1, h2, h3, h4, h5,h6</strong></span><br /><span style="color: #166d05;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; img</strong></span><br /><span style="color: #166d05;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; p</strong></span><br /><span style="color: #166d05;"><strong>  &nbsp; &nbsp; &nbsp; table<br /> &nbsp; &nbsp; &nbsp;  etc....</strong></span><br /><span style="color: #166d05;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; --&gt;</strong></span><br />&nbsp; &nbsp; &lt;/main&gt;<br />
+       &lt;footer&gt;<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; <strong><span style="color: #166d05;">&lt;!--&nbsp;</span></strong><br /><strong><span style="color: #166d05;">&nbsp; &nbsp; &nbsp; &nbsp; Link to site plan must go here only&nbsp;</span></strong><br /><strong><span style="color: #166d05;">&nbsp; &nbsp; &nbsp; &nbsp; Copyright notice must go here</span></strong><br /><strong><span style="color: #166d05;">&nbsp; &nbsp; &nbsp; &nbsp; This is where you will put any links to these legal documents: terms of use, disclaimer, and Privacy policy&nbsp;</span></strong><br /><strong><span style="color: #166d05;">&nbsp; &nbsp; &nbsp; &nbsp; --&gt;</span></strong><br />&nbsp; &nbsp; &lt;/footer&gt;<br />  <br />&nbsp; &nbsp; <strong><span style="color: #166d05;">&lt;!-- JavaScript goes here 99% of the time. The only other place in the head and only when required --&gt;</span></strong><br />&nbsp; &nbsp; <span style="color: #166d05;"><strong>&lt;!-- Modals code go here --&gt;<br /></strong></span><br />&lt;/body&gt;<br />&lt;/html&gt;</pre>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>here is the code without the comments for the basic structure that
+            must be use.</p>
+        <pre>&lt;!DOCTYPE html&gt;<br />&lt;html lang="en"&gt;<br />&lt;head&gt;<br />&nbsp; &nbsp;&lt;meta charset="UTF-8"&gt;<br />&nbsp; &nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br />&nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;<br />&nbsp; &nbsp;&lt;link rel="stylesheet" href="styles/style.css"&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&nbsp; &nbsp;&lt;header&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp;&lt;nav&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="index.html"&gt;Home&lt;/a&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp;&lt;/nav&gt;<br />&nbsp; &nbsp;&lt;/header&gt;<br />&nbsp; &nbsp;&lt;main&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp;<br />&nbsp; &nbsp;&lt;/main&gt;<br />&nbsp; &nbsp;&lt;footer&gt;<br />&nbsp; &nbsp;&lt;/footer&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</pre>
+    </body>
+
+</html>

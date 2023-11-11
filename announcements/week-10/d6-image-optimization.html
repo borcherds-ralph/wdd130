@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email addresses on web pages</title>
+    <link rel="stylesheet" href="../styles/canvas.css">
+</head>
+
+<body>
+    <h2>Image Optimization sites</h2>
+    <p>Here is a list of some image optimization sites you can use for free.</p>
+    <p><a href="https://tinyjpg.com/" target="_blank"
+            rel="noopener">https://tinyjpg.com/</a></p>
+    <p><a href="https://compressjpeg.com/" target="_blank"
+            rel="noopener">https://compressjpeg.com/</a></p>
+    <p><a href="https://compressor.io/" target="_blank"
+            rel="noopener">https://compressor.io/</a></p>
+    <p><a href="http://www.imageoptimizer.net/Pages/Home.aspx" target="_blank"
+            rel="noopener">http://www.imageoptimizer.net/Pages/Home.aspx</a></p>
+    <p>&nbsp;</p>
+    <p>This is a good list of 5 optimization sites</p>
+    <p><a href="https://www.hostinger.com/tutorials/complete-guide-to-image-optimization#5_Best_Image_Optimization_Tools"
+            target="_blank"
+            rel="noopener">https://www.hostinger.com/tutorials/complete-guide-to-image-optimization#5_Best_Image_Optimization_Tools</a>
+    </p>
+    <p>&nbsp;</p>
+    <p>This is a list of 36 optimization sites. It odes give some pros and cons for
+        each but some are a little out dated and may not be on-line anymore.</p>
+    <p><a href="https://www.g2.com/categories/image-optimization" target="_blank"
+            rel="noopener">https://www.g2.com/categories/image-optimization</a></p>
+    <p>&nbsp;</p>
+    <p>Personally I like the webp format. As of October 2023, all supported browsers
+        do support this web format. People will have to update their browsers to a
+        new format if they cannot see the images. There is a way to display the webp
+        format if the browser supports it and if not then show the jpg/png format.
+        This is the basic format</p>
+    <pre>&lt;picture&gt;<br />  &lt;source srcset="mdn-logo-wide.png" media="(min-width: 800px)"&gt;<br />  &lt;source srcset="mdn-logo-medium.png" media="(min-width: 600px)"&gt;<br />  &lt;img src="mdn-logo-narrow.png" alt="MDN Web Docs"&gt;<br />&lt;/picture&gt;</pre>
+    <p>&nbsp;</p>
+    <p>To specify specific types</p>
+    <pre class="brush: html notranslate"
+        data-signature="zM8C3BUibuoydUljMfnaVhaTCvG878n1ry9zY3SAGkU=">&lt;picture&gt;<br />  &lt;source srcset="imgae.webp"&gt;<br />  &lt;img src="iamge.png" alt="MDN Web Docs"&gt;<br />&lt;/picture&gt;</pre>
+    <p>&nbsp;</p>
+    <p>There are a few ways to use this including for different size screens. You
+        will learn about that in WDD230.</p>
+</body>
+
+</html>
