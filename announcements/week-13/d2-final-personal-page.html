@@ -24,6 +24,26 @@
                 mozallowfullscreen="mozallowfullscreen"
                 allow="autoplay *; fullscreen *; encrypted-media *"></iframe>
         </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Here is the CSS for the FAQ page, just the details, summary and other
+            info as described in the video.</p>
+        <pre>details {<br />&nbsp; &nbsp; grid-column: 2/12;<br />&nbsp; &nbsp; background-color: #496bac;<br />&nbsp; &nbsp; border-radius: 30px;<br />}<br /><br />details summary {<br />&nbsp; &nbsp; font-size: 1.25em;<br />&nbsp; &nbsp; padding: 1em;<br />&nbsp; &nbsp; background-color: #933503;<br />&nbsp; &nbsp; font-size: 2em;<br />&nbsp; &nbsp; font-weight: 700;<br />&nbsp; &nbsp; letter-spacing: 1px;<br />&nbsp; &nbsp; display: flex;<br />&nbsp; &nbsp; justify-content: space-between;<br />}<br /><br />summary:hover {<br />&nbsp; &nbsp; background-color: #1b1b1b;<br />}<br /><br />summary::after {<br />&nbsp; &nbsp; content: '\276f';<br />&nbsp; &nbsp; width: 1em;<br />&nbsp; &nbsp; height: 1em;<br />&nbsp; &nbsp; text-align: center;<br />&nbsp; &nbsp; transition: all 0.35s;<br />}<br /><br />details[open] summary::after {<br />&nbsp; &nbsp; content: '\276f';<br />&nbsp; &nbsp; width: 1em;<br />&nbsp; &nbsp; height: 1em;<br />&nbsp; &nbsp; transform: rotate(90deg);<br />}<br /><br />details h3 {<br />&nbsp; &nbsp; font-style: italic;<br />&nbsp; &nbsp; padding: 0 3em;<br />&nbsp; &nbsp; font-size: 1.5em;<br />&nbsp; &nbsp; color: #1b1b1b;<br />}<br />details p {<br />&nbsp; &nbsp; padding: 1em 2em;<br />&nbsp; &nbsp; line-height: 1.5;<br />&nbsp; &nbsp; font-size: 1.25em;<br /><br />}<br /><br />details img {<br />&nbsp; &nbsp; border: 8px solid #a58662;<br />&nbsp; &nbsp; border-radius: 30px;<br />&nbsp; &nbsp; padding: .5rem;<br />&nbsp; &nbsp; background-color: #1b1b1b;<br />}<br /><br />details cite {<br />&nbsp; &nbsp; font-size: .75em;<br />&nbsp; &nbsp; font-weight: 300;<br />&nbsp; &nbsp; font-style: italic;<br />}<br /><br />.quote {<br />&nbsp; &nbsp; font-size: .9em;<br />&nbsp; &nbsp; font-weight: 300;<br />}<br /><br />.color-text {<br />&nbsp; &nbsp; color:#1b1b1b;<br />}<br />.color-text:hover {<br />&nbsp; &nbsp; color:#a58662;<br />&nbsp; &nbsp; text-decoration: underline;<br />}</pre>
+        <p>&nbsp;</p>
+        <p>I usually create class names for each of the items so that I do not
+            have to use the HTML tags for this and double up on the selectors.
+        </p>
+        <p>Here is the same CSS with the class names instead of the HTML tags.
+        </p>
+        <p>&nbsp;</p>
+        <pre>.faq {<br />&nbsp; &nbsp; grid-column: 2/12;<br />&nbsp; &nbsp; background-color: #496bac;<br />&nbsp; &nbsp; border-radius: 30px;<br />}<br /><br />.faq-question {<br />&nbsp; &nbsp; font-size: 1.25em;<br />&nbsp; &nbsp; padding: 1em;<br />&nbsp; &nbsp; background-color: #933503;<br />&nbsp; &nbsp; font-size: 2em;<br />&nbsp; &nbsp; font-weight: 700;<br />&nbsp; &nbsp; letter-spacing: 1px;<br />&nbsp; &nbsp; display: flex;<br />&nbsp; &nbsp; justify-content: space-between;<br />}<br /><br />.faq-question:hover {<br />&nbsp; &nbsp; background-color: #1b1b1b;<br />}<br /><br />.faq-question::after {<br />&nbsp; &nbsp; content: '\276f';<br />&nbsp; &nbsp; width: 1em;<br />&nbsp; &nbsp; height: 1em;<br />&nbsp; &nbsp; text-align: center;<br />&nbsp; &nbsp; transition: all 0.35s;<br />}<br /><br />.faq[open] .faq-question::after {<br />&nbsp; &nbsp; content: '\276f';<br />&nbsp; &nbsp; width: 1em;<br />&nbsp; &nbsp; height: 1em;<br />&nbsp; &nbsp; transform: rotate(90deg);<br />}<br /><br />.faq-question h3 {<br />&nbsp; &nbsp; font-style: italic;<br />&nbsp; &nbsp; padding: 0 3em;<br />&nbsp; &nbsp; font-size: 1.5em;<br />&nbsp; &nbsp; color: #1b1b1b;<br />}<br />.faq-p {<br />&nbsp; &nbsp; padding: 1em 2em;<br />&nbsp; &nbsp; line-height: 1.5;<br />&nbsp; &nbsp; font-size: 1.25em;<br /><br />}<br /><br />.faq-img {<br />&nbsp; &nbsp; border: 8px solid #a58662;<br />&nbsp; &nbsp; border-radius: 30px;<br />&nbsp; &nbsp; padding: .5rem;<br />&nbsp; &nbsp; background-color: #1b1b1b;<br />}<br /><br />.faq-cite {<br />&nbsp; &nbsp; font-size: .75em;<br />&nbsp; &nbsp; font-weight: 300;<br />&nbsp; &nbsp; font-style: italic;<br />}<br /><br />.quote {<br />&nbsp; &nbsp; font-size: .9em;<br />&nbsp; &nbsp; font-weight: 300;<br />}<br /><br />.color-text {<br />&nbsp; &nbsp; color:#1b1b1b;<br />}<br />.color-text:hover {<br />&nbsp; &nbsp; color:#a58662;<br />&nbsp; &nbsp; text-decoration: underline;<br />}</pre>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>I have also taken the p and img tags and wrapped them in a div or
+            section and uses grid and/or flex to place them in a different
+            manner. That takes a lot more time to code and I did not want to do
+            that in the video. If&nbsp; you want to learn how to do that let me
+            know and I will show you.</p>
     </body>
 
 </html>
