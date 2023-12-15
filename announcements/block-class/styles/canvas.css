@@ -1,0 +1,61 @@
+body {
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 6px 0;
+    font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: normal;
+}
+
+h1,
+h2,
+.h1,
+.h2 {
+    font-size: 1.8em;
+    line-height: 1.5;
+}
+h3,
+.h3 {
+    font-size: 1.5em;
+}
+
+p {
+    margin: 12px 0;
+}
+
+pre {
+    color: #2d3b45;
+    display: block;
+    padding: 9px;
+    margin: 0 0 12px;
+    line-height: 1.2;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+}
