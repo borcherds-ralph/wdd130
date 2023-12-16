@@ -47,6 +47,9 @@ li {
   line-height: 1.5em;
 }
 
+img {
+  max-width: 200px;
+}
 
 main {
   background-color: #f3ffff;

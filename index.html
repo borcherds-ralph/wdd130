@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 130 Home Page - Ralph Borcherds</title>
+    <title>WDD 130 Home Page | Ralph Borcherds</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -12,8 +12,8 @@
 
     <header>
         <nav>
-            <a href="wwr/index.html">White Water Rafting Website</a>
-            <a href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a>
+            <a href="wwr/index.html">Rafting Website</a>
+            <a href="wwr/site-plan-rafting.html">Rafting Site Plan</a>
             <a href="positioning/positioning.html">Positioning Activity</a>
             <a href="trek-2022">Personal Site - Pioneer Trek 2022 - Yucca Valley
                 Stake</a>
@@ -22,12 +22,18 @@
     </header>
     <main>
         <h1>Welcome to WDD130 Web Projects - Ralph Borcherds</h1>
-        <img src="images/portrait.jpg" alt="Portrait">
+        <img src="aboutme/images/Portrait.jpg" alt="Portrait">
     </main>
     <footer>
-        <p>My First Web Page 2023 &copy;</p>
+        <p>&copy; <span id="year"></span> Ralph Borcherds - Southern California</p>
         <p>This is an example site for Students at Brigham Young University-Idaho taking WDD130.</p>
     </footer>
+
+   <script>
+        let year = new Date().getFullYear();
+        document.getElementById('year').innerHTML = year;
+   </script>
+
 </body>
 
 </html>
