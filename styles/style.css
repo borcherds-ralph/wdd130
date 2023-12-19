@@ -30,6 +30,17 @@ p {
     padding: 10px;
 }
 
+main {
+    max-width: 1200px;
+}
+aside {
+    width: 300px;
+    margin: 10px 20px;
+    border: 1px solid #b71234;
+    padding: 1em;
+    background-color: none;
+    color: #1a044e;
+}
 footer {
     background-color: steelblue;
     color: white;
