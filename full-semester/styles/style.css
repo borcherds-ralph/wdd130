@@ -1,0 +1,47 @@
+@import url(https://fonts.bunny.net/css?family=allerta:400|anek-bangla:400,700);
+
+body {
+    font-family: 'Allerta', sans-serif;
+}
+
+nav {
+    background-color: steelblue;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Anek Bangla', sans-serif;
+}
+
+a {
+    color: white;
+    padding: 1em 3em;
+}
+
+h1 {
+    color: steelblue;
+}
+
+img {
+    width: 200px;
+    border: 4px solid steelblue;
+}
+
+p {
+    padding: 10px;
+}
+
+main {
+    max-width: 1200px;
+}
+aside {
+    width: 300px;
+    margin: 10px 20px;
+    border: 1px solid #b71234;
+    padding: 1em;
+    background-color: none;
+    color: #1a044e;
+}
+footer {
+    background-color: steelblue;
+    color: white;
+}
