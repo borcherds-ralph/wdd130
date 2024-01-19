@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #a5b452;
+    --secondary-color: #9888a5;
+    --accent1-color: #5f503c;
+    --accent2-color: #afaf60;
+    --accent3-color: #771820;
+
+    --heading-font: "Bitter", serif;
+    --paragraph-font: "Inter", sans-serif;
+
+    --nav-link-color: #fff;
+    --nav-background-color: #5f503c;
+    --nav-hover-link-color: #5f503c;
+    --nav-hover-background-color: #fff;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    /* font-optical-sizing: auto; */
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    /* font-optical-sizing: auto; */
+    font-weight: 700;
+    font-style: normal;
+}
+
+header {
+    padding: 20px;
+    background-color: var(--accent1-color);
+}
+
+p {
+    padding: 25px;
+}
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--nav-link-color);
+    padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+}
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}

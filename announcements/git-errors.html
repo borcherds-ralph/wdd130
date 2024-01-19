@@ -525,6 +525,37 @@
             <img src="images/vscode-enable-git.webp" alt="enable git">
             <p>That will auto start Git and Git Base if disabled. If you have GitHub disables as well, you will need to start that using the same process.</p>
           </details>
+          <details>
+            <summary id="git-build-fail">Github Pages Build process fails</summary>
+            <p>There is an issue that does not occur much with students but does in the workplace. It can affect sudents if they are not careful. This mainly happens when a folder is moved to be a sub-folder of a Git Repository.</p>
+            <p>You will first notice that your project did not build and if you look on the code page in GitHub, you will find the last commit message has a red X to the right of it.</p>
+            <img src="images/github-buld-error-x.webp" alt="GitHub Build error indicator">
+            <p>Click on the Red X and you will be presented with something that looks like this.</p>
+            <img src="images/github-build-check-dialog.webp" alt="Build Check Dialog">
+            <p>Click on the details option next to the item with the red X</p>
+            <img src="images/github-build-check-dialog-details.webp" alt="click details link">
+            <p>Look for the error lines. They start with the word Error: and are in red background color by default</p>
+            <img src="images/github-submodule-error.png" alt="submoduel error">
+            <p>If the first like of the errors reads like this:</p>
+             <pre class="code-style">&quot;Error: fatal: No url found for submodule path &lt;path to issue&gt; in .gitmodules&quot;</pre>
+             <p>You have this issue. You have a sub-folder that is also been initialized to be a git repository</p>
+             <p>Another way to see this potential issue is to look at the code and look at the location in the error above. You should see a folder icon with an arrow pointing to the right next to the folder name like this</p>
+             <img src="images/github-submodule-icon-folder.png" alt="submodule folder icon with repository on GitHUb">
+             <p>To fix this you have to go into the sub-folder mentioned in the error and delete the hidden folder called .git</p>
+             <p>Easiest way to do this is within VSCode.</p>
+             <p class="bold-text">Windows Users</p>
+             <ul>
+              <li>open terminal/li>
+              <li>Change the terminal type to Git Bash by clicking on the chevron pointing down next to the Plus sign</li>
+              <li>Type the following command:  <pre class="code-style">rm .git -rf</pre></li>
+             </ul>
+             <p class="bold-text">Mac and Linux users</p>
+            <ul>
+              <li>open terminal/li>
+              <li>Type the following command: <pre class="code-style">rm .git -rf</pre></li>
+            </ul>
+            <p>Once done commit and sync with GitHub so that the build process can be re-initialized</p>
+          </details>
         </section>
         <section class="hints">
           <h2>These are suggestions and hints</h2>
