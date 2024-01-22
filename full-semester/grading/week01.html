@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <hav>
+            <a href="Home">Home</a>
+            <a href="week2">W2</a>
+            <a href="week3">W3</a>
+            <a href="week4">W4</a>
+            <a href="week5">W5</a>
+            <a href="week6">W6</a>
+            <a href="week7">W7</a>
+            <a href="week8">W8</a>
+            <a href="week9">W9</a>
+            <a href="week10">W10</a>
+            <a href="week11">W11</a>
+            <a href="week12">W12</a>
+            <a href="week13">W13</a>
+            <a href="week14">W14</a>
+        </hav>
+    </header>
+    <main>
+        <h2>🧪Page Evaluation Tool: <span class="highlight">W02 - Site
+                Plan</span></h2>
+        <div class="callout reference">
+            <label for="student">Enter your GitHub Username:</label>
+            <input type="text" id="student" placeholder="GitHub Username ONLY"
+                required title="GitHub Username Required">
+            <label for="student">Enter your GitHub Repository Name:</label>
+            <input type="text" id="ghrepo" placeholder="GitHub Repository Name"
+                required title="GitHub Repository Name Required">
+            <button type="submit" id="getReport">Run Report</button>
+        </div>
+        <div id="report"></div>
+        <div class="callout warning" id="message">
+            <span class="smaller">If you do not get a report, there may be
+                something wrong with your GitHub repository or repository
+                structure.<br>Check the following: <ul class="check">
+                    <li>You entered ONLY your GitHub account
+                        <strong>username</strong>. </li>
+                    <li>You have a <strong>GitHub repository</strong> named
+                        "<code>wdd130</code>".</li>
+                    <li>You have a <strong>file</strong> named
+                        "<code>index.html</code>" located on the root of
+                        "<code>wdd130</code>".</li>
+                    <li><a href="../week01/setup-github-pages.html"
+                            target="_blank">GitHub Pages</a> has been enabled
+                        for your wdd130 repository.</li>
+                    <li>Do not end any CSS file with a code
+                        <strong>comment</strong>. </li>
+                </ul>
+                <p class="callout info"> Here is an example of what the tool is
+                    looking for on your GitHub Pages enabled site:<br>
+                    <code
+                        class="plaintext">https://<em>your-github-username</em>.github.io/wdd130</code>
+                </p>
+                <p class="callout reference"> The above URL reference will
+                    automatically request the "<code>index.html</code>"" file in
+                    your <code>wdd130</code> repository.</p>
+            </span>
+        </div>
+    </main>
+    <script src="js/week2.js"></script>
+</body>
+
+</html>
