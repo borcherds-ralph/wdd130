@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lora&family=Roboto+Slab&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+
+  /************************************************************
+  *
+  *               Variables
+  *
+  ************************************************************/
+  --heading-font: Arvo, serif;
+  --heading-color: #0443b3;
+  --font-2: Lora, 'Time New Roman', serif;
+
+  --heading-background: #5f503c;
+  --color-white: #fff;
+  --hover-color: #5f503c;
+  --trans-color: rgba(196 207 207 / 0.7);
+  --trans-text-color: #04040c;
+  --footer-background: #3e3e3e;
+  --secondary-color: #0443b3;
+  --accent-2: #afaf60;
+  --accent-3: #5f503c;
+}
+
+/*******************************************************************
+*
+*               Default HTML TAG settings
+*
+********************************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: var(--font-2);
+  padding: 0.5em;
+  margin: 0;
+}
+
+h3,
+h4 {
+  padding: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  text-align: left;
+}
+
+a {
+  /* This turns of all underlines on teh links by default */
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*******************************************************
+*
+*              Content Defaults
+*
+********************************************************/
+body {
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  background-color: #c1f7f7;
+  font-family: 'Roboto Slab', sans-serif, serif;
+}
+
+
+
+/*******************************************************
+*
+*              Header Area
+*
+********************************************************/
+header {}
+
+.logo_link {}
+
+.logo {}
+
+nav {}
+
+nav a {}
+
+nav a:hover {}
+
+/*******************************************************
+*
+*              Footer Area
+*
+*******************************************************/
+footer {}
+
+.footer-p {}
+
+.footer-menu {}
+
+.footermenu:hover {}
+
+.sociallinks {}
+
+
+/*******************************************************
+*
+*              Rules for classes used on all pages
+*
+*******************************************************/
+
+
+
+
+
+/*******************************************************
+*
+*              Homepage only CSS
+*
+*******************************************************/
+
+
+
+
+/*******************************************************
+*
+*              Rules for Page 2 only
+*
+*******************************************************/
+
+
+
+
+/*******************************************************
+*
+*              Rules for Page 3 only
+*
+*******************************************************/
+
+
+
+/*******************************************************
+*
+*              Rules for Contact Us page
+*
+*******************************************************/
