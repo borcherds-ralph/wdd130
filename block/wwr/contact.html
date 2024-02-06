@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Dry Oar Rafting</title>
+    <meta name="description"
+        content="This is the contact us page for the rafting site.">
+    <meta name="author" content="Ralph Borcherds">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <img src="images/logo.jpg" alt="Site Logo" class="logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About US</a>
+                <a href="trips">Trips</a>
+                <a href="contactus">Contact Us</a>
+            </nav>
+        </header>
+        <main>
+        </main>
+        <footer>
+            <p>&copy; <span id="demo"></span> Dry Oar</p>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facegook.svg" alt="Facebook icon">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/x-twiiter.svg" alt="X icon">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.svg" alt="Instagram Icon">
+                </a>
+            </nav>
+        </footer>
+        <script>
+            const date = new Date(document.lastModified);
+            document.getElementById("demo").innerHTML = date.toDateString();
+        </script>
+    </div>
+</body>
+
+</html>

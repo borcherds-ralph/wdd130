@@ -1,0 +1,54 @@
+body {
+    background-color: #7b7b7b;
+    font-size: 18px;
+}
+
+main {
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: rgb(209, 231, 250);
+    padding: 2em;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2em;
+}
+
+.number {
+    font-size: 1.25em;
+    color: rgb(27, 13, 121);
+    font-weight: 700;
+}
+
+label {
+    font-weight: 500;
+    margin: 30px 0 0 0;
+
+}
+
+input, textarea, select {
+    border: 1px solid #3e3e3e;
+    padding: .5em 1em;
+    font-size: 18px;
+
+}
+
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+    background-color: hsla(135, 72%, 79%, 0.439);
+}
+
+button {
+    padding: 1em;
+    background-color: #06a02c;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 10px;
+    align-self: flex-start;
+}
