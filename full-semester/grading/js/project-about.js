@@ -169,8 +169,7 @@ function buildReport(data, url) {
 
       <h3>&lt;head&gt; Elements</h3>
       <div class="label">Meta Charset:</div>
-      <div class="data">${
-    h.includes('<meta charset="utf-8"') ||
+      <div class="data">${h.includes('<meta charset="utf-8"') ||
       h.includes('<meta charset="UTF-8"')
       ? "✅"
       : "❌"
@@ -191,11 +190,11 @@ function buildReport(data, url) {
       <div class="label">Meta Description:</div>
       <div class="data">${h.includes('<meta name="description" content="') > 0 ? "👀" : "❌"
     }</div>
-      <div class="standard">${getContent(h,/<meta\s+name="description"\s+content="([^"]+)"/i)} <span class="blue">Is this description of the page relevant and appropriate in describing the purpose and content of the page?"</div>
+      <div class="standard">${getContent(h, /<meta\s+name="description"\s+content="([^"]+)"/i)} <span class="blue">Is this description of the page relevant and appropriate in describing the purpose and content of the page?"</div>
 
       <div class="label">Meta Author:</div>
       <div class="data">${h.includes('name="author"') > 0 ? "✅" : "❌"}</div>
-      <div class="standard">${getContent(h,/<meta\s+name="author"\s+content="([^"]+)"/i)}</div>
+      <div class="standard">${getContent(h, /<meta\s+name="author"\s+content="([^"]+)"/i)}</div>
 
     <h3>&lt;body&gt; Elements</h3>
 
@@ -204,7 +203,7 @@ function buildReport(data, url) {
       <div class="standard"><span class="blue">The &lt;header&gt; ... &lt;/header&gt; must be within the &lt;body&gt;.</span></div>
 
       <div class="label">&lt;nav&gt;</div>
-      <div class="data">${h.includes('<nav') && h.includes('</nav>') && h.indexOf('<nav>') > h.indexOf('<header>') && h.indexOf('</nav>') < h.indexOf('</header>') ? '✅' : '❌'}</div>
+      <div class="data">${h.includes('<nav') && h.includes('</nav>') && h.indexOf('<nav') > h.indexOf('<header>') && h.indexOf('</nav>') < h.indexOf('</header>') ? '✅' : '❌'}</div>
       <div class="standard"><span class="blue">The &lt;nav&gt; ... &lt;/nav&gt; must be within the &lt;header&gt;.</span></div>
 
       <div class="label">&lt;a&gt;</div>
