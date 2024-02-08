@@ -41,14 +41,90 @@ input, textarea, select {
 }
 
 input:focus-visible, textarea:focus-visible, select:focus-visible {
-    background-color: hsla(135, 72%, 79%, 0.439);
+    background-color: hsla(135, 94%, 52%, 0.439);
 }
 
+
 button {
-    padding: 1em;
-    background-color: #06a02c;
+    position: relative;
+    background-color: hsl(135, 93%, 33%);
+    border: none;
+    color: #222;
     font-size: 1.3em;
     font-weight: 700;
-    margin: 10px;
+    box-shadow: -6px 6px 0 hsl(135, 93%, 22%);
+    padding: 1em;
+    outline: none;
     align-self: flex-start;
+    margin: 30px 0;
+}
+
+button:hover {
+    background-color: hsl(120, 95%, 22%);
+    color: #eee;
+}
+
+button:active {
+    background: hsl(120, 95%, 22%);
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 hsl(135, 96%, 10%);
+}
+
+button::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    /* border width needs to be size of the element's box shadow */
+    border: solid 6px transparent;
+    /* border width needs to be size of the element's box shadow */
+    border-right: solid 6px hsl(120, 94%, 22%);
+    /* no width for left, makes measurements easier */
+    border-left-width: 0px;
+    background: none;
+    top: 0px;
+    /* needs to be the same size as border width */
+    left: -6px;
+}
+
+
+
+button::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-top: solid 6px hsl(120, 95%, 22%);
+    border-bottom-width: 0px;
+    background: none;
+    right: 0;
+    bottom: -6px;
+}
+
+button:active::before {
+    border: solid 3px transparent;
+    border-right: solid 3px hsl(120, 95%, 22%);
+    border-left-width: 0px;
+    left: -3px;
+}
+
+button:active::after {
+    border: solid 3px transparent;
+    border-top: solid 3px hsl(120, 95%, 22%);
+    border-bottom-width: 0px;
+    bottom: -3px;
+}
+
+code {
+    background-color: #333;
+    padding: 1em 3em;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    color: #eee;
+    margin: 10px auto;
 }
