@@ -6,5 +6,6 @@
         "contactform",
         "contactinfo"
     ],
-    "git.autofetch": true
+    "git.autofetch": true,
+    "editor.stickyScroll.scrollWithEditor": true
 }
