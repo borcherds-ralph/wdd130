@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gitignore files</title>
+  <link rel="stylesheet" href="styles/teams.css">
+</head>
+
+<body>
+  <h2><span style="font-size: 36pt;">.gitignore files</span></h2>
+  <p><span style="font-size: 18pt;">The .gitignore file is one that allows you to tell Git to not
+      allow certain files to be uploaded to systems like GitHub. There are a few source control
+      systems besides GitHub. GitHub is the most popular and easiest to use.</span>
+  </p>
+  <p>&nbsp;</p>
+  <p><span style="font-size: 18pt;">Everyone needs to <span style="color: #081470;">create a file in
+        the wdd130 folder called .gitignore</span>&nbsp; &nbsp; The period must be the first
+      character for this to work.</span></p>
+  <p><span style="font-size: 18pt;">If you have a <span style="color: #081470;">Windows
+        Computer,</span> copy and paste the following into that file</span></p>
+  <pre># Windows thumbnail cache files<br />
+    Thumbs.db<br />
+    Thumbs.db:encryptable<br />
+    ehthumbs.db<br />
+    ehthumbs_vista.db<br />
+    <br />
+    # Dump file<br />
+    *.stackdump<br />
+    <br />
+    # Folder config file<br />
+    [Dd]esktop.ini<br />
+    <br />
+    # Recycle Bin used on file shares<br />
+    $RECYCLE.BIN/<br />
+    <br />
+    # Windows Installer files<br />
+    *.cab<br />
+    *.msi<br />
+    *.msix<br />
+    *.msm<br />
+    *.msp<br />
+    <br />
+    # Windows shortcuts<br />
+    *.lnk<br />
+    <br />
+    .vscode/*<br />
+    !.vscode/settings.json<br />
+    !.vscode/tasks.json<br />
+    !.vscode/launch.json<br />
+    !.vscode/extensions.json<br />
+    !.vscode/*.code-snippets<br />
+    <br />
+    # Local History for Visual Studio Code<br />
+    .history/<br />
+    <br />
+    # Built Visual Studio Code Extensions<br />
+    *.vsix</pre>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p><span style="font-size: 18pt; color: #081470;">MAC computers, </span><span
+      style="font-size: 18pt;"><span style="font-size: 18pt;">copy and paste the following into that
+        file</span></span></p>
+  <pre># General<br />
+    .DS_Store<br />
+    .AppleDouble<br />
+    .LSOverride<br />
+    <br />
+    # Icon must end with two \r<br />
+    Icon<br />
+    <br />
+    # Thumbnails<br />
+    ._*<br />
+    <br />
+    # Files that might appear in the root of a volume<br />
+    .DocumentRevisions-V100<br />
+    .fseventsd<br />
+    .Spotlight-V100<br />
+    .TemporaryItems<br />
+    .Trashes<br />
+    .VolumeIcon.icns<br />
+    .com.apple.timemachine.donotpresent<br />
+    <br />
+    # Directories potentially created on remote AFP share<br />
+    .AppleDB<br />
+    .AppleDesktop<br />
+    Network Trash Folder<br />
+    Temporary Items<br />
+    .apdisk<br />
+    <br />
+    <br />
+    # These are to keep the VSCode settings you use from becoming public<br />
+    .vscode/*<br />
+    !.vscode/settings.json<br />
+    !.vscode/tasks.json<br />
+    !.vscode/launch.json<br />
+    !.vscode/extensions.json<br />
+    !.vscode/*.code-snippets<br />
+    <br />
+    # Local History for Visual Studio Code<br />
+    .history/<br />
+    <br />
+    # Built Visual Studio Code Extensions<br />
+    *.vsix<br />
+    <br />
+  </pre>
+  <p>&nbsp;</p>
+  <p><span style="font-size: 18pt; color: #081470;">If you are running Linux, </span><span
+      style="font-size: 18pt;"><span style="font-size: 18pt;">copy and paste the following into that
+        file</span></span></p>
+  <pre>*~<br />
+    <br />
+    # temporary files which can be created if a process still has a handle open of a deleted file<br />
+    .fuse_hidden*<br />
+    <br />
+    # KDE directory preferences<br />
+    .directory<br />
+    <br />
+    # Linux trash folder which might appear on any partition or disk<br />
+    .Trash-*<br />
+    <br />
+    # .nfs files are created when an open file is removed but is still being accessed<br />
+    .nfs*<br />
+    <br />
+    <br />
+    #  These are to keep the VSCode settings you use from becoming public<br />
+    .vscode/*<br />
+    !.vscode/settings.json<br />
+    !.vscode/tasks.json<br />
+    !.vscode/launch.json<br />
+    !.vscode/extensions.json<br />
+    !.vscode/*.code-snippets<br />
+    <br />
+    # Local History for Visual Studio Code<br />
+    .history/<br />
+    <br />
+    # Built Visual Studio Code Extensions<br />
+    *.vsix<br />
+    <br />
+    <br />
+  </pre>
+
+</body>
+</html>

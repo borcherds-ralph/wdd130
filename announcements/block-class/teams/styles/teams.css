@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    margin: 12px 0;
+}
+
+pre {
+    color: #2d3b45;
+    display: block;
+    padding: 9px;
+    margin: 0 0 12px;
+    line-height: 1.2;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}

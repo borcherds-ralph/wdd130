@@ -5,86 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Dry Oar Rafting</title>
-    <meta name="description"
-        content="This is the contact us page for the rafting site.">
+    <meta name="description" content="This is the contact us page for the rafting site.">
     <meta name="author" content="Ralph Borcherds">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <div class="content">
-        <header>
-            <img src="images/logo.jpg" alt="Site Logo" class="logo">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About US</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </header>
-        <main>
-            <div id="hero">
-                <div id="hero-box">
-                    <img id="hero-img" src="images/hero.webp"
-                        alt="People enjoying white water rafting">
-                </div>
-                <section id="hero-msg">
-                    <h1 class="home-title">Have An Adventure</h1>
-                    <h4>Make Memories with Dry Oar</h4>
-                    <div class="button-box">
-                        <a class="book" href="contactus.html">Book Now</a>
-                    </div>
-                </section>
-            </div>
-            <section class="rivers-card">
-                <img class="card-img" src="images/rivers.jpg"
-                    alt="river in forest">
-                <img class="icon" src="images/river_icon.png" alt="river icon">
-                <h2>Rivers</h2>
+    <header>
+        <img src="images/logo.jpg" alt="Site Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About US</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main class="grid">
+        <div class="hero cols12 grid">
+            <img class="hero-img cols12 rows8" src="images/hero.webp"
+                alt="People enjoying white water rafting">
+            <h1 class="home-title cols4-9 row2">Have An Adventure</h1>
+            <h4 class="home-subtitle cols4-9 row3">Make Memories with Dry Oar</h4>
+            <a class="button-box cols4-9 row4 book" href="contact.html">Book Now</a>
             </section>
-            <section class="camping-card">
-                <img class="card-img" src="images/camping.jpg"
-                    alt="tent in mountains">
-                <img class="icon" src="images/fire_icon.png" alt="fire icon">
-                <h2>Camping</h2>
-            </section>
-            <section class="rapids-card">
-                <img class="card-img" src="images/rapids.jpg"
-                    alt="rafting boat">
-                <img class="icon" src="images/oars.png" alt="oars icon">
-                <h2>Rapids</h2>
-            </section>
-            <div id="background"></div>
-            <img class="mountains" src="images/mountains.jpg"
-                alt="Misty mountains">
-            <section class="msg">
-                <h2>More Than Just The Thrill</h2>
-                <p> Enjoy the breathtaking scenery. From valleys, meadows,
-                    canyons, and high peaks; it's way more than just the rapids.
-                    It's a great way to get away from it all and relax amongst
-                    all the beauty of the great outdoors. </p>
-                <a class="join" href="rivers.html">Join Us</a>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; <span id="demo"></span> Dry Oar</p>
-            <nav class="sociallinks">
-                <a href="https://facebook.com">
-                    <img src="images/facegook.svg" alt="Facebook icon">
-                </a>
-                <a href="https://twitter.com">
-                    <img src="images/x-twiiter.svg" alt="X icon">
-                </a>
-                <a href="https://instagram.com">
-                    <img src="images/instagram.svg" alt="Instagram Icon">
-                </a>
-            </nav>
-        </footer>
-        <script>
-            const date = new Date(document.lastModified);
-            document.getElementById("demo").innerHTML = date.toDateString();
-        </script>
+        </div>
+        <section class="card rivers-card">
+            <img class="card-img" src="images/rivers.jpg" alt="river in forest">
+            <img class="icon" src="images/river_icon.png" alt="river icon">
+            <p class="card-caption">Rivers</p>
+        </section>
+        <section class="card camping-card">
+            <img class="card-img" src="images/camping.jpg" alt="tent in mountains">
+            <img class="icon" src="images/fire_icon.png" alt="fire icon">
+            <p class="card-caption">Camping</p>
+        </section>
+        <section class="card rapids-card">
+            <img class="card-img" src="images/rapids.jpg" alt="rafting boat">
+            <img class="icon" src="images/oars.png" alt="oars icon">
+            <p class="card-caption">Rapids</p>
+        </section>
+        <div class="background"></div>
+        <img class="mountains" src="images/mountains.jpg" alt="Misty mountains">
+        <section class="msg">
+            <h2 class="msg-title">More Than Just The Thrill</h2>
+            <p> Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; it's
+                way more than just the rapids. It's a great way to get away from it all and relax
+                amongst all the beauty of the great outdoors. </p>
+            <a class="button-box" href="contact.html">Join Us</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span class="demo"></span> Dry Oar</p>
+        <a href="#open-modal" class="footer-menu">Wireframe</a>
+        <nav class="sociallinks">
+            <a href="https://facebook.com">
+                <img src="images/facegook.svg" alt="Facebook icon">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/x-twiiter.svg" alt="X icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+    <!-- <script>
+        const date = new Date(document.lastModified);
+        document.getElementById("demo").innerHTML = date.toDateString();
+    </script> -->
+    <!--Modal -->
+    <div id="open-modal" class="modal-window">
+        <div>
+            <a href="#" title="Close" class="modal-close">Close</a>
+            <img src="https://byui-cse.github.io/wdd130-ww-course/images/wwr/wwr-wireframe-home.png"
+                alt="full size wireframe">
+        </div>
     </div>
-</body>
 
+</body>
 </html>
