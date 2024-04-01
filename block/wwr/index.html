@@ -55,24 +55,24 @@
         </section>
     </main>
     <footer>
-        <p>&copy; <span class="demo"></span> Dry Oar</p>
+        <p>&copy; <span id="demo"></span> Dry Oar</p>
         <a href="#open-modal" class="footer-menu">Wireframe</a>
         <nav class="sociallinks">
-            <a href="https://facebook.com">
+            <a href="https://facebook.com" target="_blank">
                 <img src="images/facegook.svg" alt="Facebook icon">
             </a>
-            <a href="https://twitter.com">
+            <a href="https://twitter.com" target="_blank">
                 <img src="images/x-twiiter.svg" alt="X icon">
             </a>
-            <a href="https://instagram.com">
+            <a href="https://instagram.com" target="_blank">
                 <img src="images/instagram.svg" alt="Instagram Icon">
             </a>
         </nav>
     </footer>
-    <!-- <script>
+    <script>
         const date = new Date(document.lastModified);
-        document.getElementById("demo").innerHTML = date.toDateString();
-    </script> -->
+        document.getElementById("demo").innerHTML = date.getFullYear();
+    </script>
     <!--Modal -->
     <div id="open-modal" class="modal-window">
         <div>

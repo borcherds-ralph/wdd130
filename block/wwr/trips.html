@@ -5,44 +5,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Dry Oar Rafting</title>
-    <meta name="description"
-        content="This is the contact us page for the rafting site.">
+    <meta name="description" content="This is the contact us page for the rafting site.">
     <meta name="author" content="Ralph Borcherds">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <div class="content">
-        <header>
-            <img src="images/logo.jpg" alt="Site Logo" class="logo">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About US</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </header>
-        <main>
-        </main>
-        <footer>
-            <p>&copy; <span id="demo"></span> Dry Oar</p>
-            <nav class="sociallinks">
-                <a href="https://facebook.com">
-                    <img src="images/facegook.svg" alt="Facebook icon">
-                </a>
-                <a href="https://twitter.com">
-                    <img src="images/x-twiiter.svg" alt="X icon">
-                </a>
-                <a href="https://instagram.com">
-                    <img src="images/instagram.svg" alt="Instagram Icon">
-                </a>
-            </nav>
-        </footer>
-        <script>
-            const date = new Date(document.lastModified);
-            document.getElementById("demo").innerHTML = date.toDateString();
-        </script>
-    </div>
-</body>
+    <header>
+        <img src="images/logo.jpg" alt="Site Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About US</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main class="grid">
+        <div class="grid cols12 hero">
+            <img class="cols12 rows8" src="images/rafting60_1024.jpg" alt="trips">
+            <a class="button-box cols4-10 row3" href="contact.html">Contact Us</a>
+            <h1 class="home-title cols4-10 row2">Whitewater Rafting Trips</h1>
+        </div>
+        <section class="trips-table">
+            <h2>Rafting Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Trip Length</th>
+                        <th>Cost</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1/2 Day Class 1</td>
+                        <td>$300</td>
+                        <td>Lazy Family Adventure</td>
+                    </tr>
+                    <tr>
+                        <td>1/2 Day Class 2</td>
+                        <td>$500</td>
+                        <td>Family Teenage Children</td>
+                    </tr>
+                    <tr>
+                        <td>1 Day Class 1</td>
+                        <td>$600</td>
+                        <td>Scenic Relaxing Adventure</td>
+                    <tr>
+                        <td>1 Day Class 2</td>
+                        <td>$700</td>
+                        <td>Adventure with Class 2 Rapids</td>
+                    </tr>
+                    <tr>
+                        <td>2 Day Class 1</td>
+                        <td>$1000</td>
+                        <td>Relaxing Extended Scenic Adventure</td>
+                    </tr>
+                    <tr>
+                        <td>2 Day Class 3</td>
+                        <td>$1200</td>
+                        <td>Adventure with Class 3 Rapids</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="trips grid cols12">
+            <figure class="trip1 cols2-6">
+                <img src="images/rafting4_600.jpg" alt="1/2 Day Adventure-Class 1">
+                <figcaption>1/2 Day Adventure- Class 1</figcaption>
+            </figure>
+            <figure class="trip2 cols8-12">
+                <img src="images/rafting1_600.jpg" alt=" 1 Day Adventure-Class 2">
+                <figcaption>1 Day Adventure Class 2</figcaption>
+            </figure>
+            <figure class="trip3 cols2-6">
+                <img src="images/rafting30_600.jpg" alt="1/2 Day Adventure-Class 2">
+                <figcaption>1/2 Day Adventure Class 2</figcaption>
+            </figure>
+            <figure class="trip4 cols8-12">
+                <img src="images/rafting47_600.jpg" alt="2 Day Adventure-Class 1">
+                <figcaption>2 Day Adventure Class 1</figcaption>
+            </figure>
+            <figure class="trip5 cols2-6">
+                <img src="images/rafting33_600.jpg" alt="1 Day Adventure-Class 3">
+                <figcaption>1 Day Adventure Class 3</figcaption>
+            </figure>
+            <figure class="trip6 cols8-12">
+                <img src="images/salmon-kayak3.jpg" alt="2 Day Adventure-Class 3">
+                <figcaption>2 Day Adventure Class 3</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="demo"></span> Dry Oar</p>
+        <a href="#open-modal" class="footer-menu">Wireframe</a>
+        <nav class="sociallinks">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facegook.svg" alt="Facebook icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/x-twiiter.svg" alt="X icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+    <script>
+        const date = new Date(document.lastModified);
+        document.getElementById("demo").innerHTML = date.getFullYear();
+    </script>
 
+</body>
 </html>

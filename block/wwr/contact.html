@@ -5,99 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Dry Oar Rafting</title>
-    <meta name="description"
-        content="This is the contact us page for the rafting site.">
+    <meta name="description" content="This is the contact us page for the rafting site.">
     <meta name="author" content="Ralph Borcherds">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <div class="content">
-        <header>
-            <img src="images/logo.jpg" alt="Site Logo" class="logo">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="abou.html">About US</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </header>
-        <main class="contactus">
-            <img src="images/rafting28_1024.jpg" alt="little" class="con-hero">
-            <form action="#" class="contact">
-                <fieldset class="contact-fields">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="from">
-                    <label for="email">e-Mail</label>
-                    <input type="email" name="email" id="email">
-                    <label for="reason">Reason for contacting us?</label>
-                    <select name="reason" id="reason">
-                        <option value="" selected disabled>-- Please select One
-                            -- </option>
-                        <option value="general">General Inquiry</option>
-                        <option value="reservation">Reservation Question
-                        </option>
-                        <option value="suggestion">Website Suggestion/option>
-                    </select>
-                    <label for="comment">Please enter your comment:</label>
-                    <textarea name="comment" id="comment" cols="35"
-                        rows="10"></textarea>
-                    <div class="signup">
-                        <input type="checkbox" name="subscribe" id="newsletter">
-                        <label for="newsletter">Please subscribe me to the
-                            monthly newsletter</label>
-                    </div>
-                </fieldset>
-                <button type="submit" class="submit">Send Message</button>
-            </form>
-            <div class="address">
-                <div class="add-phone">
-                    <address>525 S Center St,<br> Rexburg, ID 83460</address>
-                    <a href="tel:123 555-1234">(123) 555-1234</a>
-                    <a href="mailto:info@whitewaterrafting.com">email:
-                        info@whitewaterrafting.com</a>
+    <header>
+        <img src="images/logo.jpg" alt="Site Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="abou.html">About US</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main class=" grid contactus">
+        <img src="images/rafting28_1024.jpg" alt="little" class="con-hero">
+        <form action="#" class="contact">
+            <fieldset class="contact-fields">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="from">
+                <label for="email">e-Mail</label>
+                <input type="email" name="email" id="email">
+                <label for="reason">Reason for contacting us?</label>
+                <select name="reason" id="reason">
+                    <option value="" selected disabled>-- Please select One -- </option>
+                    <option value="general">General Inquiry</option>
+                    <option value="reservation">Reservation Question </option>
+                    <option value="suggestion">Website Suggestion/option>
+                </select>
+                <label for="comment">Please enter your comment:</label>
+                <textarea name="comment" id="comment" cols="35" rows="10"></textarea>
+                <div class="signup">
+                    <input type="checkbox" name="subscribe" id="newsletter">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
                 </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2213.9662753582243!2d-111.78361571748994!3d43.81450909974499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53540b03dc48a5cf%3A0x1e5534d3c38ef412!2sBrigham%20Young%20University-Idaho!5e0!3m2!1sen!2sus!4v1707770074960!5m2!1sen!2sus"
-                    width="600" height="450" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="gmap"></iframe>
+            </fieldset>
+            <button type="submit" class="submit">Send Message</button>
+        </form>
+        <div class="address">
+            <div class="add-phone">
+                <address>525 S Center St,<br> Rexburg, ID 83460</address>
+                <a href="tel:123 555-1234">(123) 555-1234</a>
+                <a href="mailto:info@whitewaterrafting.com">email: info@whitewaterrafting.com</a>
             </div>
-            <hr class="hrule">
-            <div class="employees">
-                <figure>
-                    <img src="images/cartoon-1890438_640.jpg" alt="CEO">
-                    <figcaption>CEO, Mad Max</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/woman-5212479_640.png" alt="VP Sales">
-                    <figcaption>VP Sales, Emily Stewart</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/woman-6871495_640.jpg" alt="Jen">
-                    <figcaption>Tour Guide, Sally</figcaption>
-                </figure>
-            </div>
-        </main>
-        <footer>
-            <p>&copy; <span id="demo"></span> Dry Oar</p>
-            <nav class="sociallinks">
-                <a href="https://facebook.com">
-                    <img src="images/facegook.svg" alt="Facebook icon">
-                </a>
-                <a href="https://twitter.com">
-                    <img src="images/x-twiiter.svg" alt="X icon">
-                </a>
-                <a href="https://instagram.com">
-                    <img src="images/instagram.svg" alt="Instagram Icon">
-                </a>
-            </nav>
-        </footer>
-        <script>
-            const date = new Date(document.lastModified);
-            document.getElementById("demo").innerHTML = date.toDateString();
-        </script>
-    </div>
-</body>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2213.9662753582243!2d-111.78361571748994!3d43.81450909974499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53540b03dc48a5cf%3A0x1e5534d3c38ef412!2sBrigham%20Young%20University-Idaho!5e0!3m2!1sen!2sus!4v1707770074960!5m2!1sen!2sus"
+                width="600" height="450" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="gmap"></iframe>
+        </div>
+        <hr class="hrule">
+        <div class="grid employees">
+            <figure class="employee">
+                <img src="images/cartoon-1890438_640.jpg" alt="CEO">
+                <figcaption>CEO, Mad Max</figcaption>
+            </figure>
+            <figure class="employee">
+                <img src="images/woman-5212479_640.png" alt="VP Sales">
+                <figcaption>VP Sales, Emily Stewart</figcaption>
+            </figure>
+            <figure class="employee">
+                <img src="images/woman-6871495_640.jpg" alt="Jen">
+                <figcaption>Tour Guide, Sally</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="demo"></span> Dry Oar</p>
+        <a href="#open-modal" class="footer-menu">Wireframe</a>
+        <nav class="sociallinks">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facegook.svg" alt="Facebook icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/x-twiiter.svg" alt="X icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+    <script>
+        const date = new Date(document.lastModified);
+        document.getElementById("demo").innerHTML = date.getFullYear();
+    </script>
 
+</body>
 </html>
