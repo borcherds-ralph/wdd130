@@ -4,7 +4,9 @@
     "window.zoomLevel": 0,
     "cSpell.words": [
         "contactform",
-        "contactinfo"
+        "contactinfo",
+        "hrule",
+        "sociallinks"
     ],
     "git.autofetch": true,
     "editor.stickyScroll.scrollWithEditor": true
