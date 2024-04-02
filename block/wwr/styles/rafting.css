@@ -167,10 +167,6 @@ footer p {
     background-color: unset;
 }
 
-.sociallinks svg {
-    fill: #fff;
-}
-
 /* default grid layout for all pages */
 .grid {
     display: grid;
@@ -323,14 +319,14 @@ footer p {
     z-index: 999;
     visibility: hidden;
     opacity: 0;
-    pointer-events: none;
+    /* pointer-events: none; */
     transition: all 0.3s;
 }
 
 .modal-window:target {
     visibility: visible;
     opacity: 1;
-    pointer-events: auto;
+    /* pointer-events: auto; */
 }
 
 .modal-window>div {
@@ -540,7 +536,7 @@ input:focus, textarea:focus, select:focus {
     background-color: #040466;
     color: #f3f3f3;
     border: 1px solid #3e3e3e;
-    box-sizing: 5px 3px 3px #000;
+    box-shadow: 5px 3px 3px #000;
     border-radius: 25px;
     font-size: 20px;
     letter-spacing: 2px;
