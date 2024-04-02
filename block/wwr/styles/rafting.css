@@ -470,6 +470,7 @@ figure:nth-of-type(even) {
 
 figcaption {
     text-align: center;
+    padding: 1em 0;
 }
 
 .history {
@@ -604,9 +605,11 @@ input:focus, textarea:focus, select:focus {
 *               Trips CSS
 *
 *******************************************/
-.trips {
-    gap: 5em;
-    margin: 50px 0;
+.trips-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1em 5px;
+    margin: 50px auto;
 }
 
 .trips-table {
@@ -614,6 +617,48 @@ input:focus, textarea:focus, select:focus {
     grid-row: 2/4;
 }
 
+.trips-table h2 {
+    grid-column: 1/-1;
+    grid-row: 1;
+    justify-self: center;
+}
+
+
+
+.trip-duration {
+    grid-column: 1;
+}
+
+.trip-cost {
+    grid-column: 2;
+}
+
+.trip-name {
+    grid-column: 3;
+}
+
+.trip-cost:nth-of-type(even),
+.trip-duration:nth-of-type(odd),
+.trip-name:nth-of-type(odd) {
+    background-color: #9f9f9f;
+}
+
+.trip-cost:nth-of-type(odd),
+.trip-duration:nth-of-type(even),
+.trip-name:nth-of-type(even) {
+    background-color: #a28bf7;
+}
+
+.table-heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+}
+
+.trips {
+    gap: 50px;
+}
 
 /**********************************************
 *
@@ -629,7 +674,11 @@ input:focus, textarea:focus, select:focus {
 }
 
 .cols8-12 {
-    grid-column: 7/12;
+    grid-column: 8/12;
+}
+
+.cols9-12 {
+    grid-column: 9/12;
 }
 
 .cols4-9 {
