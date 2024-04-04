@@ -10,6 +10,11 @@ body {
     font-family: 'Allerta', sans-serif;
 }
 
+header, .grid, footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 nav {
     background-color: steelblue;
     padding: 1rem;
@@ -41,9 +46,6 @@ p {
     padding: 10px;
 }
 
-header, footer, .grid {
-    max-width: 1000px;
-}
 
 .grid {
     display: grid;

@@ -1,0 +1,94 @@
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.open-sans-body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: .75em 0;
+    line-height: 1.5;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+    align-items: center;
+    justify-items: center;
+    background-color: #0a5e66;
+}
+
+nav a {
+    padding: 1em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #0a5e66;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+
+.heading {
+    justify-self: center;
+    grid-column: 3 / 11;
+    grid-row: 1;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.aleo-heading {
+    font-family: "Aleo", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.para-text {
+    grid-column: 2 / -2;
+    font-size: 20px;
+}
+
+.cols2-5 {
+    grid-column: 2 / 6;
+}
+
+.cols4-9 {
+    grid-column: 4 / 10;
+}
+
+.cols7-12 {
+    grid-column: 7 / 12;
+}
+
+.ex-links {
+    color: #260483;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #0a5e66;
+    color: #fff;
+    padding: 1em;
+    margin: 50px 0 0 0;
+}

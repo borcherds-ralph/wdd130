@@ -5,33 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 130 Home Page | Ralph Borcherds</title>
-        <meta name="description" content="Main homepage for all course work for WDD 130>
-        <meta name="author" content="Ralph Borcherds">
+    <meta name="description" content="Main homepage for all course work for WDD 130>
+        <meta name=" author" content="Ralph Borcherds">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="block/">Block Course Material</a>
-            <a href="full-semester">Full Semester Course</a>
+            <a href="block/">Block Course Example</a>
+            <a href="full-semester">Full Semester Examples</a>
+            <a href="examples">Code Examples for Students</a>
         </nav>
     </header>
-    <h1>Welcome to this site</h1>
-    <p>This site is for example purposes for all course material work for the
-        full semester (14 weeks) or the block semester (7 weeks) work for
-        WDD-130.</p>
-    <p>select the course examples of what the students build in either course
-        from the navigation above.</p>
-    <p>&copy; <span id="year"></span> Ralph Borcherds - Coachella Valley in
-        Southern California </p>
-    <p>This is an example site for Students at Brigham Young University-Idaho
-        taking WDD130.</p>
+    <main>
+        <h1>Welcome to this site</h1>
+        <p>This site is for example purposes for all course material work for the full semester (14
+            weeks) or the block semester (7 weeks) work for WDD-130.</p>
+        <p>select the course examples of what the students build in either course from the
+            navigation above.</p>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Ralph Borcherds - Coachella Valley in Southern California
+        </p>
+        <p>This is an example site for Students at Brigham Young University-Idaho taking WDD130.</p>
     </footer>
     <script>
         let year = new Date().getFullYear();
         document.getElementById('year').innerHTML = year;
     </script>
-</body>
 
+</body>
 </html>
