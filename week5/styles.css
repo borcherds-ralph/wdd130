@@ -1,0 +1,149 @@
+/* These are the CSS rules that are affected in Week 5 
+All rules that have properties come straight out of the instruction examples.
+All of these rules must be merged into existing rules of the same name. 
+Colors and font-family are examples and must be updated to your choices. */
+
+/* Step 1 
+ font-family:  */
+@import url();
+
+body {
+    font-family: 
+}
+
+.home-title {
+    font-family:
+}
+
+.msg h2 {
+    font-family:
+}
+
+/* Step 2 
+font-size & line-height */
+.home-title {
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size:   2em;
+}
+
+.book,
+.join {
+    font-size: 18px
+}
+
+.msg p {
+    font-size: .8em
+}
+
+.msg {
+    background-color: #6f7364;
+    line-height:      1.5em;
+}
+
+/* Step 3
+   Simple Reset */
+body {
+    background-color: #fcfbfb;
+    font-family:      Raleway, Arial, sans-serif;
+    font-size:        22px;
+    margin:           0;
+    padding:          0;
+}
+
+h2 {
+    margin: 0;
+}
+
+/* Step 4
+   padding */
+
+nav a {
+    text-decoration: none;
+    color:           #fcfbfb;
+    text-align:      center;
+    padding:         35px;
+}
+
+#logo_link {
+    padding-top: 5px;
+}
+
+.book,
+.join {
+    padding: 15px 30px;
+}
+
+.icon {
+    padding-top: 10px;
+}
+
+.msg {
+    padding: 35px;
+}
+
+.msg p {
+    padding-bottom: 15px;
+}
+
+footer {
+    padding: 25px 50px;
+}
+
+
+footer .social img {
+    padding-top: 15px;
+}
+
+/* Step 5
+   Adding Margins */
+.book,
+.join {
+    background-color: #d9c2a3;
+    color:            black;
+    text-decoration:  none;
+    font-size:        18px;
+    padding:          15px 30px;
+    margin-top:       50px;
+}
+
+.home-title {
+    margin-top: 10px;
+}
+
+.book,
+.join {
+    margin-top: 50px;
+}
+
+.rivers-card,
+.camping-card,
+.rapids-card {
+    margin: 200px 0;
+}
+
+footer {
+    margin-top: 200px;
+}
+
+/* Step 6
+   Adding borders,
+border radius and box-sizing*/
+
+.book,
+.join {
+    background-color: #d9c2a3;
+    color:            #000;
+    text-decoration:  none;
+    font-size:        18px;
+    padding:          15px 30px;
+    margin-top:       50px;
+    border-radius:    5px;
+}
+
+.card-img {
+    border: 10px solid #000;
+}
+
+main section img {
+    box-sizing: border-box;
+}

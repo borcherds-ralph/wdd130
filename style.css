@@ -1,0 +1,4 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(0, 1fr));
+}
