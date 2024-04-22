@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 6 Positioning Activity</title>
+  <link rel="stylesheet" href="../styles/canvas.css">
+</head>
+
+<body>
+  <p>Here are the easiest ways to do this activity.</p>
+  <p>This is just the CSS.</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <h2>Positioning Activity</h2>
+  <p> This is one that is slightly harder to explain. I am posting the CSS for
+    the simplest way to do these. #2 and #6 I will post 2 different ways to do
+    them.&nbsp; Each of the different manners are shown in a different color in
+    each rule. All common properties are kept the same if there are multiple
+    ways to do them. All other changes are just bolded. The rest of the CSS as
+    not changed. </p>
+  <p>&nbsp;</p>
+  <p> I know some of you used the span keyword. I personally find it easier to
+    just use the line number of the grid. There is nothing wrong with using the
+    other methods of identifying the grid columns and rows. This is just the
+    simplest. </p>
+  <p>&nbsp;</p>
+  <pre><span style="font-size: 12pt;">/* Activity 1 styles */</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .content1 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <span style="color: #000000;"><strong>display: grid;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-template-columns: 1fr 1fr;</strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-gap: 20px;</strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; justify-items: center;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .red1 {&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100%;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: red;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;<strong> <span style="color: #000000;">grid-column: 1/3;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .green1 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: green;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .yellow1 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: gold; &nbsp;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .blue1 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100%;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: blue;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <span style="color: #000000;"><strong>grid-column:1/3;</strong></span></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;/* Activity 2 styles */&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .content2 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; /* This is the parent of the activity 2 boxes. */</span><br>
+        <span style="color: #0d11ab; font-size: 12pt;">   &nbsp; &nbsp;display: grid;</span><br>
+        <span style="color: #0d11ab; font-size: 12pt;">&nbsp; &nbsp; &nbsp; grid-template-columns: repeat(5, 50px);</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; /* This next property is optional. */</span><br>
+        <span style="color: #0d11ab; font-size: 12pt;">  &nbsp; &nbsp; grid-template-rows: repeat(5, 50px);</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .red2 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: red;&nbsp;</span><br>
+        <span style="color: #0d11ab; font-size: 12pt;">  &nbsp; &nbsp; grid-column: 1;</span><br>
+        <span style="color: #0d11ab; font-size: 12pt;">  &nbsp; &nbsp; grid-row: 1; </span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .green2 {&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: green;&nbsp;</span><br>
+        <span style="color: #0d11ab; font-size: 12pt;">  &nbsp; &nbsp; grid-column: 2;</span><br>
+        <span style="color: #0d11ab; font-size: 12pt;">  &nbsp; &nbsp; grid-row:2;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .yellow2 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: gold;&nbsp;</span><br>
+        <span style="font-size: 12pt;">  &nbsp;  <span style="color: #0810a1;"> grid-column: 3;</span></span><br>
+        <span style="font-size: 12pt;"><span style="color: #0810a1;">&nbsp; &nbsp; &nbsp; grid-row:3;</span> */</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .blue2 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: blue;&nbsp;</span><br>
+        <span style="font-size: 12pt;">  &nbsp; &nbsp; <span style="color: #0810a1;">grid-column: 4;</span></span><br>
+        <span style="font-size: 12pt;"><span style="color: #0810a1;">&nbsp; &nbsp; &nbsp; grid-row: 4</span>; */</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <br>
+        <br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;/* Activity 3 styles */&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .content3 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; /* This is the parent of the activity 3 boxes. */</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;<strong> <span style="color: #000000;">display: grid;</span></strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-template-columns: 1fr 1fr;</strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-column-gap: 50px;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .red3 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <span style="color: #000000;"><strong>width: 100%;&nbsp;</strong></span></span><br>
+        <span style="font-size: 12pt;">  &nbsp; <strong>height: 100%;</strong> </span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: red;&nbsp;</span><br>
+        <span style="font-size: 12pt;">  &nbsp; <span style="color: #000000;"><strong>grid-column:1/3;</strong></span></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .green3 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <span style="color: #000000;"><strong>width: 100%;</strong></span>&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: green;</span><br>
+        <span style="font-size: 12pt;"><strong>    <span style="color: #000000;">grid-column: 1;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .yellow3 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <strong><span style="color: #000000;">width: 100%;&nbsp;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: gold;&nbsp;</span><br>
+        <span style="font-size: 12pt;"><strong>    <span style="color: #000000;">grid-column: 2;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .blue3 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <span style="color: #000000;"><strong>width: 100%;</strong></span></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: blue;&nbsp;</span><br>
+        <span style="font-size: 12pt;">  &nbsp; <span style="color: #000000;"><strong>grid-column: 1/3;</strong></span></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <br>
+        <br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;/* Activity 4 styles */&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .content4 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; /* This is the parent of the activity 4 boxes. */</span><br>
+        <span style="font-size: 12pt;">  &nbsp; &nbsp; height: 400px;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <span style="color: #000000;"><strong>display: grid;</strong></span></span><br>
+        <span style="color: #000000;"><strong><span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; grid-template-column: 1fr 1fr;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; /* This next property
+          is optional. */</span><br>
+        <span style="color: #000000;"><strong><span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; grid-template-rows: 1fr 1fr 1fr;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .red4 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp;<span style="color: #000000;"> <strong>width: 100%;&nbsp;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; height: 100%;&nbsp;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: red;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <strong>&nbsp; <span style="color: #000000;">grid-column: 1;</span></strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-row:1/4;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .green4 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp;<span style="color: #000000;"><strong> width: 100%;&nbsp;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; height: 100%;&nbsp;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: green;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;<span style="color: #000000;"><strong> grid-column: 2;<br>
+             grid-row: 1;</strong></span></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .yellow4 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <span style="color: #000000;"><strong>width: 100%;&nbsp;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; height: 100%;&nbsp;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: gold;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;<strong> <span style="color: #000000;">grid-column: 2;</span><br>
+        <span style="color: #000000;">      grid-row: 2;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .blue4 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp;<strong> <span style="color: #000000;">width: 100%;&nbsp;</span></strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; height: 100%;&nbsp;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: blue;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;<strong> <span style="color: #000000;">grid-column: 2;</span><br>
+        <span style="color: #000000;"> &nbsp; &nbsp; &nbsp;grid-row: 3;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <br>
+        <br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;/* Activity 5 styles */&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;.content5 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; /* This is the parent of the activity 5 boxes. */</span><br>
+        <span style="font-size: 12pt;">      height: 400px;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .red5 {&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100%;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: red;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .green5 {&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; width: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: green;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <span style="color: #000000;"><strong>float: left;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;">  &nbsp; &nbsp; <strong>margin: 0 10px 10px 0;  &lt;-  this I added to give some space of the text to the green square.</strong></span><br>
+        <br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .yellow5 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <strong>width: 100%;&nbsp;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; /* This next property
+          is optional. You can leave out the height and it will auto adjust. This property si to force the height to be a little bit bigger than the green square. */</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; <strong>min-height: 120px;</strong>&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: gold;&nbsp;</span><br>
+        <br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .blue5 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp;<strong> width: 100%;&nbsp;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; height: 100px;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: blue;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <br>
+        <br>
+        <br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;/* Activity 6 styles */&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;.content6 {</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; /* This is the parent of the activity 6 boxes. */</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <strong>&nbsp;<span style="color: #000000;">display: grid;</span></strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <span style="color: #ff0000;">&nbsp;grid-template-columns: repeat(6, 1fr);</span></span><br>
+        <span style="color: #ff0000; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp;grid-template-rows: repeat(6, 1fr);</span><br>
+        <span style="color: #ff0000; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp;width: 600px;</span><br>
+        <span style="color: #ff0000; font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp;height: 600px;</span><br>
+        <span style="color: #0810a1; font-size: 12pt;">  &nbsp; &nbsp;  grid-template-columns: repeat(6, 100px);</span><br>
+        <span style="color: #0810a1; font-size: 12pt;">  &nbsp; &nbsp; &nbsp;grid-template-rows: repeat(6, 100px);</span><br>
+        <br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .red6 {</span><br>
+        <span style="font-size: 12pt;"><strong>&nbsp; &nbsp; w<span style="color: #000000;">idth: 100%;&nbsp;</span></strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; height: 100%;</strong>&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: red;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <span style="color: #000000;"><strong>grid-column: 1/4;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-row: 1/3;</strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; z-index: 1;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .green6 {</span><br>
+        <span style="font-size: 12pt;"><strong>&nbsp; &nbsp; <span style="color: #000000;">width: 100%;&nbsp;</span></strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>  &nbsp; height: 100%;</strong> </span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: green;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <span style="color: #000000;"><strong>grid-column: 1/3;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-row: 5/7;</strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; z-index: 3;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp;}&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .yellow6 {</span><br>
+        <span style="font-size: 12pt;"><strong>&nbsp; &nbsp; <span style="color: #000000;">width: 100%;&nbsp;</span></strong></span><br>
+        <span style="font-size: 12pt;"><strong><span style="color: #000000;">&nbsp; &nbsp; height: 100%;</span>&nbsp;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: gold;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <span style="color: #000000;"><strong>grid-column: 5/7;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-row: 3/7;</strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; z-index: 3;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; .blue6 {</span><br>
+        <span style="font-size: 12pt;"><strong>&nbsp; &nbsp; <span style="color: #000000;">width: 100%;&nbsp;</span></strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; height: 100%;&nbsp;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; background-color: blue;&nbsp;</span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; <span style="color: #000000;"><strong>grid-row: 2/6;</strong></span></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; grid-column: 2/6;</strong></span><br>
+        <span style="font-size: 12pt; color: #000000;"><strong>&nbsp; &nbsp; &nbsp; z-index: 2;</strong></span><br>
+        <span style="font-size: 12pt;">&nbsp; &nbsp; }&nbsp;</span></pre>
+  <p>&nbsp;</p>
+  <p> Let me know if you have any questions. I have opened this up for
+    discussion. </p>
+</body>
+
+</html>

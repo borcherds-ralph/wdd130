@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS for Extra Credit</title>
+    <link rel="stylesheet" href="../styles/canvas.css">
+</head>
+
+<body>
+    <p> Here is the CSS for the extra credit assignment as I had created
+        it.&nbsp; There are a couple of other ways to do this. If there are any
+        properties you do not understand please send me an e-mail or you can
+        look them up. </p>
+    <pre>* {<br>
+        &nbsp; box-sizing: border-box;<br>
+    }<br>
+        .grid1 {<br>
+        &nbsp; display: grid;<br>
+        &nbsp; grid-template-columns: repeat(12, 1fr);<br>
+        &nbsp; background-color: #dedede;<br>
+        &nbsp; padding: 50px 0px;<br>
+        &nbsp; box-sizing: border-box;<br>
+    }<br>
+        <br>
+        .grid1 h1 {<br>
+        &nbsp; grid-column: 1/13;<br>
+    }<br>
+        <br>
+        .grid2 {<br>
+        &nbsp; display: grid;<br>
+        &nbsp; grid-column: 2/11;<br>
+        &nbsp; background-color: #fff;<br>
+        <br>
+        &nbsp; grid-template-columns: repeat(12, 1fr);<br>
+    }<br>
+        .grid2 h2 {<br>
+        &nbsp; grid-column: 3/6;<br>
+        &nbsp; align-self: center;<br>
+    }<br>
+        <br>
+        .grid3 {<br>
+        &nbsp; display: grid;<br>
+        &nbsp; grid-template-columns: repeat(12, 1fr);<br>
+        &nbsp; grid-column: 7/13;<br>
+        &nbsp; background-color: #09f4b2;;<br>
+    }<br>
+        <br>
+        .grid3 h3 {<br>
+        &nbsp; grid-column: 2/8;<br>
+    }<br>
+        <br>
+        .grid4 {<br>
+        &nbsp; display: grid;<br>
+        &nbsp; grid-template-columns: repeat(12, 1fr);<br>
+        &nbsp; grid-column: 4/11;<br>
+        &nbsp; background-color: #b4faef;<br>
+        &nbsp; padding: 1em 0;<br>
+    }<br>
+        <br>
+        .grid4 h2 {<br>
+        &nbsp; grid-column: 2/6;<br>
+        &nbsp;&nbsp;<br>
+    }<br>
+        <br>
+        section {<br>
+        &nbsp; display: grid;<br>
+        &nbsp; grid-template-columns: repeat(12, 1fr);<br>
+        &nbsp; grid-column: 2/9;<br>
+        &nbsp; background-color: #fefefe;<br>
+        &nbsp; padding: 3em 0;<br>
+    }<br>
+        section h2 {<br>
+        &nbsp; grid-column: 1/4;<br>
+    }<br>
+        <br>
+        form {<br>
+        &nbsp; background-color: #fae9b4;<br>
+        &nbsp; grid-column: 2/7;<br>
+         <br>
+    }<br>
+        fieldset {<br>
+        &nbsp; display: grid;<br>
+        &nbsp; grid-template-columns: 1fr 5fr;<br>
+    }<br>
+        legend {<br>
+        &nbsp; font-size: 20px;<br>
+        &nbsp; font-weight: 700;<br>
+    }<br>
+        <br>
+        fieldset &gt; div {<br>
+        &nbsp; grid-column: 1/3;<br>
+        &nbsp; display: grid;<br>
+        &nbsp; grid-template-columns: 1fr 2fr;<br>
+        &nbsp; align-items: center;<br>
+        &nbsp; grid-gap: 0 20px;<br>
+    }<br>
+        label {<br>
+        &nbsp; grid-column: 1/2;<br>
+        &nbsp; justify-self: end;<br>
+    }<br>
+        input {<br>
+        &nbsp; grid-column: 2/4;<br>
+        &nbsp; margin: 1em 0;<br>
+        &nbsp; width: 100%<br>
+    }<br>
+        <br>
+        button {<br>
+        &nbsp; grid-column: 1/3;<br>
+        <br>
+        &nbsp; width: 100%;<br>
+        &nbsp; background-color: #1177ff;<br>
+        &nbsp; font-size: 2em;<br>
+    }<br>
+        <br>
+        section &gt; div {<br>
+        &nbsp; grid-column: 2/7;<br>
+        &nbsp; padding: 3em 0;<br>
+    }</pre>
+</body>
+
+</html>
