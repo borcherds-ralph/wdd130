@@ -7,7 +7,7 @@
   --trans-text-color: #04040c;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -26,6 +26,18 @@ h6 {
   font-family: 'Roboto Slab', serif;
 }
 
+h1 {
+  font-size: 2.125rem;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
 a {
   text-decoration: none;
 }
@@ -34,12 +46,35 @@ img {
   max-width: 100%;
 }
 
-.content {
+header, main {
   max-width: 1400px;
   margin: 0 auto;
   background-color: #fff;
   padding: 0 2em;
   box-sizing: border-box;
+}
+
+header {
+  margin: 0 auto 1em auto;
+  padding: 0;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em 2em;
+  padding: 0 1em 2em;
+  background-color: #3e3e3e;
+  margin: 0 0 1em 0;
+}
+
+nav a {
+  color: #e3e3e3;
+}
+
+.nav-heading {
+  grid-column: 1/-1;
+  color: #fff;
 }
 
 section {
