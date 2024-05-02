@@ -5,6 +5,7 @@
   --hover-color: #003030;
   --trans-color: rgba(196 207 207 / 0.7);
   --trans-text-color: #04040c;
+  --img-background-color: #b1caf5;
 }
 
 *, *::before, *::after {
@@ -132,11 +133,12 @@ details p {
 }
 
 details img {
-  border: solid var(--hover-color) 4px;
+  /* border: solid var(--hover-color) 4px; */
+  display: block;
   border-radius: 30px;
   padding: 1.5rem;
-  background-color: var(--hover-color);
-  margin: 1rem 0;
+  background-color: var(--img-background-color);
+  margin: 1rem;
 }
 
 pre {
@@ -212,6 +214,7 @@ td h1 {
 }
 
 .top-link {
+  display: inline-block;
   padding: 1em;
   background-color: #3e3e3e;
   color: #fff;

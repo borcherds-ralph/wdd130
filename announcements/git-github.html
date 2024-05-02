@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Git Commit and GitHub</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -11,28 +11,39 @@
 <body>
   <main>
     <h1>VSCode - Git - GitHub basic explanations</h1>
-    <p> The question has come up as to what to type into the git commit message
-      area. </p>
-    <p> Before I get into the best practice, I want to explain a few things.
-    </p>
+    <p> The question has come up as to what to type into the git commit message area. </p>
+    <p> Before I get into the best practice, I want to explain a few things. </p>
     <ol>
       <li>
-        <p> The process to commit and sync with GitHub is a multiple step
-          procedure. </p>
+        <p> The process to commit and sync with GitHub is a multiple step procedure. Here are the
+          steps that occur in the background in VSCode. These steps show the command line process if
+          you had to type them yourself.</p>
         <ul>
-          <li> Commit to staged status&nbsp;&nbsp; (git commit -m "message")
+          <li>
+            <p>You must enter a commit message in the box above the COMMIT button. This message box
+              is explained in more details below.</p>
+            <img
+              src="https://borcherds-ralph.github.io/wdd130/announcements/images/vscode-commit-message-box.png"
+              alt="commit message box">
           </li>
-          <li> Send staged to Github via a push command or a sync command&nbsp;
-            (git push origin &lt;branch name on GitHub&gt;)&nbsp; Most of you
-            will have either the branch name as MASTER or MAIN on GitHub. </li>
-          <li> Pull any changes from GitHub to local computer. (git pull
-            &lt;remote branch name&gt;) </li>
+          <li>Once you click the Commit button you are changing the status of the updated/new files
+            to to a staged status&nbsp;&nbsp; (git commit -m "message"). The command does 2 things
+            at the same time. It adds the message and commits it to the list of files and sets the
+            status to staged. </li>
+          <li>Most of you will have the branch name of MAIN. This is set as the default name in
+            VSCode when you initialize the repository. I am using the name of main in the command
+            line commands here.</li>
+          <li>Here are the steps that VSCode goes through when you click the sync button. <ol>
+              <li>Pull any changes from GitHub to local computer. (git pull origin/main) </li>
+              <li>Push the staged files to GitHub. (git push origin origin/main)</li>
+            </ol>
+          </li>
         </ul>
-        <p> You can do all these commands at the same time by doing a Commit
-          &amp; Sync (git sync origin &lt;remote branch&gt;). In VSCode this is
-          done by click the blue button if it sayd Commit &amp; Sync or click
-          the down arrow on the right side of the button and select commit &amp;
-          sync </p>
+        <p> You can do all these commands at the same time in VSCode by doing a Commit &amp; Sync.
+          In VSCode this is done by click the blue button if it says Commit &amp; Sync or click the
+          down arrow on the right side of the button and select commit &amp; sync </p>
+        <p>VScode still runs the command line commands one at a time, so it runs all three commands
+          listed above in that order, but you only click once to initiate the process.</p>
         <p>
           <img
             src="https://borcherds-ralph.github.io/wdd130/announcements/images/vscode-commit-sync.png"
@@ -40,18 +51,14 @@
         </p>
       </li>
       <li>
-        <p> There is a box to type a message in before you hit the commit/commit
-          &amp; sync button. This screenshot shows the commit &amp; sync as one
-          button. Most of you will only have COMMIT button. </p>
-        <p>
-          <img
-            src="https://borcherds-ralph.github.io/wdd130/announcements/images/vscode-commit-message-box.png"
-            alt="commit message box">
-        </p>
-        <p> If you hit the commit button without a message, you will get an
-          editor screen that looks something like this image. You have to type a
-          message into line 1. You must save and close this editor screen for
-          the commit process to continue. </p>
+        <p>This screenshot shows the commit &amp; sync as one button. Most of you will only have
+          COMMIT button. </p>
+        <img
+          src="https://borcherds-ralph.github.io/wdd130/announcements/images/vscode-commit-message-box.png"
+          alt="commit message box">
+        <p> If you hit the commit button without a message, you will get an editor screen that looks
+          something like this image. You have to type a message into line 1. You must save and close
+          this editor screen for the commit process to continue. </p>
         <p>
           <img
             src="https://borcherds-ralph.github.io/wdd130/announcements/images/vscode-editor-commit.png"
@@ -60,12 +67,11 @@
       </li>
       <li>
         <p>What to type in the MESSAGE box.</p>
-        <p> This is limited to 72 characters in length. The best commit messages
-          follow the guidelines from this article: <a
+        <p> This is limited to 72 characters in length. The best commit messages follow the
+          guidelines from this article: <a
             href="https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53"
             target="_blank" rel="noopener">
-            https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53
-          </a>
+            https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53 </a>
         </p>
         <p>Basically it is this type of message</p>
         <pre><code>Write your commit message in the imperative: "Fix bug" and not "Fixed
@@ -80,39 +86,33 @@
             <li>Capitalize the subject line and each paragraph</li>
             <li>Use the imperative mood in the subject line</li>
             <li>Wrap lines at 72 characters</li>
-            <li> Use the body to explain what and why you have done something.
-              In most cases, you can leave out details about how a change has
-              been made. </li>
+            <li> Use the body to explain what and why you have done something. In most cases, you
+              can leave out details about how a change has been made. </li>
           </ul>
           <h2>Information in commit messages</h2>
           <ul>
             <li>Describe why a change is being made.</li>
             <li>How does it address the issue?</li>
             <li>What effects does the patch have?</li>
-            <li> Do not assume the reviewer understands what the original
-              problem was. </li>
+            <li> Do not assume the reviewer understands what the original problem was. </li>
             <li>Do not assume the code is self-evident/self-documenting.</li>
-            <li> Read the commit message to see if it hints at improved code
-              structure. </li>
+            <li> Read the commit message to see if it hints at improved code structure. </li>
             <li>The first commit line is the most important.</li>
             <li>Describe any limitations of the current code.</li>
             <li>Do not include patch set-specific comments.</li>
           </ul>
         </div>
-        <p> Details for each point and good commit message examples can be found
-          on <a
+        <p> Details for each point and good commit message examples can be found on <a
             href="https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages">
-            https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages
-          </a>
+            https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages </a>
         </p>
-        <p> If you want to add more data than the main message line, which is
-          line 1 of the text, you hit the commit button and then in the editor
-          screen add you message and then go below what is there and enter
-          additional info. Remember to keep is as short as possible. Every one
-          on the internet can read that info if they so wish.This screenshot
-          gives you and example of that. The arrow pointing to the vertical line
-          is the max width or characters allowed. The arrow at the bottom shows
-          and additional message added. </p>
+        <p> If you want to add more data than the main message line, which is line 1 of the text,
+          you hit the commit button before typing anything in the message box and hit commit. YOu
+          will then see the editor screen where you add you message and then go below what is there
+          and enter additional info. Remember to keep is as short as possible. Every one on the
+          internet can read that info if they so wish.This screenshot gives you and example of that.
+          The arrow pointing to the vertical line is the max width or characters allowed per line.
+          The arrow at the bottom shows and additional message added. </p>
         <p>
           <img
             src="https://borcherds-ralph.github.io/wdd130/announcements/images/vscode-message-details.png"
@@ -120,42 +120,38 @@
         </p>
       </li>
     </ol>
-    <p> There is a lot more info that can be given on this topic but I will
-      leave that up to you to research and read if you so wish. This is just the
-      info you need to get started. </p>
-    <p> VSCode documentation on Source Control and how it works within VSCode:
-      <a href="https://code.visualstudio.com/docs/sourcecontrol/overview"
-        target="_blank" rel="noopener">
-        https://code.visualstudio.com/docs/sourcecontrol/overview </a>
+    <p>There is a lot more info that can be given on this topic but I will leave that up to you to
+      research and read if you so wish. This is just the info you need to get started. </p>
+    <p>VSCode documentation on Source Control and how it works within VSCode: <a
+        href="https://code.visualstudio.com/docs/sourcecontrol/overview" target="_blank"
+        rel="noopener"> https://code.visualstudio.com/docs/sourcecontrol/overview </a>
     </p>
-    <p> To read commit messages and to look at what changes have been made. Open
-      a repo, click on the commits. The number next to the word will be
-      different for each repo </p>
+    <p>To read commit messages and to look at what changes have been made. Open a repo, click on the
+      commits. The number next to the word will be different for each repo </p>
     <p>
-      <img
-        src="https://borcherds-ralph.github.io/wdd130/announcements/images/gh-commits-read.png"
+      <img src="https://borcherds-ralph.github.io/wdd130/announcements/images/gh-commits-read.png"
         alt="commits read">
     </p>
-    <p> You will see a screen like this one. Click on the little box with the 3
-      dots and you will see the additional message </p>
+    <p> You will see a screen like this one. Click on the little box with the 3 dots and you will
+      see the additional message if the person that did the commit added additional information.</p>
     <p>
       <img
         src="https://borcherds-ralph.github.io/wdd130/announcements/images/vscode-message-details-2.png"
         alt="details 2">
     </p>
-    <p> In the image above you will notice an orange dot. That means the
-      publication to the GitHub Pages is running. The check mark means that
-      commit was successful. </p>
-    <p> In this next image it shows the additional message and it has a red
-      circle with an X in it meaning the publication to GitHub Pages failed.
-    </p>
+    <p>In the image above you will notice an orange dot. That means the publication to the GitHub
+      Pages is running. The check mark means that commit was successful. </p>
+    <p> In this next image it shows the additional message and it has a red circle with an X in it
+      meaning the publication to GitHub Pages failed. In this case there was a second commit to
+      GitHub before the GitHUb pages publication process was able to finish, so GitHub canceled the
+      running process and started the new process.</p>
     <p>
       <img
         src="https://borcherds-ralph.github.io/wdd130/announcements/images/vscode-message-details-3.png"
         alt="message details 3">
     </p>
-    <p>Let me know if you have any questions in the Discussion Forum</p>
+    <p>Let me know if you have any questions in Microsoft Teams.</p>
   </main>
-</body>
 
+</body>
 </html>
