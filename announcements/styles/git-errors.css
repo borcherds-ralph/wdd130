@@ -46,7 +46,7 @@ img {
   max-width: 100%;
 }
 
-header, main {
+header, main, footer {
   max-width: 1400px;
   margin: 0 auto;
   background-color: #fff;
@@ -56,7 +56,7 @@ header, main {
 
 header {
   margin: 0 auto 1em auto;
-  padding: 0;
+  padding: 2em;
 }
 
 nav {
@@ -189,6 +189,8 @@ code {
   font-size: 87.5%;
   word-wrap: break-word;
   color: #212529;
+  display: block;
+  padding: 1em;
 }
 
 td h1 {
@@ -207,4 +209,28 @@ td h1 {
   font-weight: 800;
   font-style: italic;
   font-size: 1.25em;
+}
+
+.top-link {
+  padding: 1em;
+  background-color: #3e3e3e;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 2em;
+  border-radius: 10px;
+}
+
+main p:last-of-type {
+  padding: 0 1em 3em 1em;
+}
+
+footer {
+  background-color: #3e3e3e;
+  color: #fff;
+  padding: 2em;
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }

@@ -58,7 +58,7 @@
           while pushing to GitHub: Enables commit signing with GPG or X.509 </p>
         <img src="images/gpg-3.png" alt="GPG error step 3">
         <p>Close out of the Settings tab.</p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="no-permission-to-push">
         <summary>You don&apos;t have permission to push to &lt;GitHub Account&gt; on GitHub
@@ -92,7 +92,6 @@
           <p> There are other authentication methods, but they are much more complex to setup and
             require installation of additional software to create SSH keys for unique encryption
             process and authentication. </p>
-          <a href="#top">Back to Top</a>
         </details>
         <details>
           <summary>Preferred Method</summary>
@@ -120,7 +119,6 @@
             for the user by default in a hidden file called <span
               class="bolded-text">.gitconfig</span> and is much more reliable than Windows for the
             location. </p>
-          <a href="#top">Back to Top</a>
         </details>
         <details>
           <summary>Manual method</summary>
@@ -133,7 +131,6 @@
             class="colde-style">git config --global user.email "email"<br>git config --global user.name "github username"</pre>
           <p>That will set the username and email address per repository in each <span
               class="bold-text">.git/config</span> file. </p>
-          <a href="#top">Back to Top</a>
         </details>
         <details>
           <summary>Use VSCode Extension</summary>
@@ -145,9 +142,8 @@
           <p>This extension does the configuring of the username and email address in each
             repository for you or will change the global config setting for each person that you
             switch too.</p>
-          <a href="#top">Back to Top</a>
         </details>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="pages-not-initializing">
         <summary>GitHub Pages does not initialize</summary>
@@ -183,7 +179,7 @@
               sometimes if there are underscores in these names. </p>
           </li>
         </ol>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="user-name-email">
         <summary> Make sure to configure your &apos;user.name&apos; and &apos;user.email&apos; in
@@ -200,7 +196,7 @@
                     </pre>
         <p>Try to push to GitHub</p>
         <p>If you still have issues, then contact someone for help</p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="sync-hang">
         <summary> VSCode push/sync to GitHub seems to hang and not do anything </summary>
@@ -231,7 +227,7 @@
             instructions on how to overcome in this document. This will require more research with
             debug logs to see if there is a reason for the hang. </li>
         </ol>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-blocked">
         <summary> Windows Error message: App or process blocked: git.exe </summary>
@@ -266,7 +262,7 @@
           alt="Windows Notification Controlled Access">
         <p> This is the same step as above for the same error. Microsoft has a few diverse ways to
           present this message. It will also be logged in to the System Logs. </p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-rpc-curl-18">
         <summary>git RPC fail: curl 18 transfer closed with outstanding read data remaining
@@ -289,7 +285,7 @@
             answers on their own as Homebrew has its own command strcuture to work with Git &
             GitHub.</li>
         </ul>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-rpc-curl-92">
         <summary> git RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
@@ -299,7 +295,7 @@
           connections, you can only send enough data that GitHub will keep the connection open. Bad
           internet connections will drop with this error. There are other reasons this error can
           occur, but this is the only reason for this error with the data we use. </p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-add-folder-denied">
         <summary> Git does not allow you to add a folder to the repo </summary>
@@ -308,7 +304,7 @@
         <p> The issue is mot likely that the folder has been initialized as a git repository. Go
           into that folder and look for the hidden folder/directory called .git </p>
         <p>Remove the .git folder in the sub-directory</p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-ref-tips-error">
         <summary>Error: Failed to push some refs to…</summary>
@@ -395,7 +391,7 @@
               are working as a group on a single project. </p>
           </li>
         </ol>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-credential-manager-error">
         <summary>User is prompted git-credential-manager-core.exe could not be started</summary>
@@ -417,7 +413,7 @@
             href="https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808"
             target="_blank"> Find operating system info in Windows 10 </a>
         </p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="mac-xcode-error">
         <summary>MacOS error: xcrun: error: invalid active developer path </summary>
@@ -441,7 +437,7 @@
         <p>Once the software has been installed make sure to restart the VSCode application by
           clicking on the menu and select QUIT, (<img src="images/mac-command.png"
             alt="command icon">-q)</p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="libcurl-not-found">
         <summary>Git LoadLibraryExW() failed with" The specified procedure could not be found.?
@@ -457,7 +453,7 @@
         <p>Most Windows systems has this file located in <span class="bold-text">C:\Windows</span>
           and this folder is part of the Path setting on Windows computers.
         <p>
-          <a href="#top">Back to Top</a>
+          <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="install-git">
         <summary>Error You must install Git first</summary>
@@ -477,7 +473,7 @@
         <img src="images/vscode-enable-git.webp" alt="enable git">
         <p>That will auto start Git and Git Base if disabled. If you have GitHub disables as well,
           you will need to start that using the same process.</p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-login-not-working">
         <summary>Never get the Web Page to log into GitHub to authorize Git/GitHub</summary>
@@ -512,7 +508,7 @@
         <code>xdg-settings set default-web-browser firefox.desktop</code>
         <p>Common browser name:</p>
         <code>firefox.desktop, google-chrome.desktop, brave-browser.desktop, microsoft-edge.desktop, opera.desktop</code>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-build-fail">
         <summary>Github Pages Build process fails </summary>
@@ -568,7 +564,7 @@
         </ul>
         <p>Once done commit and sync with GitHub so that the build process can be re-initialized
         </p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-allow-unrelated">
         <summary>Git refusing to merge unrelated histories</summary>
@@ -584,7 +580,7 @@
             git merge origin origin/main
           </pre>
         <p>Then go ahead and make a change and then commit and sync with GitHub.</p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
     </section>
     <section class="hints">
@@ -605,7 +601,7 @@
           it goes against the standards or not explicitly stated that this is the way it must be
           done. They do not give you the option to turn that off. VSCode setting does give you that
           option. </p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="project-manager">
         <summary>Users with multiple coding projects/classes</summary>
@@ -662,7 +658,7 @@
                         "enabled": true<br>
                         },
                     </pre>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="commit-sync">
         <summary>Pushing to GitHub using fewer steps</summary>
@@ -691,7 +687,7 @@
         <p> This will make it possible for you to click the button once and commit and sync at the
           same time. Just click this button and both steps are executed in order. </p>
         <img src="images/vscode-comit-sync-button.png" alt="commit sync button">
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="commit-message">
         <summary> How to add more than 50 characters to a Git commit </summary>
@@ -723,7 +719,7 @@
           </li>
         </ul>
         <p>It is that simple.</p>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="repo-description">
         <summary>Adding a description to your repository</summary>
@@ -989,7 +985,7 @@
             </tr>
           </tbody>
         </table>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="multiple-users">
         <summary>How to share a computer to commit to GitHub using different accounts</summary>
@@ -1007,11 +1003,14 @@
         <p>Add the following line to the end. Make sure to keep the indentation. It must match what
           is already in use in yoru file.</p>
         <pre class="colde-style">[user]<br>    name = YourName<br>    email = your@email.com</pre>
-        <a href="#top">Back to Top</a>
+        <a href="#top" class="top-link">Back to Top</a>
       </details>
     </section>
   </main>
-  <footer></footer>
+  <footer>
+    <p>This file is created and updated for the use of student at BYU-Idaho</p>
+    <p>Maintained by Ralph Borcherds</p>
+  </footer>
 
 </body>
 </html>
