@@ -234,3 +234,7 @@ footer {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+
+button {
+  background-color: #3e3e3e;
+}

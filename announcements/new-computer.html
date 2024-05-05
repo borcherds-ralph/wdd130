@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup New Computer for GitHub</title>
+    <meta name="description"
+        content="This page describes how to set up a new computer for a student to keep working with GitHub without having to recreate the code or the repository.">
+    <meta name="author" content="Ralph Borcherds">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Setup New Computer for coding with GitHub</h1>
+        <p>This page describes how to set up a new computer for a student to keep working with
+            GitHub without having to recreate the code or the repository.</p>
+        <h2>Setup VSCode</h2>
+        <p>Install VSCode and the extensions that are require for class. Do not install extra
+            extension as they will not be used and will slow down the startup time.</p>
+        <h2>Setup Git</h2>
+        <p>Make sure to run the 3 commands for windows or 2 for Mac and Linux</p>
+        <ul>
+            <li>Type in this configuration command to set the global git username:
+                <pre> git config --global user.name "yourusername" </pre> and click Enter. Nothing
+                will happen if you did it right. If you get an error, you need to fix it.
+            </li>
+            <li>Enter this configuration command to set the email:
+                <pre> git config --global user.email "youremail@"</pre> and click Enter. Nothing
+                will happen if you did it right. If you get an error, you need to fix it.
+            </li>
+            <li>This next command is for Windows only. It does not hurt to also type this command on
+                the MAC and Linux system. Type in this configuration command in order to not ignore
+                case changes in files and folder names:
+                <pre>git config --global core.ignorecase false</pre> and click Enter. Nothing will
+                happen if you did it right. If you get an error, you need to fix it.
+            </li>
+        </ul>
+        <h2>Go to Repository on Gitub</h2>
+        <p>Log into your GitHub account. Open the repsoritoy. Click on the icons in the following
+            image in the order shown with numbers.</p>
+        <figure>
+            <img src="images/github-clone-urlpng"
+                alt="How to get the clone URL for a GitHub repository">
+            <figcaption>The second icon will copy the URL to the left of it to the clipboard on your
+                computer.</figcaption>
+        </figure>
+        <h2>Open VSCode</h2>
+        <p>Open VSCode and then open the parent folder of where you want to put your code. In this
+            example I will use Desktop</p>
+        <p>Once you have opened the folder in VSCode using the FILE - OPEN FOLDER menu, then open a
+            terminal window using CTRL+SHIFT+` or use the menus at the top TERMINAL - NEW TERMINAL
+        </p>
+        <p>Type the following command into the terminal</p>
+        <pre>git clone &gt;paste the github URL you copied with the second click&lt;</pre>
+        <p>This will create a clone of the wdd130 folder from GitHub onto your computer on the
+            Desktop.</p>
+        <h2>Finish Setup</h2>
+        <p>Now you need to make any edit and save it. Then go to the Source Control and commit and
+            sync with GutHub. This will force the Git and GitHub authorization logins to take place.
+        </p>
+        <h3>If you have any issues with this make sure to contact your instructor for additional
+            help.</h3>
+
+</body>
+</html>
