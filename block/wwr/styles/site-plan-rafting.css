@@ -7,6 +7,9 @@
     --accent2-color: #afaf60;
     --accent3-color: #771820;
 
+    --black: #2e2e2e;
+    --white: #fdffff;
+
     --heading-font: "Bitter", serif;
     --paragraph-font: "Inter", sans-serif;
 
@@ -18,7 +21,7 @@
 
 body {
     font-family: var(--paragraph-font);
-    /* font-optical-sizing: auto; */
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "slnt" 0;
@@ -29,19 +32,21 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    /* font-optical-sizing: auto; */
+    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
 
 header {
     padding: 20px;
-    background-color: var(--accent1-color);
+    background-color: var(--black);
+    color: var(--white);
 }
 
 p {
     padding: 25px;
 }
+
 a {
     text-decoration: none;
 }
@@ -61,7 +66,13 @@ nav a {
 nav a:link, nav a:visited {
     color: var(--nav-link-color);
 }
+
 nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
+}
+
+.color-paragraph {
+    background-color: var(--black);
+    color: var(--white);
 }
