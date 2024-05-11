@@ -32,6 +32,7 @@
       <a href="#git-login-not-working">Never get Git login web Page</a>
       <a href="#git-build-fail">GitHub actions build Failed</a>
       <a href="#git-allow-unrelated">Git sync error Unrelated histories</a>
+      <a href="#git-ssl-error">git OpenSSL SSL_read: SSL_ERROR_SYSCALL, erro 0</a>
       <h2 class="nav-heading">Hints &amp; Suggestions</h2>
       <a href="#formatters-configure">Formatter not configured</a>
       <a href="#project-manager">Project Manager Extension</a>
@@ -582,6 +583,74 @@
             git merge origin origin/main
           </pre>
         <p>Then go ahead and make a change and then commit and sync with GitHub.</p>
+        <a href="#top" class="top-link">Back to Top</a>
+      </details>
+      <details id="git-ssl-error">
+        <summary>You get the following error: fatal: Unable to access 'git repository url': OpenSSL
+          SSL_read: SSL_ERROR_SYSCALL, erro 0 </summary>
+        <p>This error id due to some SSL connectivity issue between your computer and GitHub. There
+          are a variety of reasons why you will get this message.</p>
+        <img src="images/git-ssl-error-0.png"
+          alt="Git Error Unable to access repository due to SSL error">
+        <p>The easiest way to fix this is to re-install/update Git. Go to <a
+            href="https://git-scm.com" target="_blank">git-scm.com</a> and download and install the
+          software.</p>
+        <p><span class="bold-text">Windows computers</span> You can update using one of two methods
+        </p>
+        <ul>
+          <li>Run this command in a CMD prompt on Windows:
+            <pre>git update-git-for-windows</pre>
+          </li>
+          <li>Download the files and run the installer manually. You can get the installation
+            instructions here: <a href="https://git-scm.com/download/win" target="_blank">Download
+              for Windows</a></li>
+        </ul>
+        <p><span class="bold-text">Mac Computers</span> Apple suppies the version of Git to run
+          through the XCode software. You must check for software updates for your Mac and install
+          those updates. This is done through the App Store on the Mac. It is a good idea to install
+          all those updates on a regular basis. You can get all the instructions for Mac here: <a
+            href="https://git-scm.com/download/mac target=" _blank">Downloads for macOS</a>
+        </p>
+        <p><span class="bold-text">Linux Computers</span>If you instal the Git software correctly,
+          you should only need to use your package manager and run the updated command to get the
+          most recent updates. You can get all the install commands for the various Linux
+          Distributions here: <a href="https://git-scm.com/download/linux" target="_blank">Downloads
+            for Linux</a></p>
+        <p class="bold-text">You do need to update Git at least every 4 months, sometime sooner. Git
+          releases updates to the major point release about every 2 to 3 months with bug fixes
+          randomly withing that timeframe.</p>
+        <p>As of when this was written, this table shows the last 3 major point releases with the
+          bug fixes.</p>
+        <table>
+          <tr>
+            <th>Version</th>
+            <th>Release Date</th>
+          </tr>
+          <tr>
+            <td>2.43.0</td>
+            <td>Nov 20, 2023</td>
+          </tr>
+          <tr>
+            <td>2.43.1</td>
+            <td>Feb 9, 2024</td>
+          </tr>
+          <tr>
+            <td>2.43.2</td>
+            <td>Feb 14, 2024</td>
+          </tr>
+          <tr>
+            <td>2.43.3</td>
+            <td>Feb 23, 2024</td>
+          </tr>
+          <tr>
+            <td>2.44.0</td>
+            <td>Feb 23, 2024</td>
+          </tr>
+          <tr>
+            <td>2.45.0</td>
+            <td>April 29, 2024</td>
+          </tr>
+        </table>
         <a href="#top" class="top-link">Back to Top</a>
       </details>
     </section>

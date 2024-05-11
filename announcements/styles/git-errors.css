@@ -238,3 +238,11 @@ footer {
 button {
   background-color: #3e3e3e;
 }
+
+table {
+  max-width: 600px;
+}
+
+th, td {
+  text-align: left;
+}
