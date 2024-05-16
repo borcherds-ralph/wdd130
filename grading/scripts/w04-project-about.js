@@ -137,7 +137,7 @@ function buildReport(data, url) {
         .catch((error) => {
             document.getElementById('csserrorscount').innerHTML = `CSS Validation failed to report: ${error}`;
         });
-    console.log(h);
+    console.log(h.indexOf('<!DOCTYPE html>'));
     return `
       <div class="callout warning smaller">
         ⚠️A trailing slash on void elements has no effect and interacts badly with unquoted attribute values in HTML. Do not use a trailing slash for <a href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element" target="_blank">void elements</a>.
