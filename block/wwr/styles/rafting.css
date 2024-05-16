@@ -225,6 +225,62 @@ footer p {
     justify-self: center;
 }
 
+.newsletter {
+    grid-column: 4/9;
+    grid-row: 9/11;
+    justify-self: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent1-color);
+    color: var(--white);
+    margin: 1em 0;
+    padding: 1em 0;
+}
+
+.newsletter p {
+    justify-self: center;
+    font-size: 1.5em;
+    color: var(--black);
+    margin: 1em 0 0 0;
+}
+
+.newsletter-form .field-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    margin: 1em;
+    align-items: center;
+}
+
+.newsletter-form label {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+    color: var(--white);
+    margin: 0;
+}
+
+.newsletter-form input {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.newsletter-form button {
+    background-color: var(--button-color);
+    padding: .5em 1em
+}
+
+.newsletter-form button:hover {
+    background-color: var(--button-color-hover);
+}
+
 .card {
     margin: 100px 0;
     grid-row: 3;
