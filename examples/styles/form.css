@@ -125,11 +125,26 @@ fieldset {
     grid-row: 6;
 }
 
-.grid-form legend {
+.grid-form legend, .select legend {
     box-sizing: border-box;
     color: #3e0000;
     /* display: table; */
     max-width: 100%;
     padding: 0;
     white-space: normal;
+}
+
+.select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #3e3e3e;
+    border-radius: 10px;
+    margin: 1em 0;
+}
+
+.select select {
+    padding: .5em;
+    border-radius: 10px;
 }
