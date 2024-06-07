@@ -385,17 +385,19 @@ footer p {
 }
 
 .modal-window>div {
-    width: 800px;
-    position: absolute;
-    top: 50%;
+    max-width: fit-content;
+    position: relative;
+    top: 30px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 30px;
+    transform: translateX(-50%);
     padding: 2em;
     background: white;
 }
 
 .modal-window img {
-    max-width: 100%;
+    max-width: fit-content;
+    max-height: 90vh;
 }
 
 .modal-close {
