@@ -23,11 +23,6 @@ student/
 
 #  These are to keep the VSCode settings you use from becoming public
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
 .history/
@@ -36,3 +31,4 @@ student/
 *.vsix
 trek-2022/video/water-crossing.mp4
 block/wireframes/*
+
