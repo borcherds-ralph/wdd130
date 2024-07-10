@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Coding Standards</title>
+  <link rel="stylesheet" href="../styles/canvas.css">
+</head>
+
+<body>
+  <h2>HTML Tags to use.</h2>
+  <p>You will find developers using things incorrectly all the time. You need to know where to find
+    the correct answers. </p>
+  <p>&nbsp;</p>
+  <p> All of these come from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+      target="_blank" rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML </a> site.
+    Expand the Reference -&gt; HTML Elements area and you will see all the HTML tags. There are tags
+    with a red trash icon next to them. Those are tags that have been removed from the specification
+    and you cannot use them.&nbsp; When in question about a tag name, use this list as a resource.
+  </p>
+  <p>
+    <img
+      src="https://borcherds-ralph.github.io/wdd130/announcements/images/moz-dev-html-reference.png"
+      alt="Mozilla Developer Network HTML Elements link." max-width="391">
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <h3>&lt;br&gt; Tag</h3>
+  <p> Never use &lt;br&gt; to separate paragraphs. The &lt;br&gt; is only to be used when doing
+    something like and address or make new lines in displaying a poem. Read this article for more
+    info: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br </a>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <h3>Heading Tags (h1, h2, h3, h4, h5, h6)</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+      target="_blank" rel="noopener">
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements </a>
+  </p>
+  <p> Usage notes: Heading information can be used by user agents to construct a table of contents
+    for a document automatically.&nbsp; </p>
+  <p><strong> Avoid using heading elements to resize text. Instead, use the CSS font-size property.
+      (Do not wrap &lt;a href&gt; tags inside of heading tags.) </strong></p>
+  <p> Avoid skipping heading levels: always start from &lt;h1&gt;, followed by &lt;h2&gt;and so
+    on.&nbsp; </p>
+  <p> Use only one &lt;h1&gt;per page or view. It should concisely describe the overall purpose of
+    the content. </p>
+  <p>
+    <span style="font-size: 14pt; color: #cf0202ff;">
+      <strong> If you do wrap an &lt;a href&gt; tag with a heading tag for styling, that is not
+        allowed. You must use standard CSS styling. I would recommend putting a class name on the
+        link to style it. The course material did not follow this rule. </strong>
+    </span>
+  </p>
+  <h3>&lt;section&gt; Tag</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section </a>
+  </p>
+  <p> Use this if you have text that can stand on its own, it is related to the content of the page
+    and has a heading tag. Use h2 to h6 tags in this section only. If you do not have a heading tag,
+    then you should use some other tag such as &lt;article&gt;, &lt;aside&gt; or &lt;div&gt;. </p>
+  <p> If you are only using the element as a styling wrapper, use a &lt;div&gt;. An unwritten rule
+    is that <span style="color: #0000ff;">
+      <strong> a &lt;section&gt; should logically appear in the outline of a document </strong>
+    </span> . </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <h3>&lt;article&gt; tag</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article </a>
+  </p>
+  <p> A few of you are planning on creating a BLOG page. This is the perfect place to use the
+    &lt;article&gt; tag. </p>
+  <p> A given document can have multiple articles in it; for example, on a blog that shows the text
+    of each article one after another as the reader scrolls, each post would be contained in an
+    <code>&lt;article&gt;</code> element, possibly with one or more <code>&lt;section&gt;</code> s
+    within. </p>
+  <p>&nbsp;</p>
+  <h3>&lt;address&gt; tag</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address </a>
+  </p>
+  <p> Read this article carefully and look at the examples. This is one place you can use the
+    &lt;br&gt; tag correctly. </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <h3>&lt;nav&gt; tag</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav </a>
+  </p>
+  <p> It's not necessary for all links to be contained in a &lt;nav&gt; element. <strong>
+      &lt;nav&gt; is intended only for major block of navigation links; </strong> typically <span
+      style="color: #0000ff;"> the &lt;footer&gt; element often has a list of links that don't need
+      to be in a &lt;nav&gt; element </span> . </p>
+  <p>&nbsp;</p>
+  <h3>&lt;main&gt; tag</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main </a>
+  </p>
+  <p> The content of a &lt;main&gt; element should be unique to the document. Content that is
+    repeated across a set of documents or document sections such as sidebars, navigation links,
+    copyright information, site logos, and search forms shouldn't be included unless the search form
+    is the main function of the page. </p>
+  <p>&nbsp;</p>
+  <h3>&lt;header&gt; tag</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header </a>
+  </p>
+  <p> The &lt;header&gt; element is not sectioning content and therefore does not introduce a new
+    section in the outline. </p>
+  <p> In this class, this tag holds the logo and navigation bar at the top of the page. You could
+    use it in other places to denote the &lt;header&gt; of a section or article. For ARIA
+    specification, which you will learn on your own, the &lt;header&gt; is a page banner section of
+    text to help a screen reader know that this is at the top of that section/page. </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <h3>&lt;footer&gt; tag</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer </a>
+  </p>
+  <p> The &lt;footer&gt; element represents a footer for its nearest ancestor sectioning content or
+    sectioning root element. The footer is just that. The end of the section, article, page. </p>
+  <p> One of the best ways to format a footer is to use a color that is not used on the page to
+    denote the end of the page. Also make sure you have good color contrast and the text in the
+    footer is easy to read. </p>
+  <p> This article does a great job explaining a page footer and ways to use it well: &nbsp; <a
+      href="https://howtogetonline.com/best-practices-for-designing-a-website-footer.php"
+      target="_blank" rel="noopener">
+      https://howtogetonline.com/best-practices-for-designing-a-website-footer.php </a>
+  </p>
+  <p>&nbsp;</p>
+  <h3>&lt;div&gt; tag</h3>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank"
+      rel="noopener"> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div </a>
+  </p>
+  <p> As a "pure" container, the &lt;div&gt; element does not inherently represent anything.
+    Instead, it's used to group content so it can be easily styled using the class or id attributes,
+    marking a section of a document as being written in a different language (using the lang
+    attribute), and so on. </p>
+  <p>&nbsp;</p>
+
+</body>
+</html>
