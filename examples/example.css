@@ -1,36 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lora&family=Roboto+Slab&display=swap');
 
-*, *::after, *::before {
-  box-sizing: border-box;
-}
 
-:root {
 
-  /************************************************************
+/************************************************************
   *
-  *               Variables
+  *               Variables used in the CSS file
+  *    This shows that you can use any variable names you want
+  *    There is not limit to the variable names you can use.
+  *    Just do not have items that are not used.
   *
   ************************************************************/
-  --heading-font: Arvo, serif;
-  --heading-color: #0443b3;
-  --font-2: Lora, 'Time New Roman', serif;
+:root {
+  /* The font name comes from the @import and must end in either 
+    serif or sans-serif depending on the font you are using.    */
+  --heading-font: 'Arvo', serif;
+  --paragraph-font: 'Roboto', sans-serif;
 
+  --heading-color: #0443b3;
   --heading-background: #5f503c;
-  --color-white: #fff;
+  --color-white: #fdfdfd;
   --hover-color: #5f503c;
+
   --trans-color: rgba(196 207 207 / 0.7);
   --trans-text-color: #04040c;
+
   --footer-background: #3e3e3e;
-  --secondary-color: #0443b3;
-  --accent-2: #afaf60;
-  --accent-3: #5f503c;
+
+  --primary-color: #a5b452;
+  --secondary-color: #9888a5;
+  --accent1-color: #5f503c;
+  --accent2-color: #afaf60;
+
+  --nav-link-color: #fff;
+  --nav-background-color: #5f503c;
+  --nav-hover-link-color: #5f503c;
+  --nav-hover-background-color: #fff;
 }
 
 /*******************************************************************
 *
-*               Default HTML TAG settings
+*   Default HTML TAG settings. These apply to all tags
+*   on all pages of the site. Chaining one of these will
+*   affect all pages.
 *
 ********************************************************************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 22px;
+
+  /* Background color is only seen if the screen width is wider than the max-width */
+  background-color: #c1f7f7;
+  font-family: var(--paragraph-font);
+}
 
 h1,
 h2,
@@ -46,7 +74,6 @@ h6 {
 
 h1,
 h2 {
-  font-family: var(--font-2);
   padding: 0.5em;
   margin: 0;
 }
@@ -69,38 +96,64 @@ p {
 }
 
 a {
-  /* This turns of all underlines on teh links by default */
+  /* This turns off all underlines on the links by default. You can re-enable this if you want. */
   text-decoration: none;
 }
 
 img {
+  /* This makes sure that all images are scaled correctly to fit their containers. */
   max-width: 100%;
 }
 
 /*******************************************************
 *
-*              Content Defaults
+*    Content Defaults. These affect all pages
+*    and are not used for specific styling.
+*    These are for basic layout settings only
 *
 ********************************************************/
-body {
-  font-size: 22px;
-  margin: 0;
-  padding: 0;
-  background-color: #c1f7f7;
-  font-family: 'Roboto Slab', sans-serif, serif;
+
+/* This rule will set the max-width of the 3 main areas of a web page on all pages and center the content on the screen. */
+header,
+main,
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 
+/* This rule will apply to all items you want to use position absolute and center the text in the area you are placing it.  This will be place 60px from the top. */
+.abs1 {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+
+/* This rule will apply to all items you want to use position absolute and center the text both vertically and horizontally in the area you are placing it. */
+.abs2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /*******************************************************
 *
 *              Header Area
+*    These are generally the rule names for placing the 
+*    logo and navigation in the header and making the nav
+*    horizontal.
 *
 ********************************************************/
 header {}
 
+/* This rule is for the <a href> around the logo image if needed */
 .logo_link {}
 
+/* Put this as a class name in the logo img tag to style the placement of the img */
 .logo {}
 
 nav {}
@@ -116,18 +169,23 @@ nav a:hover {}
 *******************************************************/
 footer {}
 
+/* This is for any text in the footer */
 .footer-p {}
 
+/* This is for the nav area in the footer. Make sure to override the nav items above. */
 .footer-menu {}
 
 .footermenu:hover {}
 
+/* This is for the social media icons in the footer. */
 .sociallinks {}
 
 
 /*******************************************************
 *
-*              Rules for classes used on all pages
+*  Rules for classes used on all pages
+*  If you have CSS rules that will be used on all pages 
+*  for formatting you can put them here. 
 *
 *******************************************************/
 
@@ -138,6 +196,8 @@ footer {}
 /*******************************************************
 *
 *              Homepage only CSS
+*    Only put rules here that are used on the 
+*    homepage only
 *
 *******************************************************/
 
@@ -146,7 +206,9 @@ footer {}
 
 /*******************************************************
 *
-*              Rules for Page 2 only
+*              Rules for Trips page only
+*    Only put rules here that are used on the 
+*    trips page only
 *
 *******************************************************/
 
@@ -155,7 +217,9 @@ footer {}
 
 /*******************************************************
 *
-*              Rules for Page 3 only
+*              Rules for About Us page only
+*     Only put rules here that are used on the 
+*     about us page only
 *
 *******************************************************/
 
@@ -164,5 +228,7 @@ footer {}
 /*******************************************************
 *
 *              Rules for Contact Us page
+*    Only put rules here that are used on the 
+*    contact us page only
 *
 *******************************************************/
