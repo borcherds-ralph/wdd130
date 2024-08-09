@@ -17,7 +17,8 @@
     --nav-hover-link-color: #5f503c;
     --nav-hover-background-color: #fff;
 
-    /* This sets the default font size for the page */
+    /* This sets the default font size for the page. This is changed from the default of 16px
+    due to the small size of the fonts used on this page. */
     font-size: 18px;
 
     /* Do not change these colors */
@@ -27,6 +28,12 @@
     --sitemap-bg-color: #ccc;
 }
 
+
+/*******************************************************
+*
+*     DO NOT CHANGE ANYTHING BELOW THIS LINE
+*
+********************************************************/
 *,
 *::before,
 *::after {
@@ -62,11 +69,15 @@ h5,
 h6 {
     font-family: var(--heading-font);
 
+    /* This is to set he padding for all headings as the * rule above removes all padding */
+    padding: 1em;
+
     /* These font variables are optional and are part of the newest types of fonts from Google. */
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
+
 
 header {
     padding: 20px;
@@ -75,19 +86,21 @@ header {
 }
 
 p {
+    /* This is to set he padding for all headings as the * rule above removes all padding */
     padding: 25px;
 }
 
 a {
+    /* This property removes all underlines from all the links on the page */
     text-decoration: none;
 }
 
 hr {
+    /* This is the styling for the horizontal line that separates the sections on the page.  */
     border: solid 2px var(--black);
     margin: 30px 0;
 }
 
-/* Color Palette in grid display */
 
 /* This is a temporary rule to format temporary text. */
 .caption {
@@ -98,6 +111,7 @@ hr {
     margin-top: 50px;
 }
 
+/* Color Palette in grid display */
 .colorchart {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -151,7 +165,7 @@ hr {
     background-color: var(--accent2-color);
 }
 
-/* Typography additional styling */
+/* Typography additional styling All other styling is done in the heading tags at the top of the page */
 
 .color-paragraph {
     background-color: var(--black);
