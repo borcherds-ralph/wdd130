@@ -1,34 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
 
 :root {
+    /* change the values below to your chosen colors from https://coolors.co */
     --primary-color: #a5b452;
     --secondary-color: #9888a5;
     --accent1-color: #5f503c;
     --accent2-color: #afaf60;
-    --accent3-color: #771820;
 
-    --black: #2e2e2e;
-    --white: #fdffff;
-
+    /* change the values below to your chosen font(s) */
     --heading-font: "Bitter", serif;
     --paragraph-font: "Inter", sans-serif;
 
+    /* these colors below should be chosen from among your palette colors above */
     --nav-link-color: #fff;
     --nav-background-color: #5f503c;
     --nav-hover-link-color: #5f503c;
     --nav-hover-background-color: #fff;
 
+    /* This sets the default font size for the page */
     font-size: 18px;
+
+    /* Do not change these colors */
+    --black: #2e2e2e;
+    --white: #fdffff;
+    --color-heading: #999;
+    --sitemap-bg-color: #ccc;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
+
     font-family: var(--paragraph-font);
+
+    /* These font variables are optional and are part of the newest types of fonts from Google. */
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "slnt" 0;
+
+}
+
+header,
+main,
+footer {
     max-width: 1000px;
-    padding: 20px;
     margin: 0 auto;
 }
 
@@ -39,6 +61,8 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font);
+
+    /* These font variables are optional and are part of the newest types of fonts from Google. */
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -59,11 +83,13 @@ a {
 }
 
 hr {
-    border: solid 2px #333;
+    border: solid 2px var(--black);
     margin: 30px 0;
 }
 
 /* Color Palette in grid display */
+
+/* This is a temporary rule to format temporary text. */
 .caption {
     color: #666;
     font-size: 0.8rem;
@@ -81,7 +107,7 @@ hr {
 
 .color-title {
     grid-row: 1;
-    background-color: #999;
+    background-color: var(--color-heading);
     color: #fff;
     padding: 1rem;
 }
@@ -100,7 +126,7 @@ hr {
 }
 
 .colors th {
-    background-color: #999;
+    background-color: var(--color-heading);
     padding: 1em 0;
 }
 
@@ -125,7 +151,7 @@ hr {
     background-color: var(--accent2-color);
 }
 
-/* Typography */
+/* Typography additional styling */
 
 .color-paragraph {
     background-color: var(--black);
@@ -167,32 +193,32 @@ nav a:hover {
         'page2 page2 . page3 page3 . page4 page4';
 }
 
-.sitemap>div {
+.txt-center {
     text-align: center;
 }
 
 
 .sm-home {
     grid-area: home;
-    background-color: #ccc;
+    background-color: var(--sitemap-bg-color);
     line-height: 3em;
 }
 
 .sm-page2 {
     grid-area: page2;
-    background-color: #ccc;
+    background-color: var(--sitemap-bg-color);
     line-height: 3em;
 }
 
 .sm-page3 {
     grid-area: page3;
-    background-color: #ccc;
+    background-color: var(--sitemap-bg-color);
     line-height: 3em;
 }
 
 .sm-page4 {
     grid-area: page4;
-    background-color: #ccc;
+    background-color: var(--sitemap-bg-color);
     line-height: 3em;
 }
 
