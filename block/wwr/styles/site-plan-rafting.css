@@ -26,8 +26,14 @@
     --white: #fdffff;
     --color-heading: #999;
     --sitemap-bg-color: #ccc;
+    --footer-bg-color: #020d18;
 }
 
+/* Miscellaneous styles for the purpose and audience area only. */
+
+.bld {
+    font-weight: 700;
+}
 
 /*******************************************************
 *
@@ -268,8 +274,8 @@ nav a:hover {
     border-right: 1px solid;
 }
 
-/* Miscellaneous styles */
 
-.bld {
-    font-weight: 700;
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--white);
 }
