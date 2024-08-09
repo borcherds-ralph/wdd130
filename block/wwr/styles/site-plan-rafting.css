@@ -81,7 +81,7 @@ hr {
 
 .color-title {
     grid-row: 1;
-    background-color: #2e2e2e;
+    background-color: #999;
     color: #fff;
     padding: 1rem;
 }
