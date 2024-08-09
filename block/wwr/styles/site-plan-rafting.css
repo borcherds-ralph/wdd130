@@ -78,6 +78,14 @@ h6 {
     font-style: normal;
 }
 
+ul {
+    padding: 0 2.5em;
+}
+
+li {
+    padding: 0 1.5em;
+    line-height: 1.3;
+}
 
 header {
     padding: 20px;
@@ -122,8 +130,9 @@ hr {
 .color-title {
     grid-row: 1;
     background-color: var(--color-heading);
-    color: #fff;
+    color: var(--black);
     padding: 1rem;
+    font-weight: 700;
 }
 
 .color-row {
@@ -257,4 +266,10 @@ nav a:hover {
     grid-area: right;
     border-top: 1px solid;
     border-right: 1px solid;
+}
+
+/* Miscellaneous styles */
+
+.bld {
+    font-weight: 700;
 }
