@@ -17,6 +17,8 @@
     --nav-background-color: #5f503c;
     --nav-hover-link-color: #5f503c;
     --nav-hover-background-color: #fff;
+
+    font-size: 18px;
 }
 
 body {
@@ -30,7 +32,12 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--heading-font);
     font-optical-sizing: auto;
     font-weight: 700;
@@ -51,28 +58,163 @@ a {
     text-decoration: none;
 }
 
-nav {
-    background-color: var(--nav-background-color);
-    font-size: 1.2rem;
-    display: flex;
+hr {
+    border: solid 2px #333;
+    margin: 30px 0;
 }
 
-nav a {
-    display: block;
-    color: var(--nav-link-color);
+/* Color Palette in grid display */
+.caption {
+    color: #666;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+.colorchart {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.color-title {
+    grid-row: 1;
+    background-color: #2e2e2e;
+    color: #fff;
     padding: 1rem;
 }
 
-nav a:link, nav a:visited {
-    color: var(--nav-link-color);
+.color-row {
+    grid-row: 2;
+    padding: 1rem;
 }
+
+/* Color Palette in table */
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: #999;
+    padding: 1em 0;
+}
+
+.colors td {
+    width: 20%;
+    height: 3em;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+}
+
+/* Typography */
+
+.color-paragraph {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+/* Navigation styles */
+nav {
+    background-color: var(--nav-background-color);
+    font-size: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: var(--nav-link-color);
+    padding: 1.5em;
+}
+
 
 nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
 }
 
-.color-paragraph {
-    background-color: var(--black);
-    color: var(--white);
+
+/* Site Map styles */
+.sitemap {
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    grid-template-areas:
+        '. . . home home . . .'
+        '. . . . top . . .'
+        '. left left left center right right .'
+        'page2 page2 . page3 page3 . page4 page4';
+}
+
+.sitemap>div {
+    text-align: center;
+}
+
+
+.sm-home {
+    grid-area: home;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page2 {
+    grid-area: page2;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page3 {
+    grid-area: page3;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page4 {
+    grid-area: page4;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.top {
+    grid-area: top;
+    border-left: 1px solid;
+}
+
+.left {
+    grid-area: left;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.center {
+    grid-area: center;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
 }
