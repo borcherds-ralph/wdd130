@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
+
+:root {
+    /* change the values below to your chosen colors from https://coolors.co */
+    --primary-color: #a5b452;
+    --secondary-color: #9888a5;
+    --accent1-color: #5f503c;
+    --accent2-color: #afaf60;
+
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Bitter", serif;
+    --paragraph-font: "Inter", sans-serif;
+
+    /* these colors below should be chosen from among your palette colors above */
+    --nav-link-color: #fff;
+    --nav-background-color: #5f503c;
+    --nav-hover-link-color: #5f503c;
+    --nav-hover-background-color: #fff;
+
+    /* These color are for the buttons on the site*/
+    --cta-background-color: #922e06;
+    --cta-color: #f1eeee;
+    --cta-button-text-size: 1rem;
+
+    /* Submit button colors */
+    --submit-background-color: #040464;
+    --submit-color: #f7f2f2;
+    --submit-button-text-size: 1rem;
+
+    /* these are the color for the input boxes */
+    --input-error-color: #c00707;
+    --input-normal-color: #3e3e3e;
+    --input-focus-color: #059244;
+
+
+    /* This sets the default font size for the page. This is changed from the default of 16px
+    due to the small size of the fonts used on this page. */
+    font-size: 18px;
+
+    /* Do not change these colors */
+    --black: #2e2e2e;
+    --white: #fdffff;
+    --color-heading: #999;
+    --sitemap-bg-color: #ccc;
+    --footer-bg-color: #020d18;
+}
+
+/* Miscellaneous styles for the purpose and audience area only. */
+
+.bld {
+    font-weight: 700;
+}
+
+/*******************************************************
+*
+*     DO NOT CHANGE ANYTHING BELOW THIS LINE
+*
+********************************************************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    font-family: var(--paragraph-font);
+
+    /* These font variables are optional and are part of the newest types of fonts from Google. */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+
+}
+
+header,
+main,
+footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+
+    /* This is to set he padding for all headings as the * rule above removes all padding */
+    padding: 1em;
+
+    /* These font variables are optional and are part of the newest types of fonts from Google. */
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+ul {
+    padding: 0 2.5em;
+}
+
+li {
+    padding: 0 1.5em;
+    line-height: 1.3;
+}
+
+header {
+    padding: 20px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+p {
+    /* This is to set he padding for all headings as the * rule above removes all padding */
+    padding: 25px;
+}
+
+a {
+    /* This property removes all underlines from all the links on the page */
+    text-decoration: none;
+}
+
+hr {
+    /* This is the styling for the horizontal line that separates the sections on the page.  */
+    border: solid 2px var(--black);
+    margin: 30px 0;
+}
+
+
+/* This is a temporary rule to format temporary text. */
+.caption {
+    color: #666;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+/* Color Palette in grid display */
+.colorchart {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.color-title {
+    grid-row: 1;
+    background-color: var(--color-heading);
+    color: var(--black);
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.color-row {
+    grid-row: 2;
+    padding: 1rem;
+}
+
+/* Color Palette in table */
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: var(--color-heading);
+    padding: 1em 0;
+}
+
+.colors td {
+    width: 20%;
+    height: 3em;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+}
+
+/* Typography additional styling All other styling is done in the heading tags at the top of the page */
+
+.color-paragraph {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+    font-weight: 700;
+    font-family: var(--heading-font);
+    margin: 0 100px;
+    padding: 0.5em 0;
+}
+
+.heading-1 {
+    font-size: 2em;
+
+}
+
+.heading-2 {
+    font-size: 1.5em;
+}
+
+.heading-3 {
+    font-size: 1.17em;
+}
+
+.heading-4 {
+    font-size: 1em;
+}
+
+.heading-5 {
+    font-size: .83em;
+}
+
+.heading-6 {
+    font-size: .67em;
+}
+
+/* Navigation styles */
+nav {
+    background-color: var(--nav-background-color);
+    font-size: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: var(--nav-link-color);
+    padding: 1.5em;
+}
+
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+
+/* Buttons */
+.cta {
+    background-color: var(--cta-background-color);
+    color: var(--cta-color);
+    font-size: var(--cta-button-text-size);
+    padding: 1em;
+    border-radius: 25px;
+    margin: 20px 50px;
+}
+
+.cta:hover {
+    background-color: var(--cta-color);
+    color: var(--cta-background-color);
+    font-size: var(--cta-button-text-size);
+    padding: 1em;
+    border-radius: 25px;
+    margin: 20px 50px;
+}
+
+.submit {
+    background-color: var(--submit-background-color);
+    color: var(--submit-color);
+    font-size: var(--submit-button-text-size);
+    padding: 1em;
+    border-radius: 25px;
+    margin: 20px 50px;
+}
+
+.submit:hover {
+    background-color: var(--submit-color);
+    color: var(--submit-background-color);
+    font-size: var(--submit-button-text-size);
+    padding: 1em;
+    border-radius: 25px;
+    margin: 20px 50px;
+}
+
+
+/* Input fields */
+.input {
+    padding: 10px;
+    margin: 10px 50px;
+}
+
+.normal {
+    border: var(--input-normal-color) 2px solid;
+}
+
+.focus {
+    border: var(--input-focus-color) 2px solid;
+}
+
+.error {
+    border: var(--input-error-color) 2px solid;
+}
+
+
+/* Site Map styles */
+.sitemap {
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    grid-template-areas:
+        '. . . home home . . .'
+        '. . . . top . . .'
+        '. left left left center right right .'
+        'page2 page2 . page3 page3 . page4 page4';
+}
+
+.txt-center {
+    text-align: center;
+}
+
+
+.sm-home {
+    grid-area: home;
+    background-color: var(--sitemap-bg-color);
+    line-height: 3em;
+}
+
+.sm-page2 {
+    grid-area: page2;
+    background-color: var(--sitemap-bg-color);
+    line-height: 3em;
+}
+
+.sm-page3 {
+    grid-area: page3;
+    background-color: var(--sitemap-bg-color);
+    line-height: 3em;
+}
+
+.sm-page4 {
+    grid-area: page4;
+    background-color: var(--sitemap-bg-color);
+    line-height: 3em;
+}
+
+.top {
+    grid-area: top;
+    border-left: 1px solid;
+}
+
+.left {
+    grid-area: left;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.center {
+    grid-area: center;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--white);
+}
