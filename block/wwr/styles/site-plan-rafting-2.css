@@ -326,7 +326,54 @@ nav a:hover {
 }
 
 
-/* Input fields */
+/* Form fields */
+fieldset {
+    margin: 50px 0;
+    padding: 1em;
+
+}
+
+legend {
+    font-weight: 700;
+}
+
+.input-right {
+    display: grid;
+    grid-template-columns: 200px 400px;
+    gap: 20px;
+}
+
+.input-right>label {
+    grid-column: 1 / 2;
+    justify-self: end;
+}
+
+.input-right>input,
+.input-right>textarea,
+.input-right>select {
+    grid-column: 2 / 3;
+}
+
+.input-left {
+    display: grid;
+    grid-template-columns: 100px 200px;
+    gap: 20px;
+}
+
+.input-left>input,
+.input-left>textarea,
+.input-left>select {
+    grid-column: 1 / 2;
+    justify-self: end;
+}
+
+.input-left>label {
+    grid-column: 2 / 3;
+    justify-self: start;
+}
+
+
+
 .input {
     padding: 10px;
     margin: 10px 50px;

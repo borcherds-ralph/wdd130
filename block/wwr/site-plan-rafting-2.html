@@ -137,13 +137,53 @@
         <hr>
 
         <h3>Input Fields</h3>
-        <form action="# ">
-            <input type="text" class="input normal" placeholder="normal border">
-            <input type="text" class="input focus"
-                placeholder="focus color - cursor in field">
-            <input type="text" class="input error" placeholder="error in field color">
-        </form>
 
+
+        <form>
+            <fieldset>
+                <legend>Text input</legend>
+                <input type="text" class="input normal" placeholder="normal border">
+                <input type="text" class="input focus"
+                    placeholder="focus color - cursor in field">
+                <input type="text" class="input error" placeholder="error in field color">
+            </fieldset>
+
+            <fieldset class="input-left">
+                <legend>Radio buttons</legend>
+                <input id="1st" type="radio" name="radio" value="1">
+                <label for="1st" class="radio">Option 1</label>
+
+
+                <input id="2nd" type="radio" name="radio" value="2">
+                <label for="2nd" class="radio">Option 2</label>
+            </fieldset>
+
+            <fieldset class="input-left">
+                <legend>Checkbox</legend>
+                <input id="check" type="checkbox" name="check" value="check1">
+                <label for="check" class="checkbox">Check 1</label>
+
+                <input id="check2" type="checkbox" name="check" value="check2">
+                <label for="check2" class="checkbox">Check 2</label>
+
+            </fieldset>
+
+            <fieldset class="input-right">
+                <legend>Textarea</legend>
+                <label for="textarea">Textarea</label>
+                <textarea name="name" rows="8" cols="100"></textarea>
+            </fieldset>
+
+            <fieldset class="input-right">
+                <legend>Dropdown</legend>
+                <label for="select">Select</label>
+                <select id="select" name="select">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                </select>
+            </fieldset>
+
+        </form>
         <hr>
 
         <h2>Site Map</h2>
