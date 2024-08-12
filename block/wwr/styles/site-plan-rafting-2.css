@@ -261,40 +261,68 @@ nav a:hover {
 
 
 /* Buttons */
-.cta {
-    background-color: var(--cta-background-color);
-    color: var(--cta-color);
-    font-size: var(--cta-button-text-size);
+
+.btn {
+    background: #fefefe;
+    border: 1px solid #4e4e4e;
     padding: 1em;
-    border-radius: 25px;
-    margin: 20px 50px;
+    margin: 2em;
+    cursor: pointer;
 }
 
-.cta:hover {
-    background-color: var(--cta-color);
-    color: var(--cta-background-color);
-    font-size: var(--cta-button-text-size);
-    padding: 1em;
-    border-radius: 25px;
-    margin: 20px 50px;
+.btn:hover {
+    background: #f1f1f1;
 }
 
-.submit {
-    background-color: var(--submit-background-color);
-    color: var(--submit-color);
-    font-size: var(--submit-button-text-size);
-    padding: 1em;
-    border-radius: 25px;
-    margin: 20px 50px;
+.btn:active {
+    background: #d8d8d8;
 }
 
-.submit:hover {
-    background-color: var(--submit-color);
-    color: var(--submit-background-color);
-    font-size: var(--submit-button-text-size);
-    padding: 1em;
-    border-radius: 25px;
-    margin: 20px 50px;
+.btn:focus {
+    outline: none;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #fefefe;
+    border: 0;
+    background: #cc232a
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background: #b61f26
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    background: #8b181d;
+}
+
+.btn.btn-secondary {
+    background: #292929;
+}
+
+.btn-secondary:hover {
+    background: #363636;
+}
+
+.btn-secondary:active {
+    background: #4f4f4f;
+}
+
+.btn-outline {
+    color: #cc232a;
+    border-color: #cc232a;
+}
+
+.btn-lg {
+    padding: 2em;
+}
+
+.btn.btn-sm {
+    padding: .5em;
+    font-size: .9em;
 }
 
 
