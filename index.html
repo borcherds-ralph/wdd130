@@ -4,31 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 130 Home Page | Ralph Borcherds</title>
-    <meta name="description" content="Main homepage for all course work for WDD 130">
-    <meta name=" author" content="Ralph Borcherds">
+    <title>WDD 130 Block Course | Ralph Borcherds</title>
+    <meta name="description" content="Block course homepage for the course work.">
+    <meta name="author" content="Ralph Borcherds">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="block/">Block Course Example</a>
-            <a href="full-semester">Full Semester Examples</a>
-            <a href="examples">Code Examples for Students</a>
+            <!-- <a href="../index.html">Repository Home</a> -->
+            <a href="wwr">Rafting Site</a>
+            <a href="wwr/site-plan-rafting.html">Rafting Site Plan</a>
+            <a href="https://www.linkedin.com/in/mrborcherds/" target="_blank">LinkedIn Profile</a>
         </nav>
     </header>
-    <main>
-        <h1>Welcome to this site</h1>
-        <p>This site is for example purposes for all course material work for the full semester (14
-            weeks) or the block semester (7 weeks) work for WDD-130.</p>
-        <p>select the course examples of what the students build in either course from the
-            navigation above.</p>
-    </main>
+    <div class="grid">
+        <main>
+            <h1>Ralph Borcherds | WDD 130</h1>
+            <img src="images/portrait.jpg" alt="Profile image" class="profile">
+            <p>I am your instructor for this course. My last name is pronounced like orchards with a
+                B in front of it.</p>
+            <p>I am a graduate of Brigham Young University-Idaho with a Bachelors in Web Design and
+                Development. After graduation I decided to become an instructor for the school and
+                give back to the school. I found that I enjoyed teaching while I was a student.</p>
+            <div class="text-2">
+                <p>I live in the desert of Southern California about 20 miles outside of Palm
+                    Springs, CA. I am an IT Consultant and professional Web Developer and do a lot
+                    of consulting for local companies. I am always working on a new web project
+                    using PHP, JavaScript, CSS/SCSS, MySQL technologies. You will learn about these
+                    as you learn more about web development.</p>
+                <p>My wife and daughter also received their Bachelors from BYU-Idaho. My wife earned
+                    her Bachelors of Science in Nursing and my daughter earned her Business
+                    Administration Bachelors. We all graduated the same semester, April 2020 right
+                    after the lock-downs started. </p>
+                <p>I am the Elders Quorum President in my ward and my wife if the Relief Society
+                    President. As such we are very busy with our callings and coordinating the Lords
+                    work in the Ward. We have eight grandchildren and the ninth grandchild will be
+                    born shortly after this block ends. </p>
+                <h2>A few of my favorite temples</h2>
+                <ul class="box">
+                    <li><a href="https://www.churchofjesuschrist.org/temples/details/washington-d.c.-temple?lang=eng"
+                            target="+blank">Washington D.C. Temple</a></li>
+                    <li><a href="https://www.churchofjesuschrist.org/temples/details/johannesburg-south-africa-temple?lang=eng"
+                            target="+blank">Johannesburg South Africa Temple </li>
+                    <li><a href="https://www.churchofjesuschrist.org/temples/details/redlands-california-temple?lang=eng"
+                            target="+blank">Redlands, California Temple</a></li>
+                </ul>
+            </div>
+        </main>
+        <aside class="box">
+            <h2>California</h2>
+            <img src="images/7.png" alt="California">
+            <p>California is on the west coast of the USA and borders Mexico on the South, Arizona
+                and Nevada on the East and Oregon on the North with the Pacific ocean on the west.
+            </p>
+            <p>The image is with my first grandson a few years ago petting my horse for the first
+                time without an adult with him. It was taken while I was working on a school project
+                for a class at that time.</p>
+        </aside>
+    </div>
     <footer>
-        <p>&copy; <span id="year"></span> Ralph Borcherds - Coachella Valley in Southern California
-        </p>
-        <p>This is an example site for Students at Brigham Young University-Idaho taking WDD130.</p>
+        <p>&copy; <span id="year"></span> Ralph Borcherds </p>
+        <p>This is an example site for Students at Brigham Young University-Idaho taking WDD130</p>
     </footer>
     <script>
         let year = new Date().getFullYear();

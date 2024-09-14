@@ -1,20 +1,36 @@
-@import url(https://fonts.bunny.net/css?family=allerta:400|anek-bangla:400,700);
+@import url(https://fonts.bunny.net/css?family=allerta&family=anek-bangla);
+
+*, *::before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Allerta', sans-serif;
 }
 
+header, .grid, footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 nav {
     background-color: steelblue;
-    padding: 10px;
+    padding: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     font-family: 'Anek Bangla', sans-serif;
 }
 
-a {
+nav a {
     color: white;
     padding: 1em 3em;
+}
+
+ul a {
+    color: #1a044e;
 }
 
 h1 {
@@ -30,18 +46,65 @@ p {
     padding: 10px;
 }
 
-main {
-    max-width: 1200px;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2em 0;
 }
+
+main {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+main h1 {
+    grid-column: 1/-1;
+    padding: 2rem 0;
+}
+
+.profile {
+    grid-column: 2;
+    grid-row: 2/4;
+    margin: 2em 0;
+}
+
+.text-2 {
+    grid-column: 1/-1;
+}
+
 aside {
-    width: 300px;
+    width: 20em;
     margin: 10px 20px;
     border: 1px solid #b71234;
     padding: 1em;
     background-color: none;
     color: #1a044e;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
 }
+
+ul {
+    list-style-type: none;
+}
+
 footer {
     background-color: steelblue;
     color: white;
+}
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #333;
+}
+
+h1 {
+    border-bottom: 2px #1a044e solid;
 }
