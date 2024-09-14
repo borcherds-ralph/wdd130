@@ -23,7 +23,10 @@ body {
     line-height: 1.15;
 }
 
-
+a {
+    color: #0808b8;
+    text-decoration: none;
+}
 header,
 .grid,
 footer {
@@ -117,7 +120,7 @@ aside {
     background-color: none;
     color: #1a044e;
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 1/3;
     align-self: center;
 }
 
@@ -145,7 +148,7 @@ footer {
 
 .state-name {
     position: absolute;
-    top: 7%;
+    top: 4%;
     left: 50%;
     transform: translateX(-50%);
     color: #1a044e;
