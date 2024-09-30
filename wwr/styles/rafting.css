@@ -9,34 +9,44 @@
 
 /* Root CSS variables for easy theme management */
 :root {
-    --primary-color: #4d4c49;
+   
     /* Dark color for primary text */
-    --secondary-color: #484029;
+    --primary-color: #4d4c49;
+    
     /* Secondary color, slightly lighter */
-    --accent1-color: #484029;
+    --secondary-color: #484029;
+    
     /* Accent color 1 */
-    --accent2-color: #37471e;
+    --accent1-color: #484029;
+   
     /* Accent color 2 */
+     --accent2-color: #37471e;
 
-    --white: #f3eded;
+    
     /* White color */
-    --black: #0e0c0c;
+    --white: #f3eded;
+   
     /* Black color */
-    --button-color: hsl(36, 89%, 47%);
-    --button-color-hover: hsl(36, 89%, 57%);
+    --black: #0e0c0c;
 
-    --nav-background-color: var(--accent2-color);
+    /* Button Background colors */
+    --button-color: #e38d0d;
+    --button-color-hover: #f3a530;
+
+    /* Top Navigation Colors */
     /* Background color for navigation bar */
-    --nav-link-color: #fff;
+    --nav-background-color: var(--accent2-color);
     /* Color for navigation links */
-    --nav-hover-link-color: var(--accent2-color);
+    --nav-link-color: #fff;
     /* Hover color for links */
-    --nav-hover-background-color: #fff;
+    --nav-hover-link-color: var(--accent2-color);
     /* Background color on hover for navigation links */
-    --heading-font: 'Arvo', 'sans-serif';
+    --nav-hover-background-color: #fff;
+
     /* Font for headings */
-    --paragraph-font: 'Oswald', 'sans-serif';
+    --heading-font: 'Arvo', 'sans-serif';
     /* Font for paragraphs */
+    --paragraph-font: 'Oswald', 'sans-serif';
 }
 
 /***************************************
